@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Troubleshooting</title>
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/troubleshooting_discovery.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Troubleshooting</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_3"><a name="kanchor184"></a>Troubleshooting <span class="notranslate"><b>HEAT Discovery</b></span> <![CDATA[ ]]></h1>
+            <p class="Body">&#160;</p>
+            <p class="Body">This section contains basic troubleshooting procedures for <span class="notranslate"><b>HEAT Discovery</b></span>. After you install <span class="notranslate"><b>HEAT Discovery</b></span>, we recommend that you use the following checklist to ensure that all relevant services are properly installed and working correctly. See <a href="#Troubleshooting_Checklist" class="MCXref xref">Troubleshooting Checklist</a></p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" style="width: 671px;" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                            <p>This is an advanced function for administrators and Discovery Managers.</p>
+                            <p><![CDATA[			]]></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">Troubleshooting <span class="notranslate"><b>HEAT Discovery</b></span> requires access to the .frs log files that are available from the <span class="window_name">Logs</span> workspace. See <a href="../../configure/logging/logging.htm" class="MCXref xref">Logging</a> for more information. By default, the logs are set to the <span class="window_name">Error</span> log level; however, you can capture more details. See <a href="../../configure/logging/configurelogging.htm" class="MCXref xref">Logging Configuration</a> for information on available options and how to change or set logging levels. </p>
+            <table style="width: 100%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                <col class="TableStyle-Note_Caution-Column-Column1" />
+                <col class="TableStyle-Note_Caution-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note_Caution-Body-Body2">
+                        <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/caution48_tablepadding.png" />
+                        </td>
+                        <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">We recommend resetting the logs back to the <span class="window_name">Error</span> log level after troubleshooting is completed. Otherwise, the system will continue to generate large logs that contain a high level of detail.
+</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading"><a name="Troubleshooting_Checklist"></a>Troubleshooting Checklist</h4>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the main server, check that all services are running correctly by doing the following: </td>
+                </tr>
+            </table>
+            <div>
+                <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 78px;" />
+                    <col style="width: 32px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                        </td>
+                        <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">
+               Click on a service such as AgentTaskWs. </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 78px;" />
+                    <col style="width: 32px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                        </td>
+                        <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">In the Content window right-click on the ASMX file. </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 78px;" />
+                    <col style="width: 32px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                        </td>
+                        <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">Right-click and select <span class="Bold">Browse…</span>.</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 78px;" />
+                    <col style="width: 32px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">d.</span>
+                        </td>
+                        <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="d.">Check if the agent task is responding. If it is, it opens a new window that lists the supported operations. </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 78px;" />
+                    <col style="width: 32px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">e.</span>
+                        </td>
+                        <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="e.">Follow the same steps with the ClientTransportProcessor service.</td>
+                    </tr>
+                </table> <br /></div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">For App services check that Net.tcp is up and running.</td>
+                </tr>
+            </table>
+            <blockquote>
+                <ul>
+                    <li value="1">From a command window (as administrator) run a telnet client on the server name using the specified <span class="fixedwidth">net.tcp </span>port configuration. Enter a specific domain name or IP&#160;address as shown in the following example: <span class="fixedwidth"><br />C:\Windows\System32\telnet <span class="Emphasis">&lt;Domain_Name_IPAddress&gt;</span>  7100</span><br />If <span class="fixedwidth">net.tcp</span> is correctly configured, you will see a Telnet command window with no data. </li>
+                </ul>
+            </blockquote>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Check the log file on the client or gateway machine for errors. The log file path is usually ~\FRS\Logs\JobQueues. Any errors appear in the <span class="window_name">GetClientTask</span> job. An example of a file name is JobQueue_GetClientTasksQueue_00000037014.<br /></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Check the Netscan tasks queue log file for errors. An example of a file name is JobQueue_NetScanTasksQueue_00000 000058.  </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Check the AssetProcessor.log file (the server log) located under ~\Logs for any errors. </td>
+                </tr>
+            </table>
+            <h4 class="subheading">Common Issues and Steps for Resolving Them</h4>
+            <h4 class="subheading">CI and Gateway are Not Created After Installation </h4>
+            <p class="Body">This can indicate that the  processor failed to send a message to the message sender or that the agent failed to query tasks from the task processor.</p>
+            <p class="Body">The following error message is an example of a message that can be found in the AgentTaskWS.frslog and the ClientTransportProcessorWs.frslog files:</p>
+            <p class="Code">The message could not be dispatched because the service at the endpoint address 'net.tcp://sql-1:5000/MessageSender/EventSender.svc' is unavailable for the protocol of the address</p>
+            <p class="Body"><span class="Bold">Cause</span>: The net.tcp.web service is not working.</p>
+            <p class="Body"><span class="Bold">Solution</span>: Remove and reinstall the WCF service, by following these steps:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the Server Manager and start the <span class="window_name">Remove Roles and Features</span> wizard.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="window_name">Features</span> tab, expand <span class="Bold">.NET FrameWork 4.5 Features</span>.  </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Uncheck <span class="Bold">WCF Services</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Remove</span>.</td>
+                </tr>
+            </table>
+            <p class="Body">After the feature is removed, add it back using the <span class="window_name">Add Roles and Features</span> wizard and following the prompts.</p>
+            <h4 class="subheading">Log Failed Message </h4>
+            <p class="Body">When the server fails to process a message, it is discarded. The <span class="window_name">Log Failed Message</span> setting allows you change the default and to capture failed messages. Your <span class="notranslate"><b>HEAT</b></span> login must have administrator privileges to use this feature. Turn this setting on if the server logs indicate that a message cannot be processed. <span class="FRS_VARSCompany">FrontRange</span> uses the generated log files to troubleshoot the problem.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the <span class="notranslate"><b>HEAT</b></span>&#160;Configuration Database (ConfigDB) and open your tenant workspace.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Check <span class="Bold">Log failed IM message</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span> to save the change. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Log out of the ConfigDB and log into <span class="notranslate"><b>HEAT</b></span>&#160;.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">More…</span> then search for and open the <span class="window_name">Integration Log</span> workspace.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Group by log type and select <span class="Bold">LogType: Error</span> to see the list of messages. The same error message for a single machine is not saved multiple times.  </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click a message to open and view it, or to download the attached file. <span class="FRS_VARSCompany">FrontRange</span> may use these files to assist in resolving the issue.  </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">You can also access the messages from the integration log, by doing the following:  </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Click <span class="Bold">Configure Application</span>. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">In the left pane, select <span class="Bold">Monitor &gt; Application logs &gt; Integration Log</span>. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">Click to open the pane.</td>
+                </tr>
+            </table>
+            <h4 class="subheading"> Gateway Errors</h4>
+            <p class="Body">If a gateway task does not complete successfully, do the following:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">Scan Active Directory</span> or <span class="Bold">Deploy Settings</span> to create an agent task record that can be seen under the <span class="window_name">Agent Tasks</span> tab.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the task to display information about why the task failed. An example of a failed task is if  the RPC server was available or, if access was denied (a password issue).</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Correct any issues as needed.</td>
+                </tr>
+            </table>
+            <h4 class="subheading">Client Machine Errors</h4>
+            <p class="Body">If the client is no longer sending data, check the following:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Ensure that the machine on which the MDI&#160;client is running is turned on and functional.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the CI workspace, check whether the agent status of the machine is in suspended mode. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">If it is, select the machine and click <span class="Bold">Resume Client Agent</span> from the taskbar. </td>
+                </tr>
+            </table>
+            <h4 class="subheading">MDI Troubleshooting</h4>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Ensure that the MDI service is started.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">	Inspect the file called MDIServiceHost.exe.config. By default, it should be located at: ~\MDIServiceHost. Ensure that the <span class="window_name">MDIServiceBaseAddress</span> is correctly set to: https://&lt;<em>your_registered_domain</em>&gt;:8734/MDM.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">For SSL port binding, follow the steps under <a href="mdi_deploy.htm" class="MCXref xref">Deploying the Mobile Device Inventory (MDI) Service </a>, in <a href="mdi_deploy.htm#Connect_to_MDI_Service" class="MCXref xref">MDI Service SSL Port Binding </a>.  </td>
+                </tr>
+            </table>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="fixedwidth">.netsh http show sslcert</span> command displays the SSL certificate binding information. Ensure that  ports 8734 and 4423 are bound to it.					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Check the port binding and ensure that port 8734 is actively listened to by running the following command in a command window: <span class="fixedwidth">netstat -ano | find "8734"</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Temporarily turn off the firewall on the server to rule it out as a cause.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Ensure that you are using the correct SSL&#160;certificate for the domain. Identify and install the correct certificate.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Ensure that you are using the correct root CA certificate name (available from the Certificate Authority provider) when creating the enroll.mobileconfig file. If not, regenerate the file following the steps in the <a href="mdm_apns_tool.htm" class="MCXref xref">Using the APNS Certificate Tool </a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Ensure that the server hosting the MDI service is not blocked from accessing the following services at ports 2195 and 2196:</td>
+                </tr>
+            </table>
+            <blockquote>
+                <ul>
+                    <li value="1">gateway.push.apple.com</li>
+                    <li value="2">gateway.sandbox.push.apple.com</li>
+                    <li value="3">feedback.push.apple.com</li>
+                    <li value="4">feedback.sandbox.push.apple.com</li>
+                </ul>
+            </blockquote>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Run the following command from a command window to test the connection. A blank screen confirms that the connection is successful:</td>
+                </tr>
+            </table>
+            <p class="Code">telnet gateway.push.apple.com 2195</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Rerun the telnet command with the appropriate port numbers for each of the addresses listed above, to check that you are able to connect. </td>
+                </tr>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_deploy.htm">Deploying the MDI Service</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="mdm_apns_tool.htm">APNS Certificate Tool</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

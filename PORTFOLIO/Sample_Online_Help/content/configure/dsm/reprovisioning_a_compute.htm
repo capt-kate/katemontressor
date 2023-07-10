@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Catalog|Service Requests|Creating a Service Request|Creating Software and Provisioning Service Requests">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Reprovisioning a Computer</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dsm/reprovisioning_a_compute.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../servicedesk/using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicecatalog/service_catalog.htm">Service Catalog</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicerequest/service_requests_.htm">Service Requests</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicerequest/creating_a_service_reque.htm">Creating a Service Request</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="installing_service_requests.htm">Creating Software and Provisioning Service Requests</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Reprovisioning a Computer</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor256"></a><a name="dsm_192254611_1320921"></a>Reprovisioning a Computer</h1>
+            <p class="Body">You can only reprovision a computer that already has an operating system set installed. </p>
+            <p class="Body">When you reprovision the computer, the same type of operating system set that was originally installed is uninstalled and then reinstalled. Any software packages that are already installed on the computer are reinstalled automatically after the operating system set is installed.</p>
+            <p class="Body">You can reprovision a computer in one of the following ways:</p>
+            <ul>
+                <li value="1">By creating a service request to reprovision.</li>
+                <li value="2">From the managed CI record.</li>
+            </ul>
+            <p>&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a Computer Reprovision Service Request</a><a name="dsm_192254611_1320938"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> as a Service Desk Analyst and open the <span class="window_name">Service Request</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New Service Request</span>. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Customer</span> field, enter the customer name. The service requests published to the organizational unit of the customer appear under the <span class="window_name">Parameters</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">From the <span class="window_name">Parameters</span> tab, select <span class="Bold">Reprovision Computer Request</span>.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If <span class="window_name">Reprovision Computer Request</span> is not on the list, the customer does not have this option available.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">In the <span class="window_name">Requester Details</span> section, add the following information:</td>
+                        </tr>
+                    </table>
+                    <blockquote>
+                        <ul>
+                            <li value="1"><b>Department</b>: The department that the requester is in. The choice that you make here constrains the drop-down list in the <span class="window_name">Recipient</span> field.</li>
+                            <li value="2"><b>Requester Name</b>: The name of the person who will receive the computer. When you select a requester, the <span class="window_name">Email</span> and <span class="window_name">Requester Work Phone</span> fields fill in automatically.</li>
+                        </ul>
+                    </blockquote>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">In the <span class="window_name">Hardware Details</span> section, add the following information:</td>
+                        </tr>
+                    </table>
+                    <blockquote>
+                        <ul>
+                            <li value="1"><b>Computer to Reprovision</b>: The general type of computer to reprovision. The hardware type is filled in from the hardware profile configuration record.</li>
+                            <li value="2"><b>Reason for Reprovisioning</b>: A reason for this request.</li>
+                        </ul>
+                    </blockquote>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Open the <span class="window_name">Computer Provisioning Task</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">From the list view, select the record and open it.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Initiate Provisioning Task</span> to start the reprovisioning.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Reprovision a Computer from the CI Record</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the CI tab to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Search for the computer  to reprovision.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select and open the computer record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the <span class="window_name">DSM Managed Installation</span> tab. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">A list of installation states for each DSM-managed software item displays.</p>
+                    <p class="Body_indent">If you expect a software item to display and it does not, go to the action menu, select <span class="Bold">No Category &gt; Refresh Install States</span> to update the list to show software that was deployed on the target computer manually from the DSM system.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Reprovision &lt;</span><span class="Emphasis">type of computer</span><span class="Bold">&gt;</span> from the toolbar or go to the action menu and select <span class="Bold">No Category &gt; Create Task toReprovision &lt;</span><span class="Emphasis">type of computer</span><span class="Bold">&gt;</span>. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">A computer provisioning task initiates. You can open the <span class="window_name">Computer Provisioning Task</span> workspace to view the reprovision action that you initiated.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Click <span class="Bold">Refresh</span>  to monitor changes to the list of installed software items.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save.</span></td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The managed installed status updates to installation pending.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Managed_Installed_Status"><a name="Managed_Installed_Status" data-mc-generated-bookmark="ListOf"></a>Managed Installed Status</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_pending.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="543" data-mc-height="177" src="../../resources/images/dsm_reprovisioning_pending_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Track Progress of the Reprovisioning Task</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can monitor the status of the reprovisioning task from the service request record, from the CI record, or from the <span class="window_name">Computer Provisioning Task</span> tab.</p>
+                    <h4 class="subheading">From the Service Request Record</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the service request record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the drop-down menu and select <span class="Bold">Workflow Instance</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">View the <span class="window_name">Status</span> field.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Status_Field"><a name="Status_Field" data-mc-generated-bookmark="ListOf"></a>Status Field</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_sr_workflowinstance.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="465" data-mc-height="137" src="../../resources/images/dsm_reprovisioning_sr_workflowinstance_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select an instance and click <span class="Bold">Go to</span> and then click <span class="Bold">View Instance</span> to view where the workflow is at.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="View_Instance"><a name="View_Instance" data-mc-generated-bookmark="ListOf"></a>View Instance</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisoning_workflow_instance.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="526" data-mc-height="137" src="../../resources/images/dsm_reprovisoning_workflow_instance_thumb_0_45.png" style="width: 508.7991px;height: 120.959px;" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">After the task is completed, the status updates to completed and the service request status updates to fulfilled.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Task_Completed"><a name="Task_Completed" data-mc-generated-bookmark="ListOf"></a>Task Completed</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_sr_completed.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="464" data-mc-height="160" src="../../resources/images/dsm_reprovisioning_sr_completed_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">From the Computer Provisioning Task Tab</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Computer Provisioning Task</span> tab to monitor the status of the task and workflow:</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Computer_Provisioning_Task"><a name="Computer_Provisioning_Task" data-mc-generated-bookmark="ListOf"></a>Computer Provisioning Task</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_taskpending_listview.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="575" data-mc-height="102" src="../../resources/images/dsm_reprovisioning_taskpending_listview_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the list view, select the record and open it. The <span class="window_name">DSM Status</span> field displays the status from the target computer. The DSM status is pending while the operating system set and any additional software packages are being installed.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="DSM&#160;Status"><a name="DSM&#160;Status" data-mc-generated-bookmark="ListOf"></a>DSM&#160;Status</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_task_pending.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="457" data-mc-height="269" src="../../resources/images/dsm_reprovisioning_task_pending_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">DSM status is completed after the operating system set and any additional software packages are reinstalled.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Completed_DSM&#160;Status"><a name="Completed_DSM&#160;Status" data-mc-generated-bookmark="ListOf"></a>Completed DSM&#160;Status</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_task_complete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="460" data-mc-height="272" src="../../resources/images/dsm_reprovisioning_task_complete_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">From the CI Record</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the CI tab to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the CI record from where you started the reprovisioning task or which is in the <span class="window_name">CI LInk</span> field of the <span class="window_name">Computer Provisioning Task</span> record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="window_name">DSM Managed Installation</span> tab. A list of the DSM software that was defined with the provisioning task appears. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">View the <span class="window_name">Managed Install Status</span> column.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Managed_Install_Status_Column"><a name="Managed_Install_Status_Column" data-mc-generated-bookmark="ListOf"></a>Managed Install Status Column</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisioning_pending1.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="543" data-mc-height="177" src="../../resources/images/dsm_reprovisioning_pending1_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">For more details, select a record and click <span class="Bold">Go to</span> to open the <span class="window_name">View Installation State</span> window. When the task is completed, the <span class="window_name">Managed Install Status</span> field updates to installation succeeded.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="View_Installation_State_Window"><a name="View_Installation_State_Window" data-mc-generated-bookmark="ListOf"></a>View Installation State Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_reprovisoning_complete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="535" data-mc-height="162" src="../../resources/images/dsm_reprovisoning_complete_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The computer must be restarted manually for the operating system set installation to initiate.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm.htm">Configuring  DSM</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm_envi.htm">Configuring the DSM Environment</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="dsm_sw.htm">DSM</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="dsm_features_in_.htm">DSM Features</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="installing_incidents.htm">Installing and Provisioning Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="installing_service_requests.htm">Creating Software and Provisioning Service Requests</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="reporting_an_issue_to_in.htm">Reporting an issue to install software or reprovision computer</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_cis_in_the_manag.htm">Viewing CIs in the Managed Software Workspace</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="performing_ongoing_maint.htm">Performing Ongoing Maintenance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="dsm_integration.htm">DSM Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="fields_collected_by_agent_and_agentless_scans.htm">Fields Collected by Agent and Agentless Scans</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

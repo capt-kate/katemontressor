@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>State Transitions Reference</title>
+        <link href="../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#reference/state_transitions_ref.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">State Transitions Reference</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor882"></a>State Transitions Reference</h1>
+            <p class="Body">This section contains the default state transitions for the major business objects.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Incident State Transitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Your administrator can create additional statuses to meet your the business needs of your organization.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>From state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>To state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>When ...</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Logged</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The incident is submitted from the Self Service or from an email in a logged state and is set to active when the Service Desk Analyst opens and saves the incident.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>A vendor is assigned to the incident.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Incident identified as a problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Information is needed from the customer, based on the service desk analysis.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Information is needed from the customer, based on the analysis of the vendor.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The vendor is assigned the incident based on additional information from the customer.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The vendor identifies the incident as a problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The vendor resolves the incident.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Additional information from the customer identifies the incident as a problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Additional information from the customer resolved the incident.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The incident is resolved; typically a first-call resolution.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The problem is resolved.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>The resolution is successful.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Problem State Transitions</a><a name="2Default"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>From state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>To state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>When ...</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1"> </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Logged</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The problem is initially submitted.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Logged</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Investigation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The assigned owner has started investigating the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Logged</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The Problem Manager cancels the logged problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Investigation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Identified</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The investigation has been completed and remedial measures or a workaround has been identified.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Investigation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The Problem Manager cancels the problem under investigation.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Identified </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The problem is identified as a new problem and is ready to be worked on.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Identified</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The Problem Manager cancels the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The fix for the problem is due from a vendor.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for resource</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The fix for the problem is on hold, pending a replacement item or an individual or team to perform certain actions.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The Problem Manager cancels the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for resource</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The third party, when asked to perform certain services, might need a replacement item or an individual or team to perform certain actions.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for resource</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The resource becomes available and the third party completes the purchase or installation, as might be needed.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The action from the third party completes the fix.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for resource</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The allocated resource is commissioned and completes the fix.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The immediate solution is identified and communicated from a diagnosis.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Resolved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>The fix is verified and the problem is closed, or the problem is auto-closed from another module, such as Release Management or CMDB, irrespective of the current state of the problem.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Release State Transitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The administrator can create additional statuses to meet the business needs of your organization.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>From state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>To state</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>When ...</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1"> </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Draft</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release is in draft state. The user creating the release in is gathering information to add to the release record.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Draft</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Requested</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Change Manager updates a draft release to requested state when the release record is ready to be worked on.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Requested</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release Manager accepts the release request and starts working on the release.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Waiting</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release is on hold.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release is completed, and has been validated by all linked milestones being completed.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Draft</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Change Manager or Release Manager cancels the draft release.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Requested</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release is canceled.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Release is canceled.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Waiting</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Canceled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Release is canceled.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Knowledge State Transitions</a><a name="KMDefault"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>State</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Notifications</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Roles</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Draft</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Articles are set to draft state when initially created. Articles in draft state are not searchable by Self Service users, but can be searched by other users.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Knowledge Manager when article is saved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">Knowledge Manager</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>In Review</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Articles are set to in review when the owner is ready to have it reviewed. Articles in this state are not searchable by Self Service users, but can be searched by other users.</p>
+                                    <p>In review starts the knowledge approval workflow.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>No notifications</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">Knowledge Manager</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Reviewed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Article has been approved.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Published</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Set to this state when the reviewed article is updated to published status, which means that it is available on Self Service. </p>
+                                    <p>The article cannot be updated, except by users having Knowledge Manager and Knowledge Engineer permissions.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p class="list_table">Knowledge Manager</p>
+                                    <p class="list_table">Article Owner</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Expired</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The article is obsolete but can be searched for by internal users.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Archived</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The article is no longer part of the knowledge repository. It is searchable only by the Knowledge Manager.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Rejected</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>The article has been rejected after review.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p class="list_table">Article Owner</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Knowledge Manager</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Task State Transitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"><span class="Emphasis">Default State Transitions for Tasks</span>
+                    </p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/task_wrkflw.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="627" data-mc-height="334" src="../resources/images/task_wrkflw_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>State</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Accept</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The user has accepted the task and takes ownership.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Cancel</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task has been canceled and is no longer valid.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Complete</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task has been successfully finished.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Continue</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task is moved out of Waiting and the clock continues running. The task is automatically assigned to the user who clicks <span class="Bold">Continue</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Logged</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task has been added to the log file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Reassign</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task has been forwarded to a new owner.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Rejected</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The task has been refused by the owner and is no longer valid.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Waiting</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>The owner has placed the task on hold, waiting for further action or information. The clock is placed on hold.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Service Request Transitions</a><a name="Default_Service_Request_Transitions"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Following shows the default state transitions for service requests.</p>
+                    <table style="mc-table-style: url('../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" style="width: 917px;" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>State</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Roles</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p class="list_table">Initial state Service Desk Analyst opens the service request form from <span class="notranslate"><b>HEAT</b></span> to create a new service request on behalf of a customer.</p>
+                                    <p class="list_table">When a Service Desk Analyst opens and updates the service request created by a customer in Self Service.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Approval Rejected</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The service request rejected by the approver set up for the request offering.</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Approved</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The service request approved by the approver set up for the request offering.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Canceled</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The service request is terminated without completion.</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The service request is closed after a certain amount of time, or it is closed by the user after it has been fulfilled.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Draft</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The record is saved, but no workflow is initiated and no notifications are sent. Self Service users set this with the <span class="window_name">Save for Later</span> button.</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>SDA</p>
+                                    <p>SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Fulfilled</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Updated by the Service Desk Analyst when the request has been met.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Submitted</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The service request is created in Self Service.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Waiting for 3rd party</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>The service request is on hold, pending some action from a vendor or another third party.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Waiting for customer</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>The service request is on hold, pending information or some action from the customer.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p class="list_table">SDA</p>
+                                    <p class="list_table">SDM</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../overview/change_management.htm">Change Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/configuration_management.htm">Configuration Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/incident_management.htm">Incident Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/inventory_management.htm">Inventory Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/knowledge_management.htm">Knowledge Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/problem_management.htm">Problem Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/release_management.htm">Release Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../overview/service_level_management.htm">Service Level Management</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

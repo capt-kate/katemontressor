@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data|Configuring Data Integration|Data Import">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SCCM Configuration</title>
+        <link href="../../resources/tablestyles/parametertable-notbold.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/sccm_configuration.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration_configu.htm">Configuring Data Integration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_import.htm">Data Import</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">SCCM Configuration</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor438"></a>SCCM Configuration</h1>
+            <p class="Body">You can import data from your Microsoft System Center Configuration Manager (SCCM) database into a <span class="notranslate"><b>HEAT</b></span> Configuration Management Database (CMDB). This is a one-way import of data. Once you have mapped the fields, you can import data on a scheduled basis.</p>
+            <p class="Body">The CMDB is a database that stores configuration records of configuration items. In <span class="notranslate"><b>HEAT</b></span>, all CI records are stored in the <span class="notranslate"><b>HEAT</b></span> database. A configuration item is an asset, service component, or other item that is controlled by configuration management. Inventory management manages the service assets and CIs in order to support the other service management processes.</p>
+            <h4 class="subheading">How the SCCM Integration Works</h4>
+            <p class="Body">When you create the connection between the databases and map the fields, the <span class="notranslate"><b>HEAT</b></span> Integration wizard automatically imports the data from the SCCM database into the <span class="notranslate"><b>HEAT</b></span> database. This import operation can be scheduled to occur periodically.</p>
+            <ul>
+                <li value="1">Each time the data is imported, it is automatically mapped directly into <span class="notranslate"><b>HEAT</b></span>.</li>
+                <li value="2">No other plug-ins or applications are required.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Data Imported by the <span class="notranslate"><b>HEAT</b></span> Database</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">By default, CMDB imports the following information from SCCM data objects. The system is flexible, however, and you can define other objects.</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable-notbold.css');" class="TableStyle-ParameterTable-notBold" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-notBold-Column-Column2" style="width: 291px;" />
+                        <col class="TableStyle-ParameterTable-notBold-Column-Column2" style="width: 137px;" />
+                        <col class="TableStyle-ParameterTable-notBold-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-notBold-Head-Header1">
+                                <th class="TableStyle-ParameterTable-notBold-HeadF-Column2-Header1">Source SCCM</th>
+                                <th class="TableStyle-ParameterTable-notBold-HeadF-Column2-Header1" style="text-align: center;">Method</th>
+                                <th class="TableStyle-ParameterTable-notBold-HeadD-Column2-Header1">Target </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">DateTimeNow</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Audit TimeStamp</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">SCCM</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property.ScanMethod</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.AgentID</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.AgentVersion</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">
+                                    <p>Computer_System_DATA.MachineID</p>
+                                    <p>Computer_System_DATA.InstanceKey</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">AssetIdentifier</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property.ClientID</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.Description0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.DeviceDescription</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">
+                                    <p>Computer_System_DATA.Domain0</p>
+                                    <p>Computer_System_DATA.Name0</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">Concat</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property.FullyQualifiedDomainName</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.Domain0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.DomainName</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Computer_System_DATA.Name0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property.HostName</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">
+                                    <p>Network_DATA.IPAddress0</p>
+                                    <p>Network_DATA.IPEnabled00</p>
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">Select</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.IPaddress</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">
+                                    <p>Network_Data.IPSubnet0</p>
+                                    <p>Network_Data.IPEnabled00</p>
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">Select</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property .SubnetMask</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">
+                                    <p>Network_Data.IPSubnet0</p>
+                                    <p>Network_Data.IPEnabled00</p>
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">Select</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.MACaddress</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">PC_BIOS_DATA.SerialNumber00</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Identity Property.SerialNumber</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.UserName0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Identity Property.UserName</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">System_Enclosure_DATA.ChassisTypes00</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.ChassisType</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Physical</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.ExecutionEnvironment</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Computer_System_DATA.Manufacturer00</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.Manufacturer</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.Model0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.Model</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Operating_System_DATA.Caption0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.OperatingSystem</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Operating_System_DATA.Caption0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.OSEdition</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Operating_System_DATA.Version0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.MajorVersion</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Operating_System_DATA.Version0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.MinorVersion</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2" style="height: 28px;">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Operating_System_DATA.BuildNumber0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.BuildNumber</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">
+                                    <p>Processor_DATA.Name0</p>
+                                    <p>Processor_DATA.Status0</p>
+                                    <p>OK</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">Select</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.CPUArchitecture</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">
+                                    <p>Computer_System_DATA.Roles0</p>
+                                    <p>LM_Server</p>
+                                    <p>Server</p>
+                                    <p>Server_NT</p>
+                                    <p>Server</p>
+                                    <p>SQLServer</p>
+                                    <p>Server</p>
+                                    <p>LM_Workstation</p>
+                                    <p>Workstation</p>
+                                    <p>Workstation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">CIType</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.CIType</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Logical_Disk_DATA.Size0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">Sum</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.TotalDiskSpace</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Logical_Disk_DATA.FreeSpace0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">Sum</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.FreeDiskSpace</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Computer_System_DATA.NumberOfProcessors</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">ComputerSystem Property.CPUCount</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Operating_System_DATA.CSDVersion0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">ComputerSystem Property.ServicePack</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Network_DATA.InstanceKey</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Network_DATA.IPAddress0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Network_DATA.IPEnabled00</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Network_DATA.MACAddress0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Network_DATA.IPSubnet0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Logical_Disk_DATA.InstanceKey</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Logical_Disk_DATA.DeviceID0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Logical_Disk_DATA.Description0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Logical_Disk_DATA.FileSystem0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Logical_Disk_DATA.FreeSpace0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Logical_Disk_DATA.Size0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">PC_BIOS_DATA.InstanceKey</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">PC_BIOS_DATA.ReleaseDate0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">PC_BIOS_DATA.Manufacturer0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">PC_BIOS_DATA.Version0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">Processor_DATA.InstanceKey</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">Processor_DATA.Name0</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">Category Component Property-Hardware.Network</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyC-Column2-Body2">Processor_DATA.NormSpeed00</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyC-Column2-Body2" style="text-align: center;">--&gt;</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyA-Column2-Body2">Category Component Property-Hardware.Network</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="mc-table-style: url('../../resources/tablestyles/note.css');width: 80%;" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>Ask FrontRange Solutions Professional Services to help plan your SCCM integration.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting Up the SCCM Integration</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="mc-table-style: url('../../resources/tablestyles/note.css');width: 80%;" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>SCCM 2007 is currently supported. The data flow from SCCM to <span class="notranslate"><b>HEAT</b></span> is unidirectional.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">The connection from the integration server can be either through your VPN or through the internet with or without SSL encryption for the SCCM database server connection.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                        <col class="TableStyle-Note_Warning-Column-Column1" />
+                        <col class="TableStyle-Note_Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">
+                                    <p>Before attempting to make the connection, ensure the following:</p>
+                                    <ul class="list_table">
+                                        <li value="1">SCCM is running</li>
+                                        <li value="2">Open your firewall for the Microsoft SQL server connection, for either Internet or VPN. </li>
+                                    </ul>
+                                    <p> The default port for the Microsoft SQL server connection is <span class="Bold">TCP/IP port 1433</span>. However, you can set up any TCP/IP port.</p>
+                                    <p>To enable encrypted connections to the SQL server, see Microsoft's website at <a href="http://msdn.microsoft.com/en-us/library/ms189067%28v=sql.105%29.aspx">http://msdn.microsoft.com/en-us/library/ms189067%28v=sql.105%29.aspx</a>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/caution48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+                                    <p><span class="Bold">You must have the following before proceeding:</span>
+                                    </p>
+                                    <ul class="list_table">
+                                        <li value="1">Network system administration experience</li>
+                                        <li value="2">SCCM experience</li>
+                                        <li value="3">Knowledge of FrontRange <span class="notranslate"><b>HEAT</b></span> Inventory Management Asset Data Mapping</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">Enter information into the fields. 
+Required information is indicated by a red asterisk (<span style="color: #ff0000;" class="fixedwidth">*</span>).
+</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="123px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="537px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Connection Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique descriptive name for the connection. You can accept the default name.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Server Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The server name or IP address of the SCCM server.  You can configure the server name to connect to the port that you are going to use for the Microsoft SQL Server connection by using the Microsoft SQL server connection string format for data source. For example, if you want to use TCP/IP port 1546 and the server name is 10.28.186.81, in the <span class="window_name">Server Name</span> field set the value to <span class="fixedwidth">tcp:10.28.186.81, 1546</span>. If you are using a database instance, with the default port 1546, then enter the server name as <span class="fixedwidth">tcp:10.28.186.81\DBInstance, 1433</span>. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">SSL Encryption</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Specifies if the connection is SSL encrypted.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Database Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The database name. Use the default name SCCM.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Login</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The login. Use your Microsoft SQL server authentication, and not your Windows authentication.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Password</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The password. You should also have the db_datareader permissions for the database.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Testing the Connection</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Click <span class="Bold">Test Connection</span>.</p>
+                    <p class="Body_indent">If your connection is set up correctly, a <span class="Bold">Success</span> confirmation message appears. Notice that the connection date and time are updated.</p>
+                    <p class="Body_indent">If the connection fails, do not click <span class="Bold">Next</span> until <span class="window_name">Test Connection</span> shows the <span class="window_name">Success</span> message. The connection could fail because of various reasons such as incorrect authentication, restricted or no FTP access, or restricted file permissions.</p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Next</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Object Mapping</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Enter information into the fields.</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field Name</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Mapping</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The default mapping. Select the default or select <span class="Bold">Add New</span> from the drop-down list.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The mapping name. Use the default name, modify the name, or enter a new name for the mapping. To modify the existing name or add a new name, click <span class="Bold">Save as New</span>. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Max file size</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Read only. Shows the maximum file size that you can import. The maximum file size is 50 MB.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Source File Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Read only. Taken from the value in the <span class="window_name">File Name</span> field.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Source Mapping Objects</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The source mapping objects. Select all objects that should be included. Ensure that Computer_System_Data is selected.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Batch size</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Specifies the number of records that should be retrieved each time the database is queried. The default is 200. Do not make this number too small as it could cause excessive database activity.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Max size</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Specifies the total number of records to process for any given job.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Root Table</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The table that contains records that uniquely identify the computer systems in your organization. Keep the default as Computer_System_DATA. This is the top-level object, which is equivalent to the configuration item business object in the <span class="notranslate"><b>HEAT</b></span> CMDB.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Unique Key</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The field that contains the key that uniquely identifies a computer record. This is essentially the primary key, which can be used to retrieve additional information about a computer. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Change-Time column</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>The date and time when a record is updated. Select <span class="Bold">TimeKey</span>. </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Next</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Filter Manager</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To view the column values of a SCCM database schema, you need to run a Microsoft SQL query. </p>
+                    <p class="Body">For example, to get the values for the <span class="window_name">Roles0</span> column from the  <span class="window_name">Computer_System_Data.Roles0</span> root table, enter the query:</p>
+                    <p class="Code">Select distinct Computer_System_DATA.Roles0, *from Computer_System_DATA</p>
+                    <p class="Body">The following results appear:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Mapping_Results"><a name="Sample_Mapping_Results" data-mc-generated-bookmark="ListOf"></a>Sample Mapping Results</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sccm_sqlresults.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="263" data-mc-height="263" src="../../resources/images/sccm_sqlresults_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">Notice that in the default SCCM integration filter mappings, shown on the <span class="window_name">Filter Manager</span> page below, the root table column <span class="fixedwidth">Computer_System_DATA.Roles0</span> includes the following matching values:</p>
+                    <ul>
+                        <li value="1">Server_NT</li>
+                        <li value="2">SQLServer</li>
+                        <li value="3">LM_Server</li>
+                        <li value="4">LM_Workstation</li>
+                    </ul>
+                    <p class="Body">In this instance, Computer_System_DATA is the root table for which you create filters, if necessary. For this reason, filters can be defined only on the fields of the SCCM table Computer_System_DATA.</p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Create Filter</span>. The filter fields appear.</li>
+                    </ul>
+                    <p class="Body_indent">If the <span class="window_name">Create Filter</span> button does not show, delete the default mappings on the previous page. </p>
+                    <ul>
+                        <li value="1">Select the condition you want and enter the fields and operators into the form.</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Filter_Conditions"><a name="Sample_Filter_Conditions" data-mc-generated-bookmark="ListOf"></a>Sample Filter Conditions</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sccm_config5.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="627" data-mc-height="175" src="../../resources/images/sccm_config5_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Add</span> to add another row.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Field Mapping</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <ul>
+                        <li value="1">After setting up the filters for the table rows, map the fields and transformation.</li>
+                    </ul>
+                    <p class="Body_indent">The first five mapped fields are required. Do not delete these.</p>
+                    <ul>
+                        <li value="1">If appropriate, select a transformation function from the middle column or leave it as is. Select the field names to map between SCCM and <span class="notranslate"><b>HEAT</b></span>. </li>
+                    </ul>
+                    <p class="Body_indent">The left column shows the fields from the root table column <span class="fixedwidth">Computer_System_DATA.Roles0</span>, which was selected on the previous page. The right column shows the asset identity of the matching fields in <span class="notranslate"><b>HEAT</b></span>.</p>
+                    <p class="Body_indent">A working knowledge of the SCCM fields is assumed. See <a href="about_field_mapping.htm" class="MCXref xref">Field Mapping</a></p>
+                </div>
+            </div>
+            <p class="Body">
+           See  <a href="schedule_manager.htm" class="MCXref xref">Schedule Manager</a>.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="winrm_setup.htm">WinRM Setup</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="about_hierarchical_xml_format.htm">About Hierarchical XML Format</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

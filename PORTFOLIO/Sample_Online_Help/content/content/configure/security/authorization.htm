@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Security">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Authorization</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/security/authorization.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="application_security.htm">Security</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Authorization</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor444"></a>Authorization</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> employs <a name="kanchor445"></a>role-based security to add security restrictions at the following levels:</p>
+            <ul>
+                <li value="1"><span class="Bold">Business Object:</span> You can restrict the access for a user to entire business objects, individual fields, and relationships.</li>
+                <li value="2"><span class="Bold">Form</span>: You can combine business rules and field-level permissions to help restrict the visibility of certain fields.</li>
+                <li value="3"><span class="Bold">Automation Tools:</span> You can restrict the ability of a user to share quick actions, saved searches, and dashboards.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Role-Based Security</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">A role consists of function-specific application displays. When you add users to <span class="notranslate"><b>HEAT</b></span>, you assign them to one or more roles. Each role is organized as a set of permissions organized by common user functions. At login, the system prompts the user to select a role for this session, which governs access to <span class="notranslate"><b>HEAT</b></span> modules and features (security rights) and access to business objects and fields (business object rights).</p>
+                    <p class="Body"><span class="notranslate"><b>HEAT</b></span> contains a default set of roles, including administrator, Service Desk Analyst, and various manager roles. You can customize these roles or create entirely new ones.</p>
+                    <p class="Body">For example, a user logging into <span class="notranslate"><b>HEAT</b></span> with the Change Manager role might view a layout of the change form that differs from the change form seen by a technician. &#160;The Change Manager may also have access to dashboards displaying change request data recorded by the system over the last day and trending information for the week. You can link a role to a specific device, letting users log on to view dashboard data for those machines.</p>
+                    <p class="Body">Another item to manage within the user interfaces area is the ability to grant roles. While there may be value in granting a manager the ability to grant roles with edit access to a subordinate, that same manager probably should not be able to grant access to the entire Configuration Console.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Secure Business Objects</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Business objects are designed with a set of default permissions for the following functions:</p>
+                    <ul>
+                        <li value="1"><span class="Bold">View</span>: View data.</li>
+                        <li value="2"><span class="Bold">Add</span>: Add data.</li>
+                        <li value="3"><span class="Bold">Edit</span>: Manipulate data.</li>
+                        <li value="4"><span class="Bold">Delete</span>: Delete data.</li>
+                    </ul>
+                    <p class="Body">From the Configuration Console under <span class="Bold">Configure &gt;&#160;Users and Permissions &gt; Roles</span>, you can create roles governing access to entire business objects. These are displayed as top-level tabs (such as incident, Problem, change, etc.) at the top of the user interface. See <a href="../roles/roles.htm" class="MCXref xref">About Roles</a>.</p>
+                    <p class="Body">When granting access to a business object, be sure to grant access to its associated child objects. When a role has access to a child object, clicking <span class="Bold">Go To</span> for a child record opens the associated child record in its own user interface. If not, the system does not open the object. You do not have to make the visible, only accessible.</p>
+                    <p class="Body">When designing grids and layouts, be aware of role access to user interfaces. For example, if a role has access to a user interface, double-clicking on a child record in a user interface grid opens the associated user interface. If not, the record opens in a pop-up window.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Secure Business Object Fields</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">As you construct a role, use the <span class="window_name">Object Permissions</span> page to add levels of granularity for the role. You can set access rights at the field level by expanding a selected business object and adjusting the field permission set. To get to the <span class="window_name">Object Permissions</span> page, from the Configuration&#160;Console, select <span class="Bold">Configure &gt;&#160;Users and Permissions &gt;&#160;Roles and Permissions</span>. Double-click on a role name to bring up the <span class="window_name">Role Details</span> page. Click <span class="Bold">Object Permissions</span> to display the <span class="window_name">Object&#160;Permissions</span> page.</p>
+                    <p class="Body">When working with fields that involve pick lists, the contents of the pick list are defined, along with any restrictions, on the <span class="window_name">Pick Lists</span> page.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Apply Advanced Security Features</a><a name="Applying_Advanced_Security_Features"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">By clicking <span class="Bold">Edit</span> for a selected business object on the <span class="window_name">Object Permissions</span> page, you can apply even more elaborate data-segregation constraints to do the following:</p>
+                    <ul>
+                        <li value="1">Object links to the Profile.Employee (employee profile) object.  For example, while a Service Desk Analyst can view all open incidents, you can use the <span class="window_name">Employee</span> form (Profile.Employee) to assign a new employee to a particular team, such as Service Desk Analyst US which can only view incidents opened by customers located in the United States. You also can create a definition to make an incident view-only upon being closed by a Service Desk Analyst.</li>
+                        <li value="2">Linked Profile.Employee object fields.</li>
+                        <li value="3">Relationships linking the object to Profile.Employee (such as the Change Approval Board).</li>
+                        <li value="4">Object links to objects or hierarchies that are also related to Profile.Employee. <span class="notranslate"><b>HEAT</b></span> supports hierarchy structures for:<ul><li value="1">Organization unit</li><li value="2">Team/department</li><li value="3">Geography</li><li value="4">Cost center</li></ul></li>
+                    </ul>
+                    <h4 class="subheading">Use Hierarchical Structure</h4>
+                    <p class="Body">Use the hierarchy structure to manage permissions between tiers. For example, a member of a Service Desk Manager management-level tier could be allowed to view the incidents assigned to all Service Desk Analysts assigned to a lower tier.</p>
+                    <p class="Body">If you are a member of more than one hierarchy, you have access to the most open set of permissions. For example, if you are a member of two teams, one with read-only access to a business object field and one with write access to the same field, you are granted write access to the field.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Secure Forms</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When constructing a form, you can combine business rules and field restrictions to help manage a workflow. For example, you can create a form that includes all of the fields in the change business object, but the fields viewed by a user are restricted based on the login roles. This is the simplest way to secure a form.</p>
+                    <p class="Body">An example of using a business rule to secure a form would be to construct a business rule that prevents a Service Desk Analyst from editing a change request status once that request has been submitted and is in process. The <span class="window_name">Status</span> field is rendered read-only on the request form. However, once the request has been processed and a change has been implemented, the field could be edited again, allowing the request to be closed.</p>
+                    <p class="Body">Field restrictions that have been applied in the user interface are also applied to forms. For example, if you allow a pick list such as <span class="window_name">Status</span> to be visible on an incident form, but not to be edited, the pick list remains view-only. This can interfere with successful completion of a workflow, as the status cannot be changed.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Secure Automation Tools</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Use the  <span class="window_name">Roles and Permissions</span> page to manage the sharing of productivity tools with other roles. By publishing permissions, you can define dashboards, quick actions, or saved searches within one role and share them with another role. See <a href="../roles/roles.htm" class="MCXref xref">About Roles</a>.</p>
+                    <p class="Body">These items also can be highly customized by the individual. Restricting such sharing can keep the application from becoming cluttered in places such as lists of available quick actions or saved searches. For example, a Service Desk Manager can have the ability (publish permission) to publish search results to Service Desk Analysts, allowing saved searches also to be accessed by the Service Desk Analysts.</p>
+                    <p class="Body">Use care when planning to add powerful tools to forms such as quick actions. When added to a toolbar, they can often be used to circumvent form-related restrictions or pick lists which are constrained to limit selections for items such as status based on the current status value.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="ldap_synchronization.htm">LDAP Synchronization</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="application_security.htm">Security</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="authentication.htm">Authentication</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="security_example.htm">Security Examples</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

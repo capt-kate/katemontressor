@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|String Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Decode</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/decode.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_string_functions.htm">String Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Decode</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="StringFunctions" data-mc-xref-target-name="Decode"><a name="Decode" data-mc-generated-bookmark="ListOf"></a><a name="kanchor821"></a>Decode </h2>
+            <p class="Body">Compares one expression to one or more other expressions. When the base expression matches a search expression, returns the corresponding result expression. When no match is found, returns the default expression when specified, or null when it is not. This function is similar to an if-then function.</p>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">decode(expr, search, result [, search , result]... [, default])</p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">No</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <p class="Body">This function must have at least four parameters, and can have an unlimited number of parameters.</p>
+            <table style="mc-table-style: url('../../resources/tablestyles/optionstable.css');width: 92%;" cellspacing="0" class="TableStyle-OptionsTable">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                        expr                   </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Expression to evaluate.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">search</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Text to match exactly with the search expression.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">result</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Value to return if the previous search text is matched.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">default</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">Value to return if no matches are found.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">Number value or text value.</p>
+            <h4 class="subheading">Example</h4>
+            <p class="Code">$(decode("Impact", "High", 1, "Medium", 2, "No Matches"))</p>
+            <p class="Body_indent">If the field called <span class="window_name">Impact</span> has the value <span class="window_name">High</span>, then this functions returns 1. If the field called <span class="window_name">Impact</span> has the value <span class="window_name">Medium</span>, then this function returns 2. If the field called <span class="window_name">Impact</span> has any other value, this function returns the text value "No Matches".</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="_string_functions.htm">String Functions</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="emptystring.htm">EmptyString</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="find.htm">Find</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="floattostr2.htm">FloatToStr2</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="len.htm">Len</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="substring.htm">Substring</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="tolowercase.htm">ToLowerCase</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="tostring.htm">ToString</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="touppercase.htm">ToUpperCase</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="trim.htm">Trim</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

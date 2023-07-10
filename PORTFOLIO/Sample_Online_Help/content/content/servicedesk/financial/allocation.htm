@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Financial">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Allocation</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/financial/allocation.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="financial.htm">Financial</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Allocation</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Allocation</h1>
+            <p class="Body"><span class="window_name">Allocation</span> shows subscribed services consumed and is automatically calculated based on the schedule <span class="window_name">Service Allocation Calculation Daily Schedule</span>. For example, Data Service might provide 25% of it's total services to CRM Service. This cost is automatically calculated each month for CRM Service. The schedule gathers information daily, but provides data at the end of the month.</p>
+            <p class="fig_title" data-mc-xref-target-name="Data_Service_Allocation_-_25__of_costs_are_allocated_to_CRM_Service"><a name="Data_Service_Allocation_-_25__of_costs_are_allocated_to_CRM_Service" data-mc-generated-bookmark="ListOf"></a>Data Service Allocation - 25% of costs are allocated to CRM Service</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/allocation_data_service.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="215" src="../../resources/images/allocation_data_service_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <p class="fig_title" data-mc-xref-target-name="CRM_Service_Costs_-_25__of_Data_Service_costs_for_May_(7,597.50)_are_charged_..."><a name="CRM_Service_Costs_-_25__of_Data_Service_costs_for_May_(7,597.50)_are_charged_..." data-mc-generated-bookmark="ListOf"></a>CRM Service Costs - 25% of Data Service costs for May (7,597.50) are charged to CRM Service</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/allocation_crm_service.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="247" src="../../resources/images/allocation_crm_service_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Establish Service Allocation</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can set the percentage of services consumed for each service provided. You can allocate as many services as you want. When the <span class="window_name">Service Allocation Calculation Daily Schedule</span> is run, the total is listed under the <span class="window_name">Cost Item</span> tab of the dependent service. The schedule is run daily (hence the name), but only the monthly totals appear under the tab.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk console as Administrator, open the <span class="window_name">CI Service</span> workspace, then open the service record to which you want to set allocations.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the Allocation tab, click <b>New ITFM Recurring Service Subscription</b>. The <span class="window_name">New ITFM Recurring Service Subscription</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Status</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose a status for the allocated service from the drop down list. Only the Active status is used in cost calculations.</p>
+                                            <ul class="list_table">
+                                                <li value="1">Pending</li>
+                                                <li value="2">Active</li>
+                                                <li value="3">Paused</li>
+                                                <li value="4">Obsoleted</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Consuming Service</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the name of the consuming service, or choose a service from the list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Supporting Service</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">This value is automatically entered corresponding to the service record you are in, but you can change this if needed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Allocation (%)</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter a whole number for the percent of use the consuming service provides to the supporting service.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Default Cost Driver</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the default cost driver for this service, or choose a cost driver from the list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Notes</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Type a description for this transaction.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The window closes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Repeat this process for additional consuming services.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Setting the Service Allocation Calculation Daily Schedule</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This schedule is not set by default, to prevent it from running for users who don't need it.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk console as Administrator, open the <span class="window_name">Schedule Entry</span> workspace, then  open the <span class="window_name">Service Allocation Calculation Daily Schedule</span>. The form appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Service_Allocation_Calculation_Daily_Schedule"><a name="Service_Allocation_Calculation_Daily_Schedule" data-mc-generated-bookmark="ListOf"></a>Service Allocation Calculation Daily Schedule</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/service_allocation_schedule.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="657" data-mc-height="424" src="../../resources/images/service_allocation_schedule_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Start Time</p>
+                                            <p>End Time</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Set the times  you want the schedule to start and end each day.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Start Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Set the date you want the schedule to begin.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">No End Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Check this option to continuously run this schedule. By default, this option is not checked to prevent the schedule from running for users not needing it.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="Body_indent">You can modify other fields as needed, or leave them as set.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="financial.htm">Financial</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="tracking_costs_for_an_incident.htm">Tracking Costs for an Incident</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="cost_driver.htm">Cost Driver</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cost_item.htm">Cost Items</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="distribution.htm">Distribution</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cost_filters.htm">Cost Filters</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="export_cost_item_to_excel.htm">Exporting Costs to Excel</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="task_costs.htm">Task Costs</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ci_costing.htm">CI Costing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="team_costing.htm">Team Costing</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

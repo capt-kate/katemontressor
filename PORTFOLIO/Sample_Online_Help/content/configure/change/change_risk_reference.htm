@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Change Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Change Risk Reference</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/change/change_risk_reference.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/change_management.htm">Change Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Change Risk Reference</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor498"></a>Change Risk Reference</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Associated Fields Related to Risk Analysis Functionality</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="margin-left: 0;margin-right: auto;width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CatalogName</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Stores the name of the catalog that is used in the relationship constraint. The default setting is BaseCatalog.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CalculateRiskQuestions</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Serves as a trigger for the Java script to create new answer records (based on the catalog selected) that the user must complete. The system triggers the out-of-the-box field whenever you change the <span class="window_name">Category</span> field.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">RiskLevel</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Contains the values high, medium, or low, depending on the value of the <span class="window_name">RiskSum</span> field. The risk level is a conditional list expression that calculates the value. It can be easily modified to set different thresholds for the risk level.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">RiskSum</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Contains a numeric value calculated by a before save rule. The system adds all of the weights associated with the user's answers to the risk analysis questions to produce the result.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Associated Objects Related to Change Risk Catalog</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="margin-left: 0;margin-right: auto;width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Business object</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">FRS_RiskCatalog</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Contains the relationship that contains the catalog to be used for this change record, based on the value contained in the <span class="window_name">CatalogName</span> field.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">FRS_RiskAnswer</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Contains the relationship that contains the answers for the user to the risk questions. The system dynamically populates this by the Java script associated with the <span class="window_name">CalculateRiskQuestions</span> field. &#160;You can edit the records on the <span class="window_name">Risk Level</span> tab on the <span class="window_name">Change</span> workspace.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="change_calendar.htm">Change Calendar</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../../servicedesk/change/changes.htm">Change</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../servicedesk/changecalendar/change_calendar.htm">Using the Change Calendar</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/working_with_a_change.htm">Creating a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/adding_change_tasks.htm">Working with Change Tasks for a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/closing_a_change.htm">Resolving and Closing a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/implementing_a_change.htm">Implementing a Change</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/managing_change_approval.htm">Managing Change Approvals</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/post_implementation_revi.htm">Post-Implementation Review</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/schedule_a_change.htm">Scheduling a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/setting_the_risk_level.htm">Setting the Risk Level</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/cancelling_a_change.htm">Canceling a Change Request</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/approve_a_change.htm">Approving a Change Request</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/analyze_and_classify_pot.htm">Analyze and Classify Potential Change</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/change_approval_board.htm">Change Approval Board</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="the_change_approval_workflow.htm">The Change Approval Workflow</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../workflows/workflow_instance.htm">Workflow Instance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/change_lifecycle.htm">Change Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

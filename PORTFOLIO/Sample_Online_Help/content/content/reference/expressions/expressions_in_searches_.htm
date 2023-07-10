@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Expression Examples">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Expressions in Searches and Dashboards</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/expressions_in_searches_.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expression_examples.htm">Expression Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Expressions in Searches and Dashboards</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor686"></a>Using Expressions in Searches and Dashboards</h1>
+            <p class="Body">Searches and dashboards can employ literal strings or expressions, such as:</p>
+            <p class="Code">abc</p>
+            <p class="Code">1</p>
+            <p class="Code">925-398-1800</p>
+            <p class="Body">While searches and dashboards cannot use full expression syntax, they can employ the powerful set of built-in functions included with <span class="notranslate"><b>HEAT</b></span>, parsed with <span class="fixedwidth">$()</span> brackets. A sample function is:</p>
+            <p class="Code">$(CurrentLoginID())</p>
+            <p class="Body">The following illustrates an expression defining a search:</p>
+            <p class="fig_title" data-mc-xref-target-name="Expression_Defining_a_Search"><a name="Expression_Defining_a_Search" data-mc-generated-bookmark="ListOf"></a>Expression Defining a Search</p>
+            <p class="Body"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/search_expression.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="696" data-mc-height="169" src="../../resources/images/search_expression_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p class="Body">Depending on the business object that is referenced, built-in functions associated with the object automatically fill in the search fields as you type.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">If you are not using a value in the <span class="Bold">Contains</span> field, enter a space to activate the <span class="Bold">Search</span> button.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">In a dashboard, a common use of expressions is to leverage the DateTime functions available as built-in functions.</p>
+            <h4 class="subheading">Use a Search Expression</h4>
+            <p class="Body">Within the Advanced Search area, enter a business object in the first field, then enter an expression or select a built-in function from the drop-down list.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="constructing_expressions.htm">Constructing Expressions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

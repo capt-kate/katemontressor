@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Business Objects">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Pick Lists</title>
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/picklists/pick_lists.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../businessobjects/business_objects.htm">Business Objects</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Pick Lists</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor394"></a>Using Pick Lists</h1>
+            <p class="Body">A <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">pick list<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A list of values shown in a drop-down list or combo box. Pick lists supply other objects with field values and are stored as child objects in a relationship.</span></a> is a list of values shown on a<a name="kanchor395"></a> drop-down or combo-box. Pick lists supply other objects with field values and are stored as child objects in a relationship.</p>
+            <p class="Body">Pick lists are used by validation objects to filter data. See <a href="../businessobjects/validation_objects.htm" class="MCXref xref">Using Validation Business Objects</a>.</p>
+            <p class="Body">Pick lists can include objects that are standalone records. For example, the <span class="window_name">StandardUserTeam</span> and <span class="window_name">Profile.Employee</span> objects control the <span class="window_name">Team</span> and <span class="window_name">Owner</span> drop-down lists in many business objects.</p>
+            <p class="Body">Each value in a pick list is obtained from a table row in a business object. For example, the <span class="window_name">Active Employee List by Full Name</span> pick list derives its values from the <span class="window_name">Full Name</span> table row in the Profile.Employee business object.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                            <p>When using a combo-box in the Service Catalog	that gets data from a pick list, ensure the pick list is validated. Otherwise, you might see the red invalid value indicator in the field.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Accessing a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console, open the  <span class="window_name">Pick Lists</span> workspace. A list of pick lists appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="List_of_Pick_Lists"><a name="List_of_Pick_Lists" data-mc-generated-bookmark="ListOf"></a>List of Pick Lists</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/pick_list_02.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1372" data-mc-height="620" src="../../resources/images/pick_list_02_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click an item from the list to view specific details, including associated business objects and fields.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Pick lists showing a lock <img src="../../resources/images/buttons/lock.png" class="icon" /> are default pick lists and can not be deleted.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Pick List</span> toolbar, click <span class="Bold">Add New</span>. The <span class="window_name"><a name="kanchor396"></a>Add New Validation List</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Add_New_Validation_List_Page"><a name="Add_New_Validation_List_Page" data-mc-generated-bookmark="ListOf"></a>Add New Validation List Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/pick_add_validation_lists.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="761" data-mc-height="597" src="../../resources/images/pick_add_validation_lists_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="170px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="482px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Translated</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enables the localization of the list items.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>List Name</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The name of the pick list to be stored.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Display Name</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The name of the pick list to be displayed in the <span class="notranslate"><b>HEAT</b></span> application.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Get List Data From</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Select <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Business Object<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Any key business component that you want to track and manage. Examples include incidents, tasks, configuration items, attachments, audit history, contacts, and notes.</span></a>, then select a value from the drop-down list. (The validation providers option is for a specific circumstance. Do not select this option unless directed by <span class="FRS_VARSCompany">FrontRange</span>.)</p>
+                                            <p>Unicode text fields  marked as validated only show  named validation lists with stored fields which are also Unicode text fields. Similarly, regular text fields can only by validated by named validation lists, with stored fields which are regular text fields. For  example, assume there is a named validation list defined against the <span class="window_name">LoginID</span> field in Profile.Employee, which has been marked as Unicode (such as <span class="Emphasis">DisplayName of Employee with LoginID value by Team</span>). To use it as the pick list for a validated text field, the field must also be marked as Unicode. This enables  the named validation list to show up in the list.
+</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Display field</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The visible field name to be displayed in the pick list.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Value field</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A stored field name.&#160;Select from the drop-down list. </p>
+                                            <p>This entry frequently differs from the <span class="window_name">Display field</span> selection. For example, the <span class="window_name">Owner</span> field in many business objects contain pick lists of <span class="window_name">DisplayName</span> entries derived from the Profile.Employee business object, such as <span class="Emphasis">Bernard Jeffries</span>. However, you can select a <span class="window_name">Value</span> field entry that is based on the corresponding login ID of the Profile.Employee object, such as <span class="Emphasis">Bjeffries</span>.</p>
+                                            <p>This allows the value of the login ID to be stored in the database when the pick list item is selected. In this case, it is a practical choice because many <span class="notranslate"><b>HEAT</b></span> business rules and system functions use login ID values. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Sort by field</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Sorting value, either ascending or descending.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Add constraints to the pick list to restrict the data presented. Click <a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="Add"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Add New Condition</a><img src="../../resources/images/buttons/add_column.png" class="icon" style="display: none;" data-mc-target-name="Add" /> to activate a constraint formula. This formula is based on the parameter selected in the <span class="window_name">Get List Data From</span> drop-down list.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Use constraints to restrict or filter the amount of values that are shown to the end user based on previously selected values. In case you want to use such a pick list (such as within a service offering) you can select a field, EQUALS TO and then enter <span class="fixedwidth">{0}</span>.</p>
+                    <p class="Body_indent">Another example, to add a constraint to the <span class="window_name">Active Employee List by Full Name</span> pick list to include active employees, enter:</p>
+                    <p class="Body_indent"><span class="fixedwidth">Status + not equal to + Terminated</span>
+                    </p>
+                    <p class="Body_indent">Click  <span class="Bold">Remove this condition</span> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> to delete a constraint.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save </span>to preserve your settings.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Usage Stats</span> to view the business objects where the pick list is used and the name of its linked field.</li>
+                            <li value="2">Click <span class="Bold">Preview</span> to view what the pick list looks like.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Modifying a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Pick List</span> page, click the pick list  to modify. The <span class="window_name">Edit Existing List</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Edit_a_Pick_List"><a name="Edit_a_Pick_List" data-mc-generated-bookmark="ListOf"></a>Edit a Pick List</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/pick_list_edit.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="750" data-mc-height="537" src="../../resources/images/pick_list_edit_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Modify the information as needed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>. </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Modifying Values in a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Pick List</span> page, click <span class="Bold">values</span> next to the pick list to modify. The list of values appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To add a value, click <span class="Bold">Add</span>, then enter the new value in the <span class="window_name">Status</span> field. Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To modify a value, select the value row, then click <span class="Bold">edit</span> at the far right end of the row. Edit the value, then click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Close</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Translating a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create translated values for each item in the pick list. See <a href="../localization/localization.htm" class="MCXref xref">About Localization</a> for more information.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Pick List</span> page, click <span class="Bold">values</span> next to the pick list to translate. The list of values appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the value row, then click <span class="Bold">edit</span> at the far right end of the row. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Translate </span><img src="../../resources/images/buttons/translate.png" alt="" class="icon" />. The <span class="window_name">Translate</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter the translation, then click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">Users will see the language value based on the locale they have chosen. See <a href="../../interface/locales.htm" class="MCXref xref">Changing Locales</a>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Deleting a Pick List</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+							Use caution when deleting a pick list. Business objects using this pick list might no longer function as expected.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within <span class="window_name">Pick List</span> page, open the pick list to modify. The <span class="window_name">Edit Existing List</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Delete</span>. Default pick lists cannot be deleted.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Delete_a_Pick_List"><a name="Delete_a_Pick_List" data-mc-generated-bookmark="ListOf"></a>Delete a Pick List</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/pick_list_delete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="760" data-mc-height="607" src="../../resources/images/pick_list_delete_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The <span class="window_name">Delete Confirmation</span> window appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Yes</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Return to the <span class="window_name">List View</span> and refresh the window. The pick list no longer appears.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../businessobjects/validation_objects.htm">Using Validation Business Objects</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="adding_values_to_a_pick_list.htm">Adding Values to a Pick List</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="configure_pick_list_request_offering.htm">Configure Pick List for a Request Offering</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/workflowobjects/get_approval.htm">Get Approval</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

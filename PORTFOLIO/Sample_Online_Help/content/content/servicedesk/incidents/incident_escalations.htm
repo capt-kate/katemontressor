@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Incident|Working with Incidents">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Incident Escalations</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/incidents/incident_escalations.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="incidents.htm">Incident</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="creating_an_incident.htm">Working with Incidents</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Incident Escalations</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor153"></a>Incident Escalations</h1>
+            <p class="Body">Events are monitored by an escalation clock. </p>
+            <p class="Body">If an event does not occur within a prescribed period of time, an escalation action is executed. The exact timing and actions of an escalation depend on how your system is configured. </p>
+            <p class="Body">Escalations typically provide notification in a dashboard or an incident form. It is up to the Service Desk Analyst or Manager to take appropriate action based on such notifications. </p>
+            <p class="Body">Service Level Agreements (SLAs) associated with the affected incident Service override any system escalations. In the absence of Service Level Agreements, defined escalations are set to run. </p>
+            <p class="Body"> If another Service is selected, the previous escalation clock is stopped and the records of the previous escalation schedule are marked <span class="Emphasis">Obsolete</span>. A new escalation schedule goes into effect. </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor154"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Incident Escalations</a><a name="incidents_561546860_1399529"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can view response and resolution escalations under the <span class="window_name">Resolution Details</span> tab of the Incidents form. </p>
+                    <p class="fig_title" data-mc-xref-target-name="Response_and_Resolution_Targets"><a name="Response_and_Resolution_Targets" data-mc-generated-bookmark="ListOf"></a>Response and Resolution Targets</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/escalation_bar.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="480" data-mc-height="156" src="../../resources/images/escalation_bar_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">For details on each escalation, choose the <span class="window_name">Escalation Watch</span> tab of the Incident form.</p>
+                    <p class="Body">The Response Target uses the incident Response escalation schedule, and the Resolution Target uses the incident Resolution escalation schedule. If SLAs are configured for a Service, then the escalations that are configured within the SLA override the default system escalations. If another Service is selected, the previous escalation clock is stopped and the records of the previous escalation schedule is marked Obsolete. A new escalation schedule goes into effect. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If the Resolution Target bar or the escalation records on the Escalation Watch tab does not appear, click the Refresh button on the incident toolbar.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within an open Incident, click the Escalation Watch tab. The list of escalations for the incident appear.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">If the incident is logged from Self Service, but the response time has not been reached yet, the bar remains gray (since it is not determined whether the Response Target is <span class="Emphasis">Met</span> or <span class="Emphasis">Breached</span>).</li>
+                            <li value="2">If the incident changes from Logged to any other status (for example, Active), then the Response Target has been met, and the response bar indicates <span class="Emphasis">Met</span> accordingly.</li>
+                            <li value="3">If the incident remains in Logged status and passes the response time, then the response bar indicates <span class="Emphasis">Breached</span>.</li>
+                            <li value="4">After an incident Response escalation has been breached, even if the Status is updated to Active, the bar still indicates <span class="Emphasis">Breached</span>, because the incident was not responded to in a timely manner.</li>
+                            <li value="5">The Resolution Target progress bar shows the resolution date and time for the incident, including the dates and time the incident is considered breached.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the <span class="window_name">Escalation Watch</span> tab. Any configured escalations appear. </td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Escalations_in_the_absence_of_SLAs"><a name="Escalations_in_the_absence_of_SLAs" data-mc-generated-bookmark="ListOf"></a>Escalations in the absence of SLAs</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/escalation_watch_tab.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1134" data-mc-height="210" src="../../resources/images/escalation_watch_tab_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">Double-click an item to view its details.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Incident Response
+</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When an end user submits an incident through the Self Service module, its initial status
+is set to <span class="Emphasis">Logged</span>. The incident status is changed to another state when an SDA assigns an
+owner. The amount of time that the incident is in the <span class="Emphasis">Logged</span> state is the incident
+response time. If incident response time exceeds a prescribed duration, a notification
+appears on the Service Desk Management dashboard.
+</p>
+                    <p class="Body">When you are notified of an incident response escalation:
+</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1."> Open the  incident that was identified in the escalation notification. The incident Details appear.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2."> In the <span class="window_name">Owner</span> field, choose a name from the drop-down list.
+</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."> 
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The incident status changes to <span class="Emphasis">Active</span>.</li>
+                            <li value="2">The incident is considered responded to and the escalation ends.</li>
+                            <li value="3">The end user is notified (if automatic notification is enabled).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="Body">&#160;</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/escalations/create_escalations.htm">Creating an Escalation</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/escalations/escalation_exceptions.htm">Escalation Exceptions</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="incidents.htm">Incident</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../configure/escalations/define_escalations__from.htm">Escalations</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="creating_an_incident.htm">Working with Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="assigning_incidents.htm">Assigning an  Incident</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="closing_incidents.htm">Closing Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="investigating_an_inciden.htm">Investigating an Incident</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="linking_incidents.htm">Linking Assets</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="resolving_incidents.htm">Resolving Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="responding_incidents.htm">Responding to Incidents</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/workflows/workflow_instance.htm">Workflow Instance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/incident_lifecycle.htm">Incident Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../servicerequest/service_request_escalati.htm">Service Request Escalations</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../tasks/task_escalations.htm">Task Escalations</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/incidents_defaults.htm">Escalation Defaults</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

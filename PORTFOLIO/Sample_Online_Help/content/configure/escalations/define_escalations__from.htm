@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Escalations</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/escalations/define_escalations__from.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Escalations</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor428"></a>Escalations</h1>
+            <p class="Body">An escalation clock monitors various <span class="notranslate"><b>HEAT</b></span> events. If an event does not occur in a prescribed period, <span class="notranslate"><b>HEAT</b></span> executes an escalation action. The exact timing and actions of an escalation depend on how you configure the escalation. By default, escalations are defined for incidents, service requests, and tasks and automatically run unless you are using the <span class="window_name">Service Level Management</span> module.</p>
+            <p class="Body">Escalations typically provide notification in a dashboard or in a business object form (such as an <span class="window_name">Incident Details</span> form). It is up to the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SDA<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Desk Analyst</span></a> or <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SDM<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Desk Manager</span></a> to take appropriate action based on such notifications.</p>
+            <p class="Body">You can define and manage escalations through service level packages (<a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SLP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Level Package.</span></a>s) and service level agreements (<a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SLA<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Level Agreement</span></a>s). An escalation is executed by the escalation engine when a triggering event occurs or condition exists, and can be affected by hours of operation and service level agreements. See <a href="create_escalations.htm" class="MCXref xref">Creating an Escalation</a>.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2"> Service level agreements associated with a service override any system escalations when service level agreements are associated with a request item. In the absence of service level agreements, default escalations are  run. See <a href="create_escalations.htm" class="MCXref xref">Creating an Escalation</a>.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                <col class="TableStyle-Note_Caution-Column-Column1" />
+                <col class="TableStyle-Note_Caution-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note_Caution-Body-Body2">
+                        <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+							Do not delete the <span class="window_name">ServiceReq - Delivery Default</span> escalation, as  you will not be able to create and save new request offerings.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Default Escalations</a><a name="Default_escalations"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Default <span class="notranslate"><b>HEAT</b></span> escalation states are provided for these events:</p>
+                    <h4 class="subheading">Incident</h4>
+                    <ul>
+                        <li value="1">Closing</li>
+                        <li value="2">Resolution</li>
+                        <li value="3">Response</li>
+                        <li value="4">Waiting</li>
+                    </ul>
+                    <h4 class="subheading">Service Request</h4>
+                    <ul>
+                        <li value="1">Closing</li>
+                        <li value="2">Delivery</li>
+                        <li value="3">Response</li>
+                        <li value="4">Waiting</li>
+                    </ul>
+                    <h4 class="subheading">Task</h4>
+                    <ul>
+                        <li value="1">Task Assignment - Acceptance </li>
+                        <li value="2">Task Assignment - Completion</li>
+                        <li value="3">Task Work Order - Acceptance </li>
+                        <li value="4">Task Work Order - Completion</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Factors Affecting Escalations</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Escalation configurations define the business object and the field that the escalation is based on. An escalation is based on the status of a specified field in a business object form. For example, the <span class="window_name">IncidentClosing</span> escalation is based on the value of the status field in the incident business object form. </p>
+                    <ul>
+                        <li value="1"><span class="Bold">How form events are mapped to escalation clock activity</span>: Because escalations are time-based, each has an escalation clock that you can configure to run, stop, reset, and so on based on the status of the specified form field. For example, the <span class="window_name">IncidentClosing</span> escalation is configured so that when the <span class="window_name">Incident Status</span> field is set to resolved, the escalation clock starts running.</li>
+                        <li value="2"> <span class="Bold">The number and target duration of escalation levels, and what action is taken when the target duration is exceeded</span>: After the escalation clock starts, it runs for a specified period of time at one or more stages, or escalation levels. Escalation levels are defined by thresholds that must be reached to trigger a call for additional resources to meet a service level target or customer expectation. When the duration at any level is exceeded, the escalation engine takes an action that you specify. For example, the <span class="window_name">IncidentClosing</span> escalation is configured so that if the escalation clock runs for more than one day, the system executes the <span class="window_name">Auto Close</span> quick action. You can configure up to three escalation levels for each escalation. Each level can have its own target duration and action when the target duration is exceeded.</li>
+                        <li value="3"><span class="Bold">Exceptions to field status that the escalation is based on</span>: You can specify that different escalation levels be based on form fields other than the field that the escalation was based on originally. For example, you could specify that level 2 of the <span class="window_name">IncidentClosing</span> escalation be based on the value of the <span class="window_name">Priority</span> field instead of the <span class="window_name">Status</span> field (which the escalation was originally based on).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="escalation_exceptions.htm">Escalation Exceptions</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="escalation_watch.htm">Escalation Watch</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="set_escalation_schedule_by_priorty.htm">Set Escalation Schedule by Priority</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="create_escalations.htm">Creating an Escalation</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/incidents_defaults.htm">Escalation Defaults</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="resolution_details.htm">Resolution Details</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

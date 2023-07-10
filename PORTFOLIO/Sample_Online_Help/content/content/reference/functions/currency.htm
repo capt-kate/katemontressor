@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|Numeric and Currency Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Currency</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/currency.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_numeric_and_currency_functions.htm">Numeric and Currency Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Currency</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="NumericAndCurrencyFunctions" data-mc-xref-target-name="Currency"><a name="Currency" data-mc-generated-bookmark="ListOf"></a><a name="kanchor758"></a>Currency</h2>
+            <p class="Body">Converts the input parameter or parameters into a currency value. A currency value is a combination of the actual number value and the currency code, such as 3 USD. </p>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">Currency(value,currencyCode)</p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <table style="width: 92%;caption-side: top;mc-table-style: url('../../resources/tablestyles/optionstable.css');" cellspacing="0" class="TableStyle-OptionsTable">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p><span class="window_name">value</span>
+                            </p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>The value to be converted.</p>
+                            <p>&#160;</p>
+                            <p><span class="Bold">Notes:</span>&#160;</p>
+                            <ul>
+                                <li value="1">If you include the optional <span class="window_name">currencyCode</span> parameter, then this <span class="window_name">value</span> parameter cannot be a currency image (which includes the currency code) because then you would specify the currency code twice; once here and once in the <span class="window_name">currencyCode</span> parameter. The <span class="window_name">value</span> parameter must be a number or text value.</li>
+                            </ul>
+                            <ul>
+                                <li value="1">If you do not include the optional <span class="window_name">currencyCode</span> parameter, this <span class="window_name">value</span> parameter may or may not contain the currency code. The <span class="window_name">value</span> parameter can be a currency image, or a number or text value.</li>
+                            </ul>
+                            <ul>
+                                <li value="1">If you do not include the optional <span class="window_name">currencyCode</span> parameter and the <span class="window_name">value</span> parameter does not contain the currency code, (that is, it is a number or text value), the system returns the value with the default currency code as specified in your user profile.</li>
+                                <li value="2">For example, to enter 21&#160;USD, you could either enter <span class="fixedwidth">$(Currency (21, USD)</span> or <span class="fixedwidth">$(Currency ("21 USD")</span>.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1"><span class="window_name">currencyCode</span>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">
+                            <p>Optional. The code value of the currency. See <a href="http://www.xe.com/iso4217.php">http://www.xe.com/iso4217.php</a> for a list of ISO 4217 currency codes. You can only use this parameter if the <span class="window_name">value</span> parameter does not contain a currency code.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">Currency value (a combination of the actual number value and the currency code, such as 3 USD).</p>
+            <blockquote>
+                <ul>
+                    <li value="1">If you only include the <span class="window_name">value</span> parameter:<ul><li value="1">Returns  a currency value if the <span class="window_name">value</span> parameter is a currency image, such as "3USD" or "3.25JPY".</li><li value="2">Returns  a currency value with the default currency code  if the <span class="window_name">value</span> parameter is a number or text value, such as "4".</li></ul></li>
+                    <li value="2">If you include both parameters:<ul><li value="1">Returns  a currency value.</li></ul></li>
+                    <li value="3">Returns an error if the <span class="window_name">value</span> parameter is another type, such as DateTime, or if either of the input parameters are invalid.</li>
+                    <li value="4">Returns null if the <span class="window_name">value</span> parameter is null.</li>
+                </ul>
+            </blockquote>
+            <h4 class="subheading">Example</h4>
+            <p class="Code">$(Currency(Cost + 10,USD))</p>
+            <p class="Body_indent">If the value of the <span class="window_name">Cost</span> field is 25, the above example returns "35 USD".</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="_numeric_and_currency_functions.htm">Numeric and Currency Functions</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="currencycode.htm">CurrencyCode</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="currencyvalue.htm">CurrencyValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="defaultcurrencycode.htm">DefaultCurrencyCode</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="defaultcurrencysymbol.htm">DefaultCurrencySymbol</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="round.htm">Round</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="rounddown.htm">RoundDown</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="roundup.htm">RoundUp</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

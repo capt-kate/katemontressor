@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Services</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Services</h1>
+                    <p>Services are github repositories that are part of a project.</p>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>List all services</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Retrieves the services for a project</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/services</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The id of the project for which to list services</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl 'https://api.ciscoshipped.io/projects/19d87036-532a-11e5-913f-0242ac1100c4/services'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">[</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "type":"ServiceRepo",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_id":"19d87036-532a-11e5-913f-0242ac1100c4",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "id":"2355356f-532a-11e5-9140-0242ac1100c4",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "buildpack_id":"f5e20759-f2b9-11e4-963b-14109fd75217",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"phptest242",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "image_source":"https://api.ciscoshipped.io/cli/static/images/php.svg",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "build_image":"bradrydzewski/php:5.5",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_image":"npateriyainsecure/php-hello-world",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "repository":"https://github.com/mikejihbe/phptest242",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "organization":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "build_command":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "run_command":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "test_command":"echo noop",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_port":<span class="mi">80</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_shared_directory":"/app",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-php-template",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "github_repo_id":<span class="mi">41928815</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "drone_repo_enabled":true,"health_check_path":"/"</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  {...},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  {...}</p>
+                                    <p class="code">]
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Get a service</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Retrieves a project service</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/services/&lt;SERVICE_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The project id for the service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">SERVICE_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The service id to retrieve</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl 'https://api.ciscoshipped.io/projects/19d87036-532a-11e5-913f-0242ac1100c4/services/2355356f-532a-11e5-9140-0242ac1100c4'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{ </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "type":"ServiceRepo", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "project_id":"19d87036-532a-11e5-913f-0242ac1100c4", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "id":"2355356f-532a-11e5-9140-0242ac1100c4", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "buildpack_id":"f5e20759-f2b9-11e4-963b-14109fd75217", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"phptest242", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "image_source":"https://api.ciscoshipped.io/cli/static/images/php.svg", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_image":"bradrydzewski/php:5.5", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_image":"npateriyainsecure/php-hello-world", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "repository":"https://github.com/mikejihbe/phptest242", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "organization":"", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_cpu":<span class="mi">1</span>, </p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  "default_ram":<span class="mi">512</span>, </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_command":"", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "run_command":"", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "test_command":"echo noop", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_port":<span class="mi">80</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_shared_directory":"/app", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-php-template", </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "github_repo_id":<span class="mi">41928815</span>, </p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "drone_repo_enabled":true,"health_check_path":"/" </p>
+                                    <p class="code">}</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2><a name="Create"></a>Create a service</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Creates a service for a project, and returns the created service.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">POST https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/services</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The id of the project for which to create the service</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="query-parameters">Query Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Default</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">type</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">One of “ServiceRepo” or “ServiceImage”. ServiceImages have the minimum attributes to launch a service. ServiceRepos are a superset of a ServiceImages attributes and correspond to services in active development backed by a github repository.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">name</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The name for the service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">image_source</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The graphic displayed for this service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">deploy_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The docker image used when deploying this service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">default_cpu</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">All configurations created from this service will start with this amount of CPU.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">ram</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">All configurations created from this service will start with this amount of ram.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_port</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack.</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The port on which your service listens. In the case of ServiceImages, you’ll need to set this before your container is deployable</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">buildpack_id</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The id of the buildpack to use for the ServiceRepo</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">public</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) Whether or not the created github repository should be public</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">organization</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2" />
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The github organization in which to put the repository. Defaults to the authenticated user’s organization</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">build_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The docker image used to build this service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">build_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The command to run to build your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">test_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The command to run to test your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">run_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The command to run to run your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">health_check_path</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The endpoint of your application to hit to see if it’s working.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">container_shared_directory</td>
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">(Only ServiceRepo) The mount point within your image for your service code.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl 'https://api.ciscoshipped.io/projects/19d87036-532a-11e5-913f-0242ac1100c4/services' -d '{"type": "ServiceRepo", "project_id":"34a35726-66e9-11e5-99df-0242ac110120","buildpack_id":"4e0c194a-1c66-11e5-bb2c-a45e60e7c003","name":"rails","public":true,"organization":""}'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "type":"ServiceRepo",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "buildpack_id":"4e0c194a-1c66-11e5-bb2c-a45e60e7c003",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"rails",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "image_source":"https://api.ciscoshipped.io/cli/static/images/ruby-on-rails-alt.svg",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "repository":"https://github.com/mikejihbe/railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "organization":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "public":true,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_command":"/app/bin/build",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "run_command":"/app/bin/run",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "test_command":"/app/bin/test",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_shared_directory":"/app",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-buildpack-template-rails.git",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "github_repo_id":<span class="mi">43392827</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "drone_repo_enabled":true,"health_check_path":"/"</p>
+                                    <p class="code">}
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Update a service</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Updates a service for a project, and returns the updated service.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">PUT https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/services/&lt;SERVICE_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The project id for the service to be updated</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">SERVICE_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The service id for the service to be updated</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="query-parameters">Query Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Default</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">type</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">One of “ServiceRepo” or “ServiceImage”. ServiceImages have the minimum attributes to launch a service. ServiceRepos are a superset of a ServiceImages attributes and correspond to services in active development backed by a github repository.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">name</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The name for the service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">image_source</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The graphic displayed for this service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">deploy_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The docker image used when deploying this service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">default_cpu</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">All configurations created from this service will start with this amount of CPU.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">ram</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">All configurations created from this service will start with this amount of ram.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_port</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The port on which your service listens. In the case of ServiceImages, you’ll need to set this before your container is deployable</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">buildpack_id</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The id of the buildpack to use for the ServiceRepo</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">public</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) Whether or not the created github repository should be public</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">organization</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2" />
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The github organization in which to put the repository. Defaults to the authenticated user’s organization</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">build_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The docker image used to build this service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">build_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The command to run to build your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">test_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The command to run to test your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">run_command</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">(Only ServiceRepo) The command to run to run your service.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">health_check_path</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">(Only ServiceRepo) The endpoint of your application to hit to see if it’s working.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">container_shared_directory</td>
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">Inherited from the buildpack</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">(Only ServiceRepo) The mount point within your image for your service code.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl -X PUT 'https://api.ciscoshipped.io/projects/19d87036-532a-11e5-913f-0242ac1100c4/services/4455979b-66e9-11e5-99e0-0242ac110120'  -d  '{"name": "rails2"}'
+                        </p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "type":"ServiceRepo",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "buildpack_id":"4e0c194a-1c66-11e5-bb2c-a45e60e7c003",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"rails2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "image_source":"https://api.ciscoshipped.io/cli/static/images/ruby-on-rails-alt.svg",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "repository":"https://github.com/mikejihbe/railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "organization":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "public":true,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_command":"/app/bin/build",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "run_command":"/app/bin/run",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "test_command":"/app/bin/test",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_shared_directory":"/app",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-buildpack-template-rails.git",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "github_repo_id":<span class="mi">43392827</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "drone_repo_enabled":true,"health_check_path":"/"</p>
+                                    <p class="code">}</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Delete a project service</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body2">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyB-Column1-Body2">
+                                    <p>Deletes a project service</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">DELETE https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/services/&lt;SERVICE_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The project id for the service</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">SERVICE_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The service id to delete</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column2-Body2">
+                                    <p class="code">curl -X DELETE 'https://api.ciscoshipped.io/projects/19d87036-532a-11e5-913f-0242ac1100c4/services/4455979b-66e9-11e5-99e0-0242ac110120'</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Business Objects">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Business Rules</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/businessrules/business_rules1.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../businessobjects/business_objects.htm">Business Objects</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Business Rules</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Using Business Rules</h1>
+            <p>&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Business Rules</a><a name="1About"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Business rules occur as an extension of the activity on the client user interface.&#160;They interact with the client user interface causing values to be updated, related records to be created or updated, etc. </p>
+                    <p class="Body">Business object rules, including business rules, are event-driven synchronous processes that can create or update records as a client function. These can occur as either client- or server-side processes, depending on the design of the rule and action being taken. </p>
+                    <p class="Body">Business rules are a special case of business object rules. A business rule can perform a server-side update to the current record, create a related record, or update a related record after the current record is saved.</p>
+                    <p class="Body">All business object rules are client event driven and occur when the event happens. Although there is no time limit on how long a business rule can take to run, their very nature makes them run quickly during the time a record is being manipulated, saved, or created.</p>
+                    <p class="Body"><a name="kanchor405"></a>Each business rule pertains to a single business object. Use the business rule editor to create rules with the following characteristics:</p>
+                    <ul>
+                        <li value="1">Defined by business object.</li>
+                        <li value="2">Commonly used to configure events that are based on user input forms.</li>
+                        <li value="3">Contain definitions that include:<ul><li value="1">Triggering events.</li><li value="2">Actions triggered by an event.</li><li value="3">Characteristics of user input forms that pertain to the business object.</li></ul></li>
+                        <li value="4">Executed immediately when triggered by an event.</li>
+                        <li value="5">Cannot be used to define time-based events such as start times, delays, etc.</li>
+                    </ul>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>Before-save rules (such as LastModBy or LastModDateTime) are saving rules, and are executed after the business rule eval loop has been closed. Saving and validation rules cannot be used to trigger any actions nor any edit or calculated rules.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">By adding rules, you are adding restrictions rather than removing them. If a business object field is only available to a particular user, you cannot add access using a business rule.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Business Rule Types</a><a name="2Business"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col width="144px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="566px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Business rule type</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Triggered Actions</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Contains generic rules.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Initialization Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Adds a rule when an object or field is initialized.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Editing and Calculation Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Automatically populates the value of a field when a dependent field is changed (for example, the value displayed in the <span class="window_name">Email</span> field changes when the owner is changed).</p>
+                                    <p>&#160;</p>
+                                    <p>Editing rules can also include calculation fields allowing you to define calculations on the field.</p>
+                                    <p>&#160;</p>
+                                    <p>Use the drop-down lists to create an <span class="window_name">On Change, set</span> sequence. Add expressions in the field provided. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Read-Only Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Adds read-only rules for entire business objects. For example, you can render a business object as read-only when the status field changes to resolved.</p>
+                                    <p>&#160;</p>
+                                    <p>A business object must contain a read-only field  to use this option.</p>
+                                    <p>&#160;</p>
+                                    <p>When a form is opened for a read-only object, all controls (except those listed in the exception list) become read-only. When defining an exception list, it is important to understand which fields can be changed by business rules. These fields must be also be added to the exceptions list. Updating a field that is not part of the exception list generates an error message.</p>
+                                    <p>&#160;</p>
+                                    <p>Child objects are not affected when a business object is changed to a read-only state. However, you may not be able to link a new child object to this business object.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Required Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Determines when a rule is required. Required rules can be conditionally required using expressions.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Before-save Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Determines when an object can be saved.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Regular Expression Validation Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Adds custom validation rules based on regular expressions (RegEx). These rules run when you save an object.</p>
+                                    <p>&#160;</p>
+                                    <p>The following regular expressions apply:</p>
+                                    <ul class="list_table">
+                                        <li value="1"><span class="Bold">Alphanumeric</span>: Contains the validation type: ^[a-zA-Z0-9\s.\-]+$</li>
+                                        <li value="2"><span class="Bold">Zip Code</span>: Contains the validation type: ^((\d{5}-\d{4})|(\d{5})|([A-Z]\d[A-Z]\s\d[A-Z]\d))$</li>
+                                        <li value="3"><span class="Bold">Email</span>: Contains the validation type: ^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)((\[\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$</li>
+                                        <li value="4"><span class="Bold">Phone US</span>: Contains the validation type: ^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$</li>
+                                        <li value="5"><span class="Bold">IP Address</span>: Contains the validation type: ^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4] \d|25[0-5])$</li>
+                                        <li value="6"><span class="Bold">MAC Address</span>: Contains the validation type: ^[01]?[- .]?\(?[2-9]\d{2}\)?[- .]?\d{3}[- .]? \d{4}$</li>
+                                        <li value="7"><span class="Bold">Percent</span>: Contains the validation type: ^100$|^\s*(\d{0,2})((\.|\,)(\d*))?\s*\%?\s*$</li>
+                                        <li value="8"><span class="Bold">Custom</span>: Requires the additional entry of a custom expression.</li>
+                                    </ul>
+                                    <p>&#160;</p>
+                                    <p>Enter the message to show when this validation encounters an error.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Validation Rules</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Prevents the closure of a record when an associated workflow item has not been marked completed or canceled. </p>
+                                    <p>&#160;</p>
+                                    <p>To use this rule, add validation rules with custom expressions. The system runs the rule when the user saves the object. (See note above.)</p>
+                                    <p>&#160;</p>
+                                    <p>For example, you may need to construct your incident module to block incident resolution and closure when an existing task has not been completed or canceled. Construct a validate on save rule as follows:</p>
+                                    <p class="Code">$(((Status != "Closed") &amp;&amp; (Status != "Resolved")) ||</p>
+                                    <p class="Code">IsTrueForAllChildren("Incident#", RecId, "Task#Assignment.Rev3", "$(Status == 'Completed' || Status == 'Canceled')"))</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Business Rule</a><a name="3Creating"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Business rules apply to records created after the business rule has been created, and not retroactively to existing records.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration&#160;Console, open a business object, then select the <span class="window_name">Business Rules</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <b>Triggered Actions</b>. The  <span class="window_name">Triggered Actions</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Triggered_Actions_Window"><a name="Triggered_Actions_Window" data-mc-generated-bookmark="ListOf"></a>Triggered Actions Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/add_trigger.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="472" data-mc-height="687" src="../../resources/images/add_trigger_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Add Trigger</span>. The  <span class="window_name">Create Triggered Action</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Create_Triggered_Action&#160;Window"><a name="Create_Triggered_Action&#160;Window" data-mc-generated-bookmark="ListOf"></a>Create Triggered Action&#160;Window</p>
+                    <blockquote>
+                        <p class="Body" style="text-align: left;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/create_trigger.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="797" data-mc-height="388" src="../../resources/images/create_trigger_thumb_0_45.png" tabindex="" /></a>
+                        </p>
+                    </blockquote>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter a unique trigger name and description. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select a trigger or event from the drop-down list. You can choose more than one.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-triggers-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Trigger</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Disabled</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Disables this triggered action. Select this option when you want to create a read-only business rule. </p>
+                                            <p>&#160;</p>
+                                            <p><b>NOTE:</b>&#160;You cannot disable triggered actions that contain calculations.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Initialize</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Runs when the object is initialized.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Insert</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Runs when the object is inserted.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Delete</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Runs when the object is deleted.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Update</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Runs when the object is modified and saved.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Initialization of Specific Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Runs when a specific field is initialized. The following additional parameters appear when this option is selected, depending on the specified field:</p>
+                                            <ul class="list_table">
+                                                <li value="1">is changed (runs when the field is modified)</li>
+                                                <li value="2">is changed to (runs when the field is modified)</li>
+                                                <li value="3">is changed from (runs when the field is modified from a specific string)</li>
+                                                <li value="4">is changed from to (runs when the field is modified from a specific string to a specific string)</li>
+                                                <li value="5">is set to (runs when the field is modified to a specific string)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Update of Specific Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Runs when a specific field is modified.  The following additional parameters appear when this option is selected, depending on the specified field:</p>
+                                            <ul class="list_table">
+                                                <li value="1">is changed (runs when the field is modified)</li>
+                                                <li value="2">is changed to (runs when the field is modified)</li>
+                                                <li value="3">is changed from  (runs when the field is modified from a specific string)</li>
+                                                <li value="4">is changed from to (runs when the field is modified from a specific string to a specific string)</li>
+                                                <li value="5">is set to (runs when the field is modified to a specific string)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">On Creation of Specific Relationship</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Runs when a specified relationship is modified. Select the relationship from the drop-down list.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">On Removal of Specific Relationship</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Runs when a specified relationship is deleted. Select the relationship from the drop-down list.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Next</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Select one of the following actions:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Action</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Rule Action: Send Email</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">This option appears if the rule is an email notification.  See  <a href="../email/communication_manager.htm" class="MCXref xref">Communication Manager</a>.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Configure new action</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Configures a new action. Select an action from the drop-down list.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Use copy of existing quick action</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Uses a copy of an existing quick action. Select  an action from the drop-down list.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Next</span>. The options that appear depend on the selected action. See <a href="../../servicedesk/quickactions/quick_actions.htm" class="MCXref xref">Quick Actions</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enabling and Disabling Business Rules</a><a name="4Enabling"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can enable or disable most business rules except for rules containing calculated fields.</p>
+                    <ul>
+                        <li value="1">By default, the system enables business rules when they are created.  Click <span class="Bold">Disable</span> <img src="../../resources/images/buttons/disable.png" class="icon" /> to disable a business rule while it is being created. When disabled, the system grays out the rule entry.</li>
+                        <li value="2">To enable  an existing rule, click <b>Enable</b><img src="../../resources/images/buttons/enable.png" />.</li>
+                        <li value="3">
+                            <p>To enable or disable an existing rule, click <span class="Bold">Disable</span><img src="../../resources/images/buttons/disable.png" class="icon" />.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Disabling Read-Only Business Rules</a><a name="5Disabling"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When disabling a read-only business rule for a business object, a confirmation window offers additional options:</p>
+                    <ul>
+                        <li value="1"><span class="Bold">Disable and Clear</span>: Disables the rule and removes the read-only restriction from existing objects.</li>
+                        <li value="2"><span class="Bold">Disable Rule</span>: Disables the rule, but maintains the read-only state of any existing business objects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Modifying Business Rules</a><a name="6Modifying"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Business rules apply to records that are created after the business rule has been modified, and not retroactively to existing records.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="mc-table-style: url('../../resources/tablestyles/note_caution.css');width: 80%;" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/caution48_normal.png" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">Use caution when modifying a business rule as it might affect dependent objects.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration&#160;Console, open a business object, then select the <span class="window_name">Business Rules</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Navigate to the rule to modify.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Edit</span> <img src="../../resources/images/buttons/edit.png" class="icon" />. The  <span class="window_name">Edit</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Make changes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Deleting a Business Rule</a><a name="7Deleting"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="mc-table-style: url('../../resources/tablestyles/note_caution.css');width: 80%;" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/caution48_normal.png" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">Use caution when deleting a business rule as it might affect dependent objects.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration&#160;Console, open a business object, then select the <span class="window_name">Business Rules</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Navigate to the rule to delete.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Delete</span> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" data-mc-target-name="delete" />. The  <span class="window_name">Delete confirmation</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Yes</span> to delete the rule.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="businessrulesexamples.htm">Business Rule Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="overriding_the_read_only.htm">Overriding the Read-Only Rule</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

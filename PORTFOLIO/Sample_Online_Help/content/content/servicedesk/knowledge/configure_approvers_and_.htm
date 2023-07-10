@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Knowledge|Approving Knowledge Articles">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configure Approvers and Approval Workflows</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/knowledge/configure_approvers_and_.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="knowledge.htm">Knowledge</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="knowledge_article_approv.htm">Approving Knowledge Articles</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configure Approvers and Approval Workflows</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor195"></a>Configuring Approvers and Approval Workflows for Knowledge Articles</h1>
+            <p class="Body">&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />About Knowledge Article Approval Workflows</a><a name="1About"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The Knowledge Management module provides an approval workflow for each knowledge article type:</p>
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col width="132px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="144px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="209px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Article Type</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Workflow Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Business Object</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Document</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Document Knowledge Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>FRS_Knowledge.Document</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Error Message</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Error Message Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>FRS_Knowledge.ErrorMessage</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Issue and Resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Issue Resolution Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>FRS_Knowledge.IssueResolution</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Patch</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Patch Knowledge Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>FRS_Knowledge.Patch</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Q &amp; A</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Q and A Knowledge Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>FRS_Knowledge.QandA</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Reference</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Reference Knowledge Approval Workflow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>FRS_Knowledge.Reference</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">Workflows consist mostly of the <a href="../../reference/workflowobjects/get_approval.htm" class="MCXref xref">Get Approval Workflow Block</a> and the <a href="../../reference/workflowobjects/notification.htm" class="MCXref xref">Notification Workflow Block</a>.&#160;&#160;These define who the approvers are, the approval sequence and criteria, who receives notification during the approval process, and voting deadlines. You can change any of these settings to customize the approval process as described in the following sections.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />About Knowledge Article Approvers</a><a name="2About"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Approvers can be configured on a group or individual basis.</p>
+                    <h4 class="subheading">Groups</h4>
+                    <p class="Body">By default, approvers are configured using these contact groups:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><a name="kanchor196"></a>Knowledge Business Approval Group</li>
+                            <li value="2"><a name="kanchor197"></a>Knowledge Technical Approval Group</li>
+                            <li value="3"><a name="kanchor198"></a>Knowledge Presentation Approval Group</li>
+                        </ul>
+                    </div>
+                    <p class="Body">For example, if a knowledge article requires business approval, all of the members of the Knowledge Business Approval Group are notified when the article is ready for review by one or more group members. You can specify who reviews articles by adding or removing users to or from this group. </p>
+                    <p class="Body">You can also create a new approval group and then reconfigure an approval workflow to use the new group instead of a default group. </p>
+                    <h4 class="subheading">Individuals</h4>
+                    <p class="Body">Approval workflows can also be configured to specify one or more individual approvers rather than an approval group. Under this scenario, approval is required from each specified individual. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create Approval Groups for Knowledge Articles</a><a name="3Create"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can also create a new approval group and then reconfigure an approval workflow to use the new group instead of a default approval group.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console, click <span class="Bold">Configure &gt;&#160;Users and Permissions &gt; Groups</span>. The <span class="window_name">Contact Group</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New Contact Group</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Fill in the contact group form.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Reconfigure one or more approval workflows to use the new contact group:</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Access the approval workflow that you will reconfigure.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Double-click the <span class="window_name">Get Approval</span> block that will use the new approval group. (Approval workflows typically have three <span class="window_name">Get Approval </span>blocks; one each for technical, presentation, and business approval). The <span class="window_name">Get Approval</span> properties window appears. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">In the <span class="window_name">Approvers</span> area, use the drop-down list in the <span class="Bold">From a Group</span> field to select the new contact group.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Save </span>followed by <span class="Bold">OK</span> to save the new workflow version.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Return to the version list for this workflow and publish the new version.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure Individual Approvers  for a Knowledge Article</a><a name="4Configure"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can use <span class="window_name">Get Approval</span> workflow blocks to specify individual approvers rather than approval groups. However, only one individual approver can be specified in a <span class="window_name">Get Approval</span> block. To specify multiple individual approvers, you must use multiple <span class="window_name">Get Approval</span> blocks.
+</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Access the approval workflow that will use individual reviewers.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the <span class="window_name">Get Approval</span> block that you will reconfigure.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the block properties dialog <span class="window_name">Approvers</span> area, select <span class="Bold">From a User</span> and use the drop-down lists in the group and user fields to select an individual approver.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save </span>followed by <span class="Bold">OK</span> to save the new workflow version.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Return to the version list for this workflow and publish the new version.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure the Knowledge Article Approval Sequence</a><a name="5Configure"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">By default, the <span class="window_name">Get Approval</span> blocks in all of the provided knowledge approval workflows are arranged in this sequence:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Technical approval</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Presentation approval</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Business approval</td>
+                        </tr>
+                    </table>
+                    <p class="Body">All three approval types are not always required for a knowledge article. The knowledge collection in which you place the knowledge article determines the types of approval that are required. 
+					</p>
+                    <p class="Body">To change the approval sequence in a workflow, see <a href="../../configure/workflows/creating_a_basic_workflo.htm" class="MCXref xref">Using  Workflows</a>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure the Approval Criteria for a Knowledge Article Type</a><a name="6Configure"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Approval criteria are controlled by the information in the <span class="window_name">Approval/Denial Criteria</span> area of the <span class="window_name">Get Approval</span> block properties window. Criteria that you can configure are:</p>
+                    <ul>
+                        <li value="1"><span class="Bold">Approve if all approved.</span> The article is approved if every member of the approval group approves it.</li>
+                        <li value="2"><span class="Bold">Approve if any approved.</span> The article is approved if one member of the approval group approves it.</li>
+                        <li value="3"><span class="Bold">Approve if at least N% approved.</span> The article is approved if the specified percentage of approval group members approve it.</li>
+                        <li value="4"><span class="Bold">Deny if any rejected.</span> The article is rejected if one member of the approval group rejects it.</li>
+                        <li value="5"><span class="Bold">Deny if at least N% rejected</span>. The article is rejected if the specified percentage of approval group members reject it.</li>
+                    </ul>
+                    <p class="Body">To set the approval criteria for a knowledge article type, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the knowledge workflow for the knowledge article type.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the <span class="window_name">Get Approval</span> block to reconfigure.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Approval/Denial Criteria</span> area of the <span class="window_name">Get Approval</span> block properties window, select an approval method.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Email Notifications for Knowledge Article Approvals</a><a name="7Email"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Email notification occurs at two general stages in a knowledge approval workflow:</p>
+                    <ul>
+                        <li value="1">Approvers are notified when an article is ready for them to review.</li>
+                        <li value="2">The owner of an article is notified about the article status after it is reviewed or after a review deadline expires.</li>
+                    </ul>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure Approver Notifications for Knowledge Article</a><a name="8Approver"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The <span class="window_name">Send Notification for Knowledge</span> quick action  (affiliated with the FRS_ApprovalVoteTracking business object) sends email to approvers when an article is ready for them to review. By default, this notification is sent to <span class="fixedwidth">$(OwnerEmail)</span>.</p>
+                            <p class="Body">To reconfigure this quick action:</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console, click <span class="Bold">Build &gt;&#160;Automation Tools &gt;&#160;Quick Actions</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the resulting list of business objects, scroll to <span class="Bold">FRS_ApprovalVoteTracking</span> and click <span class="Bold">Add/Edit</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Under <span class="window_name">Your Actions</span>, double-click <span class="Bold">Send Notification for Knowledge</span> and reconfigure it as necessary.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body">To specify that another quick action be used:</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console as a Knowledge Manager or administrator, from the <span class="window_name">Knowledge</span> workspace, open a knowledge record.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">View Workflow</span>, then click <span class="Bold">Open Definition</span>. The workflow designer appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the <span class="window_name">Get Approval</span> block to reconfigure it.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Approval Notification Quick Action</span> area, use the drop-down list to select another quick action.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span> in the workflow designer.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure Owner Notifications for Knowledge Articles</a><a name="9Owner"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Notification blocks in the knowledge workflows are configured to send the following notifications to an article owner after an article is reviewed or if a review deadline expires:</p>
+                            <ul>
+                                <li value="1"><span class="Bold">Failed Technical Review.</span> Notifies the article owner that the article failed technical review.</li>
+                                <li value="2"><span class="Bold">Failed Presentation Review.</span> Notifies the article owner that the article failed presentation review.</li>
+                                <li value="3"><span class="Bold">Failed Business Review.</span> Notifies the article owner that the article failed business review.</li>
+                                <li value="4"><span class="Bold">Technical Review Deadline.</span> Notifies the article owner that the deadline for technical review expired and that the article must be resubmitted for approval.</li>
+                                <li value="5"><span class="Bold">Presentation Review Deadline.</span> Notifies the article owner  that the deadline for presentation review expired and that the article must be resubmitted for approval.</li>
+                                <li value="6"><span class="Bold">Business Review Deadline.</span> Notifies the article owner that the deadline for business review expired and that the article must be resubmitted for approval.</li>
+                                <li value="7"><span class="Bold">Notification to Owner.</span> Notifies the article owner  that the article was approved.</li>
+                            </ul>
+                            <p class="Body">To change or create new owner notifications for knowledge articles, do the following:</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console as a Knowledge Manager or administrator, from the <span class="window_name">Knowledge</span> workspace, open a knowledge record.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">View Workflow</span>, then click <span class="Bold">Show Definition</span>. The workflow designer appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the <span class="window_name">Notification</span> block to reconfigure it. The <span class="window_name">Notification</span> properties window appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">You can use the default template that appears, or modify it as needed.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span> followed by <span class="Bold">OK</span> to save the new workflow version.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Return to the version list for this workflow and publish the new version.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Configure a Voting Deadline for a Knowledge Article Approval Request</a><a name="10Configure"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Voting deadlines for article approvers are configured through <a href="../../reference/workflowobjects/get_approval.htm" class="MCXref xref">Get Approval Workflow Block</a>s. Deadlines can be based on a duration (in days, hours, and minutes) or on the date in a field that you specify.</p>
+                    <p class="Body">To configure a voting deadline for a knowledge article, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Service Desk Console as a Knowledge Manager or administrator, from the <span class="window_name">Knowledge</span> workspace, open a knowledge record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">View Workflow</span>, then click <span class="Bold">Show Definition</span>. The workflow designer appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the <span class="window_name">Get Approval</span> workflow block that is labeled as default, to reconfigure it. The <span class="window_name">Get Approval</span> properties window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Approval Voting Deadline</span> area, do one of the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Field</span> and use the drop-down list to specify a field name.</li>
+                            <li value="2">Click <span class="Bold">Duration</span> and specify the duration length in the provided fields. (The duration clock starts when the <span class="window_name">Get Approval</span> workflow block is triggered; the deadline is reached when the duration ends).</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span> followed by <span class="Bold">OK</span> to save the new workflow version.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Return to the version list for this workflow and publish the new version.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="knowledge.htm">Knowledge</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="creating_a_knowledge_art.htm">Creating a Knowledge Article</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="archiving_or_expiring_a_.htm">Archiving or Expiring a Knowledge Article</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="knowledge_article_approv.htm">Approving Knowledge Articles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="publishing_a_knowledge_a.htm">Publishing a Knowledge Article</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="setting_up_knowledge_advisory_board.htm">Setting up the Knowledge Advisory Board</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="knowledge_approval_workflow.htm">The Knowledge Approval Workflow</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/workflows/workflow_instance.htm">Workflow Instance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="feedback.htm">Feedback</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="related_articles.htm">Related Articles</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../socialboard/related_posts.htm">Related Posts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/knowledge_lifecycle.htm">Knowledge Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

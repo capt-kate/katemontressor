@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Common Features|Quick Actions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Quick Action Expression Examples</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/quickactions/quick_action_examples.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../common_actions.htm">Common Features</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="quick_actions.htm">Quick Actions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Quick Action Expression Examples</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Quick Action Expression Examples</h1>
+            <p class="Body">The following examples show how expressions can be used to enhance quick actions.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Access a Record from Notification Emails</a><a name="Accessing_a_record_from_notification_emails"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"><a name="kanchor321"></a>The syntax for creating a direct link to the record is:</p>
+                    <p class="Code">&lt;a href="$(ServerURL())/?Scope=ObjectWorkspace&amp;CommandId=Search&amp;ObjectType=Change%23&amp;CommandData=RecId,%3D,0,$([FRS_Approval#.][Change#.]RecId),string,AND|#"&gt;</p>
+                    <p class="Body">where</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="fixedwidth">$(ServerURL(</span> is the tenant URL</li>
+                            <li value="2"><span class="fixedwidth">Scope=ObjectWorkspace</span> is the access the specified object workspace from the <span class="notranslate"><b>HEAT</b></span> web client</li>
+                            <li value="3"><span class="fixedwidth">CommandId=Search</span> is search for the specific record in the object workspace</li>
+                            <li value="4"><span class="fixedwidth">ObjectType=&lt;</span><span class="Emphasis" style="line-height: 13pt;">the business object</span><span class="fixedwidth">&gt;</span> is the name of the business object to search for the record (for example, <span class="fixedwidth">Change#</span>). Notice in the example URL, the presence of <span class="fixedwidth">%23</span>, which corresponds in hexadecimal to the "#" character in ASCII.</li>
+                            <li value="5"><span class="fixedwidth">CommandData=RecId,%3D,0,$([FRS_Approval#.][Change#.]RecId),string,AND|#</span> is the means to search for the record. </li>
+                        </ul>
+                    </div>
+                    <p class="Body">For example, if the current record is an FRS_ApprovalVoteTracking record, and you wish to access the <span class="Emphasis">grandparent</span> Change record, via its relationship to FRS_Approval, you would use the following example expression: </p>
+                    <p class="Code">CommandData=RecId,%3D,0,</p>
+                    <p class="Code">$([FRS_Approval#.][Change#.]RecId),</p>
+                    <p class="Code">string,AND|#</p>
+                    <p class="Body">As another example, if the current record is a Change record, and you want to access it directly, you would use the following example expression:</p>
+                    <p class="Code">CommandData=RecId,%3D,0,$(RecId),</p>
+                    <p class="Code">string,AND|#</p>
+                    <p class="Body">The <span class="fixedwidth">%3D</span> corresponds in hexadecimal to the "<span class="fixedwidth">=</span>" character in ASCII, and is required as part of the value to the CommandData parameter.</p>
+                    <p class="Body">If you are not logged into <span class="notranslate"><b>HEAT</b></span>, you will be prompted to do so upon clicking the link. Access is dictated by your assigned role.</p>
+                    <p class="Body">The following syntax is for creating a link to access the record from the My Items tab in Self Service:</p>
+                    <p class="Code">&lt;a href="$(ServerURL())?Scope=SelfService&amp;role=SelfService&amp;CommandId=OpenMyItem&amp;ItemType=FRS_ApprovalVoteTracking&amp;ItemId=$(RecId)"&gt;</p>
+                    <p class="Body">where</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="fixedwidth">$(ServerURL()</span> is the tenant URL</li>
+                            <li value="2"><span class="fixedwidth">Scope=SelfService</span> is the access the Self Service application, via the Service Owner or Self Service roles</li>
+                            <li value="3"><span class="fixedwidth">role=SelfService</span> is the Self Service Role</li>
+                            <li value="4"><span class="fixedwidth">CommandId=OpenMyItem</span> is the fixed UI Action command to open the My Items tab in Self Service</li>
+                            <li value="5"><span class="fixedwidth">ItemType=FRS_ApprovalVoteTracking</span> is the the approval vote tracking object</li>
+                            <li value="6"><span class="fixedwidth">ItemId=$(RecId)</span> is the the specific record identified by its Rec ID</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Access a Survey Emails Record</a><a name="Accessing_a_Survey_Emails_Record"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Note that you need to add the appropriate expression to the incident or Service Request Send Survey Business Rule.</p>
+                    <ul>
+                        <li value="1">If you have the following raw URL expression (notice that there are no &lt;a&gt; tags surrounding the expression):</li>
+                    </ul>
+                    <p class="Code">$(GetSurveyURL())&amp;amp;survey_name=$(GetSurveyName("DefaultSurveyName"))&amp;amp;customer_id=$(GetApplicationId())&amp;amp;ot=Incident&amp;amp;oid=$(RecId)&amp;amp;page_index=0</p>
+                    <p class="Body">Update it with the following expression:</p>
+                    <p class="Code">&lt;a href="$(GetSurveyURL())&amp;amp;survey_name=$(GetSurveyName(&amp;quot;DefaultSurveyName&amp;quot;))&amp;amp;customer_id=$(GetApplicationId())&amp;amp;ot=Incident&amp;amp;oid=$(RecId)&amp;amp;page_index=0"&gt;Click here to fill out survey&lt;/a&gt;</p>
+                    <ul>
+                        <li value="1">If you have already modified the Send Email configuration to the friendly URL, it would appear as follows:</li>
+                    </ul>
+                    <p class="Code">&lt;a href="$(GetSurveyURL())&amp;amp;survey_name=$(GetSurveyName("DefaultSurveyName"))&amp;amp;customer_id=$(GetApplicationId())&amp;amp;ot=Incident&amp;amp;oid=$(RecId)&amp;amp;page_index=0"&gt;Click here to fill out survey&lt;/a&gt;</p>
+                    <p class="Body">Update it with the following expression to escape the double-quote characters surrounding DefaultSurveyName, as shown:</p>
+                    <p class="Code">&lt;a href="$(GetSurveyURL())&amp;amp;survey_name=$(GetSurveyName(&amp;quot;DefaultSurveyName&amp;quot;))&amp;amp;customer_id=$(GetApplicationId())&amp;amp;ot=Incident&amp;amp;oid=$(RecId)&amp;amp;page_index=0"&gt;Click here to fill out survey&lt;/a&gt;</p>
+                    <p class="Body">If you are not logged into <span class="notranslate"><b>HEAT</b></span>, you will be prompted to do so upon clicking the link. Access is dictated by your assigned role.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="quick_actions.htm">Quick Actions</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="object_templates.htm">Object Templates</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_quick_actions.htm">Using Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="add_actions_to_quick_act.htm">Add Actions to Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cloning_a_quick_action.htm">Cloning a Quick Action</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="add_fields_to_a_quick.htm">Add Fields to a Quick Action</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="adding_quick_action_butt.htm">Adding Quick Action Buttons to the Workspace Toolbar</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

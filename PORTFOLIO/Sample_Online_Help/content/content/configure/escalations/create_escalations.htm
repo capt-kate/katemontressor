@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Escalations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating an Escalation</title>
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/escalations/create_escalations.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="define_escalations__from.htm">Escalations</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Creating an Escalation</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Creating an Escalation</h1>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">If an escalation includes automatic email notification, ensure that the email server is configured correctly.
+ See <a href="../email/email.htm" class="MCXref xref">Setting Up Email</a>.					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create an Escalation Schedule</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console, select <span class="Bold">Automation Tools &gt; Escalation Schedules</span>.  The list of escalation schedules appears, sorted by business object. Although you can create an escalation for any object, escalations are usually created for incident, service request, task, or problem objects.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Escalation_Schedules_Workspace"><a name="Escalation_Schedules_Workspace" data-mc-generated-bookmark="ListOf"></a>Escalation Schedules Workspace</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/escalation_schedules.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1146" data-mc-height="507" src="../../resources/images/escalation_schedules_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Add New</span>. The  <span class="window_name">New Escalation Settings</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Business Object</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the business object.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Schedule name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for the schedule.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Escalation clock is regulated by</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The event that drives the escalation schedule.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Value</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The clock action for each value of the selected field. &#160;The default is <span class="Bold">Run</span>. </p>
+                                            <p>&#160;</p>
+                                            <p>The values in this table are derived from the selected field.  If needed, you can set a clock action for individual values. See <a href="#Default_Clock_States" class="MCXref xref">Escalation Clock States</a>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Keep a secondary (response) clock </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Specifies a controlling field. The secondary clock resets when the value of the field that you specify here changes. When the secondary clock has run for a duration set in the escalation lifecycle, (that is, when the specified field has remained unchanged for that amount of time) a quick action executes. A secondary clock is typically used to monitor response times.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">When this escalation schedule replaces a schedule already in place</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Recalculate the escalation clock value from the business object's creation time: Continues using the original creation time of the record as the starting point for elapsed time calculations. </li>
+                                            </ul>
+                                            <p class="Body_indent">With this option, if the new schedule reduces the target time from, for example, 10 days to five days, and if the current record was created six days ago, the schedule is considered breached as soon as it is implemented.</p>
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Reset the escalation clock to zero: Restarts the escalation clock when the new schedule is implemented.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Link escalation watches directly to business object using the following link field</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Optional. Employs a link field in an escalation watch.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span> to save the escalation schedule. The escalation is added to the list in the left panel and in the escalation schedules area.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Add Escalation Levels</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After you create an escalation, you can define its lifecycle by defining its escalation levels, which are the thresholds that must be reached to trigger a call for additional resources to meet a service level target or customer expectation.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2"><a name="kanchor418"></a>The following procedure describes how to define escalations only if the service level management module is not available.							Do not use this procedure if the service level management module is available at your site; rather, define and manage escalations through service level packages and service level agreements.
+ See <a href="../../servicedesk/servicerequest/service_request_escalati.htm" class="MCXref xref">Service Request Escalations</a>.							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Escalation Schedules</span> page, click the schedule to which you want to add a level.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Set Thresholds</span>. The  <span class="window_name">Escalation Parameters for:</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Escalation_Parameters_Window"><a name="Escalation_Parameters_Window" data-mc-generated-bookmark="ListOf"></a>Escalation Parameters Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/escalation_parameters.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="590" data-mc-height="521" src="../../resources/images/escalation_parameters_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your information  under the <span class="window_name">Service Target and Breach</span> tab.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Schedule is Enabled</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Activates the escalation schedule after the item has been saved. &#160;Enablea the fields.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Target Duration</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Defines the total amount of time used to track this escalation. Enter  values in the day (d), hour (h) and minute (m) fields. </p>
+                                            <p>&#160;</p>
+                                            <p>Do not use with the <span class="window_name">Target DateTime Field</span> option.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Target DateTime Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Defines the deadline for the target. </p>
+                                            <p>&#160;</p>
+                                            <p>Do not use with the <span class="window_name">Target Duration</span> option.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Hours of Operation</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The business operating hours to apply to this escalation.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">On breach, run action</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The quick action that executes if the escalation lifecycle exceeds the time limit defined above.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="Body_indent">If you haved configured a secondary clock, enter the following information in the Response and Periodic Update Target area:</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">If 'x' field value hasn't changed, while clock is running:</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Schedules actions at intervals within the lifecycle. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">for</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Defines the interval used to track this action in the day (d), hour (h) and minute (m) fields.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">then run action</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The quick action that executes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information under the <span class="window_name">Escalation Level 1</span>, <span class="window_name">2</span> and <span class="window_name">3</span> tabs as needed. If the Service Desk cannot successfully meet a service level target, the incident is elevated to a second or even third tier of support.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Do Not escalate at this level</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Ignores this escalation level.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Set as follows</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables the escalation threshold and action parameters area.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Escalate at (%)</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The percentage of the escalation lifecycle to elapse before raising the escalation to the next level. You can enter a value or use the slider bar to set the percentage.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>i.e. at:</p>
+                                            <p>out of target:</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Reflects  hours and minutes in relation to the breach target interval (in the <span class="window_name">out of target: </span>field).</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">By running action</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The quick action to execute when this interval is exceeded. Examples of quick actions include closing an incident, reassigning an incident, or sending an escalation or automated failure message.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">OK</span> to save the escalation schedule. </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Modify an Escalation Schedule</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Escalation Schedules</span> page, click  the schedule.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Edit Schedule</span>. The  <span class="window_name">Edit Escalation Settings</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Modify the information as described above.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Delete an Escalation Schedule</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Escalation Schedules</span> page, click <span class="Bold">Delete</span><img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> in the row containing the escalation schedule you want to remove. The  delete confirmation message appears.</td>
+                        </tr>
+                    </table>
+icns ·âic07  ¥âPNG
+
+   IHDR   Ä   Ä   √>aÀ   sRGB ÆŒÈ   	pHYs     öú  QIDATxÌù[å]Wy«◊\ÏèÔ±ﬂÉqM5âA-ï®ö™¢®4BÍK)}(U_(UUµRUBiAJ%öñ¥PT‘J®}i U<–
+µ¥Á$ÜƒNÏ‡ÿqÏÿ€„πv˝˜>ø}˛gÕ⁄3„f/T/iüÔˆˇæµ˜ˇ[{Ì}é'Ñ„ˇ5C%^˝'?˙ª∑`xhËùahËŒxécaa!D={∫16c»‘¯ΩF,ÚÂB9QVnù>Mî√V˛:ø0?ˇ‹¸¬¬ó„9¸Õ·?pR°íFùú„_˝…áÜFFF˛ 6ˇ√oº}ˇ∫];∂áÕ◊áhWúÎ§Z÷@ˆ|˙dçZ…E|ŸπôGRÉsúûû	óØNÖSgŒÜ'üzÊÍ‹‹‹GÊÓ?|ﬂ=dçÔÚs%\¨ ˘≈Ê«ﬁè|ˆ¿æ€ﬁ{ÁÅ}a›∫u·ÚÏH∏23¶Á„››;ùpø9Ú«ªøÁd®gÅ©eçSú¡ÖÉS¶◊Ú:‰H _Ô“Îs!N¨™?÷Õáık¬˙—πpıÍ’ùÔﬂ?v‚sÛÛÛøwÉ9Ú∫î£]NÓs«Êˇ·Å}{ﬂ˚ñÉwÜks√·‘ï—∞e˚Æ∞˚¶Ìa|›Dº´¥nı©ÌıV¢ìüb€¸)ŒÌ4Gˆ‘ïÀ·“+/áS/Ω∂çÖ∑|É–o}ˆπ£1˜cûﬂïŒç–’¸’ºÒôø7.Ä£Ô~«œéØ]ŒN≠	ª^s l⁄≤-6æ>≈¡ƒ^Õ…ßıÆ∑∆JÛÖªp˛l8ı‹˜√-Îf√ÏµÀ·K_˘⁄ïŸôô◊æÔ/_∏ﬁyÿ¯·v¡WS/>„˚MwÏ”∂ˇÚ‘h’¸Õ[∑7ÕOk:˘“uh†c{^Í”‚9sÊLxÚ…'+Èÿ•tÍ¯‚√◊ñ∑a”÷∞sÔ˛∏∞G™G€Ïõ˘≠6¸j˙ãX ëÃwÓºe{òú
+õ∑ÔÆÓ|HE:)Nætltlœ≈Áu¥ zË°/ ’À’…˘ò;>Ô´)7næ)l⁄∂3\éÔ4zπç9ø‰Á“ï^ƒàˇ⁄ıÎ¬’πë∞qÀMãHÜLë‰zJZÀ5∆snπÂñpÔΩ˜…ïÊêÃÈ‘—‹`¿màã‡Jº∆Î◊	∂ló≤àó¿H÷∂±µk¬Ùï°ÍÖ¬$!“õâ_ƒπ˛‚È”ïΩ{◊Æ¶9KÂ©Ò+mæœ£yΩÆÎäiøˆU:Òµk«√L¸F36æV˘€™`«E, 8òèèÚ··ëÜ4ë®É·:>‰ã/ûÔzˇ«Còz9¸ÀgÔ{ˆÏiöÙË£èÜ˚Ôø?hÅ®º˘ˆøˆvñ^Lø;l⁄¥)|Éá√=˜¸\5MdæTÍ‹ì;◊ë——†k,i± 6Ô=∂ﬁqO8}TﬂéÍ·äX'òÿ†\{6NÖ˘¯ukvv∂*B\Ω˘ÊzõW≠˘ÿÖ(bM¡Íe†ÔˆUµË¢wG‹÷¨YLèüG5IÔÉÊ3'œ~«H_≥a[º÷€√Ê«_JCùÿãØ∞ì”àîÎ∂¨≤¯ ’…G'∂c«é©O‹Wmª∑›v[’Lb>¯…¶0πç£ß¥˘&F£”\∑”Êì€`tù-◊⁄`VI)bÃN]
+3ìÁ¬¸‹tuŸ"Y§ÂFõ_ÿ›ªw7ç_
+◊÷D˜ßM„ú„ÁÁÛIOÛÖ≠¸≥3aÊÚπ†k.a± .ü9.ùx,Ã]Ø8q2ù$o${\zÒ‡“2ó˚ó´A-$xI›˝ÿƒΩˆÏ‘≈0y‚•0y˙¬ù 2æF‚x1ª^6D.ár•´:«èTL#Õ!È5I*œkh`;N:~ùzäYmªà ≤Q=Î◊ØöÇ√áá#GéTd—¥6íhÜÀ6¨¸+¡-7'uÑõôôòé‹CáÖO˙”ULÀ≠Zs∂@íVŸ(bTç1∂Ë´€⁄µk: ≥q¥(U≠ﬁ]-HöGÈ-4˘âI.7¿®˘Òœ3ö;øÚ~¯·¶å*VeÌõ`JÁèÄ>Ú°ÖÊ∑WcoÜxÉtÆ [í<≈Ò;ù:éA˜‡âπçO?¯∞ıÀá_Xtd≥»W∞∏òÎG);_ ?˝÷CΩ[¢˝2ùTæbA®Ko~™∫-ùCÒ\å<‚^;çÒãü◊$ORπ:*_\‰ïzc®¯≥„€ÌæØ}QΩ;ÑÊ âÂ¬‚†J[Cà#i6“Ûô?ıÈG'b £ñ˚\ßvLj‘.ïŒwÄSﬂ;“ê∆ˆaíﬁh¸",ßØŸiæl˜	G3S¨\z˜cûVyc®©˘Œ—gàÅN|⁄e·C‚√Ne=Sùßò«S=çìõÓ.Úß?9Éï§nÍ”É†~º±T‹|‰/>ÔÖ˙˘XS”o‰AfÆ9ƒ¿"›Ô:q$1ø§˘ÒIgÎóÓ9)ª©—õòŒ£+Ÿ˘#†∫^ˇuO@å$‰	#}πë√‡K%5”yrw:Xd∫ıÀ¶>Áèù;gñ{.∂⁄æ2Ä]µà£)ÊnTàuâ.ê7C∂bƒSI\RÉxm’6u[?>a¿ÂjGúúRd?ÂæàH".%Ú‹œù€Üw¨Ú›ñÓJcÃ'…w~È‰9^~çúØéîıY∆à{bÏ¡¿/Å–î#ü$çkkº◊Îæúé…|≤µ ‹Û„*ÀxTçÖ˝Ü.E(»5]1‚UE≠¨8¿óLÑ„¡U…ΩètÎwºÎπ˘≈{Á’+›ôË|¸˘˝Œ+±M” ëà?è Ÿ46áUúë∆›N1∫Û€Ó˛Ù\∞%Yx‘” Á˜‡ü˛ﬁ¸˚ﬁÛãwÎBvæ Ó:¯∆Õ⁄ˇ+¢º!ËÅh|ÿ9,IèªNc¿ìTÛ≤=Ü_?æ‘∆/8‹∂gÁ–ƒ∫Òâ∆◊Å“˘;¿µkÒoE2“…ﬁîô’¬âIX…Ü∏ÁπœÛ∏Û=ÆºÂljÉ´Œgî3Ògdﬂπ,¥jjÁ;¿7æÒıÏ≈.◊xí ∑M
+Gåúúåd™˚›øTè°S€eˇ0˜ÆÆﬁ˘∞+˛=>æ˙> q9ô.l∞PË6:X$~Â∏éÕ/~‘D
+ªí‡ëãöÓheÁ;¿¯ò˛`ºÎ™œ•Ø“%9î!ù!ùmå«¡#ÈXÈ‘"N>2≈;.ßÎJÌt#§€–˘¿ˆ*›—Ág	Ì±…›¶-/ıÀVÆ˚•Îø‚é˙+ï^∑…Èı|Vø)ƒüëªùÔ «N¸‡Bˇ%∞æìi@é<˜•∫€N™¸mápπ<›˘ûCΩãçÃ·àI6ã<ÍOˇ¯¬≈…+W»ÈBvæ >˛‡g∑Ë¬#Õ;R§µuû%Vu˙ã(ç´ÓR;çRÛıÏOq?≈∞”˘¿ÀﬂZÒz„qﬂ'˛v¯üæÙÔèÙc´Øu˛‡íıMp∞ï˘;º»•A)—ÿHr‘Xö)5–ë¸‚Á˘`›ûòlç•0\c≥‘)ù}væ¯ï˜çÓj%S†îËÅƒñ∏r</µ˘ŒÔı¡#}˜π;˛éﬂ˝ö”Ë|ƒüÇ/r6‹≤EúàÉH∞H¸‡Ò#ÒÉK˝©ÕK)xd∫s(èX™{M◊©/´ò—˘ÿΩÛÊçë…Üëö#s[Er8¸Hr|qIOøÛ”0Úê‰…ˆ¡‹Ú1á«•kÎ◊„Æî—˘ÿq€O,zˆ;Ò"JdÊ|êò#õf ”¶·ß∆r[ø„•3–ëÚªéÛèÀªvıK ÈDv˛xÚŸß≤Õâôk^ X˘ÖoÔ5À„“â/€Ä|ûS{˙üsΩèËk˘x+†Û‡¯Òcb∫aã∆ E^é@¸H·”bH&qú||Á'.©ú¥¶«]VÉyRÈÿf˜/‰9–˘–?Êôn8Çx5Ö°≤]'.)<9m˜K'è?Ÿé¡ñ‘ Y{Î'ıÛzïN†Ÿ˘»˝õ9êôì¯ƒüÎ)_zá#«Ôxöü´n%5ô#WáÛ¶ø‘…ËVvæ éü¯AÛèÂËY¬D&Ñ¢{LX¸“Ï≤=ü8ícÉ≈÷\iåyS?π9©Z⁄w™Õß∑Âp´ÈÎ|ƒüÇõ§è7d»ÕA‚±S,ÒäÙŸ¯¿¶ø¯˜öÆ+åÍ2πÌyiºNÌÁì◊ÖÏ¸[@u—Ω-Eâì˘ÓÉ<˜•:y¬Ê∂~èCæ§b.˜÷}ËäëÀ.W ≥†å–‹Mãó@éÿÂ|êçT#h†t˘sè	≈|êüÊ:&ßìßòt⁄Â*W‚wÃjÍe,ÄﬁÛÄÄE‰E“⁄ÓRrê‰"ÒKÊÓ~èK'ÈÒúè81IŒU≤—#∞ZÔÕ¢'≥Y∆hπúD—#!ÿı6Í¿z<}ÒÛòÙ\˛ïÃÈı®Ö¨Í8† ΩÛó@'E »BVÒÃÒ8˘Røb≈|Îó<π‹©‰∏∆9H«∂Èº(ßÑQƒ‡…Ôî@êKöÁæâäsxú|˜yCÂß6ò¥q…t±#ózÓÁ1óÊzŒjÍE<hºƒ ù<'?R1trëä±ı#øK≈”A≠6?5w¨œÈ˛¥N)v “X"Æçº‘/€õ·:$√ étzNÊÊé˘—S~ó“KE< ÉGÅlôíÈ>bi#itäœ\ƒÒ´N:¿§~lrs8èQI~	≤à "ÿ 
+â#ÒßRy:‰˜‡îÔ∫c®Ìjy8˜ÅÀ≈ºÒídQ@o»"ñ∆¨Ñ(íËN:;Ç◊.7Rˇr65¿IÍ‹Y¯¡ï(ÀX Ω~Ëy©Ê;°é√üìZ 4Ñ§ˆr~’eæ\.Û™éÎ‘uŸ<hÚk–°´¢ó± "+∫)” 2ùt|Œé|4»˝K5ü:^€sâ„ìùÛóLk	èØ—#N◊Z üîÛ®E–€Dñö«`˜†Á§|¯©ÅMåÉﬂq©èòÀÜÛ\WΩoV´¿ë›Ëe,ÄÍÓØ	ÄÿÙŒ…—V“uaY@ƒ“ÜÉOÎÇK˝≤ó;'rsµâ5u´U–Xù)≈<ƒ@Û|å∫ìÿ÷DÇ$áÊ;´ƒ‹'ΩÕøé<IöãÔzÍ¶Û¨∂]∆hÆ⁄ó@„lö‰d”t°ñ"ﬁc˝äµÊır∏ú/≠!;ásüÎÕÚ(chë’Á ≈N^õNÜ‚¯êÚ_œù
+^R#µ©Î¨˚“9´Î‘«çGÄ—§ÔŒ‚ƒ\)ôﬁ ø˚-•µ˘¬,ïC\“ÁEO•p>8∑‹‰´ÆSΩÖÂu∫–Àx	Ï]y}Ø’ÜàKüÂ©HeHwªW≤Ò•1jåjêá$œqƒê4ªMV∏¨vÅ6–*˚Àxàî»JΩ‘xS‘@C¡~ŸÆS'á´¢â3c©˙Ç˜π–âÅKÀ˚Nó∆V€.f§èD»!4ª-∂t>r/◊|·»%'ı•qü√cËH’)eÒÄò‹K ‰√ë6"gìáLŒúƒë¯Yt¯%óä)ûÊ`ß≤⁄s“Øå"v  ]?§/K1≤©ô∆T«„n;V∫€‘OL~t≈|Pc ^“@<Ÿ"v ëñ>âSÚ∞+¨=∑»U∞7ÔÕSò¶yÆÎ‘ <~jHíÛß~›¯Ö‹¸’©±ËLÙLÙó¿ÍÏ2¡@dßd{]íKÈmx˜ªNMŒÉs¡ÔÿíÙbvÄöî¡} Ú$—ùº6ü˚…E*üÊHw¨˚K5êƒΩÜ|©ÆäπQÄ^∆–lÈ˝wc'Q∫ö„>qG√K:ñ∏ÁÇU>:R>FZ«1K’#ÊxÈn3G	≤å†jnl»¢7Åˆ&A™ãﬁ&sÑ≥H<F>æÂl·¿§íÈ<‡àw%ÀX ÒÍ´ó£¯ 1íËNNõ_HFz∫Áóõ√±Ëí‰íÉt8Œ!á|–•Ÿ´kˆË71•!KdÔ— 

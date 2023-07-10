@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Built-in Functions</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/_built_in_functions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Functions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor717"></a>Built-in Functions</h1>
+            <p class="Body">Built-in functions can be used in various places:</p>
+            <ul>
+                <li value="1">As parameters for search and dashboard queries.</li>
+                <li value="2">As values or expression members in quick actions. </li>
+                <li value="3">As values or expression members in object and relationship rules.</li>
+                <li value="4">As values in workflow objects.</li>
+                <li value="5">As values in reports. </li>
+            </ul>
+            <p class="Body">Each function description contains the following information:</p>
+            <ul>
+                <li value="1">Name of the function.</li>
+                <li value="2">Brief description of the function.</li>
+                <li value="3">Syntax of the function.</li>
+                <li value="4">The business objects for which this function is enabled: Search/dashboard, business rules, quick actions, workflow objects, and reports.</li>
+                <li value="5">Input parameters for the function. These inputs can be literals, field references, function calls, text concatenation, expressions, and so on. For details on expressions, see <a href="../expressions/expressions.htm" class="MCXref xref">Expressions</a>.</li>
+                <li value="6">The type of value that the function returns. Possible values are as follows:<ul><li value="1">Text</li><li value="2">DateTime</li><li value="3">Boolean</li><li value="4">Number</li><li value="5">Unicode text</li><li value="6">Fixed text</li><li value="7">Currency</li><li value="8">List of text items (only valid in certain areas)</li><li value="9">Regular expression</li></ul></li>
+                <li value="7">An example of how the function is used.</li>
+            </ul>
+            <p class="Body" data-mc-conditions="Default.Do Not Print">The following functions are described in this section:</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Control Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="childfold.htm#ChildFold">ChildFold</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ChildFold" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="findancestor.htm#FindAncestor">FindAncestor</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="FindAncestor" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="foreachchild.htm#ForEachChild">ForEachChild</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ForEachChild" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getbovalue.htm#GetBOValue">GetBOValue</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetBOValue" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getsrpvalue.htm#GetSRPValue">GetSRPValue</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetSRPValue" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="ifallsiblings.htm#IfAllSiblings">IfAllSiblings</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IfAllSiblings" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="isbounderchangecontrol.htm#IsBOUnderChangeControl">IsBOUnderChangeControl</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IsBOUnderChangeControl" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="istrueforallchildren.htm#IsTrueForAllChildren">IsTrueForAllChildren</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IsTrueForAllChildren" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="searchhierarchy.htm#SearchHierarchy">SearchHierarchy</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="SearchHierarchy" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="searchlist.htm#SearchList">SearchList</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="SearchList" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Current User Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentloginid.htm#CurrentLoginId">CurrentLoginId </a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentLoginId" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserdisplayname.htm#CurrentUserDisplayName">CurrentUserDisplayName </a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserDisplayName" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuseremail.htm#CurrentUserEmail">CurrentUserEmail </a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserEmail" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserfield.htm#CurrentUserField">CurrentUserField </a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserField" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuseridentitytype.htm#CurrentUserIdentityType">CurrentUserIdentityType</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserIdentityType" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserinfo1.htm#CurrentUserInfo1">CurrentUserInfo1</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserInfo1" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentusername.htm#CurrentUserName">CurrentUserName</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserName" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserorganizationalunitname.htm#CurrentUserOrganizationalUnitName">CurrentUserOrganizationalUnitName</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserOrganizationalUnitName" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserorganziationa.htm#CurrentUserOrganizationalUnit">CurrentUserOrganizationalUnit</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserOrganizationalUnit" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserrecid.htm#CurrentUserRecId">CurrentUserRecId</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserRecId" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserrelatedobjectfieldvalues.htm#CurrentUserRelatedObjectFieldValues">CurrentUserRelatedObjectFieldValues</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserRelatedObjectFieldValues" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserrole.htm#CurrentUserRole">CurrentUserRole</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserRole" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserteam.htm#CurrentUserTeam">CurrentUserTeam</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserTeam" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserteamids.htm#CurrentUserTeamIds">CurrentUserTeamIds</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserTeamIds" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentuserteamnames.htm#CurrentUserTeamNames">CurrentUserTeamNames</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentUserTeamNames" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="userpresence.htm#UserPresence">UserPresence</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="UserPresence" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Date Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="adddays.htm#AddDays">AddDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addhours.htm#AddHours">AddHours</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddHours" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addminutes.htm#AddMinutes">AddMinutes</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddMinutes" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addmonths.htm#AddMonths">AddMonths</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddMonths" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addquarters.htm#AddQuarters">AddQuarters</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddQuarters" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addweeks.htm#AddWeeks">AddWeeks</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddWeeks" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="addyears.htm#AddYears">AddYears</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AddYears" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofday.htm#BeginningOfDay">BeginningOfDay</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfDay" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofhour.htm#BeginningOfHour">BeginningOfHour</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfHour" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofminute.htm#BeginningOfMinute">BeginningOfMinute</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfMinute" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofmonth.htm#BeginningOfMonth">BeginningOfMonth</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfMonth" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofquarter.htm#BeginningOfQuarter">BeginningOfQuarter</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfQuarter" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofweek.htm#BeginningOfWeek">BeginningOfWeek</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfWeek" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="beginningofyear.htm#BeginningOfYear">BeginningOfYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="BeginningOfYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentdate.htm#CurrentDate">CurrentDate</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentDate" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentdatestr.htm#CurrentDateStr">CurrentDateStr</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentDateStr" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentdatetime.htm#CurrentDateTime">CurrentDateTime</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentDateTime" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="dateadd.htm#DateAdd">DateAdd</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DateAdd" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="datediff.htm#DateDiff">DateDiff</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DateDiff" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="datepart.htm#DatePart">DatePart</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DatePart" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofday.htm#EndOfDay">EndOfDay</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfDay" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofhour.htm#EndOfHour">EndOfHour</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfHour" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofminute.htm#EndOfMinute">EndOfMinute</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfMinute" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofmonth.htm#EndOfMonth">EndOfMonth</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfMonth" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofnextyear.htm#EndOfNextYear">EndOfNextYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfNextYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofquarter.htm#EndOfQuarter">EndOfQuarter</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfQuarter" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofthismonth.htm#EndOfThisMonth">EndOfThisMonth</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfThisMonth" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofthisyear.htm#EndOfThisYear">EndOfThisYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfThisYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofweek.htm#EndOfWeek">EndOfWeek</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfWeek" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="endofyear.htm#EndOfYear">EndOfYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EndOfYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="formatdate.htm#FormatDate">FormatDate</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="FormatDate" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="last3months.htm#Last3Months">Last3Months</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Last3Months" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="last90days.htm#Last90Days">Last90Days</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Last90Days" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="last365days.htm#Last365Days">Last365Days</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Last365Days" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="lastdays.htm#LastDays">LastDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="LastDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="lastsevendays.htm#LastSevenDays">LastSevenDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="LastSevenDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="lastthirtydays.htm#LastThirtyDays">LastThirtyDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="LastThirtyDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="lastweeks.htm#LastWeeks">LastWeeks</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="LastWeeks" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="lastyears.htm#LastYears">LastYears</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="LastYears" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="nextdays.htm#NextDays">NextDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="NextDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="nextsevendays.htm#NextSevenDays">NextSevenDays</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="NextSevenDays" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="secondstotime.htm#SecondsToTime">SecondsToTime</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="SecondsToTime" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="startofnextyear.htm#StartOfNextYear">StartOfNextYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="StartOfNextYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="startofpreviousmonth.htm#StartOfPreviousMonth">StartOfPreviousMonth</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="StartOfPreviousMonth" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="startofthismonth.htm#StartOfThisMonth">StartOfThisMonth</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="StartOfThisMonth" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="startofthisyear.htm#StartOfThisYear">StartOfThisYear</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="StartOfThisYear" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="toclienttime.htm#ToClientTime">ToClientTime</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ToClientTime" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="today.htm#Today">Today</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Today" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="tomorrow.htm#Tomorrow">Tomorrow</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Tomorrow" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="yesterday.htm#Yesterday">Yesterday</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Yesterday" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Default User Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="defaultusername.htm#DefaultUserName">DefaultUserName</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DefaultUserName" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="defaultuserteam.htm#DefaultUserTeam">DefaultUserTeam</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DefaultUserTeam" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="defaultusertype.htm#DefaultUserType">DefaultUserType</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DefaultUserType" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />LDAP Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="dn.htm#DN">DN</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DN" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="parsedn.htm#ParseDn">ParseDn</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ParseDn" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Numeric and Currency Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currency.htm#Currency">Currency</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Currency" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currencycode.htm#CurrencyCode">CurrencyCode</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrencyCode" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currencyvalue.htm#CurrencyValue">CurrencyValue</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrencyValue" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="defaultcurrencycode.htm#DefaultCurrencyCode">DefaultCurrencyCode</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DefaultCurrencyCode" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="defaultcurrencysymbol.htm#DefaultCurrencySymbol">DefaultCurrencySymbol</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DefaultCurrencySymbol" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="round.htm#Round">Round</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Round" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="rounddown.htm#RoundDown">RoundDown</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="RoundDown" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="roundup.htm#RoundUp">RoundUp</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="RoundUp" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Numeric Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="numericempty.htm#NumericEmpty">NumericEmpty</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="NumericEmpty" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Regular Expression Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="firstregexmatch.htm#FirstRegexMatch">FirstRegexMatch</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="FirstRegexMatch" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="isregexmatch.htm#IsRegexMatch">IsRegexMatch</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IsRegexMatch" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="regex.htm#Regex">Regex</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Regex" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="replaceregex.htm#ReplaceRegex">ReplaceRegex</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ReplaceRegex" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />String Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="decode.htm#Decode">Decode </a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Decode" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="emptystring.htm#EmptyString">EmptyString</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EmptyString" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="find.htm#Find">Find</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Find" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="floattostr2.htm#FloatToStr2">FloatToStr2</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="FloatToStr2" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="len.htm#Len">Len</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Len" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="replace.htm#Replace">Replace</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Replace" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="substring.htm#Substring">Substring</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Substring" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="substring0.htm#Substring0">Substring0</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Substring0" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="tolowercase.htm#ToLowerCase">ToLowerCase</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ToLowerCase" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="tostring.htm#ToString">ToString</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ToString" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="touppercase.htm#ToUpperCase">ToUpperCase</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ToUpperCase" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="trim.htm#Trim">Trim</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Trim" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />System Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="ismoduleenabled.htm#IsModuleEnabled">IsModuleEnabled</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IsModuleEnabled" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="audithistorydescription.htm#AuditHistoryDescription">AuditHistoryDescription</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="AuditHistoryDescription" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentbrowserculture.htm#CurrentBrowserCulture">CurrentBrowserCulture</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentBrowserCulture" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentbrowsertimezoneoffset.htm#CurrentBrowserTimezoneOffset">CurrentBrowserTimezoneOffset</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentBrowserTimezoneOffset" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="currentglobalcurrency.htm#CurrentGlobalCurrency">CurrentGlobalCurrency</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="CurrentGlobalCurrency" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="encodelink.htm#EncodeLink">EncodeLink</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EncodeLink" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="evalfield_.htm#EvalField">EvalField</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="EvalField" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getactionvariable.htm#GetActionVariable">GetActionVariable</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetActionVariable" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getapplicationid.htm#GetApplicationId">GetApplicationId</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetApplicationId" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getcountervalue.htm#GetCounterValue">GetCounterValue</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetCounterValue" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getglobal.htm#GetGlobal">GetGlobal</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetGlobal" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getnextcounter.htm#GetNextCounter">GetNextCounter</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetNextCounter" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getsurveyname.htm#GetSurveyName">GetSurveyName</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetSurveyName" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getsurveyurl.htm#GetSurveyURL">GetSurveyURL</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetSurveyURL" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getuserannotatedfield.htm#GetUserAnnotatedField">GetUserAnnotatedField</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetUserAnnotatedField" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="getuserfield.htm#GetUserField">GetUserField</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="GetUserField" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="hopcalcduration.htm#HOPCalcDuration">HOPCalcDuration</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="HOPCalcDuration" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="hopcalctargetdate.htm#HOPCalcTargetDate">HOPCalcTargetDate</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="HOPCalcTargetDate" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="htmldecode.htm#HtmlDecode">HtmlDecode</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="HtmlDecode" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="htmlencode.htm#HtmlEncode">HtmlEncode</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="HtmlEncode" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="htmlsanitize.htm#HtmlSanitize">HtmlSanitize</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="HtmlSanitize" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="isnull.htm#IsNull">IsNull</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="IsNull" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="local.htm#Local">Local</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Local" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="newguid.htm#NewGuid">NewGuid</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="NewGuid" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="nvl.htm#nvl">nvl</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="nvl" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="prompt.htm#Prompt">Prompt</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Prompt" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="promptandexecuteaction.htm#PromptAndExecuteAction">PromptAndExecuteAction</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="PromptAndExecuteAction" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="secureserverurl.htm#SecureServerURL">SecureServerURL</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="SecureServerURL" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="serverurl.htm#ServerURL">ServerURL</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="ServerURL" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Type Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="ListOfProxy_0">
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="boolean.htm#Boolean">Boolean</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Boolean" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="datetime.htm#DateTime">DateTime</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="DateTime" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" class="GenListOfTableLink">
+                            <col style="width: 0px;" />
+                            <col />
+                            <col style="width: 10pt;" />
+                            <col style="width: 0px;" />
+                            <tr>
+                                <td />
+                                <td class="GenListOfTextLink"><a class="GenListOfTextLink" href="number.htm#Number">Number</a>
+                                </td>
+                                <td class="GenListOfPageTextLink">
+                                    <MadCap:xref style="mc-format: '{page}';" class="ListOfPageNumber" data-mc-xref-target="Number" />
+                                </td>
+                                <td />
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="audithistorydescription.htm">AuditHistoryDescription</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="childfold.htm">ChildFold</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currency.htm">Currency</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currencycode.htm">CurrencyCode</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currencyvalue.htm">CurrencyValue</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentbrowserculture.htm">CurrentBrowserCulture</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentbrowsertimezoneoffset.htm">CurrentBrowserTimezoneOffset</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentdate.htm">CurrentDate</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentdatestr.htm">CurrentDateStr</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentdatetime.htm">CurrentDateTime</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentglobalcurrency.htm">CurrentGlobalCurrency</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentloginid.htm">CurrentLoginID</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserdisplayname.htm">CurrentUserDisplayName</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuseremail.htm">CurrentUserEmail</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserfield.htm">CurrentUserField</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuseridentitytype.htm">CurrentUserIdentityType</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserinfo1.htm">CurrentUserInfo1</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentusername.htm">CurrentUserName</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserorganizationalunitname.htm">CurrentUserOrganizationalUnitName</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserorganziationa.htm">CurrentUserOrganizationalUnit</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserrecid.htm">CurrentUserRecId</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserrelatedobjectfieldvalues.htm">CurrentUserRelatedObjectFieldValues</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserrole.htm">CurrentUserRole</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserteam.htm">CurrentUserTeam</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserteamids.htm">CurrentUserTeamIds</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="currentuserteamnames.htm">CurrentUserTeamNames</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="dateadd.htm">DateAdd</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="datediff.htm">DateDiff</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="datepart.htm">DatePart</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="decode.htm">Decode</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="defaultcurrencycode.htm">DefaultCurrencyCode</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="defaultcurrencysymbol.htm">DefaultCurrencySymbol</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="defaultusername.htm">DefaultUserName</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="defaultuserteam.htm">DefaultUserTeam</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="defaultusertype.htm">DefaultUserType</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="dn.htm">DN</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="emptystring.htm">EmptyString</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="encodelink.htm">EncodeLink</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="endofnextyear.htm">EndOfNextYear</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="endofthismonth.htm">EndOfThisMonth</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="endofthisyear.htm">EndOfThisYear</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="evalfield_.htm">EvalField</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="find.htm">Find</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="firstregexmatch.htm">FirstRegexMatch</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="floattostr2.htm">FloatToStr2</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="foreachchild.htm">ForEachChild</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="formatdate.htm">FormatDate</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getactionvariable.htm">GetActionVariable</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getapplicationid.htm">GetApplicationId</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getbovalue.htm">GetBOValue</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getcountervalue.htm">GetCounterValue</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getglobal.htm">GetGlobal</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getnextcounter.htm">GetNextCounter</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getsrpvalue.htm">GetSRPValue</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getsurveyname.htm">GetSurveyName</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="getsurveyurl.htm">GetSurveyURL</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="hopcalcduration.htm">HOPCalcDuration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="hopcalctargetdate.htm">HOPCalcTargetDate</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="htmldecode.htm">HtmlDecode</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="htmlencode.htm">HtmlEncode</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="htmlsanitize.htm">HtmlSanitize</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="ifallsiblings.htm">IfAllSiblings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="isbounderchangecontrol.htm">IsBOUnderChangeControl</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="isregexmatch.htm">IsRegexMatch</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="istrueforallchildren.htm">IsTrueForAllChildren</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="last3months.htm">Last3Months</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="last90days.htm">Last90Days</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="last365days.htm">Last365Days</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="lastsevendays.htm">LastSevenDays</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="lastthirtydays.htm">LastThirtyDays</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="len.htm">Len</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="local.htm">Local</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="newguid.htm">NewGuid</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="nextsevendays.htm">NextSevenDays</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="numericempty.htm">NumericEmpty</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="nvl.htm">nvl</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="parsedn.htm">ParseDn</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="prompt.htm">Prompt</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="promptandexecuteaction.htm">PromptAndExecuteAction</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="regex.htm">Regex</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="replaceregex.htm">ReplaceRegex</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="round.htm">Round</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="rounddown.htm">RoundDown</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="roundup.htm">RoundUp</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="searchhierarchy.htm">SearchHierarchy</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="searchlist.htm">SearchList</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="secondstotime.htm">SecondsToTime</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="secureserverurl.htm">SecureServerURL</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="serverurl.htm">ServerURL</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="startofnextyear.htm">StartOfNextYear</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="startofpreviousmonth.htm">StartOfPreviousMonth</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="startofthismonth.htm">StartOfThisMonth</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="startofthisyear.htm">StartOfThisYear</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="substring.htm">Substring</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="toclienttime.htm">ToClientTime</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="today.htm">Today</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="tolowercase.htm">ToLowerCase</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="tomorrow.htm">Tomorrow</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="tostring.htm">ToString</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="touppercase.htm">ToUpperCase</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="trim.htm">Trim</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="userpresence.htm">UserPresence</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="yesterday.htm">Yesterday</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../expressions/expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../expressions/constructing_expressions.htm">Constructing Expressions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../expressions/expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../expressions/expressions_in_the_form_editor.htm">Using Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../expressions/expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../expressions/type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../expressions/operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../expressions/null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up the Application|Users">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>About Roles</title>
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/roles/roles.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/setting_up_the_applicati.htm">Setting Up the Application</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/users.htm">Users</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Roles</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor579"></a>About Roles</h1>
+            <h3>The Role Workspace</h3>
+            <p class="Body">The system assigned at least one role to all <span class="notranslate"><b>HEAT</b></span> users of the type employee. Users can have multiple roles. The system uses roles to define responsibilities for the users as they work within the application.</p>
+            <p class="Body">A role consists of device- or function-specific application access to various workspaces, business objects, and fields. When you create users, you assign them to a specific role. These roles are available to the user upon logging in. When a role is selected, it determines the default set of user interfaces (forms, dashboards, and their controls) available to the user.</p>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> contains a default set of roles organized by common user functions, including administrator, Service Desk Analyst, and various manager roles. Access to modules and features (security rights) and access to business objects and fields (business object rights) are based on the user's role. You can customize these roles or create entirely new ones.</p>
+            <p class="Body">For example, a user logging into <span class="notranslate"><b>HEAT</b></span> under the Change Manager role might view a layout of the change form that differs from the change form seen by a technician, in addition to dashboards displaying change request data recorded by the system over the last day and trending information for the week. The role can also be linked to a specific device, letting users log on in a role that views dashboard data for layouts for that machine.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Roles</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console Settings pane under <span class="window_name">Configure</span>, go to <span class="Bold">User and Permissions &gt; Roles</span>. The  list of available roles appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent"><span class="Emphasis">OR</span>
+                    </p>
+                    <p class="Body_indent">Log into the Service Desk Console as an administrator and open the <span class="window_name">Role</span> workspace.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click a role name to view the list of users assigned to that particular role.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_List_of_Administrators"><a name="Sample_List_of_Administrators" data-mc-generated-bookmark="ListOf"></a>Sample List of Administrators</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/role_list.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="823" data-mc-height="608" src="../../resources/images/role_list_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the Configuration Console Settings pane under <span class="window_name">Configure</span>, go to <span class="Bold">User and Permissions &gt; Roles and Permissions</span>. The  list of available roles appears with the following information:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Role Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> The name of the role as stored within the business object.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the role as displayed in the <span class="notranslate"><b>HEAT</b></span> interface and in pick lists.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Tabs</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A list of the available tabs (user interfaces) available for display for users assigned to this role. Hover over a table cell to display a complete pop-up list of the tabs assigned to the particular role.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Users</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click <span class="Bold">Find Users</span> on any row to open the <span class="window_name">Role</span> workspace, from where you can view the list of employees who are in that particular role.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Action</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Click <span class="Bold">Clone</span> to create another role with the same attributes. You must provide a unique name for the new role.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create a Role</a><a name="roles_1236189643_1266760"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create roles that appear within the application role lists, such as when defining a quick action. New roles do not appear in the main login drop-down list. Therefore, users must be associated with one of the default roles before they can be linked to a created role.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Roles and Permissions</span> workspace, click <span class="Bold">Add New...</span>. The  <span class="window_name">Role Details</span> page appears. 
+       The following default tabs appear (results may vary depending on your system setup):
+    </td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Translation Tool</b> See <a href="../localization/using_the_translation_tool.htm" class="MCXref xref">Using the Translation Tool</a>.</li>
+                            <li value="2"><![CDATA[
+                            ]]><b>Role Details</b> Continue to the next step.</li>
+                            <li value="3"><b>Top Level Tabs</b> See <a href="#roles_1236189643_1266878" class="MCXref xref">Top Level Tabs</a></li>
+                            <li value="4"><b>Object Permissions</b> See <a href="#roles_1236189643_1266912" class="MCXref xref">Object Permissions</a></li>
+                            <li value="5"><b>System Permissions</b> See <a href="#roles_1236189643_1266963" class="MCXref xref">System Permissions</a></li>
+                            <li value="6"><b>Permissions to Grant Roles</b> See <a href="#roles_1236189643_1267018" class="MCXref xref">Permissions to Grant Roles</a></li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter your options.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-options-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="208px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="448px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Option</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Show "Talk with Agent" button (applicable for Self Service only)</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to places a <span class="window_name">Talk with Agent</span> button in the header bar of the role interface. This only applies to the Self Service role.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Overwrite default branding options with the options listed below</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to enable selections within the <span class="window_name">Branding Options</span> section.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>New UI</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to use the new <span class="notranslate"><b>HEAT</b></span> user interface. If not selected, the system displays the original user interface.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Self Service Role</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to define this role as  Self Service.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Branding Options</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>These options only apply to the Self Service role. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Logout Button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to show the <span class="window_name">Logout</span> button.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Change Password Button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to shoe the <span class="window_name">Change Password</span> button.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Show "Report an Issue" button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to show the <span class="window_name">Report an Issue</span> button.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>New Window Button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to show the  <span class="window_name">New Window</span> button.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Select Workspace Button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to show the  <span class="window_name">Workspace</span> button.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Help Link</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Check to show a button the enables users to access this online help.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Change Role Button</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Check to show a button that enables users to change roles.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h4 class="subheading">Change Logo</h4>
+                    <p class="Body">You can select a different logo for any role. By default, each role uses the original logo defined for the application (see <a href="../dynamicstyles/style_editor.htm" class="MCXref xref">The Style Editor</a>).</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">Change Logo</span>. The file navigation window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Navigate to the logo you want, then click <span class="Bold">Open</span>. The updated logo appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     Users of that role will see the logo in the top left corner of their window.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">To revert to the original default logo, click <span class="Bold">Reset Logo</span>.</li>
+                        </ul>
+                    </div>
+                    <h4 class="subheading">Top Links and Bottom Links</h4>
+                    <p class="Body">You can define external links to be visible at the top of Self Service pages. For example, you can direct customers to pages to download software updates or to access an external knowledge base.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">Add Item</span> <img src="../../resources/images/buttons/add_green.png" alt="" class="icon" /> to add a table row for defining a top link. This icon only appears when you check <span class="window_name">Overwrite default branding options with the options listed below</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter your information into the fields.</td>
+                        </tr>
+                    </table>
+                    <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                        <col width="106px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="544px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Title</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The display name for the link.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>URL</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>A valid URL to be used as the link target, such as http://www.frontrange.com.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Window</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Displays the link in a new browser window.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Pass Single Sign-on Info</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Passes single sign-on information if working within a secured environment.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Top Level Tabs</a><a name="roles_1236189643_1266878"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">In <span class="notranslate"><b>HEAT</b></span>, the top-level tabs contain the user interfaces that are available to the user upon logging in. User interfaces, shown as additional tabs at the top of the Service Desk Console, combine forms for recording information for your company, the dashboards which display the compiled metrics, and their controls.</p>
+                            <p class="Body">For example, an Incident Manager can view a <span class="window_name">Home</span> tab containing several dashboards displaying metrics for incidents according to status and ownership. In addition, the <span class="window_name">Incidents</span> tab contains a grid that lists existing incidents, a record display area with details for a selected incident, and a toolbar allowing the Incident Manager to create a new incident, change its status, or take additional actions.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From  <span class="window_name">Top Level Tabs</span>, click <span class="Bold">Add New Tab</span>. The  list of workspace types appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the workspace type that you want. The  tab preferences page appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select your options.</td>
+                                </tr>
+                            </table>
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="169px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="495px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Options</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>The Tab is Available</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>This role has access to this workspace, but the tab might not be initially visible.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>The Tab is Initially Visible</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>This role has access to this workspace and the tab is initially visible.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>The Tab Can Be Closed by User</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>This role has access to this workspace, and the tab contains a Close button (X).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Search tags</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enter search tags to be used within the dashboard configuration.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Show Toolbar</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>This role sees the search toolbar. </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click<span class="Bold"> Add this Tab</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5."> 
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     The system saves the settings.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Object Permissions</a><a name="roles_1236189643_1266912"></a><a name="Object_Permissions"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Specify the view for a role view and read-access rights for business objects. Unlike regular object permissions, the <span class="window_name">Object Permissions</span> page allows you to apply data-segregation security constraints. You can specify security rights based on the data and relations within the business object and within the business object of the current user.</p>
+                            <p class="Body">For example, administrators may be able to view and modify data in any record, while members of the support role may not be able to view private information such as a social security number.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">The application of the data-segregation security organizational unit constraint to a role can affect your saved searches. You may need to modify your search parameters to reflect these constraints.
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the  <span class="Bold">Object Permissions</span> tab, select the object (for example, <span class="window_name">address</span>) for which you want to change permissions. The  list of permission selections appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the permissions you want for the role for each appropriate object.</td>
+                                </tr>
+                            </table>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-permissions-</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                        <col width="106px" class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col width="549px" class="TableStyle-ParameterTable-Column-Column2" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Permission</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Add</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Adds data to a selected business object. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>View</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Views data in a selected business object. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Edit</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Manipulates data in a selected business object. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Delete</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Deletes data in a selected business object.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Lifecycle</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Click <span class="Bold">Edit</span>, then check <span class="Bold">Allow Editing</span> to enable the role user to edit the object in the final state.</p>
+                                                    <p>For more specific rights, you can expand an object in the table and set rights for specific business object components:</p>
+                                                    <ul class="list_table">
+                                                        <li value="1">Object fields.</li>
+                                                        <li value="2">Object links to the <span class="fixedwidth">Profile.Employee</span> (employee profile) object.</li>
+                                                        <li value="3">Linked <span class="fixedwidth">Profile.Employee</span> object fields.</li>
+                                                        <li value="4">Relationships linking the object to <span class="fixedwidth">Profile.Employee</span> (such as the CAB in change).</li>
+                                                        <li value="5">Object links to objects or hierarchies that are also related to <span class="fixedwidth">Profile.Employee</span>.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                                    <p>Access</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                                    <p>Click <span class="Bold">Edit</span>, then click <span class="Bold">Add a new case...</span> to define advanced security criteria. For example, you can create a definition to make an incident be view-only when it is closed. The match can be based on literal, validated, or numeric input. You also can specify a match when the field is empty.</p>
+                                                    <p>You can match against: </p>
+                                                    <ul class="list_table">
+                                                        <li value="1">Your own <span class="fixedwidth">Profile.Employee</span> business object.</li>
+                                                        <li value="2">Multiple objects (one-to-many relations of <span class="fixedwidth">Profile.Employee</span>).</li>
+                                                        <li value="3">A hierarchy of objects (relation to a hierarchical object).</li>
+                                                    </ul>
+                                                    <p>When defining multiple cases, the object-matching logic uses the case with the widest application in the event of a conflict. When roles  are combined, their access cases are combined. If one role has unrestricted access (no cases) for an object, the cases are not combined and the merged role maintains its unrestricted access to the object.</p>
+                                                    <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/object_permissions.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1024" data-mc-height="457" src="../../resources/images/object_permissions_thumb_0_45.png" alt="" tabindex="" /></a>
+                                                    </p>
+                                                    <p>Enter the criteria, then click <span class="Bold">Update</span>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor580"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />System Permissions</a><a name="roles_1236189643_1266963"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can assign default permissions for sharing items with other roles. By publishing permissions, you can define dashboards, quick actions, or searches within one role and allow assigned users to share them with another role. </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Select the <span class="Bold">System Permissions</span> tab.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">If you are working in a Managed Service Provider (MSP) environment, select <span class="Bold">Apply MSP Security</span> to apply a combination of the user's tenant and organizational unit security access to this object when logging in with this role.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">This option is visible only to MSP providers who have had the MSP database enabled by FrontRange Solutions.
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select your options for the role.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">If a role does not have permission to create quick actions, saved searches, or dashboards (and its parts), users in that role cannot create them. If a role does not have permission to edit quick actions, saved searches, or dashboards (and its parts), users in that role cannot edit them.
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="100px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="190px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <col width="232px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <col width="179px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">&#160;</th>
+                                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                            <p>Create (for self)</p>
+                                        </th>
+                                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                            <p>Edit (for all)</p>
+                                        </th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                            <p>Delete (for all)</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Quick Action</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Create, edit, and delete quick actions created by the user.</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Create personal quick actions and edit quick actions created by other users.</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Delete quick actions created by other users.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Search</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Create, edit, and delete saved searches created by the user.</p>
+                                            <p>The user cannot publish to any other roles.</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Create personal searches and edit saved searches created by other users. The user can publish to other roles.</p>
+                                            <p>&#160;</p>
+                                            <p>The system displays an Edit button next to the saved search.</p>
+                                            <p>&#160;</p>
+                                            <p>The user can view dependencies (to see if the saved search is being used in other areas, such as dashboard parts).</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Delete saved searches created by other users.</p>
+                                            <p>&#160;</p>
+                                            <p>The user can view dependencies (to see if the saved search is being used in other areas, such as dashboard parts).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Dashboard</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                            <p>Create, edit, and delete dashboard and dashboard parts created by the user.</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                            <p>Create and edit dashboard and dashboard parts created by other users.</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Delete dashboard and dashboard parts created by other users.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select the roles that have permissions to publish (or save) from the <span class="window_name">Allow Publishing</span> drop-down lists:</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Quick actions</li>
+                                    <li value="2">
+                                        <p>Searches</p>
+                                    </li>
+                                    <li value="3">Dashboards</li>
+                                    <li value="4">Reports</li>
+                                </ul>
+                                <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                    <col class="TableStyle-Note-Column-Column1" />
+                                    <col class="TableStyle-Note-Column-Column2" />
+                                    <tbody>
+                                        <tr class="TableStyle-Note-Body-Body2">
+                                            <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                <img src="../../resources/global_images/note.png" class="icon" />
+                                            </td>
+                                            <td class="TableStyle-Note-BodyA-Column2-Body2">Publishing to other roles is enabled only if edit permissions are selected for the role.
+									</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5."> 
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">The system permissions are in effect for the user role after they log out then log back in.
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Permissions to Grant Roles</a><a name="roles_1236189643_1267018"></a><a name="Permissions_to_Grant_Roles"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can assign the ability to link a role to another user. For example, a Service Desk Manager may need the ability to assign supporting roles within the service organization, such as Service Desk Analyst.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the  <span class="Bold">Permissions to Grant Roles</span> tab, check the linked roles that you want.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">If needed, check <span class="Bold">This role can log into administration tool:</span> to permit users with this role to log into the Configuration Console. For example, a management-level employee may need access to the Configuration Console to edit a form or layout. In this case, you need to apply additional restrictions to this role.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">Because it provides access to the Configuration Console, we recommend that you severely restrict the use of this permission. In a default installation, the system limits this permission to administrators.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Modify Roles</a><a name="roles"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Roles and Permissions</span> workspace, select the role that you want to modify.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Edit the role using the options described above.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Delete Roles</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can delete any role, including <span class="notranslate"><b>HEAT</b></span> default roles. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+							Do not delete the administrator role, as this could prevent access to the Configure Console.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the  <span class="window_name">Roles and Permissions</span> workspace. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the far right column, click <span class="Bold">Delete</span> <img src="../../resources/images/buttons/delete_red_x.png" alt="" class="icon" /> in the row of the role that you want to delete.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Clone Roles</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create a copy of an existing role. For example, you could clone the basic settings for a Service Desk Analyst, then customize the role by changing its associated dashboards or security settings.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From  the  <span class="window_name">Roles and Permissions</span> workspace, click <span class="Bold">Clone</span> corresponding to the role that you want to clone. The  clone role window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter a unique name for the role, then click <span class="Bold">OK</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The new role appears in the role list.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Link Users to a Role</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">For information on adding users to a role, or linking and unlinking users, see <a href="../users/configuring_users.htm#employees_2653137062_1197004" class="MCXref xref">Link Roles to an Employee</a>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Find Role Users</a><a name="user"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can view a list of users assigned to a specific role by doing the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console, from the <span class="window_name">User Management</span> workspace toolbar, click <span class="Bold">Roles</span>. The list of roles appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Find Users</span> corresponding to the role that you want to clone. The list of users linked to this role appears.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">New</span> to create a new user record to link to this role.</li>
+                            <li value="2">To remove a user from a role, select the user on the list, then click <span class="Bold">Delete</span>.</li>
+                            <li value="3">Click <span class="Bold">Link</span> to link the selected user to another user. Select the other user from the list, then click <span class="Bold">Select</span>.</li>
+                            <li value="4">Click <span class="Bold">Unlink</span> to break the link between the selected user and the role.</li>
+                            <li value="5">Click <span class="Bold">Go to</span> to view the details of the selected user.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../layouts/assigning_layouts_to_roles.htm">Assigning Layouts (Workspaces) to Roles</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../../reference/error_messages.htm">Error Messages</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../users/give_service_desk_analyst_access_to_assigned_incidents.htm">Give an SDA Access to Assigned Incidents</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../users/give_a_service_desk_manager_access_to_incidents_for_organizational_unit.htm">Give an SDM Access to Incidents for an OU</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../users/give_a_self_service_access_to_submitted_incidents.htm">Give Self Service Access to Submitted Incidents</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../users/give_a_sda_access_to_incidents_assigned_to_an_ou.htm">Give an SDA Access to Incidents Assigned to an OU</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../users/submit_a_request_on_behalf_of_a_customer.htm">Submit a Request on Behalf of a Customer</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../users/configuring_users.htm">Using Employees</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../users/configuring_groups__cont.htm">Using Contact Groups</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../users/department.htm">Using Departments</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../users/teams.htm">Using Teams</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="change_roles.htm">Change Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="knowledge_management_rol.htm">Knowledge Management Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="problem_management_roles.htm">Problem Management Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="release_management_roles.htm">Release Management Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="service_request_roles.htm">Service Request Roles</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../users/contact_store.htm">Using the Contact Store</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../users/external_contact.htm">Using External Contacts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../users/identity_store.htm">Using the Identity Store</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../employment_type.htm">Employment Type</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="administrator_tasks.htm">Administrator Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="change_manager_tasks.htm">Change Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="configuration_manager_ta.htm">Configuration Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="executive_tasks.htm">Executive Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="guest_tasks.htm">Guest Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="inventory_manager_tasks.htm">Inventory Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="knowledge_manager_tasks.htm">Knowledge Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="license_manager_tasks.htm">License Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="problem_manager_tasks.htm">Problem Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="release_manager_tasks.htm">Release Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="report_manager_tasks.htm">Report Manager Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="self_service_tasks.htm">Self Service Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="service_desk_analyst__sd.htm">Service Desk Analyst (SDA) Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="service_desk_manager__sd.htm">Service Desk Manager (SDM) Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="service_owner_tasks.htm">Service Owner Tasks</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/scheduling/schedule_entry.htm">Schedule Entry</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

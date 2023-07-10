@@ -1,0 +1,1 @@
+define({"../bpm/nespresso/BPM-NN-MI-Approve.htm":1,"../bpm/nespresso/BPM-NN-MI-Create.htm":0,"../shared/Tips.htm":2,});

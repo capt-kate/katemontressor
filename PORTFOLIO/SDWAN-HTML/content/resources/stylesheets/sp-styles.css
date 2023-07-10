@@ -1,0 +1,1466 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*****************  FONTS  ***********************************************/
+
+body,
+p,
+MadCap|dropDownHead,
+MadCap|breadcrumbsProxy,
+MadCap|relationshipsItem,
+MadCap|relationshipsHeading,
+.Comment,
+span.Superscript,
+p.Header,
+p.ReleaseDate,
+p.NOTE,
+p.TIP,
+p.CAUTION,
+li
+{
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.Code,
+p.Code
+{
+	font-family: 'Courier New';
+}
+
+h1,
+p.Title,
+p.Subtitle,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-family: 'Open Sans Light', Arial, sans-serif;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+li,
+MadCap|dropDownHead,
+MadCap|breadcrumbsProxy,
+MadCap|relationshipsItem,
+MadCap|relationshipsHeading
+{
+	mc-hyphenate: never;
+}
+
+/***************** COLORS  ***********************************************/
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p.Title,
+p.Subtitle,
+a:link,
+a:visited,
+ul.navigation li a:hover,
+.colorBlue,
+.Code,
+MadCap|dropDownHead,
+MadCap|miniTocProxy
+{
+	color: #007dba;
+	/* Silver Peak blue */
+}
+
+h1,
+p.relatedMenu
+{
+	color: #ffffff;
+	/* White */
+}
+
+.colorRed,
+.Draft,
+a:focus,
+a:hover,
+a:active,
+.Comment
+{
+	color: #ff0000;
+	/* Red */
+}
+
+.colorGreenBold
+{
+	color: #00b705;
+	/* Medium green */
+	font-weight: bold;
+}
+
+.colorDarkGreen
+{
+	color: #2e8b57;
+	/* Dark green */
+}
+
+MadCap|glossaryTerm
+{
+	color: #46C51B;
+}
+
+a.GlossaryPageTerm
+{
+	color: #a9a9a9;
+}
+
+MadCap|glossaryTerm:hover
+{
+	color: #008000;
+	text-decoration: underline;
+}
+
+/***************** STYLES  ***********************************************/
+
+body
+{
+	margin: 0 20%;
+	line-height: 1.7em;
+}
+
+p
+{
+	font-size: 12pt;
+	margin: 0 0 20px;
+	line-height: 18px;
+	padding: 0px;
+}
+
+b,
+.bold
+{
+	font-weight: 700;
+}
+
+a:link
+{
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:visited
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+ul.navigation li a:hover
+{
+	background-color: #f5f5f5;
+}
+
+a:active
+{
+	text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	text-decoration: none;
+	margin-left: 0in;
+	margin-right: 0in;
+	mc-disable-glossary-terms: true;
+	mc-next-class: p;
+	page-break-after: avoid;
+}
+
+h1	/* Used for topic title at the top of each page */
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: -15px;
+	margin-right: 0;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 7px;
+	font-size: 2em;
+	background-color: #007dba;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+	page-break-before: always;
+}
+
+.Contents	/* Only used for TOC title */
+{
+	mc-toc-depth: 0;
+	mc-heading-level: 0;
+	mc-disable-glossary-terms: true;
+}
+
+.Appendix	/* Only used for Appendix title */
+{
+	mc-auto-number-format: 'GA:Appendix {A+} - ';
+}
+
+.Step
+{
+	mc-auto-number-format: 'GH:Step {Gn+}: ';
+}
+
+h2
+{
+	margin-top: 30pt;
+	margin-bottom: 20pt;
+	font-size: 1.6em;
+}
+
+h3
+{
+	margin-top: 30pt;
+	margin-bottom: 20pt;
+	font-size: 1.2em;
+}
+
+h4
+{
+	margin-top: 20pt;
+	margin-bottom: 10pt;
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+h5,
+h6
+{
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+	font-size: 1.0em;
+	font-weight: 600;
+}
+
+h6
+{
+	mc-heading-level: 0;
+	mc-toc-depth: 0;
+}
+
+p.Title
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 36pt;
+	letter-spacing: 2px;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 36pt;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+}
+
+p.Subtitle
+{
+	margin: 0 0 40px 0;
+	font-size: 24pt;
+	mc-hyphenate: never;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+}
+
+p.ReleaseDate
+{
+	margin: 0 0 2px;
+	font-size: 10.5pt;
+	font-weight: bold;
+	mc-hyphenate: never;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+}
+
+p.Footnote
+{
+	text-align: left;
+	margin-left: 0.4in;
+	margin-right: 0.25in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-size: 8pt;
+	letter-spacing: 0em;
+	text-indent: -14px;
+	line-height: 10pt;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+}
+
+.menu
+{
+	font-style: italic;
+	mc-disable-glossary-terms: true;
+	padding: 1px 3px;
+	margin-top: 1px;
+}
+
+p.NOTE
+{
+	mc-auto-number-format: '{b}NOTE:{/b}   ';
+	mc-auto-number-class: colorBlue;
+}
+
+p.TIP
+{
+	mc-auto-number-format: '{b}TIP:{/b}   ';
+	mc-auto-number-class: colorDarkGreen;
+}
+
+p.CAUTION
+{
+	mc-auto-number-format: '{b}CAUTION:{/b}   ';
+	mc-auto-number-class: colorRed;
+}
+
+.Code
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 11pt;
+	mc-hyphenate: never;
+	text-decoration: none;
+	margin: 0;
+}
+
+.highlight
+{
+	background-color: #f7ff6a;
+}
+
+p.relatedMenu
+{
+	margin-bottom: 0;
+	width: 135px;
+	padding-left: 5px;
+	margin-right: 0;
+	padding-right: 0;
+	background-color: #007dba;
+	font-variant: small-caps;
+	font-weight: bold;
+	mc-disable-glossary-terms: true;
+	mc-next-class: menu;
+}
+
+p.For_REVIEWERS
+{
+	text-align: left;
+	margin-left: 150px;
+	margin-right: 100px;
+	margin-top: 5pt;
+	margin-bottom: 5pt;
+	font-size: 10pt;
+	letter-spacing: 0em;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'For Reviewers: ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 150px;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+	mc-disable-glossary-terms: true;
+	mc-auto-number-class: colorRed;
+}
+
+.DRAFT
+{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 24pt;
+	letter-spacing: 0em;
+	line-height: 26pt;
+	text-decoration: none;
+}
+
+p.Copyright
+{
+	font-size: 10pt;
+	mc-disable-glossary-terms: true;
+	line-height: 10pt;
+}
+
+p.Footer
+{
+	font-size: 10pt;
+	clear: both;
+	mc-disable-glossary-terms: true;
+}
+
+/************************* LISTS ****************************************************************/
+
+ol
+{
+	
+}
+
+ul
+{
+	list-style-position: outside;
+	list-style-image: url('../globalimages/bullet.png');
+}
+
+ul ul
+{
+	list-style-position: outside;
+	list-style: disc;
+	list-style-image: url('../globalimages/bullet-2.png');
+}
+
+ul ul ul
+{
+	list-style-position: outside;
+	list-style: disc;
+	list-style-image: url('../globalimages/bullet-3.png');
+}
+
+li
+{
+	font-size: 12pt;
+	line-height: 1.3em;
+	orphans: 2;
+	display: list-item;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding: 0px;
+}
+
+li p
+{
+	list-style: none;
+	margin: 12px 0px;
+	padding: 0px;
+}
+
+p.checklist_Item
+{
+	mc-auto-number-class: checkbox;
+	mc-auto-number-format: '□ ';
+	mc-auto-number-position: outside-head;
+	text-indent: 0;
+	padding-left: 30px;
+	mc-auto-number-offset: 30px;
+}
+
+span.checkbox
+{
+	font-size: 18pt;
+}
+
+/************************ TABLES ****************************************************************/
+
+table
+{
+	padding: 0;
+	border: #000 1px solid;
+	border-spacing: 0;
+	border-collapse: collapse;
+	cell-padding-left: 5px;
+	cell-padding-right: 5px;
+	cell-padding-top: 0px;
+	cell-padding-bottom: 0px;
+	margin-bottom: 15px;
+}
+
+thead
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #808080;
+	name: Header1;
+	id: 2;
+	font-family: Arial;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #007dba;
+	text-align: left;
+	vertical-align: middle;
+	cell-padding-top: 3px;
+	cell-padding-bottom: 3px;
+	font-size: 12pt;
+	cell-content-style-tag: p;
+}
+
+td
+{
+	vertical-align: top;
+	border: #808080 1px solid;
+	padding: 3px 5px;
+	page-break-inside: avoid;
+	frame-break-inside: avoid;
+	column-break-inside: avoid;
+	widows: 3;
+	orphans: 3;
+}
+
+td.Body2
+{
+	name: Body2;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #808080;
+	cell-padding-top: 3px;
+	cell-padding-bottom: 3px;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+td ul
+{
+	list-style: disc;
+	list-style-image: url('../globalimages/bullet-2.png');
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+td li
+{
+	margin: 4px 0;
+	font-size: 11pt;
+}
+
+th
+{
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+}
+
+td p
+{
+	margin: 1px 0;
+	padding: 1px 0;
+	font-size: 11pt;
+}
+
+caption	/* Only use for tables */
+{
+	margin: 1.5em 0px 0px;
+	padding-bottom: 0px;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 2em;
+	text-align: left;
+	mc-disable-glossary-terms: true;
+	mc-caption-repeat: true;
+	mc-hyphenate: never;
+}
+
+/* special cell colors */
+
+td.Critical,
+td.Minor,
+td.Major,
+td.Warning
+{
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+}
+
+td.Critical
+{
+	background-color: red;
+	color: #fff;
+}
+
+td.Minor
+{
+	background-color: #ffff00;
+}
+
+td.Major
+{
+	background-color: orange;
+}
+
+td.Warning
+{
+	background-color: #00ffff;
+}
+
+/************************ IMAGES ****************************************************************/
+
+img.figure	/* use for all most images; automatically resizes for PDF output */
+{
+	border: solid 1px #007dba;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 95%;
+	height: auto;
+}
+
+img.figure-no-border	/* automatically resizes for PDF output */
+{
+	margin: 10px 0;
+	max-width: 95%;
+	height: auto;
+}
+
+img.icon	/* use for inline graphics, such as buttons; for explaining the interface */
+{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+img.watermark	/* only used on masterpages &  page layout */
+{
+	position: absolute;
+	top: 30px;
+	left: 25%;
+	width: 50%;
+	z-index: -100;
+	border: none;
+}
+
+/* Use Figure div to insert an image with a caption. */
+
+div.figure
+{
+	display: block;
+	margin: 20px 0;
+	padding: 0;
+}
+
+div.figure p
+{
+	padding: 0;
+	margin: 0;
+}
+
+p.figcaption
+{
+	font-size: 11px;
+	font-style: italic;
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+	mc-next-class: p;
+	mc-auto-number-format: 'GF:Figure {Gn+}. ';
+}
+
+p.figcaption-noNumber
+{
+	font-size: 11px;
+	font-style: italic;
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+	mc-next-class: p;
+}
+
+/************************ END IMAGES ****************************************************************/
+
+MadCap|dropDownHead
+{
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 0in;
+	margin-right: 0in;
+	mc-hyphenate: never;
+	mc-disable-glossary-terms: true;
+}
+
+.Comment
+{
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: #ffffe0;
+	mc-next-class: p;
+}
+
+span.Superscript
+{
+	vertical-align: super;
+	font-size: 60%;
+}
+
+MadCap|breadcrumbsProxy
+{
+	font-size: 9pt;
+	mc-breadcrumbs-prefix: '';
+	mc-breadcrumbs-divider: ' > ';
+	mc-breadcrumbs-count: 5;
+	font-style: italic;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border: 0;
+}
+
+MadCap|glossaryTerm
+{
+	mc-closed-image: none;
+	mc-open-image: none;
+}
+
+MadCap|pageFooter
+{
+	mc-disable-glossary-terms: true;
+}
+
+MadCap|pageHeader
+{
+	mc-disable-glossary-terms: true;
+}
+
+MadCap|relatedTopics
+{
+	mc-disable-glossary-terms: true;
+}
+
+MadCap|miniTocProxy
+{
+	display: block;
+}
+
+p.Header	/** used in master page for the title **/
+{
+	font-weight: bold;
+	font-size: 10pt;
+	margin-bottom: 0;
+	mc-disable-glossary-terms: true;
+}
+
+a.GlossaryPageTerm
+{
+	color: #a9a9a9;
+}
+
+MadCap|glossaryTerm:hover
+{
+	color: #008000;
+	text-decoration: underline;
+}
+
+MadCap|glossaryTerm:focus
+{
+	color: #008000;
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: #008000;
+}
+
+MadCap|glossaryTerm.Hyperlink
+{
+	color: #008000;
+	font-style: normal;
+}
+
+p.TOC2
+{
+	margin: 0px 0px 0px 30px;
+}
+
+p.TOC3
+{
+	margin: 0px 0px 0px 60px;
+}
+
+p.TOC4
+{
+	margin: 0px 0px 0px 90px;
+}
+
+p.TOC5
+{
+	margin: 0px 0px 0px 120px;
+}
+
+p.TOC6
+{
+	margin: 0px;
+}
+
+p.TOC7
+{
+	margin: 0px;
+}
+
+p.TOC8
+{
+	margin: 0px;
+}
+
+p.TOC9
+{
+	margin: 0px;
+}
+
+p.TOC1
+{
+	margin: 30px 0px 0px;
+}
+
+MadCap|xref
+{
+	color: #007dba;
+	text-decoration: none;
+	mc-format: '{paratext}';
+}
+
+MadCap|xref:focus
+{
+	color: #FF002A;
+}
+
+MadCap|xref:hover
+{
+	color: #FF002A;
+}
+
+/****************************************************** MINI-TOC **************************/
+
+p.MiniTOC1,
+p.MiniTOC2,
+p.MiniTOC3,
+p.MiniTOC4,
+p.MiniTOC5,
+p.MiniTOC6,
+p.MiniTOC7,
+p.MiniTOC8,
+p.MiniTOC9
+{
+	color: #007dba;
+	font-size: 11pt;
+	text-decoration: none;
+}
+
+p.MiniTOC1
+{
+	margin: 0px;
+}
+
+p.MiniTOC2
+{
+	margin: 0px 0px 0px 30px;
+}
+
+p.MiniTOC3
+{
+	margin: 0px 0px 0px 60px;
+}
+
+p.MiniTOC4
+{
+	margin: 0px 0px 0px 90px;
+}
+
+p.MiniTOC5
+{
+	margin: 0px 0px 0px 120px;
+}
+
+p.MiniTOC6
+{
+	font-size: 11pt;
+	text-decoration: none;
+	margin: 0px 0px 0px 150px;
+}
+
+p.MiniTOC7
+{
+	margin: 0px 0px 0px 180px;
+}
+
+p.MiniTOC8
+{
+	margin: 0px 0px 0px 210px;
+}
+
+p.MiniTOC9
+{
+	margin: 0px 0px 0px 240px;
+}
+
+a.MiniTOC1:link,
+a.MiniTOC2:link,
+a.MiniTOC3:link,
+a.MiniTOC4:link,
+a.MiniTOC5:link,
+a.MiniTOC6:link,
+a.MiniTOC7:link,
+a.MiniTOC8:link,
+a.MiniTOC9:link,
+a.MiniTOC1:visited,
+a.MiniTOC2:visited,
+a.MiniTOC3:visited,
+a.MiniTOC4:visited,
+a.MiniTOC5:visited,
+a.MiniTOC6:visited,
+a.MiniTOC7:visited,
+a.MiniTOC8:visited,
+a.MiniTOC9:visited
+{
+	color: #007dba;
+}
+
+a.MiniTOC1:focus,
+a.MiniTOC2:focus,
+a.MiniTOC3:focus,
+a.MiniTOC4:focus,
+a.MiniTOC5:focus,
+a.MiniTOC6:focus,
+a.MiniTOC7:focus,
+a.MiniTOC8:focus,
+a.MiniTOC9:focus,
+a.MiniTOC1:hover,
+a.MiniTOC2:hover,
+a.MiniTOC3:hover,
+a.MiniTOC4:hover,
+a.MiniTOC5:hover,
+a.MiniTOC6:hover,
+a.MiniTOC7:hover,
+a.MiniTOC8:hover,
+a.MiniTOC9:hover
+{
+	color: red;
+}
+
+MadCap|popup
+{
+	color: #008000;
+}
+
+MadCap|popup:focus
+{
+	color: #008000;
+}
+
+MadCap|popup:hover
+{
+	color: #ff0000;
+}
+
+MadCap|expandingBody
+{
+	color: #a9a9a9;
+	font-style: italic;
+}
+
+MadCap|relationshipsProxy
+{
+	text-align: left;
+	display: block;
+	margin: 40px 0;
+	padding: 10px;
+	border: solid 1px #007dba;
+	border-radius: 6px;
+	width: 40%;
+}
+
+MadCap|relationshipsItem
+{
+	font-size: 11pt;
+	margin: 0px;
+	padding: 1px 10px;
+}
+
+MadCap|relationshipsHeading
+{
+	margin: 5px 0 0;
+	color: #959595;
+	font-size: 0.9em;
+}
+
+MadCap|relationshipsHeading.concept
+{
+	mc-label: 'Concepts';
+	font-size: 0.9em;
+}
+
+MadCap|relationshipsHeading.reference
+{
+	font-size: 0.9em;
+	mc-label: 'Related Topics';
+}
+
+MadCap|relationshipsHeading.task
+{
+	font-size: 0.9em;
+	mc-label: 'Tasks';
+}
+
+/***************************** HIDDEN *************************************************/
+
+abbr
+{
+	mc-disabled: true;
+}
+
+acronym
+{
+	mc-disabled: true;
+}
+
+address
+{
+	mc-disabled: true;
+}
+
+area
+{
+	mc-disabled: true;
+}
+
+article
+{
+	mc-disabled: true;
+}
+
+aside
+{
+	mc-disabled: true;
+}
+
+big
+{
+	mc-disabled: true;
+}
+
+button
+{
+	mc-disabled: true;
+}
+
+canvas
+{
+	mc-disabled: true;
+}
+
+cite
+{
+	mc-disabled: true;
+}
+
+datalist
+{
+	mc-disabled: true;
+}
+
+del
+{
+	mc-disabled: true;
+}
+
+dir
+{
+	mc-disabled: true;
+}
+
+fieldset
+{
+	mc-disabled: true;
+}
+
+figure
+{
+	mc-disabled: true;
+}
+
+form
+{
+	mc-disabled: true;
+}
+
+frame
+{
+	mc-disabled: true;
+}
+
+frameset
+{
+	mc-disabled: true;
+}
+
+head
+{
+	mc-disabled: true;
+}
+
+input
+{
+	mc-disabled: true;
+}
+
+ins
+{
+	mc-disabled: true;
+}
+
+kbd
+{
+	mc-disabled: true;
+}
+
+label
+{
+	mc-disabled: true;
+}
+
+legend
+{
+	mc-disabled: true;
+}
+
+noframes
+{
+	mc-disabled: true;
+}
+
+object
+{
+	mc-disabled: true;
+}
+
+optgroup
+{
+	mc-disabled: true;
+}
+
+option
+{
+	mc-disabled: true;
+}
+
+q
+{
+	mc-disabled: true;
+}
+
+s
+{
+	mc-disabled: true;
+}
+
+section
+{
+	mc-disabled: true;
+}
+
+select
+{
+	mc-disabled: true;
+}
+
+small
+{
+	mc-disabled: true;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+blockquote
+{
+	mc-disabled: true;
+}
+
+code
+{
+	mc-disabled: true;
+}
+
+div.NewRowClass1	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.NewRowClass1::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.NewRowClass1::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.NewRowClass1 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.NewRowClass1 > div:nth-child(1)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.NewRowClass1 > div:nth-child(2)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.NewRowClass1 > div:nth-child(3)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+/*************************************** END HIDDEN ********************************************/
+
+@media only screen and (max-width: 1279px)
+{
+	body
+	{
+		margin: 0px 10%;
+	}
+
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(3)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	body
+	{
+		margin: 0px 5px;
+		mc-disable-glossary-terms: true;
+	}
+
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+@media print
+{
+	body
+	{
+		margin: 0;
+		padding: 0;
+		mc-disable-glossary-terms: true;
+	}
+
+	p
+	{
+		font-size: 10pt;
+	}
+
+	img,
+	img.figure
+	{
+		max-width: 6in;
+		border: none 0px #000000;
+		padding: 1px;
+		max-width: 6.75in;
+	}
+
+	h1
+	{
+		color: #007dba;
+		background-color: #ffffff;
+		page-break-before: always;
+		margin-top: 0;
+	}
+
+	img.figure-no-border
+	{
+		margin: 10px 0;
+		max-width: 6.75in;
+	}
+
+	div.figure
+	{
+		column-break-inside: avoid;
+		frame-break-inside: avoid;
+		page-break-inside: avoid;
+		orphans: 3;
+		widows: 3;
+	}
+
+	.Comment
+	{
+		mc-conditions: 'output.Comment';
+	}
+
+	a.hyperlink
+	{
+		color: ;
+	}
+
+	a:hover
+	{
+		text-decoration: underline;
+	}
+
+	MadCap|glossaryTerm.Hyperlink
+	{
+		font-style: normal;
+	}
+
+	b
+	{
+		font-weight: 700;
+	}
+
+	td ul
+	{
+		margin-left: 20px;
+	}
+}
+
+.bullet,
+.listNumber	/* These classes are for importing frame files only and will be changed to list items after import */
+{
+	
+}
+
+div.indent
+{
+	margin-left: 100px;
+}
+
+.DRAFT
+{
+	font-family: 'Times New Roman';
+}
+
+/*************************************** PAGE BREAK STYLES ********************************************/
+
+.pgBreak
+{
+	/* use on a blank line to create a page break */
+	column-break-before: always;
+	frame-break-before: always;
+	page-break-before: always;
+	orphans: 3;
+	widows: 3;
+	font-size: 1pt;
+	line-height: 1pt;
+}
+
+.pgBreakBeforeAvoid
+{
+	/* use on an item to keep it with the previous p tag. */
+	column-break-before: avoid;
+	frame-break-before: avoid;
+	frame-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-inside: avoid;
+	column-break-inside: avoid;
+	orphans: 3;
+	widows: 3;
+}
+
+div.keepTogether
+{
+	column-break-inside: avoid;
+	frame-break-inside: avoid;
+	page-break-inside: avoid;
+	orphans: 3;
+	widows: 3;
+}
+
+/*************************************** TOP NAV STYLES ********************************************/
+
+div.TopicContent
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+}
+
+div.sideContent
+{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 33.33%;
+}
+
+html.templateTopic div.sideContent
+{
+	display: none;
+}
+
+ul.navigation li a	/*** overrides the skin style ***/
+{
+	font-style: normal;
+}
+
+MadCap|xref.Number
+{
+	mc-format: '{paranumonly}';
+}
+
+/*
+ul.navigation ul > li:hover > a
+{
+	background-color: #000000 !important;
+}
+*/
+
+.\000023text
+{
+	font-weight: normal;
+}
+
+.blackBG
+{
+	background-color: #000000;
+	color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+

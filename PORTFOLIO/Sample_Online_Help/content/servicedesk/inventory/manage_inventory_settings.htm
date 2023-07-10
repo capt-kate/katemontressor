@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Manage Inventory Settings</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/manage_inventory_settings.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Manage Inventory Settings</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_3">Managing Inventory Settings<a name="inventorymanagement_1146540237_1229393"></a><a name="kanchor181"></a></h1>
+            <p class="Body">Within the <span class="window_name">Inventory Settings</span> workspace you can specify and manage the auditing of assets for an organizational unit. </p>
+            <p class="Body">Use the Inventory Manager to: </p>
+            <ul>
+                <li value="1">Specify audit frequency.</li>
+                <li value="2">Specify  purging of audit history.</li>
+                <li value="3">Collect software usage information (and software execution data).</li>
+                <li value="4">Define if software updates and patches on clients should be collected .</li>
+                <li value="5">Enable LanProbe.</li>
+                <li value="6">Define SNMP community strings for LanProbe.</li>
+                <li value="7">Specify the agent task polling frequency.</li>
+                <li value="8">View executable files to be returned as part of the software inventory—for more information about the executable files that appear, see <a href="using_audits.htm#inventorymanagement_1146540237_1280114" class="MCXref xref">Update Inventory Settings from Software Inventory</a>.</li>
+                <li value="9">Assign inventory settings to organizational units.</li>
+                <li value="10">Update your gateway proxy.</li>
+                <li value="11">Audit specific file types.</li>
+                <li value="12">Exclude folders from being audited.</li>
+            </ul>
+            <p> The changes to the records are made the next time the machines are audited or when you click <b>Audit Inventory</b> on the toolbar. </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Define Inventory Settings</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p> Use the following steps to configure the inventory settings:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a Discovery Manager or Configuration Manager and open the <span class="window_name">Inventory Settings</span> workspace. By default, one record is listed.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Inventory_Settings_Window"><a name="Inventory_Settings_Window" data-mc-generated-bookmark="ListOf"></a>Inventory Settings Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inventory_settings.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="751" data-mc-height="531" src="../../resources/images/inventory_settings_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">New Inventory Setting</span>. A blank <span class="window_name">Inventory Settings</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">
+       The following default tabs appear (results may vary depending on your system setup):
+     </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Details</b>. See the information in the next step.</li>
+                            <li value="2"><b>Community Strings</b>. See <a href="#Community_Strings" class="MCXref xref">Community Strings Tab</a></li>
+                            <li value="3"><b>Software Files</b>. See <a href="#Software_Files" class="MCXref xref">Software Files Tab</a></li>
+                            <li value="4"><b>Org Units</b>. See <a href="#Org_Units" class="MCXref xref">Org Units Tab</a></li>
+                            <li value="5"><b>Gateway Proxy</b>. See <a href="#Gateway_Proxy" class="MCXref xref">Gateway Proxy Tab</a></li>
+                            <li value="6"><b>WiFi Configuration</b>. <a href="#WiFi_Configuration" class="MCXref xref">WiFi Configuration Tab</a>.</li>
+                            <li value="7"><span class="Bold">Audit File Types</span>. <a href="#Audit_File_Types" class="MCXref xref">Audit File&#160;Types</a></li>
+                            <li value="8"><span class="Bold">Audit Excluded Folders</span>. <a href="#Audit_Excluded_Folders" class="MCXref xref">Audit Excluded Folders</a></li>
+                            <li value="9"><span class="Bold">Audit Subnet Configurations</span>. <a href="#Audit_Subnet_Configs" class="MCXref xref">Audit Subnet Configs</a></li>
+                            <li value="10"><span class="Bold">Max Message Sending Retry</span>. <a href="#Limit_Client_Agent_Message_Retry" class="MCXref xref">Limit Message Sending Retry</a></li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields under the <span class="window_name">Details</span> tab.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for the new setting.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Version</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Automatically updated by the system each time you make a change  and save it.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Audit Frequency</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The frequency of the audit.</p>
+                                            <p> </p>
+                                            <p>Select an option from the drop-down. We recommend selecting  <span class="window_name">Random Weekday</span>, which means that each computer associated with the <span class="window_name">Inventory Settings</span> record in the network is audited on a different random weekday.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">At</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The time at which you want to run the audit. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Purge Audit History Older Than</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">How often you want the audit data to be deleted from the system. &#160;Specify the value in months.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Max Message Sending Retry</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of times a client machine should send the same message if the IM server is unable to process it. This allows you to suspend the message. A resume agent task for the server will reactivate it. See <a href="#Server_is_unable_to_process_Client_Agent_Messages" class="MCXref xref">Managing Inventory Settings</a>. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Collect Software Usage</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Audits the software usage on client machines. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Collect Thin Client Sessions</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Audits terminal (virtual)&#160;sessions. See  <a href="using_audits.htm#inventorymanagement_1146540237_1231485" class="MCXref xref">View Remote and Virtual Software Execution</a>.</p>
+                                            <p> </p>
+                                            <p>If you check this option, the <span class="Bold">Collect Software Usage</span> option is also  selected by default. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Collect Patches and Updates</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Audits patches and software updates on client machines.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Enable LANProbe</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enables LANProbe, which is installed on client machines as part of the client agent installation. </p>
+                                            <p> By default, this option is not checked. You can manually start a LanProbe service from any client with the Client Agent installed.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Agent Task Polling Frequency</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The frequency, in minutes, that the client agent polls for tasks. The default frequency is 30 minutes.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Community Strings Tab</a><a name="Community_Strings"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This tab lists the SNMP community strings defined for LANProbe.</p>
+                    <p class="Body">Perform the following steps to create a new community string:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the toolbar, click <span class="Bold">New Community String</span>. The <span class="window_name">Community String</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the community string to be used for accessing the SNMP devices. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">When LANProbe is aware of a new IP or MAC address, it investigates the device-type using SNMP. Contact your network Administrator if you are unsure of which values to enter.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Software Files Tab</a><a name="Software_Files"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This tab lists the software programs set up for auditing.</p>
+                    <p class="Body">To add files to audit to the list, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the toolbar, click <span class="Bold">Link</span> <img src="../../resources/images/buttons/link.png" alt="" class="icon" />. A list of files appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Navigate to the file that you want to add to the list and click <span class="Bold">Select</span>. The file is added to the list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     </td>
+                        </tr>
+                    </table>
+                    <p> </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Org Units Tab</a><a name="Org_Units"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This tab lists the  organizational units that are assigned inventory settings.</p>
+                    <p class="Body">The default configuration is one inventory setting, applicable to all audited computers. Creating new inventory settings and assigning them to organizational units allows for computers in different organizational units to have different settings, should this be necessary.</p>
+                    <p class="Body">When the task processor service gets a request for client tasks (from the client agent), it checks whether there are any changes in the computer's inventory settings. </p>
+                    <p class="Body">When a new computer is added, it is usually not linked to an organizational unit. The task processor searches for a root organizational unit, which is linked to the computer, if the root organizational unit is found. If the root organizational unit does not have linked inventory settings, the task processor tries to locate default inventory settings to link to the root organizational unit. If default settings are not found, the task processor creates new inventory settings and links it to the root organizational unit. </p>
+                    <p class="Body">If the organizational unit that is linked to a computer is not the root organizational unit and it does not have inventory settings, then the task processor recursively follows the organizational unit parent links until it finds a root organizational unit or an organizational unit with inventory settings and then applies the settings to the organizational unit in question.</p>
+                    <p class="Body">To add organizational units to the list, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">Link</span> <img src="../../resources/images/buttons/link.png" alt="" class="icon" />.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select an organizational unit.</td>
+                        </tr>
+                    </table>
+                    <p class="Body"> </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Gateway Proxy Tab</a><a name="Gateway_Proxy"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Gateway Proxy</span> tab lists any gateway proxies defined for Windows clients. (Mac clients are defined in the server address within the saas.ini file on the local installation.)</p>
+                    <p class="Body">To enter information about the gateway proxy, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Endpoint Address</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The address of the endpoint URL. </p>
+                                    <p>  <![CDATA[ ]]></p>
+                                    <p>The default proxy port 8097 is used unless defined in the endpoint address. For example, http://company/users:8113.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Priority</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The priority number of  this address.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To remove a gateway, select the gateway from the list and click <span class="Bold">Delete</span> <img src="../../resources/images/buttons/delete_red_x.png" alt="" class="icon" />.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />WiFi Configuration Tab</a><a name="WiFi_Configuration"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">WiFi Configurations</span> tab lists any WiFi configurations used.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">To create a new WiFi configuration, click <span class="Bold">New MDI_WiFiConfiguration</span>. The <span class="window_name">New MDI_WiFiConfiguration</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Network Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the network.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Encryption</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>The encryption type. Choose  from the drop-down list.</p>
+                                    <ul class="list_table">
+                                        <li value="1">None</li>
+                                        <li value="2">WEP</li>
+                                        <li value="3">WPA/WPA2</li>
+                                        <li value="4">Any</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Password</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The network password.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Active</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Makes this configuration active.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Audit File&#160;Types</a><a name="Audit_File_Types"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p>The <span class="window_name">Audit File Types</span> tab allows you to check machines for the number of occurrences of a specified file-type, by it's extension (such as gz, EXE, dll or html). The audit reports the number of occurrences and the total size of all files of the specified file type. The top 50 occurrences of file-types are listed by default. You can create a specific file-type to audit. However, creating a new audit file type overrides the top 50 defaults and only lists the file types that you specify. To create a new or specific file type to audit, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Inventory Settings &gt; Audit File Types</span> tab, click <span class="Bold">New Audit File Type</span>  to open the dialog. The <span class="window_name">New Audit File Type</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the extension of the file type. You do not need to enter a dot (.) before the extension type. The file type is case-insensitive.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>. Enter as many file types as you need to track.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Deploy Settings</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">The file type data is available in the <span class="window_name">Extension Histogram</span> tab of the CI.</td>
+                        </tr>
+                    </table>
+                    <p>&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Audit Excluded Folders</a><a name="Audit_Excluded_Folders"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Audit Excluded Folders</span> tab allows you to specify folders  from being audited for file types or other data. In most instances you must specify a full path.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Inventory Settings &gt; Audit Excluded Folders</span> tab, click <span class="Bold">New Audit Excluded Folder</span>  to open the dialog. The <span class="window_name">New Audit Excluded Folder</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the folder name or full path. This is a required field. You can use wildcard characters such as ? and *. For Windows, folder CLSIDs and environment dtrings such as {d20ea4e1-3957-11d2-a40b-0c5020524153} and %ProgramFiles% are also supported. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select a platform (such as: AIX, Windows, OSX) from the drop-down list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. Enter as many paths or folders that you would like to exclude from being audited. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Deploy Settings</span>. </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Audit Subnet Configs</a><a name="Audit_Subnet_Configs"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Audit Subnet Configs</span> tab allows you to specify subnets of specific switches to either be included or excluded from LanProbe audits. For example, you can enter 10.1.2.3/24 or 172.16.33.9/24</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Inventory Settings &gt; Audit Subnet Configs</span> tab, click <span class="Bold">New Switch Subnet Config</span>  to open the dialog. The <span class="window_name">New Switch Subnet Config</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the IP address.  </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select an option from the include or exclude drop-down list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. Enter as many IP addresses that you would like to include or exclude from being audited. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Deploy Settings</span>. </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Limit Message Sending Retry</a><a name="Limit_Client_Agent_Message_Retry"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Sometimes a client agent sends a message that cannot be processed by the server. If  the message was sent due to a failure or other error, the agent tries to resend the message an indefinite number of times. </p>
+                    <p class="Body">You can modify the number of retries from the <span class="window_name">Inventory Settings</span> workspace, by setting the following.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Inventory Settings</span> workspace, select an organizational unit.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the <span class="window_name">Max Message Sending Retry</span> field, enter the number of retries to allow. The default value is 5. However, we recommend that you do not modify this value for existing configurations as this enables FrontRange Solutions to troubleshoot specific problems.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">Any machine that displays an agent status of <em>suspended</em> indicates that it is no longer sending messages to the server since it has retried the specified number of times. It no longer processes any tasks and the client agent task must be resumed. </p>
+                    <p class="Body">Open the configuration item (CI) and select <span class="Bold">Resume Client Agent</span> on the task bar to allow the machine to resume sending messages. </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_deploy.htm">Deploying the MDI Service</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="mdm_apns_tool.htm">APNS Certificate Tool</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_discovery.htm">Troubleshooting</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Service Level Management|Setting up Surveys">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Sending Surveys</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/surveys/sending_surveys.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/service_level_management.htm">Service Level Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="setting_up_surveys.htm">Setting up Surveys</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Sending Surveys</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor525"></a>Sending Surveys</h1>
+            <p class="Body">Surveys are sent automatically using a business rule which invokes a<span class="window_name"> Send Email</span> quick action. The default business rule <span class="window_name">Send Survey upon Incident Closure</span> is included in <span class="notranslate"><b>HEAT</b></span>. The email contains a link to the survey stored in the <span class="notranslate"><b>HEAT</b></span> database.</p>
+            <p class="Body">You should construct a new Business Rule for each business object requiring a survey.</p>
+            <p class="Body">For example, the <span class="window_name">Send Survey upon Incident Closure Business Rule</span> contains the following survey link:</p>
+            <p class="Code">$(GetSurveyURL())&amp;survey_name=$(GetSurveyName("DefaultSurveyName"))&amp;customer_id=$(GetApplicationId())&amp;ot=Incident&amp;oid=$(RecId)&amp;page_index=0</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-URL components-</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col width="240px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="454px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Component</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(GetSurveyURL()) </span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns a portion of the Survey URL. The following is an example:</p>
+                                    <p><span class="fixedwidth">http://hostname:portname/Public/TakeSurvey.aspx?action=take_survey</span>
+                                    </p>
+                                    <p>The host and port portions are usually customized.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">Survey_name=$(GetSurveyName<br />("DefaultSurveyName"))</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns the default survey name<span class="fixedwidth">. DefaultSurveyName</span> is a global constant with the default value <span class="fixedwidth">"Sample Survey"</span> (out-of-the-box Survey).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">customer_id=<br />$(GetApplicationId())</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns the ID of the destination tenant for delivery of survey results.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">ot=Incident</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Business Object associated with the Survey data. In this case, the survey is associated with the incident business object.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">oid=$(RecId)</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Record ID associated with the Survey data.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p><span class="fixedwidth">page_index=0</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Page index number for navigation purposes. For example, the 0 may indicate the Welcome page, rather than the Questions page (<span class="fixedwidth">page_index=4</span>)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">The default port for surveys is HTTPS 443. However, port HTTPS 7075 is supported until further notice.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">
+            &#160;
+        </p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="scorecardconfig.htm">Using the Score Card</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="setting_up_surveys.htm">Setting Up Surveys</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_the_survey.htm">Using the Survey</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_survey_results.htm">Viewing Survey Results</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="configuring_surveys.htm">Configuring Survey Frequency</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Appendixes|C - Tunnel Troubleshooting">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="sdwan sd-wan deployment guide silver peak network" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Debugging IPSec Tunneling</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="resources/stylesheets/sp-styles.css" rel="stylesheet" />
+        <link href="resources/tablestyles/formfieldstable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/note-table.css" rel="stylesheet" />
+        <link href="resources/tablestyles/caution-table.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+        <script src="../Skins/Default/Scripts/TopicToolBar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="http://www.silver-peak.com/Support/EdgeConnect/index.html" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/EC_Master_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="5" data-mc-toc="True">
+                                            </div>
+                                        </div>
+                                        <h1>Debugging IPSec Tunneling</h1>
+                                        <h2>IPSec Troubleshooting - Basic</h2>
+                                        <p>When debugging IPSec tunneling,  look out for:</p>
+                                        <ol>
+                                            <li value="1">If you have bi-directional traffic via ESP or NAT-T then the appliances are trying to establish an IPSec tunnel.&#160; <ul><li value="1">Silver Peak Recommendation: Set the MTU size to 1400 to account for IPSec overhead.</li></ul></li>
+                                            <li value="2"><a name="Another"></a>Another common scenario occurs when another device appliance responds to IPSec requests, rather than the Silver Peak. If you encounter tunnel connectivity issues, it may be necessary to validate the IPSec response is coming from the correct Silver Peak appliance.&#160; If this is found to be happening, most firewalls have an IPSec pass-through feature that can be enabled to get around this. </li>
+                                            <li value="3">A third scenario to be aware of is the case where no IPSec devices are responding to IPSec requests from the Silver Peak appliance.&#160; This scenario could be caused by a misconfiguration of the pre-shared key or IPSec setup.&#160; It could also be caused when the IPSec requests are blocked by a firewall or other device somewhere between the Silver Peak appliances.</li>
+                                        </ol>
+                                        <p>
+                                            <table style="width: 100%;mc-table-style: url('resources/tablestyles/caution-table.css');" class="TableStyle-Caution-table" cellspacing="0">
+                                                <col class="TableStyle-Caution-table-Column-Column1" />
+                                                <col class="TableStyle-Caution-table-Column-Column2" />
+                                                <tbody>
+                                                    <tr class="TableStyle-Caution-table-Body-Body1">
+                                                        <td class="TableStyle-Caution-table-BodyB-Column1-Body1">&#160;</td>
+                                                        <td class="TableStyle-Caution-table-BodyA-Column2-Body1">
+                                                            <p><b>IMPORTANT</b>: <span class="colorRed"> If you’re not familiar with IPSec or comfortable troubleshooting using a CLI , we recommend that you involve your network or firewall administrator for assistance in troubleshooting connectivity issues. Making changes to routers, firewalls, and other devices in production environments can cause disruptions in service.</span></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </p>
+                                        <h2>IPSec Troubleshooting – Advanced</h2>
+                                        <p><i>Broadcast CLI</i>
+                                        </p>
+                                        <p>Silver Peak Orchestrator provides the Broadcast CLI (BCLI) tool that enables administrators to issue CLI commands centrally from the Orchestrator interface.  The BCLI can be used to issue commands to one or many appliances at a time.  As long as the Orchestrator can communicate with remote appliances, Broadcast CLI can be used to issue commands for troubleshooting IPSec.  </p>
+                                        <p>Broadcast CLI can be accessed on the Orchestrator by choosing <i>Maintenance &gt; [Tools] Broadcast CLI</i></p>
+                                        <p class="bold">To identify if another device is responding to <a href="#Another">IPSec requests</a>: </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Use the BCLI to issue the following command on the remote silver peak:&#160; </p>
+                                                <p>(Tunnel name in this example is <i>tun1</i>. Replace <i>tun1</i> with appropriate tunnel name in your environment.)</p>
+                                                <p>&#160;</p>
+                                                <p class="Code">BRSUPP86 (config) <span class="colorDarkGreen"># show int tunnel tun1 ipsec status</span><br />Tunnel tun1 ipsec state<br />&#160; Tunnel Oper:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Down</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">IPSec Enabled:&#160;&#160;&#160;&#160;&#160;&#160; yes<br />&#160; IPSec Oper:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Healthy<br />&#160; <span class="highlight">Total IPSec SAs:&#160;&#160;&#160;&#160; in:1 out:1**&#160;&#160;</span><br />&#160; IPSec Key Size:&#160;&#160;&#160;&#160;&#160; 256 bits<br />&#160; Replay Window(bits): 1024</p>
+                                                <p class="Code">&#160;</p>
+                                                <table style="width: 100%;mc-table-style: url('resources/tablestyles/note-table.css');" class="TableStyle-Note-table" cellspacing="0">
+                                                    <col class="TableStyle-Note-table-Column-Column1" />
+                                                    <col class="TableStyle-Note-table-Column-Column2" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Note-table-Body-Body1">
+                                                            <td class="TableStyle-Note-table-BodyB-Column1-Body1">&#160;</td>
+                                                            <td class="TableStyle-Note-table-BodyA-Column2-Body1">
+                                                                <p><b>NOTE</b>: 1 SA (security association) sent (out) and 1 SA received (in), but we can’t validate which device responded to our SA.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="2">
+                                                <p>Issue the following command from the BCLI:</p>
+                                                <p>&#160;</p>
+                                                <p class="Code">BRSUPP86 (config) <span class="colorDarkGreen"># show int tunnel tun1 ipsec debug</span></p>
+                                                <p>&#160;</p>
+                                                <p class="Code">IPSec stats for tid 2<br />-----Key-management---<br />Current state: 2<br />Req key by dp: 1<br />Rekey dp: 0<br />Rekey TO: 0<br />Rekey # in pkts: 0<br />Rekey # out pkts: 0<br />Key wait TO: 0<br />Passive key TO: 0</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">-----In-bound---<br /><span class="highlight">Total packets: 0**</span></p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">Aligment: 0<br />No sa: 0<br />Verify fail: 0<br />Replay check: 0<br />Decryption fail: 0<br />Other reason: 0</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">-----Out-bound---<br />Total packets: 453<br />No sa: 6<br />Encryption fail: 0<br />Authentication fail: 0<br />Other reason: 0</p>
+                                            </li>
+                                        </ol>
+                                        <table style="width: 100%;mc-table-style: url('resources/tablestyles/note-table.css');" class="TableStyle-Note-table" cellspacing="0">
+                                            <col class="TableStyle-Note-table-Column-Column1" />
+                                            <col class="TableStyle-Note-table-Column-Column2" />
+                                            <tbody>
+                                                <tr class="TableStyle-Note-table-Body-Body1">
+                                                    <td class="TableStyle-Note-table-BodyB-Column1-Body1">&#160;</td>
+                                                    <td class="TableStyle-Note-table-BodyA-Column2-Body1"><b>NOTE</b>:  “Total packets” should not be 0. This indicates the firewall in front of us responded, and the Silver Peak appliance never got the request.  (Scenario 2, above) In this situation, it is necessary to enable “ipsec passthrough” on the firewall.  Alternatively, you could elect to connect the Silver Peak appliance directly to the public internet.  (Make sure WAN hardening is enabled and proper security precautions are in place.)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>&#160;</p>
+                                        <p class="bold">To validate a deeper issue with IPSec packets traversing the network:</p>
+                                        <ol>
+                                            <li value="1">If the tunnel debug command shows no SAs at all, you could have an issue with the IKE exchange. This scenario could be caused by a misconfiguration of the pre-shared key or IPSec setup.&#160; It could also be caused when the IPSec requests are blocked by a firewall or other device somewhere between the Silver Peak appliances.</li>
+                                            <li value="2">
+                                                <p>Issue the following command from the BCLI: </p>
+                                                <p>(Replace <i>tun1</i> with appropriate tunnel name in your environment.)</p>
+                                                <p class="Code">BRSUPP86 (config) # show int tunnel tun1 ipsec debug</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">IPSec stats for tid 2<br />-----Key-management---<br /><span class="highlight">Current state: 2</span><br />Req key by dp: 1<br />Rekey dp: 0<br />Rekey TO: 0<br />Rekey # in pkts: 0<br />Rekey # out pkts: 0<br />Key wait TO: 0<br />Passive key TO: 0</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">-----In-bound---<br />Total packets: 435<br />Alignment: 0<br />No sa: 0<br />Verify fail: 0<br />Replay check: 0<br />Decryption fail: 0<br />Other reason: 0</p>
+                                                <p class="Code">&#160;</p>
+                                                <p class="Code">-----Out-bound---<br />Total packets: 453<br />No sa: 6<br />Encryption fail: 0<br />Authentication fail: 0<br />Other reason: 0</p>
+                                            </li>
+                                        </ol>
+                                        <p>The <i>Current State</i> output indicates the ISAKMP key exchange state. For reference, here’s a table of ISAKMP key exchange states as they map to the <i>Current State</i> value:</p>
+                                        <p>
+                                            <table style="mc-table-style: url('resources/tablestyles/formfieldstable.css');" class="TableStyle-FormFieldsTable" cellspacing="0">
+                                                <col class="TableStyle-FormFieldsTable-Column-Column1" />
+                                                <col class="TableStyle-FormFieldsTable-Column-Column2" />
+                                                <thead>
+                                                    <tr class="TableStyle-FormFieldsTable-Head-Header1">
+                                                        <th class="TableStyle-FormFieldsTable-HeadE-Column1-Header1">
+                                                            <p>ISAKMP Key Exchange State</p>
+                                                        </th>
+                                                        <th class="TableStyle-FormFieldsTable-HeadD-Column2-Header1" style="text-align: center;">
+                                                            <p>Current State ID </p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-FormFieldsTable-Body-Body1">
+                                                        <td class="TableStyle-FormFieldsTable-BodyH-Column1-Body1">
+                                                            <p>ST_INIT</p>
+                                                        </td>
+                                                        <td class="TableStyle-FormFieldsTable-BodyG-Column2-Body1" style="text-align: center;">
+                                                            <p>1</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-FormFieldsTable-Body-Body1">
+                                                        <td class="TableStyle-FormFieldsTable-BodyH-Column1-Body1">
+                                                            <p>ST_ACTIVE_KEY_WAIT</p>
+                                                        </td>
+                                                        <td class="TableStyle-FormFieldsTable-BodyG-Column2-Body1" style="text-align: center;">
+                                                            <p>2</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-FormFieldsTable-Body-Body1">
+                                                        <td class="TableStyle-FormFieldsTable-BodyH-Column1-Body1">
+                                                            <p>ST_ACTIVE_READY</p>
+                                                        </td>
+                                                        <td class="TableStyle-FormFieldsTable-BodyG-Column2-Body1" style="text-align: center;">
+                                                            <p>3</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-FormFieldsTable-Body-Body1">
+                                                        <td class="TableStyle-FormFieldsTable-BodyB-Column1-Body1">
+                                                            <p>ST_PASSIVE_READY</p>
+                                                        </td>
+                                                        <td class="TableStyle-FormFieldsTable-BodyA-Column2-Body1" style="text-align: center;">
+                                                            <p>4</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </p>
+                                        <p>&#160;</p>
+                                        <table style="width: 100%;mc-table-style: url('resources/tablestyles/note-table.css');" class="TableStyle-Note-table" cellspacing="0">
+                                            <col class="TableStyle-Note-table-Column-Column1" />
+                                            <col class="TableStyle-Note-table-Column-Column2" />
+                                            <tbody>
+                                                <tr class="TableStyle-Note-table-Body-Body1">
+                                                    <td class="TableStyle-Note-table-BodyB-Column1-Body1">&#160;</td>
+                                                    <td class="TableStyle-Note-table-BodyA-Column2-Body1">
+                                                        <ul>
+                                                            <li value="1">If you are stuck in ST_ACTIVE_KEY_WAIT (Current State = 2), then you might have an IKE connectivity problem or a pre-shared-key issue.<ul><li value="1">Check firewall config</li><li value="2">Check pre-shared key entered correctly</li></ul></li>
+                                                            <li value="2">If no IKE exchange is happening at all - the SPs (Security Policies) which packets hit to trigger the IKE session may be wrong or missing, due to misconfiguration <ul><li value="1">Check IP address configuration</li></ul></li>
+                                                            <li value="3">If tunnels come up but we are seeing bad performance <ul><li value="1">Revisit the MTU configuration.&#160; MTU may need to be adjusted lower.</li></ul></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>&#160;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

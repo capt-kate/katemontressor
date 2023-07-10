@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Problem Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Problem Object Reference</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/businessobjects/problem_object.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/problem_management.htm">Problem Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Problem Object Reference</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor510"></a>Problem Object</h1>
+            <p class="Body">The following sections describe the default problem business objects.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Field Descriptions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Field name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Type</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Size</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Comments</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Category </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pick list for the category.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ClosedBy</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentUserName()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ClosedDateTime </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentDateTime()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CreatedBy</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentUserName()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CreatedDateTime </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentDateTime()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Description </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>4000</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Details of the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ErrorMessage</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>1000</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Text of the error message.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>FirstIncidentLinked</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Impact</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pick list for the impact.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>IncidentToRootCause<br />Duration</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>12 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>IsInFinalState</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Boolean</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Y/N</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>IsWorkAround</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Boolean</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Y/N</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>KnownErrorDate</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Date when established.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>KnownErrorDuration</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Computed</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>KPIAfterIdentification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>12 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>KPIBeforeIdentification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>12 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>KPITimeUntilRootCause</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>12 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>LastModBy</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentUserName()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>LastModDateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$CurrentDateTime()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>OrganizationalUnit</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Impacted organization unit.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Owner</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Assigned owner.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>OwnerEmailAddress</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Email address of the owner.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>OwnerLink</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Link</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;
+                            </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>OwnerTeam</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Assigned owner team.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>OwnerType</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>30</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>$DefaultUserType()</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Priority</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Based on the impact, urgency, and severity.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemDuration</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Known error date; the created date.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemLifetime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Closed date; the created date.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemNumber</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10 digits</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Auto generated from counter.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>RecId</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>32</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Record ID.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Resolution</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>4000</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>When the problem is resolved.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ResolutionAction</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pick list for the resolution action.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ResolutionEscLink</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Link</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>When auto resolved.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ResponseEscalationLink</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Link</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>RootCause</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>400</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>When RFC is submitted</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>RootCauseDateTime<br />Created</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Service</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>40</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Impacted service</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Source Source</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>25</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Status</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>40</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pick list for the status.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Subject Summary </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Brief description of the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TargetResolutionTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TotalWaitingDuration </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Number</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>8 digit, 2 decimal</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TypeOfProblem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Auto-filled. Values can be problem or known error.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Urgency</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>10</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pick list for the urgency.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>WaitingEscLink</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Link</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>n/a</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Workaround</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Text</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>4000</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Describes a workaround.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Relationship Definitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Relationship</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Type</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Cardinality</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatesAnnouncement </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemContainsAttachment</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>contains</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>AuditHistoryRelationship</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>contains</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>exactly one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>BusinessServiceAssociatesProblem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatesChange</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CIAssociatesProblem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>FAQAssociatedProblem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatedEscalationWatch</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatedByWorkflowInstance </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>FRS_KnowledgeAssociatedProblem </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatedMyItem </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatesIncident </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssocInventoryItem </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemContainsJournal </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>contains</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssocKnowledge </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssocProblemWorkaround </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociProfileEmployee </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssociatesReleaseProject </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ServiceCatalogAssociatesProblem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or many</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemAssocStandardUserTeam</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>ProblemContainsTask</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>associated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>zero or one</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Layouts</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Layout</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Context</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Roles</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Problem Layout</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Create, change, or view a problem.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Service Desk Analyst</p>
+                                    <p>Data provider (incident)</p>
+                                    <p>Internal specialists</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Forms</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Purpose</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Main problem edit.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem.Brief</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Brief preview below list (browse).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem.PopUp</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Pop-up view.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ProblemRootCause</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Shows the root cause of the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem.Workaround</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Shows a workaround for the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem.Detail</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Shows the details tab.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Problem.DataEntry</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Shows the details tab plus the problem ID on the header .</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Quick Actions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" style="width: 245px;" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Invocation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Request for change</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Manual</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Creates a new change using problem data.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Document Article</p>
+                                </td>
+                                <td rowspan="6" class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Manual</p>
+                                </td>
+                                <td rowspan="6" class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Creates a new knowledge article, based on the contents of the current problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Error Message Article</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Issue and Resolution Article</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Patch Article</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Q&amp;A Article </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Reference Article</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Close Related Incidents</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Manual</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Closes all incidents related to the current problem. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem Status to Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Auto</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Updates the status of the problem to closed. Invoked from the "Problem Close Process" demo workflow via the "Close Related Problems" quick action.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Resolve Incidents</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Manual</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Sets the incident status to resolved. Accomplished by invoking the "Resolve Incident Related to Problem" quick action against the related incidents.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Business Rules</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CI Owner Notification for Problem Cause Identification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Sends notification to the related CI owner if the CI is identified as the root cause for the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Major Problem Root Cause Identification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Sends notification to the Problem Review Board when the root cause of a major problem is identified.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Problem Notification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Sends notification to the owner for a new problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Priority 1 Problem Notification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Sends notification to the owner for a new problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>First incident is Linked</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Detects when the first incident is linked to the problem to populate the date and time to field Problem.FirstIncidentLinked.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Major Problem Resolution Notification for Problem Review Board</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Major problem review.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Link On Problem Review Board</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>New link on Problem Review Board.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>New Service Linked Add To Problem Review Board</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>New service linked add to Problem Review Board.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Resolve all Related Incidents when Problem Closed</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Closes any incident records linked to a parent problem record that has been closed.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Root Cause has been Found</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Root cause has been found.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Start Investigation of Problem</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Starts an investigation of the problem.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Workaround Notification for Incident Owner</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Workaround has been created.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Object Searches</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-ParameterTable" style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Criteria</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Open problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Not in List Canceled, Closed</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active problem with CIs </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Active</p>
+                                    <p>AND</p>
+                                    <p>CI# RecID IsNotEmpty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Closed problem last 30 days </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Closed</p>
+                                    <p>AND</p>
+                                    <p>Problem# ClosedDateTime EqualTo $(LastThirtyDays())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Active</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Active problems with linked incidents </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Active</p>
+                                    <p>AND</p>
+                                    <p>Incident# RecID IsNotEmpty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>All problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# RecID Is Not Empty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Closed problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Closed</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>High priority problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Priority Equal To 1</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Known error without workarounds </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Type of Problem Equal To Known Error</p>
+                                    <p>AND</p>
+                                    <p>Problem# Workaround IsEmpty</p>
+                                    <p>AND</p>
+                                    <p>Problem# Status NotInList Closed, Resolved</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Known errors </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Type of Problem Equal To Known Error</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Logged problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Logged</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>My active problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where:Problem# Status InList Active</p>
+                                    <p>AND</p>
+                                    <p>Problem# Owner Equal To $(CurrentLoginId())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>My problems </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Owner Equal To $(CurrentLoginId())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>My team's problem </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# OwnerTeam Equal To $(CurrentUserTeam())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Priority 1 active problems</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Priority Equal To 1</p>
+                                    <p>AND</p>
+                                    <p>Problem# Status Equal To Active</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem past target date</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# TargetResolutionDate Less Than $(CurrentDateTime())</p>
+                                    <p>AND</p>
+                                    <p>Problem# Status Not In List Closed, Resolved</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem received today</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# CreatedDateTime Equal To $(CurrentDate())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problem with root cause found</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Root Cause Created Greater Than $(StartOfThisYear())</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with change</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Change' where: Change# RecID Is Not Empty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with CIs</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'CI' where: CI# RecID Is Not Empty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with incident to root cause duration calculated</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Incident To Root Cause Created Greater Than 0</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with linked incidents after identification of issue</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Equal To Identified</p>
+                                    <p>AND</p>
+                                    <p>Incident# RecID Is Not Empty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with linked incidents before identification</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Status Not In List Canceled, Closed, Identified, Investigation, Resolved, Waiting for 3rd Party, Waiting for Resource</p>
+                                    <p>AND</p>
+                                    <p>Incident# RecID Is Not Empty</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Problems with pending tasks </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Find 'Task' where Status In List Accepted, Waiting</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Problems with workarounds </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Find 'Problem' where: Problem# Workaround Is Not Empty</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/businessobjects/using_erd.htm">Using ERD</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/performance/performance.htm">Performance</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../../configure/businessobjects/business_objects.htm">Business Objects</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../configure/templates/templates.htm">Templates</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../../configure/businessobjects/business_object_examples.htm">Business Object Examples</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessobjects/using_business_objects.htm">Using Business Objects</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessobjects/creating_a_field.htm">Using Fields</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessobjects/adding_a_relationship_to.htm">Using Relationships</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="incident_object.htm">Incident Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="change_object.htm">Change Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="knowledge_object.htm">Knowledge Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="service_request_object.htm">Service Request Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="survey_objects.htm">Survey Objects Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="frs_timezone.htm">The Timezone Object</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="all_business_objects.htm">Default Business Objects</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/businessobjects/using_relationships_in_a_grid.htm">Using Relationships in a Grid</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

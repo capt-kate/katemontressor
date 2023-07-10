@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up the Application">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using the Business Object Uploader</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/systemsettings/using_the_business_objec.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/setting_up_the_applicati.htm">Setting Up the Application</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using the Business Object Uploader</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor626"></a><a name="system_settings_3027789145_1184477"></a>Using the Business Object Uploader</h1>
+            <p class="Body"><a name="kanchor627"></a>If you have an existing set of business objects upon installing the <span class="notranslate"><b>HEAT</b></span> tenant, you can import them into the <span class="notranslate"><b>HEAT</b></span> application using the <span class="window_name">Business Object Uploader</span> tool. The tool communicates with the <span class="notranslate"><b>HEAT</b></span> application server using public web services to facilitate user logins, population of dataentry forms, and the upload of business object data.</p>
+            <h4 class="subheading">Before You Begin</h4>
+            <p class="Body">Before you can use the <span class="window_name">Business Object Uploader</span> tool, you must do the following:</p>
+            <ul>
+                <li value="1">Have administrator role access.</li>
+                <li value="2">Organize your existing set of business objects into a MS Excel spreadsheet. You can obtain this spreadsheet, which contains a template for capturing business object properties, from FrontRange Technical Support. See a <a href="#system_settings_3027789145_1213724" class="MCXref xref">Sample Mapping File</a>.</li>
+                <li value="3">See <a href="#system_settings_3027789145_1187082" class="MCXref xref">Mapping Notes</a> for useful profile mapping information to keep in mind when preparing to upload incident and employee profile records.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Handle Link Properties</a><a name="Handling_Link_Properties"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When the system detects a business property link type (for example, ParentLink), the system displays the <span class="window_name">Select Link Column</span> form.</p>
+                    <p class="Body">This form displays the following:</p>
+                    <ul>
+                        <li value="1">Link Property: Display name of the business property from the business object determined to be a link property.</li>
+                        <li value="2">Select Property to Search on From business object: Table name linked to this business property. The system retrieves record IDs from this table for insertion into the business object.</li>
+                        <li value="3">Choose Property: A drop-down list of all fields in the linked business object (all business properties in the linked business object).</li>
+                    </ul>
+                    <p class="Body">Click <span class="Bold">Select</span> to save the business property. During the upload, the system looks up items in the linked business object based on values in the input file and the selected business property.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Mapping Notes</a><a name="system_settings_3027789145_1187082"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following sections contain mapping information that you must follow to successfully upload incident and employee profile records. See a <a href="#system_settings_3027789145_1213724" class="MCXref xref">Sample Mapping File</a>.</p>
+                    <ul>
+                        <li value="1">When uploading tasks with a completed status, you must add an input file column mapped to the ActualEffort business property.</li>
+                        <li value="2">You can add files containing ParentLink relationships. Insert a <span class="window_name">*ParentLinkRelationship*</span> column in the input file, then add relationship names corresponding to each entry. You must also include a <span class="window_name">ParentLink</span> column, or these entries will be ignored during the upload.</li>
+                        <li value="3">When loading employee profiles, make sure to include the employee login and password to facilitate use of the system.</li>
+                    </ul>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Notes for Incident Record Mapping</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body"><a name="kanchor628"></a>When mapping active incidents, add the status, owner team, and owner columns in order.</p>
+                            <p class="Body">When uploading logged incidents, you must specify an owner  in the spreadsheet, or the upload fails.</p>
+                            <p class="Body">The following table contains column heading mappings for incident records:</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="323px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="336px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                        Column heading
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                        Map to business object
+                                    </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Customer Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Profile.Link-Link LoginID</p>
+                                            <p>OR</p>
+                                            <p>Primary Email</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Reported By
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       AlternateLink-Link.LoginID
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Summary
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Subject 
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Description
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Symptom
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Closed By
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Internal Services
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                        Task ID (when adding records with Task information)
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                        AssignmentID
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a name="kanchor629"></a><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Notes for Employee Profile Mapping</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body"><a name="kanchor630"></a>When uploading employee records, create separate objects for managers and employees. Upload manager records first, as the system resolves relationship links to employees.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">When loading employee profiles, make sure to include the employee login and password to facilitate use of the system.
+					</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body">The display name used in an uploaded employee record computes the name using the <span class="window_name">First Name</span>, <span class="window_name">Middle Name</span> and <span class="window_name">Last Name</span> field values. Uploading a record with a <span class="window_name">DisplayName</span> value in the spreadsheet does not produce a value in the system's <span class="window_name">Display Name</span> field.</p>
+                            <p class="Body">The following table contains column heading mappings for employee records</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="192px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="533px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                            <p>Spreadsheet entry</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                            <p>Map to database entry</p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Primary Phone</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Phone1</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Organizational Unit </p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>OrgUnitLink-Link </p>
+                                            <p>&#160;</p>
+                                            <p>Move this mapping to the bottom of the spreadsheet.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body">The system does not support inserting certain information into employee tabs, such as group, computer, journal, and attachments.</p>
+                            <h4 class="subheading">Add Employees with Multiple Roles<a name="kanchor631"></a></h4>
+                            <p class="Body">Add a <span class="window_name">Role</span> column to the input file that contains the role display names. If you are updating an existing employee record during the upload, any new roles are added to the roles already assigned to the employee in the employee record. &#160;The system separates roles by commas.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="window_name">Role</span> column should be named *Role* (with the asterisks included) and should include the role display name and not the actual role name. For example, include Self Service and not SelfService. All role names should be in the column and separated by commas.
+					</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body">In the application configuration file (called app.config), you can set the <span class="window_name">AddRoleBehavior</span> parameter to merge or overwrite.</p>
+                            <ul>
+                                <li value="1"><b>Merge</b>. Adds new roles from the input file to existing role assignments.</li>
+                                <li value="2"><b>Overwrite</b>. Deletes existing role assignments and adds roles from the input file.</li>
+                            </ul>
+                            <h4 class="subheading">Add Employees Linked to Multiple Teams</h4>
+                            <p class="Body">Add a <span class="window_name">Teams</span> column to the input file that lists the team names (separated by commas) for a particular employee. The team names must match the team entries in the <span class="window_name">StandardUserTeam</span> table in <span class="notranslate"><b>HEAT</b></span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor632"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Import Cost Data</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can import cost data to the <span class="window_name">Frs_data_cost_items</span> table and associate it with a specific configuration item. The cost items table column uses ParentLink entries.</p>
+                    <ul>
+                        <li value="1">The input file column name can use a name other than ParentLink, but it must be mapped to ParentLink.</li>
+                        <li value="2">The values in this column must correspond to unique business object field values.</li>
+                    </ul>
+                    <h4 class="subheading">Map Input Values to a ParentLink Entry</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Manually map the input file column to the <span class="window_name">ParentLink-Link</span> entry. The system displays the <span class="window_name">SelectLink Table</span> window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Use the drop-down list to select a business object from the <span class="window_name">Select Link Table by Name</span> field.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save Selection</span>. The system displays the <span class="window_name">Select Link Column</span> window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Use the drop-down list to select a business property from the <span class="window_name">Choose Property</span> field.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Check to Use Input</span> as RecID checkbox to assign the input file value as a record ID.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Select</span> to complete the mapping and return to the <span class="window_name">SelectLink Table</span> window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Save Selection</span> to save the mapping.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Sample Mapping File</a><a name="system_settings_3027789145_1213724"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Shown below is a sample mapping file.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Mapping_File"><a name="Sample_Mapping_File" data-mc-generated-bookmark="ListOf"></a>Sample Mapping File</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/samplemappingfile_gbu.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="455" data-mc-height="474" src="../../resources/images/samplemappingfile_gbu_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Ensure that the header name in the sample profile file maps to the <span class="notranslate"><b>HEAT</b></span> property name.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="bulk_upload_configuratio.htm">Bulk Upload Configuration</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

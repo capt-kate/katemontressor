@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Configuration|Working with CIs">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The CI Map</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/textlist.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/configurationmgmt/the_ci_map.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="configuration_items.htm">Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="working_with_cis.htm">Working with CIs</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">The CI Map</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor132"></a>The CI Map</h1>
+            <p class="Body">The CI map tool gives you a way to visually look at a Configuration Item (CI) or Service and view the related Services or CIs (such as dependent on, hosted on, or managed by) in your organization. </p>
+            <p class="Body">While viewing a workflow, you can see the impact of service interruptions at various upstream and downstream points, enabling you to better manage your Service network and to quickly isolate service failures.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">The CI map supports individual services but does not support environments using clusters or load-balancing structure.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View a CI Map</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator or Configuration Manager, then open the <span class="window_name">CI</span> or <span class="window_name">CI Service</span> workspace. The list of objects appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the object you want from the list. The record details appear.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">CI&#160;Map</span>. The CI&#160;map appears for the selected service. The following shows a web hosting service map.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_CI_Map_for_web_hosting_service"><a name="Sample_CI_Map_for_web_hosting_service" data-mc-generated-bookmark="ListOf"></a>Sample CI Map for web hosting service</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ci_map.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1483" data-mc-height="671" src="../../resources/images/ci_map_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Under <span class="window_name">View Options</span>, choose a Horizontal or Vertical layout.</li>
+                            <li value="2">Under <span class="window_name">View Options</span>, select <span class="Bold">Always show relation</span> to show the relation between items on the map.</li>
+                            <li value="3">Select the number of levels to view. In large maps, you might only want to view 1 or 2 levels.</li>
+                            <li value="4">Select an item on the map to view the record details.</li>
+                            <li value="5">To center the map on a specific item, right-click the item, then choose <span class="Bold">Centralize and Redraw</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View CI Outage Impact</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To view the potential impact of an outage, right-click a CI block in the Map and choose <span class="Bold">Show outage impact</span>. </p>
+                    <p class="fig_title" data-mc-xref-target-name="CI_block_pop-up_menu"><a name="CI_block_pop-up_menu" data-mc-generated-bookmark="ListOf"></a>CI block pop-up menu</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ci_hide_outage.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="334" data-mc-height="222" src="../../resources/images/ci_hide_outage_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The  impact of an outage is shown.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_outage_impact"><a name="Sample_outage_impact" data-mc-generated-bookmark="ListOf"></a>Sample outage impact</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ci_outage_impact.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="987" data-mc-height="655" src="../../resources/images/ci_outage_impact_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/textlist.css');" class="TableStyle-TextList" cellspacing="0">
+                        <col class="TableStyle-TextList-Column-Column1" style="width: 212px;" />
+                        <col class="TableStyle-TextList-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-TextList-Body-Body2">
+                                <td class="TableStyle-TextList-BodyH-Column1-Body2">
+                                    <img src="../../resources/images/ci_map_outage.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-TextList-BodyG-Column1-Body2">This service is disabled.</td>
+                            </tr>
+                            <tr class="TableStyle-TextList-Body-Body2">
+                                <td class="TableStyle-TextList-BodyB-Column1-Body2">
+                                    <img src="../../resources/images/ci_map_affected.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-TextList-BodyA-Column1-Body2">This service is impacted.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body_indent">To revert to the original view, right-click a CI block and choose <span class="Bold">Hide Outage Impact</span>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor133"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View a CI Map Tree</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Use the Map Tree tab to view upstream and downstream relationships to a given CI. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within a CI&#160;record, select  the <span class="window_name">CI Map Tree</span> tab. CIs that are downstream to the current CI are listed on the left side, while upstream CIs are on the left. </td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_CI_Service_Map_tree"><a name="Sample_CI_Service_Map_tree" data-mc-generated-bookmark="ListOf"></a>Sample CI Service Map tree</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ci_map_tree.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="659" data-mc-height="664" src="../../resources/images/ci_map_tree_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">For outage purposes, consider that a downstream CI is dependent on the current CI, while the current CI is dependent on the CIs that are upstream to it.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Map a CI</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Link or unlink upstream and downstream relationships to a given CI under the Map Tree tab.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within a CI&#160;record, select  the <span class="window_name">Map Tree</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Link</span> <img src="../../resources/images/buttons/link.png" class="icon" /> under the downstream or upstream relationship. The relationship window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the relationship you want to link, then click <span class="Bold">Link</span>. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The CI record that you selected appears in the tree view. If there are CIs that are related to the CI record you selected, these appear as parents or children (as defined when the CIs were linked) to the CI in the tree.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Define a CI Relationship</a><a name="configuration_items_400625368_1237561"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Using the <span class="window_name">CI Named Rel Data</span> workspace, you can add verbiage to define logical relationships between CIs. This verbiage appears on the CI map viewer, showing how one CI is related to another (for example, <span class="Emphasis">hosted on</span>, <span class="Emphasis">connects to</span>, <span class="Emphasis">runs on</span>, and so on).</p>
+                    <p class="Body">For example, a child record connected to a parent record (upstream) contains the verbiage <span class="Emphasis">Hosted on</span>, while the parent record connecting to a child record (downstream) contains the verbiage <span class="Emphasis">Hosts</span>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">While logged into <span class="notranslate"><b>HEAT</b></span> in the administrator or Configuration Manager role, open the <span class="window_name">CI Named Rel Data</span> workspace. The list of relationships appears.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The Child to Parent Link Name column shows the verbiage for a child record related to a parent record (an upstream relationship).</li>
+                            <li value="2">The Parent to Child Link Name column shows the verbiage for a parent record (a downstream relationship) related to a child record.</li>
+                            <p class="fig_title" data-mc-xref-target-name="CI_Named_Rel_Data_Workspace"><a name="CI_Named_Rel_Data_Workspace" data-mc-generated-bookmark="ListOf"></a>CI Named Rel Data Workspace</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cinamedreldata.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="785" data-mc-height="602" src="../../resources/images/cinamedreldata_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <li value="3">At the bottom of the window, the <span class="Bold">Label for arrow from the Child to Parent Object </span>field shows the upstream relationship. For example, <span class="Type">Hosted on</span>.</li>
+                            <li value="4">The <span class="Bold">Label for arrow from Parent to Child Object </span>field shows the downstream relationship. For example, <span class="Type">Hosts</span>.</li>
+                        </ul> <![CDATA[ ]]></div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click a record. The <span class="window_name">CI&#160;Named Rel Data</span> edit window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Change the labels as needed. For example, you could change <span class="Type">Hosted on</span> to <span class="Type">Hosted by</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The relationship name appears when you define a CI Map.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Define Constraints for CI Relationships</a><a name="Define"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Using the <span class="window_name">CI Named Rel Constraints</span> workspace, you can define logical relationships between parent and child CIs. When you search for a CI to link while defining a CI map, the only results that appear are the CI types that you define can logically link to the CI you are mapping from (for example, a workstation CI or computer CI can be a child of a server CI, but the server CI cannot be a child of a workstation or computer CI).</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">While logged into <span class="notranslate"><b>HEAT</b></span> in the administrator or Configuration Manager role, open the <span class="window_name">CI Named Rel Constraints</span> workspace. The list of constraints appears.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The Child Group Name column shows the CI type of a child record related to a parent record (an upstream relationship).</li>
+                            <li value="2">The Link Name column shows the verbiage to define the relationship of the selected CI type, as defined in <a href="#configuration_items_400625368_1237561" class="MCXref xref">Define a CI Relationship</a>.</li>
+                            <li value="3">The Master Group Name column shows the CI type of a parent record (a downstream relationship) related to a child record.</li>
+                        </ul>
+                    </div>
+                    <p class="fig_title" data-mc-xref-target-name="CI_Named_Rel_Constraints_workspace"><a name="CI_Named_Rel_Constraints_workspace" data-mc-generated-bookmark="ListOf"></a>CI Named Rel Constraints workspace</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cinamesrelconstraints.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="448" data-mc-height="728" src="../../resources/images/cinamesrelconstraints_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New</span>. The <span class="window_name">CINamedRelContraints</span> form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Child</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Select a child CI type. For example, <span class="Type">database</span>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">LinkName</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Select a relationship between the child and parent CI types. For example, <span class="Type">runs on</span>. This list is populated by the <span class="window_name">CI Named Rel Data</span> workspace.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Parent</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Select the corresponding parent CI type. For example, <span class="Type">server</span>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Optional. Enter of description of the constraint.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="configuration_items.htm">Configuration</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="configuration_baseline.htm">The Configuration Baseline</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="working_with_cis.htm">Working with CIs</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="setting_up_a_change_wind.htm">Setting up a Change Window and Lockout</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="linking_cis_to_other_objects.htm">Linking CIs to Other Objects</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="variance_reports.htm">Variance Reports</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

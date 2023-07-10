@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Service Level Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Setting Up Surveys</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/surveys/setting_up_surveys.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/service_level_management.htm">Service Level Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Surveys</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor522"></a>Setting Up Surveys</h1>
+            <p class="Body">Customer surveys measure customer satisfaction with the various departments in your organization. Surveys are published over the web, and distributed by email. When opened, they appear in a new browser window.</p>
+            <p class="Body"><a name="kanchor523"></a>By default, a Service Desk Manager can view survey results within the business layouts.</p>
+            <p class="Body">Surveys are triggered upon the conclusion of a specific event, such as after closing an incident. This automated process is defined in a business rule associated with a specific business object.</p>
+            <p class="Body">Three types of surveys can be created:</p>
+            <ul>
+                <li value="1"><span style="font-weight: bold;" class="Bold">Post-Transaction.</span> This survey type is event-driven, enabling you to send a survey triggered by the conclusion of a specified event, such as after every 5th call received. The sending of post-transaction surveys is automated.</li>
+                <li value="2"><span style="font-weight: bold;" class="Bold">On-Demand.</span> This survey type is used to survey the entire customer base (or some specified segment of customers) on an as-needed basis.</li>
+                <li value="3"><span style="font-weight: bold;" class="Bold">Periodic. </span>The same parameters as the On-Demand survey, however, unlike the On-Demand survey, which can be submitted only once, the Periodic survey can be completed and submitted multiple times by the respondent.</li>
+            </ul>
+            <p class="Body">&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create a Survey</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Incident and service request survey notifications are generated for every fifth record. This is implemented with the workflow and is controlled by a global constant.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console Settings pane under <span class="window_name">Configure &gt; Communication Templates</span>, click <span class="Bold">Surveys</span>. The Survey List appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Create a new survey</span>. The <span class="window_name">Create Survey</span> form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="171px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="488px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Survey title</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enter a unique title for the survey. This name is saved as a global constant for use when creating a link in a survey notification email. This name will be displayed as a header on each page of the survey.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Survey type</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p><span class="Bold">on-demand</span> (only survey type available in <span class="notranslate"><b>HEAT</b></span>).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Logo (URL)</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Use to show your company logo on the survey by inserting the logo local web server path or public URL. </p>
+                                            <p>For example,</p>
+                                            <p>a local durvey web server path would be: <span class="fixedwidth">../templates/images/logo.png</span></p>
+                                            <p>a public URL would be: <span class="fixedwidth">http://www.mycompany.com/logo-small.gif</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Style</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Select the color style to apply to the survey.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Description</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Optional. Enter a description about the survey which appears as a tool tip for the survey title on the Survey List page. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Welcome message</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Optional. Enter a message to greet the survey taker. Appears on the Welcome page of the survey.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Thank you message</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enter a message to display when the survey is submitted. If the respondent tries to resubmit a survey, the thank you message appears as a reminder that the survey has been previously submitted.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Suspend message</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enter the message that appears if the survey is suspended (unpublished).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Expired on</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enter an expiration date or click the calendar to select an expiration date; if the respondent tries to submit the survey on or after the expiration date, the expiration message appears.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Expiration message</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Enter a message that appears if the respondent attempts to submit a survey on or after the expiration date.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The blank survey appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The following command items are available on the survey:</p>
+                    <table class="TableStyle-OptionsTable" style="mc-table-style: url('../../resources/tablestyles/optionstable.css');width: 92%;" cellspacing="0">
+                        <col width="171px" class="TableStyle-OptionsTable-Column-Column1" />
+                        <col width="467px" class="TableStyle-OptionsTable-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                                    <p>survey list</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                                    <p>Return to the Survey List page.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                                    <p>copy survey</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                                    <p>Duplicate the current survey.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                                    <p>survey properties</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                                    <p>The basic survey properties described above.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                                    <p>delete survey</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                                    <p>Click to delete the current survey. This action can not be undone.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                                    <p>add question</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                                    <p>Click to add a question to the survey. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">
+                                    <p>preview</p>
+                                </td>
+                                <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">
+                                    <p>Click to see what the user will encounter.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Add Survey Questions</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Add questions to the survey. Click <span class="Bold">Add question</span>. The <span class="Emphasis">Add Question</span> form appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields. </td>
+                                </tr>
+                            </table>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                        <col width="171px" class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col width="488px" class="TableStyle-ParameterTable-Column-Column2" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Fields</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Question Type</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Select a format from the drop-down list.</p>
+                                                    <ul class="list_table">
+                                                        <li value="1"><span class="Bold">text - </span>The respondent can enter a short, one-line answer.</li>
+                                                        <li value="2"><span class="Bold">essay - </span>The respondent can enter a long answer; this is essentially a comments field.</li>
+                                                        <li value="3"><span class="Bold">radio button - </span>The respondent can only select one answer.</li>
+                                                        <li value="4"><span class="Bold">check box - </span>The respondent can select multiple answers.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Question</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Enter a survey question.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Answer Required</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Select to require the user to respond to the question.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Question Category</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Choose from the drop-down list. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Answers</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>This field is used for <span class="Bold">radio button</span> or <span class="Bold">check box</span> questions.</p>
+                                                    <p>Type the response choices in the <span class="Bold">Answers</span> field. Each line in the answer box represents an answer option, so press <span class="Bold">Enter</span> to start a new line for each response.</p>
+                                                    <p>For example, for a radio button or checkbox, you can enter:</p>
+                                                    <ul class="list_table">
+                                                        <li value="1">Excellent [weight=5]</li>
+                                                        <li value="2">Very Good [weight=4]</li>
+                                                        <li value="3">Good [weight=3]</li>
+                                                        <li value="4">Fair [weight=2]</li>
+                                                        <li value="5">Poor [weight=1]</li>
+                                                        <li value="6">Don't Know/Not Applicable [weight=5]</li>
+                                                    </ul>
+                                                    <p>Or for a Yes/No or True/False response for a radio button or checkbox, you can enter:</p>
+                                                    <ul class="list_table">
+                                                        <li value="1">Yes [weight=1]</li>
+                                                        <li value="2">No [weight=0]</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                                    <p>Last answer contains text box</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                                    <p>Select to provide a short answer field as a final response option (for example, an Other option or a Comments box).</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Repeat these steps to add more questions to the survey.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">The questions appear as you add each one.</p>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Click <span class="Bold">insert page break</span> to create a page break between questions.</li>
+                                    <li value="2">Click <span class="Bold">insert question</span> to place a question between two existing questions.</li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">After all questions have been entered and you are ready to publish the survey, go to the survey list and click <span class="Bold">Start</span>.<br />To suspend a survey, click <span class="Bold">Stop</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body">&#160;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor524"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Question Categories</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">On the<span class="Bold"> Survey List</span> page, click the <span class="Bold">Question Categories</span> list to add general groupings for use in sorting survey data.</p>
+                            <p class="Body">Enter question categories in the fields provided, such as <span class="Bold">Courtesy</span> or <span class="Bold">Timeliness of Resolution</span>. These categories are available when adding questions to a survey. If a category is used, it appears in the <span class="window_name">Used </span>list on the <span class="Bold">Question Categories</span> page.</p>
+                            <p class="Body">You cannot delete a question category if it is used on an active survey. </p>
+                            <p class="Body">To add a category, click <span class="Bold">Add</span>.</p>
+                        </div>
+                    </div>
+                    <p class="Body">&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Duplicate a Survey</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the <span class="Bold">Survey List</span> page, click the name of the survey to copy. The survey opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To copy the survey, click the <span class="Bold">copy survey</span> link at the top of the page. The <span class="Bold">Source</span> survey field confirms the survey being copied.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your information into the fields.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                        <col class="TableStyle-OptionsTable-Column-Column1" />
+                        <col class="TableStyle-OptionsTable-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">New survey title</td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Enter a name for the new survey.</td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">New survey description</td>
+                                <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">
+                        Optional. Enter a description  for the new survey. The description will appear as a tool tip when you move your mouse over a survey title on the <span class="Bold">Survey List</span> page.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Copy</span>. The new survey opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Make any needed changes to the questions and survey properties, then <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Modify a Survey</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You cannot edit a survey once responses have been received for that survey. If you clear the responses, you can then edit the survey. </p>
+                    <p class="Body">Within the survey page, you can perform the following actions:</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Action</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Edit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to edit a question on the page;  to the right of the question.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sort</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to change the order of the questions; to the right of the question.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Move Up</p>
+                                    <p>Move Down</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Reposition the order of the questions.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Remove</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to delete a question from the survey, then click <span class="Bold">OK</span> to confirm.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Remove Page Break</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click the link to the right of the page break to remove.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Add Question</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>To add a question to the end of the survey, click the link at the top of the page;</p>
+                                    <p>To add a question to a specific location in the survey, click <span class="Bold">Insert Question</span> at the bottom of each question segment.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Survey Properties</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to edit the survey properties (survey type, welcome message, etc.).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Copy Survey</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to copy the open survey.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delete Survey</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to delete the open survey.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Preview</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Click to see a preview of the open survey.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Survey List</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Click to return to the <span class="Bold">Survey List</span> page.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If the survey has responses, you will not see the delete survey link. You must first delete the responses from the database by clicking the clear link on the Survey List page.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body"> &#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Delete a Survey</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You cannot delete a survey that has responses. When you delete a survey from the database, all data related to that survey is also deleted.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the <span class="Bold">Survey List</span> page, click the name of the survey to delete. The survey opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To delete the survey, click the <span class="Bold">delete survey</span> link at the top of the page.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">OK</span> to confirm the deletion.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="scorecardconfig.htm">Using the Score Card</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_the_survey.htm">Using the Survey</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sending_surveys.htm">Sending Surveys</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_survey_results.htm">Viewing Survey Results</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="configuring_surveys.htm">Configuring Survey Frequency</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

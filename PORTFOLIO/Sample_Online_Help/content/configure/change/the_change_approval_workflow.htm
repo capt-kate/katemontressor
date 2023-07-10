@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Change Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The Change Approval Workflow</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/change/the_change_approval_workflow.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/change_management.htm">Change Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">The Change Approval Workflow</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor497"></a>The Change Approval Workflow</h1>
+            <p class="Body">This section describes the default change approval workflow.  See <a href="../workflows/creating_a_basic_workflo.htm" class="MCXref xref">Using  Workflows</a> for information on modifying workflows.</p>
+            <p class="fig_title" data-mc-xref-target-name="The_Default_Change_Approval_Workflow"><a name="The_Default_Change_Approval_Workflow" data-mc-generated-bookmark="ListOf"></a>The Default Change Approval Workflow</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_approval_workflow.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1330" data-mc-height="568" src="../../resources/images/change_approval_workflow_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <h4 class="subheading">Configuration</h4>
+            <p class="Body">The <span class="window_name">Trigger Definition</span> is set to:</p>
+            <p class="Body_indent"><span class="Bold">Specific fields updated</span>
+            </p>
+            <p class="Body_indent"><span class="Emphasis">AND</span>
+            </p>
+            <p class="Body_indent"><span class="Bold">Status is equal to pending approval</span>
+            </p>
+            <p class="fig_title" data-mc-xref-target-name="Change_Workflow_Trigger_Definition"><a name="Change_Workflow_Trigger_Definition" data-mc-generated-bookmark="ListOf"></a>Change Workflow Trigger Definition</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_trigger_def.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="542" data-mc-height="353" src="../../resources/images/change_workflow_trigger_def_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p class="Body">Set the <span class="window_name">Exception Notification</span> to an email template.</p>
+            <h4 class="subheading">Workflow</h4>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1."><b>If</b> Need additional approval</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Change type not equal to standard</p>
+            <p class="Body_indent"><span class="Emphasis">AND</span>
+            </p>
+            <p class="Body_indent">Change type not equal to minor</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">true: Go to <a href="#If" class="MCXref xref">If emergency change</a></li>
+                    <li value="2">false: Stop</li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2."><a name="If"></a><b>If</b> emergency change</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Change type equal to emergency</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">If true:&#160;Go to <a href="#Get_Approval_ECAB_Approval" class="MCXref xref">Get Approval ECAB approval</a></li>
+                    <li value="2">If false:&#160;Go to <a href="#Get_Approval_CAB_Approval" class="MCXref xref">Get Approval CAB approval</a></li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."><b><a name="If_Major_Change"></a>If</b> major change</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Change type equal to major</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">If true:&#160;Go to <a href="#Get_Approval_MC_Approval" class="MCXref xref">Get Approval MC approval</a></li>
+                    <li value="2">If false:&#160;Go to <a href="#Notification_Approved_Change_Notification" class="MCXref xref">Notification Approved change notification</a></li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4."><b><a name="Get_Approval_ECAB_Approval"></a>Get Approval</b> ECAB approval</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Get_ECAB&#160;Approval"><a name="Get_ECAB&#160;Approval" data-mc-generated-bookmark="ListOf"></a>Get ECAB&#160;Approval</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_get_approval_ecab_approval.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="753" data-mc-height="682" src="../../resources/images/change_workflow_get_approval_ecab_approval_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">If approved:&#160;Go to <a href="#Notification_Approved_Change_Notification" class="MCXref xref">Notification Approved change notification</a></li>
+                    <li value="2">If denied:&#160;Go to <a href="#Notification_Denied_Change_Notification" class="MCXref xref">Notification Denied change notification</a></li>
+                    <li value="3">If timed out:&#160;Go to <a href="#Notification_Time_Out_Approval_Notification" class="MCXref xref">Notification Timed out approval notification</a></li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5."><b><a name="Get_Approval_CAB_Approval"></a>Get Approval</b> CAB approval</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Get_CAB&#160;Approval"><a name="Get_CAB&#160;Approval" data-mc-generated-bookmark="ListOf"></a>Get CAB&#160;Approval</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_get_approval_cab_approval.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="753" data-mc-height="682" src="../../resources/images/change_workflow_get_approval_cab_approval_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">If approved:&#160;Go to <a href="#If_Major_Change" class="MCXref xref">If major change</a></li>
+                    <li value="2">If denied:&#160;Go to <a href="#Notification_Denied_Change_Notification" class="MCXref xref">Notification Denied change notification</a></li>
+                    <li value="3">If timed out:&#160;Go to <a href="#Notification_Time_Out_Approval_Notification" class="MCXref xref">Notification Timed out approval notification</a></li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6."><b><a name="Get_Approval_MC_Approval"></a>Get Approval</b> MC approval</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Get_MC&#160;Approval"><a name="Get_MC&#160;Approval" data-mc-generated-bookmark="ListOf"></a>Get MC&#160;Approval</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_get_approval_mc_approval.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="753" data-mc-height="682" src="../../resources/images/change_workflow_get_approval_mc_approval_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">If approved:&#160;Go to <a href="#Notification_Approved_Change_Notification" class="MCXref xref">Notification Approved change notification</a></li>
+                    <li value="2">If denied:&#160;Go to <a href="#Notification_Denied_Change_Notification" class="MCXref xref">Notification Denied change notification</a></li>
+                    <li value="3">If timed out:&#160;Go to <a href="#Notification_Time_Out_Approval_Notification" class="MCXref xref">Notification Timed out approval notification</a></li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7."><b><a name="Notification_Denied_Change_Notification"></a>Notification</b> Denied change notification</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Denied_Change_Notification"><a name="Denied_Change_Notification" data-mc-generated-bookmark="ListOf"></a>Denied Change Notification</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_notifcation_denied.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="841" data-mc-height="534" src="../../resources/images/change_workflow_notifcation_denied_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8."><b><a name="Notification_Approved_Change_Notification"></a>Notification</b> Approved change notification</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Approved_Change_Notification"><a name="Approved_Change_Notification" data-mc-generated-bookmark="ListOf"></a>Approved Change Notification</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_notification_approved.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="841" data-mc-height="534" src="../../resources/images/change_workflow_notification_approved_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9."><b><a name="Notification_Time_Out_Approval_Notification"></a>Notification</b> Timed out approval notification</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Timed_Out_Approval_Notification"><a name="Timed_Out_Approval_Notification" data-mc-generated-bookmark="ListOf"></a>Timed Out Approval Notification</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_workflow_notification_time_out.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="841" data-mc-height="534" src="../../resources/images/change_workflow_notification_time_out_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10."><b>Update</b> Set status to scheduled</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Status: Scheduled</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">OK:&#160;Go to stop.</li>
+                    <li value="2">Failed:&#160;Go to stop.</li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11."><b>Update</b> Set cancellation reason</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Cancellation reason: change approval denied by CAB member or approval board.</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">OK:&#160;Go to <a href="#Update_Set_Status_to_Denied" class="MCXref xref">Update Set status to denied</a></li>
+                    <li value="2">Failed:&#160;Go to stop.</li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12."><b><a name="Update_Set_Status_to_Denied"></a>Update</b> Set status to denied</td>
+                </tr>
+            </table>
+            <p class="Body_indent">Status: Denied</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">OK: Go to stop.</li>
+                    <li value="2">Failed:&#160;Go to stop.</li>
+                </ul>
+            </div>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">If the system determines that there is not enough time (according to the settings) to approve a change request before the approval board meeting, the approval automatically rolls over to the next  meeting.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="change_calendar.htm">Change Calendar</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../../servicedesk/change/changes.htm">Change</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../servicedesk/changecalendar/change_calendar.htm">Using the Change Calendar</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/working_with_a_change.htm">Creating a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/adding_change_tasks.htm">Working with Change Tasks for a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/closing_a_change.htm">Resolving and Closing a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/implementing_a_change.htm">Implementing a Change</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/managing_change_approval.htm">Managing Change Approvals</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/post_implementation_revi.htm">Post-Implementation Review</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/schedule_a_change.htm">Scheduling a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/setting_the_risk_level.htm">Setting the Risk Level</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/change/cancelling_a_change.htm">Canceling a Change Request</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/approve_a_change.htm">Approving a Change Request</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/analyze_and_classify_pot.htm">Analyze and Classify Potential Change</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../servicedesk/change/change_approval_board.htm">Change Approval Board</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="change_risk_reference.htm">Change Risk Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../workflows/workflow_instance.htm">Workflow Instance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/change_lifecycle.htm">Change Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

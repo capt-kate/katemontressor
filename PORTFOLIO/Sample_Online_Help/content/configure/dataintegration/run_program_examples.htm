@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data|Configuring Data Integration|Run Program - Remote Host">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Reset a Password using Run Program</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/run_program_examples.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration_configu.htm">Configuring Data Integration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="run_program.htm">Run Program - Remote Host</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Reset a Password using Run Program</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor443"></a>Resetting a Password Using Run Program</h1>
+            <p class="Body">This example shows how to create a quick action that resets a password when a user submits a service request.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Create a run program connection within the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Data Integration Wizard<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Used to import data from external sources into HEAT.</span></a>. See <a href="run_program.htm" class="MCXref xref">Run Program - Remote Host</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Create a request offering to reset a password, and publish as a service request. See <a href="../../servicedesk/services/creating_request_offering.htm" class="MCXref xref">Working with Request Offerings</a> and <a href="../../servicedesk/servicerequest/creating_a_service_reque.htm" class="MCXref xref">Working with Service Requests</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Create a quick action that is triggered by the service request to automatically reset the password. See  <a href="../../reference/quickactions/templates/run_program.htm" class="MCXref xref">Run Program Quick Action</a>.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">When the quick action is run against the selected employee record, <span class="notranslate"><b>HEAT</b></span> sends an email to the employee with the temporary password. The employee logs in using the temporary password, and then changes the password.</p>
+            <p class="Body_indent">The quick action can be defined as:</p>
+            <div class="sub_list">
+                <ul>
+                    <li value="1"><b>WSDL URL</b>: $(ServerURL() + '/AdminUI/Services/ConfigServiceAPIProxy.asmx?wsdl')</li>
+                    <li value="2"><b>Service Name</b>: ConfigServiceAPIProxy</li>
+                    <li value="3"><b>Operation Name</b>: OneTimePasswordRequest</li>
+                    <li value="4"><b>UserName</b>: $(LoginID)</li>
+                    <li value="5"><b>Email</b>: $(PrimaryEmail)</li>
+                </ul>
+            </div>
+            <p class="fig_title" data-mc-xref-target-name="Quick_Action_Settings_to_Reset_a_Password"><a name="Quick_Action_Settings_to_Reset_a_Password" data-mc-generated-bookmark="ListOf"></a>Quick Action Settings to Reset a Password</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/reset_user_password_in_ootb_database.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1680" data-mc-height="924" src="../../resources/images/reset_user_password_in_ootb_database_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">This feature only works with the employee business object, and not the Profile.Employee (pre-MCT) object. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="winrm_setup.htm">WinRM Setup</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="run_program_history.htm">Run Program History</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="about_hierarchical_xml_format.htm">About Hierarchical XML Format</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/workflowobjects/run_program.htm">Run Program</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

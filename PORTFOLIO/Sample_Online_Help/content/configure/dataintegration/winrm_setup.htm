@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data|Configuring Data Integration|Run Program - Remote Host">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WinRM Setup</title>
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/winrm_setup.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration_configu.htm">Configuring Data Integration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="run_program.htm">Run Program - Remote Host</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">WinRM Setup</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor446"></a>Using Windows Remote Management (WinRM) Setup</h1>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                <col class="TableStyle-Note_Warning-Column-Column1" />
+                <col class="TableStyle-Note_Warning-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note_Warning-Body-Body2">
+                        <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/warning48_normal.png" alt="" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">Before configuring WinRM, be sure that you have a deep understanding of Windows Remote Management. We strongly recommend you review the security implications of each mode. You must have an account with sufficient permissions to use Windows Remote Management before starting configuration.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Running the Program on the Application Server</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Check your system requirements. WinRM 2.0 and PowerShell 2.0 are required on the Application Server or on the server where the run program is executed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Check if PowerShell is installed on the Application Server on which the FrontRange Integration Service is hosted. In Windows, go to <b>Start &gt; All Programs &gt; Accessories</b> and check to see if the Windows PowerShell folder exists. If not, install it per instructions from Microsoft.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_PowerShell_Folder"><a name="Windows_PowerShell_Folder" data-mc-generated-bookmark="ListOf"></a>Windows PowerShell Folder</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/windows_powershell_folder.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="250" data-mc-height="544" src="../../resources/images/windows_powershell_folder_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Check to see if WinRM is running by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Run the PowerShell command module as an administrator.</td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">get-service winrm</span>.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Windows_PowerShell_Command_Module"><a name="Windows_PowerShell_Command_Module" data-mc-generated-bookmark="ListOf"></a>Windows PowerShell Command Module</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="636" data-mc-height="347" src="../../resources/images/powershell_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">The status should show <span class="Emphasis">running</span>. If not, go to <span class="window_name">Services</span>, change the <span class="window_name">Startup</span> to <span class="Emphasis">automatic</span>, then start the service.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">There are two modes: trusted and secure (using an SSL certificate).</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">
+                                <p><b>Trusted mode</b>: Register the remote server as “Trusted Host”  (<b>NOTE</b>: Do not copy and paste. Enter it manually.)</p>
+                                <ul>
+                                    <li value="1">
+                                        <p>Run the PowerShell command module as an administrator.</p>
+                                    </li>
+                                    <li value="2">
+                                        <p>Enter  <span class="fixedwidth">winrm set winrm/config/client ‘@{TrustedHosts=”CA-D02539.NA.FRS”}’</span>.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="PowerShell_Trusted_Mode_Setup"><a name="PowerShell_Trusted_Mode_Setup" data-mc-generated-bookmark="ListOf"></a>PowerShell Trusted Mode Setup</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_trusted_host.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="284" src="../../resources/images/powershell_trusted_host_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <ul>
+                            <li value="1"><b>Secure mode</b>: (using an SSL certificate) Register the remote server certificate using MMC (if necessary).</li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="PowerShell_Secure_Mode_Setup"><a name="PowerShell_Secure_Mode_Setup" data-mc-generated-bookmark="ListOf"></a>PowerShell Secure Mode Setup</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_secured_mode.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="507" data-mc-height="322" src="../../resources/images/powershell_secured_mode_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Running the Program on the Application Server</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Check your system requirements. WinRM 2.0 and PowerShell 2.0 are required on the Application Server or on the server where the run program is executed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Check if PowerShell is installed on the Application Server on which the FrontRange Integration Service is hosted. In Windows, go to <b>Start &gt; All Programs &gt; Accessories</b> and check to see if the Windows PowerShell folder exists. If not, install it per instructions from Microsoft.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_PowerShell_Folder_..8"><a name="Windows_PowerShell_Folder_..8" data-mc-generated-bookmark="ListOf"></a>Windows PowerShell Folder</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/windows_powershell_folder.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="250" data-mc-height="544" src="../../resources/images/windows_powershell_folder_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Check to see if WinRM is running by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Run the PowerShell command module as an administrator.</td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">get-service winrm</span>.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Windows_PowerShell_Command_Module_..9"><a name="Windows_PowerShell_Command_Module_..9" data-mc-generated-bookmark="ListOf"></a>Windows PowerShell Command Module</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="636" data-mc-height="347" src="../../resources/images/powershell_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">The status should show <span class="Emphasis">running</span>. If not, go to <span class="window_name">Services</span>, change the <span class="window_name">Startup</span> to <span class="Emphasis">automatic</span>, then start the service.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">There are two modes: trusted and secure (using an SSL certificate).</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">
+                                <p><b>Trusted mode</b>: Register the remote server as “Trusted Host”  (<b>NOTE</b>: Do not copy and paste. Enter it manually.)</p>
+                                <ul>
+                                    <li value="1">
+                                        <p>Run the PowerShell command module as an administrator.</p>
+                                    </li>
+                                    <li value="2">
+                                        <p>Enter  <span class="fixedwidth">winrm set winrm/config/client ‘@{TrustedHosts=”CA-D02539.NA.FRS”}’</span>.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="PowerShell_Trusted_Mode_Setup_..10"><a name="PowerShell_Trusted_Mode_Setup_..10" data-mc-generated-bookmark="ListOf"></a>PowerShell Trusted Mode Setup</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_trusted_host.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="284" src="../../resources/images/powershell_trusted_host_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <ul>
+                            <li value="1"><b>Secure mode</b>: (using an SSL certificate) Register the remote server certificate using MMC (if necessary).</li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="PowerShell_Secure_Mode_Setup_..11"><a name="PowerShell_Secure_Mode_Setup_..11" data-mc-generated-bookmark="ListOf"></a>PowerShell Secure Mode Setup</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_secured_mode.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="507" data-mc-height="322" src="../../resources/images/powershell_secured_mode_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Running the Program on Another Server</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Use the following steps when using another program to execute Run Program.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Check your system requirements. WinRM 2.0 and PowerShell 2.0 are required on the Application Server or on the server where the run program is executed..</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Check if PowerShell is installed on the Application Server on which the FrontRange Integration Service is hosted. In Windows, go to <b>Start &gt; All Programs &gt; Accessories</b> and check to see if the Windows PowerShell folder exists. If not, install it per instructions from Microsoft.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the PowerShell command module, enable the PowerShell remoting capability by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Enter  <span class="fixedwidth">Enable-PSRemoting -force</span>. 	This initiates Windows to configure the machine for listener ports and firewall rules.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_1"><a name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_1" data-mc-generated-bookmark="ListOf"></a>Enabling the PowerShell&#160;Remoting Capability -- Example 1</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_enable-psremoting_-force.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="266" src="../../resources/images/powershell_enable-psremoting_-force_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <p class="Body_indent">Port 5986 is the default HTTPS port used by WinRM to receive the remote commands.</p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">Winrm get winrm/config</span> to check the configuration.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_2"><a name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_2" data-mc-generated-bookmark="ListOf"></a>Enabling the PowerShell&#160;Remoting Capability -- Example 2</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_winrm_get_winrm.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="628" data-mc-height="299" src="../../resources/images/powershell_winrm_get_winrm_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Create a firewall inbound rule for the port.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Firewall_Inbound_Rule"><a name="Firewall_Inbound_Rule" data-mc-generated-bookmark="ListOf"></a>Firewall Inbound Rule</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/firewall_inbound_rule.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="548" data-mc-height="323" src="../../resources/images/firewall_inbound_rule_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Get a server certificate for authentication purposes.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Trusted_Root_Server_Certificate"><a name="Trusted_Root_Server_Certificate" data-mc-generated-bookmark="ListOf"></a>Trusted Root Server Certificate</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/server_certificate_run_program.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="626" data-mc-height="210" src="../../resources/images/server_certificate_run_program_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Get the certificate thumbprint to configure the WinRM listener (in the next step).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Export the public key to register it in the Integration Server.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Certificate_Thumbprint"><a name="Certificate_Thumbprint" data-mc-generated-bookmark="ListOf"></a>Certificate Thumbprint</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/run_program_public_key.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="274" data-mc-height="186" src="../../resources/images/run_program_public_key_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Configure the WinRM listener. Run the Windows command prompt as an administrator by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Enter <span class="fixedwidth">Winrm create winrm/config/listener?Address=*+Transport=HTTPS</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">           @{Hostname=”CA-D02539.NA.FRS”;</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">            CertificateThumbprint=”3d448fe37734a891d5876b5c51083c8a79ec0dcb”}</span><![CDATA[
+]]></td>
+                            </tr>
+                        </table>
+                        <p class="Body_indent">If successful, the listener shows the port and certificate thumbprint.</p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">Winrm enumerate winrm/config/listener</span> to check the listener.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Checking_the_WinRM_Listener"><a name="Checking_the_WinRM_Listener" data-mc-generated-bookmark="ListOf"></a>Checking the WinRM Listener</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/winrm_listener.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="628" data-mc-height="311" src="../../resources/images/winrm_listener_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Running the Program on Another Server</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Use the following steps when using another program to execute Run Program.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Check your system requirements. WinRM 2.0 and PowerShell 2.0 are required on the Application Server or on the server where the run program is executed..</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Check if PowerShell is installed on the Application Server on which the FrontRange Integration Service is hosted. In Windows, go to <b>Start &gt; All Programs &gt; Accessories</b> and check to see if the Windows PowerShell folder exists. If not, install it per instructions from Microsoft.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the PowerShell command module, enable the PowerShell remoting capability by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Enter  <span class="fixedwidth">Enable-PSRemoting -force</span>. 	This initiates Windows to configure the machine for listener ports and firewall rules.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_1_..12"><a name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_1_..12" data-mc-generated-bookmark="ListOf"></a>Enabling the PowerShell&#160;Remoting Capability -- Example 1</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_enable-psremoting_-force.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="266" src="../../resources/images/powershell_enable-psremoting_-force_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                        <p class="Body_indent">Port 5986 is the default HTTPS port used by WinRM to receive the remote commands.</p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">Winrm get winrm/config</span> to check the configuration.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_2_..13"><a name="Enabling_the_PowerShell&#160;Remoting_Capability_--_Example_2_..13" data-mc-generated-bookmark="ListOf"></a>Enabling the PowerShell&#160;Remoting Capability -- Example 2</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/powershell_winrm_get_winrm.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="628" data-mc-height="299" src="../../resources/images/powershell_winrm_get_winrm_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Create a firewall inbound rule for the port.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Firewall_Inbound_Rule_..14"><a name="Firewall_Inbound_Rule_..14" data-mc-generated-bookmark="ListOf"></a>Firewall Inbound Rule</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/firewall_inbound_rule.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="548" data-mc-height="323" src="../../resources/images/firewall_inbound_rule_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Get a server certificate for authentication purposes.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Trusted_Root_Server_Certificate_..15"><a name="Trusted_Root_Server_Certificate_..15" data-mc-generated-bookmark="ListOf"></a>Trusted Root Server Certificate</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/server_certificate_run_program.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="626" data-mc-height="210" src="../../resources/images/server_certificate_run_program_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Get the certificate thumbprint to configure the WinRM listener (in the next step).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Export the public key to register it in the Integration Server.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Certificate_Thumbprint_..16"><a name="Certificate_Thumbprint_..16" data-mc-generated-bookmark="ListOf"></a>Certificate Thumbprint</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/run_program_public_key.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="274" data-mc-height="186" src="../../resources/images/run_program_public_key_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Configure the WinRM listener. Run the Windows command prompt as an administrator by doing the following:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Enter <span class="fixedwidth">Winrm create winrm/config/listener?Address=*+Transport=HTTPS</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">           @{Hostname=”CA-D02539.NA.FRS”;</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">            CertificateThumbprint=”3d448fe37734a891d5876b5c51083c8a79ec0dcb”}</span><![CDATA[
+]]></td>
+                            </tr>
+                        </table>
+                        <p class="Body_indent">If successful, the listener shows the port and certificate thumbprint.</p>
+                        <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 78px;" />
+                            <col style="width: 32px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                                </td>
+                                <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Enter  <span class="fixedwidth">Winrm enumerate winrm/config/listener</span> to check the listener.</td>
+                            </tr>
+                        </table>
+                        <p class="fig_title" data-mc-xref-target-name="Checking_the_WinRM_Listener_..17"><a name="Checking_the_WinRM_Listener_..17" data-mc-generated-bookmark="ListOf"></a>Checking the WinRM Listener</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/winrm_listener.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="628" data-mc-height="311" src="../../resources/images/winrm_listener_thumb_0_45.png" alt="" tabindex="" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="about_hierarchical_xml_format.htm">About Hierarchical XML Format</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

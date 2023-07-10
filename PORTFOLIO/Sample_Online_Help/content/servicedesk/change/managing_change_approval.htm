@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Change|Creating a Change Request|Approving a Change Request">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Managing Change Approvals</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/change/managing_change_approval.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="changes.htm">Change</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="working_with_a_change.htm">Creating a Change Request</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="approve_a_change.htm">Approving a Change Request</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Managing Change Approvals</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor120"></a>Managing Change Request Approvals</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Managing Change Request Approvals</a><a name="About"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body" style="text-indent: 3px;">Before sending a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">change request<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A formal request for the implementation of a change.</span></a> for approval, review whether the type of <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">change<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A process for assessing and reducing the impact and risks of proposed changes.</span></a> requires approval from reviewers other than you. See <a href="#change_2879514302_1171984" class="MCXref xref">About Change Request Approvals</a>.</p>
+                    <p class="Body">After you review the change request and add the necessary information to it, update the change request status to <span class="Emphasis">pending approval</span> to trigger the change approval workflow (if approval is required for the type of change). </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor121"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Change Request Approvals</a><a name="change_2879514302_1171984"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Default approvals are configured based on the type of change requested. Each change type has an associated change approval board (CAB, ECAB, or management committee). See the following table.</p>
+                    <p class="Body">The following default approvals are defined:</p>
+                    <table style="width: 528px;caption-side: top;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col width="144px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="128px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="128px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="128px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Type of change</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>1st approver</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>2nd approver</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>3rd approver</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Minor and Standard</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Change Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Not required</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Not required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Significant</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Change Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>CAB</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Not required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Major</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Change Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>CAB</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Management committee</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Emergency</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Change Manager</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>ECAB</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Not required</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Minor and standard changes do not require an approval process. The Change Manager can set the status of these type of change requests to <span class="Emphasis">pending approval</span> and bypass the approval process.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">For changes other than standard, the approval process is triggered when the change status is set to <span class="Emphasis">pending approval</span>, as shown in the following screen:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Default_Workflow_for_Change_Approvals"><a name="Default_Workflow_for_Change_Approvals" data-mc-generated-bookmark="ListOf"></a>Default Workflow for Change Approvals</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_approval.jpg" data-mc-popup-alt="Default workflow for Change approvals"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="627" data-mc-height="657" src="../../resources/images/change_approval_thumb_0_45.jpg" alt="Default workflow for Change approvals" title="Default workflow for Change approvals" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Change Manager<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Ensures that changes are introduced into the organization with minimum disruption to existing services. The Change Manager can initiate a change request, but usually manages the change through its lifecycle.</span></a> configures the approval members for each approval group. When a change request status is updated to <span class="Emphasis">pending approval</span>, the system sends notification emails to each member of the approval group associated with the change request.</p>
+                    <p class="Body">The Change Manager can also set up an ad-hoc approver for a specific change request. </p>
+                    <p class="Body">Depending on how the approval is configured, some types of change requests might require a vote of approved from all the approvers while other types of change requests might require only a fifty-one percent approval vote. Approval blocks can also be set up to get approval from a group or from a user. </p>
+                    <p class="Body">In the following example, the change request is approved only if all the approvers approve the change request as defined under the <span class="window_name">Approval/Denial Criteria</span> options:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Approval_Properties_for_a_Significant_Change,_Requiring_CAB_Approval"><a name="Approval_Properties_for_a_Significant_Change,_Requiring_CAB_Approval" data-mc-generated-bookmark="ListOf"></a>Approval Properties for a Significant Change, Requiring CAB Approval</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_approval_votecount.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="481" data-mc-height="319" src="../../resources/images/change_approval_votecount_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <p class="Body">When the approval process has triggered, you can view the <span class="window_name">Workflow Instance</span> tab of the change request record to keep track of where the approval is in the workflow.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor122"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Approving a Change Request and Send it for Approval</a><a name="2Approve"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a Change Manager and open a change request record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Ensure that all of the information is complete and accurate. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Send the change request for approval by changing the status of the change request to <span class="Emphasis">pending approval</span>.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>When you change the status to <span class="Emphasis">pending approval</span>, the system assumes that you (as the Change Manager) approve the change request and automatically puts your user name into the <span class="window_name">Approved By</span> field.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The system notifies the change requester that the change request is now in <span class="Emphasis">pending approval</span> status. </p>
+                    <p class="Body_indent">The <span class="window_name">Approvals</span> tab appears.</p>
+                    <p class="Body_indent">The system sends a change request approval notification  to the approvers associated with the change request. See <a href="#change_2879514302_1171984" class="MCXref xref">About Change Request Approvals</a>.</p>
+                    <p class="Body_indent">For significant, major, and emergency changes, the appropriate workflow is triggered and a record is created in the <span class="window_name">Workflow Instance</span> tab of the change request record.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Tracking Approval Votes for a Change Request</a><a name="3Track"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When a change request is in the <span class="Emphasis">pending approval</span> state, the change request approvers vote on the implementation of the change. To track the overall approval process and track the acceptance of the change request by each reviewer, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a Change Manager and open the <span class="window_name">Approval Vote Tracking</span> workspace. The list of change request approvals appears. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Group the change request approvals by name to view the votes according to the change request record.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Approval_Vote_Tracking_Workspace"><a name="Approval_Vote_Tracking_Workspace" data-mc-generated-bookmark="ListOf"></a>Approval Vote Tracking Workspace</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/approval_vote_by_group.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="666" data-mc-height="278" src="../../resources/images/approval_vote_by_group_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the change request approval record that you want to view. The voting status appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Voting_Status"><a name="Voting_Status" data-mc-generated-bookmark="ListOf"></a>Voting Status</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/approval_vote_tracking.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="839" data-mc-height="778" src="../../resources/images/approval_vote_tracking_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Go to</span> to open the original change request record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select the <span class="window_name">Approval</span> tab to view all votes on this change request record.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Approval_Tab"><a name="Approval_Tab" data-mc-generated-bookmark="ListOf"></a>Approval Tab</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/approval_vote_summary.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="817" data-mc-height="370" src="../../resources/images/approval_vote_summary_thumb_0_45.png" style="width: 657px;height: 297px;" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/change/change_calendar.htm">Change Calendar</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="changes.htm">Change</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../changecalendar/change_calendar.htm">Using the Change Calendar</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="working_with_a_change.htm">Creating a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="adding_change_tasks.htm">Working with Change Tasks for a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="closing_a_change.htm">Resolving and Closing a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="implementing_a_change.htm">Implementing a Change</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="post_implementation_revi.htm">Post-Implementation Review</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_a_change.htm">Scheduling a Change Request</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="setting_the_risk_level.htm">Setting the Risk Level</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cancelling_a_change.htm">Canceling a Change Request</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="approve_a_change.htm">Approving a Change Request</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="analyze_and_classify_pot.htm">Analyze and Classify Potential Change</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="change_approval_board.htm">Change Approval Board</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/change/change_risk_reference.htm">Change Risk Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/change/the_change_approval_workflow.htm">The Change Approval Workflow</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/workflows/workflow_instance.htm">Workflow Instance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/change_lifecycle.htm">Change Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

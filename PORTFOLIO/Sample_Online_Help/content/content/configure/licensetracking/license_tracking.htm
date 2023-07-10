@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Defining Your Organization">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>License Tracking</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/licensetracking/license_tracking.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../deployment/define_your_organization.htm">Defining Your Organization</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">License Tracking</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor547"></a>License Tracking</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> allows both named and concurrent user license types. This data is based on content in the <span class="window_name">Logon_History</span> object.</p>
+            <p class="Body">To better support tracking and identification of named users, the Profile.Employee (employee) business object includes a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Boolean<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Uses AND, OR, and NOT as operators between expressions to produce results based on whether the complete expression is true or false.  Also called logical.</span></a> field called <span class="window_name">Is Named User</span>. To accommodate this, an option is on the default standard employee form.</p>
+            <p class="Body">Concurrent users are users who are currently logged into the system but are not named or Self Service users. In reports, the number of concurrent users is calculated as:</p>
+            <p class="Code">Select * from logon_history where login_datetime &gt; Timestamp and logout_datetime &lt; Timestamp and not (self service role or named user). </p>
+            <p class="Body">When users log out, the tracked time is indicated as an explicit logout. If a user does not log out, but simply closes the browser window, eventually they will time out. If a user logs in again before the timeout occurs, they will consume another license. In other words, the system will show this user as using multiple licenses (for each log in session) simultaneously. The user IP address that is tracked is the IP address of your internet gateway; we cannot determine multiple log in sessions using the user IP address.</p>
+            <p class="Body">If a user opens a new browser window and logs in, they consume another session. If a user opens a browser tab, they share the same session.</p>
+            <p class="Body">You can generate a report to track user licensing usage, as described in <a href="viewing_the_license_usag.htm#license_1996962119_938507" class="MCXref xref">Viewing the License Usage Report</a>, or use the available default reports.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_the_license_usag.htm">Viewing the License Usage Report</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="tracking_named_users.htm">Tracking Named Users</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="logonhistory_api.htm">LogonHistory API</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Basics|Search">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Record Search</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#interface/search/using_record_search.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../basics.htm">Basics</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="search.htm">Search</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Record Search</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor41"></a>Using Record Search</h1>
+            <p class="Body">Often with a form, you can link your record to another record. For example, you can link a configuration item to a change or problem record. </p>
+            <p class="Body">This relationship  between the two records creates a status association as well as a cross-reference. For example:</p>
+            <ul>
+                <li value="1">When an incident is linked to a problem, the incident status changes to <span class="Emphasis">waiting for resolution</span>. If unlinked, the status reverts to the previous state. When the problem is closed, all linked incidents are resolved and the information is copied to the linked incidents and the affected customers are notified. If there is a workaround, notification is sent to the incident owner (such as the Service Desk Analyst), not the customers.</li>
+                <li value="2">When the problem to which an incident is linked is <span class="Emphasis">closed</span>, all incidents linked to the problem are changed to <span class="Emphasis">resolved</span> status.</li>
+            </ul>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console, open the record  to link. For example, open a configuration item record from the <span class="window_name">CI</span> workspace. The form appears with data in the fields.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select a tab containing a link icon, then click <span class="Bold">Link</span> <img src="../../resources/images/buttons/link.png" class="icon" />. The record search window appears.</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Record_Search_Window"><a name="Record_Search_Window" data-mc-generated-bookmark="ListOf"></a>Record Search Window</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/record_search_window.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="868" data-mc-height="362" src="../../resources/images/record_search_window_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter the search criteria.</td>
+                </tr>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-search criteria-</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">A. Business object</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The business object  to find. Select one from the drop-down list, such as incident, service agreement, or My Item.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">B. Field</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. The field  to search. Select from the drop-down list. If you do not select a field, all fields within the business object are searched. The available fields depend on the chosen business object.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">C. Operator</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                               The operator to use. Choose an operator from the drop-down list.
+                                <ul class="list_table"><li value="1"><span class="Bold">Equal to</span>: The value in <span class="window_name">Field</span> matches the value in <span class="window_name">Criteria</span>.</li><li value="2"><span class="Bold">Not Equal to</span>: The value in <span class="window_name">Field</span> does not match the value in <span class="window_name">Criteria</span>.</li><li value="3"><span class="Bold">Begin with</span>: The value in <span class="window_name">Field</span> starts with the value in <span class="window_name">Criteria</span>.</li><li value="4"><p><span class="Bold">Not Begin with</span>: The value in <span class="window_name">Field</span> does not start with the value in <span class="window_name">Criteria</span>.</p></li><li value="5"><span class="Bold">Contains</span>: The value in <span class="window_name">Field</span> contains the string value in <span class="window_name">Criteria</span>.</li><li value="6"><span class="Bold">Does Not Contain</span>: The value in <span class="window_name">Field</span> does not contain the string value in <span class="window_name">Criteria</span>.</li><li value="7"><span class="Bold">Is Empty</span>: <span class="window_name">Field</span> does not contain any values.</li><li value="8"><span class="Bold">Is Not Empty</span>: <span class="window_name">Field</span> contains something.</li></ul></td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">D. Criteria</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                The value to search.
+                                <ul class="list_table"><li value="1">For a text value, enter the text.</li><li value="2">For a DateTime field, click the calendar picker.<br /><span class="Emphasis"> OR</span><br />If the <span class="window_name">Operator</span> is <span class="window_name">Equal to</span>, enter <span class="Bold">$</span> to view a list of DateTime functions.</li></ul><p>If you have a validated field and the <span class="window_name">Operator</span> is <span class="window_name">in List</span>, choose the options  from the drop-down list. You can select multiple options.</p><p>&#160;</p><p>You can also enter an expression. For example:</p><p><span class="fixedwidth">$(Prompt("Please Select Priority","Priority of IncidentPriority used in Incident",200,400))</span>. See <a href="../../reference/expressions/expressions_in_searches_.htm" class="MCXref xref">Using Expressions in Searches and Dashboards</a> for more information.</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Add</span> <img src="../../resources/images/buttons/add_green.png" class="icon" /> to add another search line and enter more criteria. Repeat as needed.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">To remove a search line, click <span class="Bold">Delete</span> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" />. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click one of the following:</td>
+                </tr>
+            </table>
+            <blockquote>
+                <ul>
+                    <li value="1"><span class="Bold">Select</span>: Add the item to your record.</li>
+                    <li value="2"><span class="Bold">Save Search as Default</span>: Automatically load your criteria into the record search window each time. This criteria appears throughout all objects.</li>
+                    <li value="3"><span class="Bold">Reset Default Search</span>: Remove your default criteria. </li>
+                    <li value="4"><span class="Bold">Add</span>: Create a new linked object record. For example, if you are linking an incident object, then a blank incident form appears. From here you can create a new incident record that is automatically linked to your parent record.</li>
+                    <li value="5"><span class="Bold">Edit</span>: Modify a selected record. For example, if you have selected incident 10424, you can modify the information in this record from here (assuming you have privileges).</li>
+                    <li value="6"><span class="Bold">Cancel</span>: Dismiss the window without linking the record.</li>
+                </ul>
+            </blockquote>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_search.htm">Configuring Search</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/businessobjects/configure_object_search.htm">Configure  Search Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_object_matching.htm">Configuring Related Items Search</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="search_not_in_english.htm">Search Not in English</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="search.htm">Search</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="related_items.htm">Using Related Items</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="search_examples.htm">Search Examples</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="find_and_replace.htm">Find and Replace</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="search_records_within_a_specific_time.htm">Finding Records that Will Breach</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="text_searching.htm">Using Simple Text Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="advanced_search.htm">Using Advanced Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="saved_searches.htm">Using Saved Searches</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="exporting_a_saved_search.htm">Exporting a Saved Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="email_a_saved_search.htm">Emailing a Saved Search</a>
+                    </p>
+                    <p class="VideoHeading_Video_0">Video</p>
+                    <p class="VideoItem_Video_0"><a href="video_creating_a_saved_search.htm">Video: Creating a Saved Search</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="tips_for_search.htm">Tips for Running a Search</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_saved_searches.htm">Default Saved Searches</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Security|Authentication">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Integrated Windows Authentication</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/security/direct_ad_authentication.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="application_security.htm">Security</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="authentication.htm">Authentication</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Integrated Windows Authentication</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Integrated Windows Authentication</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Authentication</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">There are two ways to authenticate users in <span class="notranslate"><b>HEAT</b></span>:</p>
+                    <ul>
+                        <li value="1"><span class="Bold">Window Integrated Security</span>: Uses Windows credentials. This option is only available for the on-premise version of <span class="notranslate"><b>HEAT</b></span>. The user's computer must be a member of the Windows domain.</li>
+                    </ul>
+                    <ul>
+                        <li value="1"><span class="Bold">Direct AD Authentication</span>: Uses the identify provider of the customer. This option is available for the on-premise and Cloud versions of <span class="notranslate"><b>HEAT</b></span>. Users must log in each time, although they can save their credentials within their browser.</li>
+                    </ul>
+                    <p class="Body_indent">Users can access authentication either by going directly to the identity provider (such as active directory, SAML, or OpenID), or by logging into <span class="notranslate"><b>HEAT</b></span> (which then redirects the user to the identity provider).</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The identify provider authenticates the user but does not share credentials.</li>
+                            <li value="2">The identify provider session is separate from the <span class="notranslate"><b>HEAT</b></span> session, and must be configured separately.</li>
+                            <li value="3">The identify provider is configured separately and according to the specific identify provider process.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">The following illustrates how active directory authentication works:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Active_Directory&#160;Authentication"><a name="Active_Directory&#160;Authentication" data-mc-generated-bookmark="ListOf"></a>Active Directory&#160;Authentication</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ad_authentication.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="531" data-mc-height="195" src="../../resources/images/ad_authentication_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring <span class="notranslate"><b>HEAT</b></span> and Windows Integrated Security</a><a name="Configure_Cloud_and_WIS"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This describes how to configure <span class="notranslate"><b>HEAT</b></span> active directory authentication using Windows Integrated Security (<a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">WIS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Windows Integrated Security.  Uses the security features of Windows clients and servers and the current Windows user information on the client computer.</span></a>). This feature allows users to access <span class="notranslate"><b>HEAT</b></span> without entering their user name and password. This procedure is only valid for the on-premise version of <span class="notranslate"><b>HEAT</b></span>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the ConfigDB tenant, open the <span class="window_name">Tenants</span> workspace. The available tenants are listed. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the HEATSM tenant by clicking the company name on the line with the HEATSM tenant. The  <span class="window_name">Tenants</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Login Url</span> field, enter the URL where users go to log in.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click&#160;<span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Log into <span class="notranslate"><b>HEAT</b></span>  as administrator in a separate browser  window or tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Open the <span class="window_name">Authentication Provider</span> workspace (from either the Service Desk Console or Configuration Console).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">New Record Menu</span> and select <span class="Bold">New Windows Integrated</span>. The  <span class="window_name">Windows Integrated</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Default</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Automatically generated by the system. The default value is false.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Disabled</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves this configuration without activation.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The provider name, such as <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">WIS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Windows Integrated Security.  Uses the security features of Windows clients and servers and the current Windows user information on the client computer.</span></a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Identity Server URL</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The path to your identity server, such as /<span class="notranslate"><b>HEAT</b></span>/WIS.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Logout URL</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The URL that users are directed to when logging out of  the authentication provider. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sort Order</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Specifies the sort order of this provider in relation to other providers assigned to a user. A value of 1 means this provider is used first for authentication when logging in. If a login failure occurs (server failure or incorrect password), the next provider in the sort order is used. The last successfully authenticated login is highlighted in the <span class="window_name">Enable External Auth</span> area of the <span class="window_name">Employee </span>record. Use this field only if multiple authentication providers are configured.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Certificate of customer's Windows Integrated server</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Only applies to public certificates. Click <span class="Bold">Browse</span> to navigate to the certificate.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Expiration Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Specifies the date that the certificate expires. This field merely stores the date so that you can see when the current one expires and get another certificate before or when it expires.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Auto Provisioning</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Adds new users via authentication. You have the option to auto provision the role, status, and team for the new user.
+                                        </p>
+                                            <p>If  selected, an <span class="window_name">Employee</span> record is created if an user logs in using authentication and does not already have an <span class="window_name">Employee</span> record.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Open the <span class="window_name">Employee</span> workspace (as administrator), then open an employee record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Modify an existing employee by enabling <span class="window_name">External Auth</span> and specifying <span class="window_name">Login for External Auth</span> as the newly created Windows Integrated authentication provider.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Check_Enable_External_Auth_and_Click_Add_New_..."><a name="Check_Enable_External_Auth_and_Click_Add_New_..." data-mc-generated-bookmark="ListOf"></a>Check Enable External Auth and Click Add New ...</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/enable_external_auth.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1116" data-mc-height="631" src="../../resources/images/enable_external_auth_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <p class="fig_title" data-mc-xref-target-name="Enter_the_Name_of_your_Windows_Integrated_Authentication_Provider"><a name="Enter_the_Name_of_your_Windows_Integrated_Authentication_Provider" data-mc-generated-bookmark="ListOf"></a>Enter the Name of your Windows Integrated Authentication Provider</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/new_external_login.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="327" src="../../resources/images/new_external_login_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12.">Log out. The  <span class="window_name">Login</span> page appears with <span class="window_name">Sign in with WIS</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sign_In_with_WIS"><a name="Sign_In_with_WIS" data-mc-generated-bookmark="ListOf"></a>Sign In with WIS</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sign_in_with_wis.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="463" data-mc-height="314" src="../../resources/images/sign_in_with_wis_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">13.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="13.">Next to <span class="window_name">Login for External Auth</span>, click <span class="Bold">Add New</span>. The <span class="window_name">New External Login</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the window does not appear, then Windows authentication is disabled for Windows Integrated Security.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">14.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="14.">Click <span class="Bold">Sign in with WIS</span>. The Windows sign-in window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">15.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="15.">Enter your user name and password, then click <span class="Bold">OK</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Cloud authenticated the user using the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">WIS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Windows Integrated Security.  Uses the security features of Windows clients and servers and the current Windows user information on the client computer.</span></a> system.</p>
+                    <p class="Body_indent">If auto provisioning is enabled in new authentication provider, you can skip step 6. <span class="notranslate"><b>HEAT</b></span> creates a new employee with external authentication enabled and the login for external authentication is specified as the Windows integrated authentication provider.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring <span class="notranslate"><b>HEAT</b></span> and Windows Integrated Security for External Authentication</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The lifecycle for external authentication using a Windows Integrated Security provider is as follows:</p>
+                    <ol>
+                        <li value="1">Windows Integrated Security receives an authentication SAML request from <span class="notranslate"><b>HEAT</b></span>.</li>
+                        <li value="2">Windows Integrated Security validates the request and checks the certificates.</li>
+                        <li value="3">Windows Integrated Security creates the SAML response.</li>
+                        <li value="4">Windows Integrated Security signs the SAML response with the certificate specified in the Web.config file.</li>
+                        <li value="5">Windows Integrated Security enables auto provisioning in the SAML response using LDAP configuration from the Web.config file.</li>
+                        <li value="6">Windows Integrated Security posts the SAML response back to the Cloud.</li>
+                    </ol>
+                    <p class="Body">Windows Integrated Security is configurable in the Web.config file. You can specify whether an external authentication request from <span class="notranslate"><b>HEAT</b></span> should be validated and its certificate checked. To skip the authentication request validation, do not specify the <span class="window_name">heatCertificatePath</span> application setting in the Web.config file.</p>
+                    <h4 class="subheading">Validating Incoming Authentication Requests</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">The <span class="notranslate"><b>HEAT</b></span> tenant may be marked with an ADFS private certificate. To check or specify it, open the ConfigDB tenant and specify the ADFS private certificate and its password for each corresponding tenant.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Set_the_ADFS_Certificate_for_Each_Tenant"><a name="Set_the_ADFS_Certificate_for_Each_Tenant" data-mc-generated-bookmark="ListOf"></a>Set the ADFS Certificate for Each Tenant</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/configdb_adfs.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="598" data-mc-height="328" src="../../resources/images/configdb_adfs_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the Web.config file with a text editor (such as NotePad), and set the <span class="window_name">heatCertificatePath</span> setting to a path relative to the public certificate. This is used on the Windows Integrated Security side for validating <span class="notranslate"><b>HEAT</b></span> requests.</td>
+                        </tr>
+                    </table>
+                    <p class="Code">&lt;configuration&gt;</p>
+                    <p class="Code">…</p>
+                    <p class="Code">&#160;&#160;&#160;&lt;appSettings&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="heatCertificatePath" value="Certificate\HeatCertificate.cer" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&lt;/appSettings&gt;</p>
+                    <p class="Code">…</p>
+                    <p class="Code">&lt;/configuration&gt;</p>
+                    <p class="Body_indent">If the <span class="window_name">heatCertificatePath</span> setting is specified incorrectly or if there is no such directory or file, then an unhandled exception is thrown during the validation process. For example:</p>
+                    <p class="Code">&lt;add key="heatCertificatePath" value="Certificate\HeatCertificate.cer INCORRECT NAME" /&gt;</p>
+                    <p class="Body_indent">produces:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Server_Error_Example"><a name="Server_Error_Example" data-mc-generated-bookmark="ListOf"></a>Server Error Example</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/wis_error.png" alt="" class="img_border" />
+                    </p>
+                    <p class="Body_indent">If you do not see an error message, then the validation of the external authentication succeeded.</p>
+                    <h4 class="subheading"><a name="To_Configure_WIS_for_Auto_Provisioning"></a>Configuring Windows Integrated Security for Auto Provisioning</h4>
+                    <p class="Body">The Windows Integrated Security Web.config file may contain the LDAP server and active directory LDAP queries  used for retrieving data needed for auto provisioning:</p>
+                    <ol>
+                        <li value="1">First name</li>
+                        <li value="2">Last Name</li>
+                        <li value="3">Email</li>
+                        <li value="4">LoginId</li>
+                    </ol>
+                    <p class="Body">After windows authentication Windows Integrated Security performs the LDAP search with parameters given in the Web.config file:</p>
+                    <p class="Code">&lt;configuration&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&lt;configSections&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;section name="ldapConfiguration" type="System.Configuration.NameValueSectionHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&lt;/configSections&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&lt;ldapConfiguration&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="server" value="SomeServer.Boo.Yah" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="userName" value="SomeServerUserName" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="password" value="InternalPassword" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="rootNode" value="OU=Personnel,DC=SomeServer,DC=Boo,DC=Yah" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="filter" value="(&amp;amp;(objectClass=person)(samaccountname={0}))" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&lt;/ldapConfiguration&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;…</p>
+                    <p class="Code">&lt;configuration&gt;</p>
+                    <p class="Body">All <span class="window_name">ldapConfiguration</span> parameters are required.</p>
+                    <p class="Body"><span class="window_name">ldapConfiguration</span> should contain server, <span class="window_name">userName</span> and <span class="window_name">password</span> for LDAP connection. Also, it should contain <span class="window_name">rootNode</span> and <span class="window_name">filter</span> for LDAP search. If any  options are not specified, then the LDAP connection or search fails and auto provisioning does not work for the Windows Integrated Security authentication provider. As a result, <span class="notranslate"><b>HEAT</b></span> Cloud cannot create a new employee on external authentication.</p>
+                    <p class="Body"><span class="window_name">ldapConfiguration</span> is a custom configuration section, so it should be added to the <span class="fixedwidth">configSections</span> collection.</p>
+                    <h4 class="subheading">Configuring Windows Integrated Security Provider to Sign its Response with a Certificate</h4>
+                    <p class="Body">The <span class="notranslate"><b>HEAT</b></span> authentication provider may be marked with a public certificate. See <a href="#Configure_Cloud_and_WIS" class="MCXref xref">Configuring HEAT and Windows Integrated Security</a>. This reduces  the ability of external sites to send the authentication requests to <span class="notranslate"><b>HEAT</b></span> and successfully authenticate. It also means that only requests signed with the corresponding private certificate result in a successful authentication.</p>
+                    <p class="Body">You can configure the Windows Integrated Security provider with a private certificate, by doing the following: </p>
+                    <ol>
+                        <li value="1">Open the Web.config configuration file for the Windows Integrated Security site.</li>
+                        <li value="2">Specify the <span class="window_name">wisCertificatePath</span> application setting and name of the private certificate.</li>
+                        <li value="3">Specify the <span class="window_name">wisCertificatePassword</span> secure application setting for the certificate password.</li>
+                    </ol>
+                    <p class="Body_indent">For example:</p>
+                    <p class="Code">&lt;configuration&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;…</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;configSections&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;section name="secureAppSettings" type="System.Configuration.NameValueSectionHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;/configSections&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;…</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;appSettings&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="wisCertificatePath" value="Certificate\WISCertificate.pfx" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;/appSettings&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;…</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;secureAppSettings&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;add key="wisCertificatePassword" value="Frontrange1" /&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&lt;/secureAppSettings&gt;</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;…</p>
+                    <p class="Code">&lt;/configuration&gt;</p>
+                    <p class="Body">Note that <span class="window_name">wisCertificatePassword</span> should be specified in the <span class="window_name">secureAppSettings</span> custom configuration section. It contains the password for the private certificate so it can be encrypted  to reduce the possibility of password leak.</p>
+                    <p class="Body">Also note that <span class="window_name">secureAppSettings</span> is a custom configuration section, so it should be added to the <span class="window_name">configSections</span> collection in the Web.config file as shown in the example above.</p>
+                    <p class="Body">If the authentication provider is marked with a public certificate and the Windows Integrated Security site is not configured with a private certificate:</p>
+                    <ul>
+                        <li value="1">The private certificate password wisCertificatePassword is not specified in the Web.config file.</li>
+                        <li value="2">The private certificate password is incorrect.</li>
+                        <li value="3">The 	private certificate name wisCertificatePath is not specified in the Web.config file.</li>
+                        <li value="4">The 	private certificate name is specified incorrectly.</li>
+                    </ul>
+                    <p class="Body_indent">then the external authentication fails.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Failed_External_Authentication"><a name="Failed_External_Authentication" data-mc-generated-bookmark="ListOf"></a>Failed External Authentication</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/failed_authentication.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="623" data-mc-height="290" src="../../resources/images/failed_authentication_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <p class="Body">At same time, if the <span class="notranslate"><b>HEAT</b></span> authentication provider is not marked with a public certificate and Windows Integrated Security configured with the private certificate, then the <span class="notranslate"><b>HEAT</b></span> external authentication  succeeds and the user is redirected to the default page.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring the Server to use Windows Authentication</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">By default, the Windows Server and local server of Windows OS are not configured to use Windows Authentication. So you cannot use Windows Integrated Security to perform Windows authentication for <span class="notranslate"><b>HEAT</b></span> external authentication.</p>
+                    <h4 class="subheading">Windows Authentication on the IIS Web Server</h4>
+                    <p class="Body">To enable Windows authentication on IIS web server, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within Windows,  go to <span class="Bold">Control Panel &gt; Programs &gt; Turn Windows features on or off</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Turn_Window_Features_On_or_Off"><a name="Turn_Window_Features_On_or_Off" data-mc-generated-bookmark="ListOf"></a>Turn Window Features On or Off</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/turn_windows_on.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="873" data-mc-height="371" src="../../resources/images/turn_windows_on_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">A list of features appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Expand Internet Information Services, then go to <span class="Bold">World Wide Web Services &gt; Security</span>, then check <span class="Bold">Window Authentication</span>. </td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_Authentication_-_Web"><a name="Windows_Authentication_-_Web" data-mc-generated-bookmark="ListOf"></a>Windows Authentication - Web</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/windows_authentication.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="444" data-mc-height="523" src="../../resources/images/windows_authentication_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">OK</span>, then close the window.</td>
+                        </tr>
+                    </table>
+                    <h4 class="subheading">Windows Authentication on the Windows Server IIS Web Server</h4>
+                    <p class="Body">To enable Windows authentication on Windows Server IIS web server, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within Windows, right-click <span class="Bold">Computer</span>, then choose <span class="Bold">Manage</span>. The <span class="window_name">Server Manager</span> opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Expand <span class="Bold">Roles</span>, right-click <span class="Bold">Web Server (IIS)</span>, then choose <span class="Bold">Add Role Services</span>. The <span class="window_name">Add Role Services</span> window opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Expand <span class="Bold">Security</span>, select <span class="Bold">Windows Authentication</span>, then click <span class="Bold">Install</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_Authentication_-_Server"><a name="Windows_Authentication_-_Server" data-mc-generated-bookmark="ListOf"></a>Windows Authentication - Server</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/windows_authentication_roles.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="623" data-mc-height="450" src="../../resources/images/windows_authentication_roles_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Enabling for WIS</h4>
+                    <p class="Body">After Windows authentication is enabled on the server,  enable it for WIS:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Windows search box, type <span class="Type">inetmgr</span>. The <span class="window_name">IIS Manager</span> window opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Go to <span class="Bold">MachineName &gt; Sites &gt; Default Web Site &gt; HEAT &gt; WIS</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In Features View, select <span class="Bold">Authentication</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Right-click <span class="Bold">Windows Authentication</span>, then choose <span class="Bold">Enable</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Disable all other authentication types.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Enable_Windows_Authentication"><a name="Enable_Windows_Authentication" data-mc-generated-bookmark="ListOf"></a>Enable Windows Authentication</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/enable_windows_authentication.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="567" data-mc-height="193" src="../../resources/images/enable_windows_authentication_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Testing</h4>
+                    <p class="Body">To test, log into <span class="notranslate"><b>HEAT</b></span> with external authentication using the WIS authentication provider. If Windows Authentication was installed correctly, then the default window should appear.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Successful_Windows_Authentication_Install"><a name="Successful_Windows_Authentication_Install" data-mc-generated-bookmark="ListOf"></a>Successful Windows Authentication Install</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/default_windows_auth_login.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="626" data-mc-height="261" src="../../resources/images/default_windows_auth_login_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting the Default Provider</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Designate an authentication provider as the default to ensure the correct configuration is accessed by users.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk console as Administrator, and open the <span class="window_name">Authentication Provider</span> workspace. The list of configured providers are listed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the provider you want to make the default, then click <span class="Bold">Set Default</span> from the toolbar.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Set_the_Default_Authentication_Provider"><a name="Set_the_Default_Authentication_Provider" data-mc-generated-bookmark="ListOf"></a>Set the Default Authentication Provider</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/authentication_default.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="127" src="../../resources/images/authentication_default_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">Only one provider can be the Default.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring Windows Integrated Security to Work in Debug Mode</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Using Windows Integrated Security in debug mode shows you all configurations used in WIS, and errors that occurred during validation of a SAML request or construction of a SAML response. You can easily determine the cause of failed external authentication using this method.</p>
+                    <p class="Body">WIS in debug mode shows the following information:</p>
+                    <ul>
+                        <li value="1">Request validation information.</li>
+                        <li value="2">SAML request in XML format.</li>
+                        <li value="3">LDAP server information.</li>
+                        <li value="4">Auto Provisioning block – LDAP search result parameters and attributes.</li>
+                        <li value="5">SAML response certificate.</li>
+                        <li value="6">SAML response in XML format.</li>
+                    </ul>
+                    <p class="Body">To enable debug mode for Windows Integrated authentication provider, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> and open the  <span class="window_name">Authentication Provider</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">	Double-click to open the Windows integrated authentication provider record. See <a href="../securitysettings/authentication_providers.htm" class="MCXref xref">Authentication Providers</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."><span class="Bold">Identity Server Url</span> Add a debug parameter to the URL.</td>
+                        </tr>
+                    </table>
+                    <p class="Code"> <![CDATA[ ]]></p>
+                    <p class="Code">/HEAT/WIS/Default.aspx?debug=true</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     Log out.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Log in using Windows integrated authentication provider, using the windows user name and password.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The Windows Integrated Security debug mode page appears.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_Integrated_Security_Debug_Mode_Page"><a name="Windows_Integrated_Security_Debug_Mode_Page" data-mc-generated-bookmark="ListOf"></a>Windows Integrated Security Debug Mode Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/wis_debug_mode.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="625" data-mc-height="304" src="../../resources/images/wis_debug_mode_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The following links appear on this page:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="Bold">More ...</span> Hides/shows the SAML request or SAML response. </li>
+                            <li value="2"><span class="Bold">Private certificate</span> Is used for the signature of the SAML response. This downloads the corresponding public certificate.</li>
+                            <li value="3"><span class="Bold">Post</span> This button posts the SAML response to <span class="notranslate"><b>HEAT</b></span> to the corresponding <span class="window_name">AssertionConsumerHandler</span>.</li>
+                        </ul>
+                    </div>
+                    <h4 class="subheading">SAML Request Validation</h4>
+                    <p class="Body">If the authentication request validation fails, the <span class="window_name">Post</span> button is disabled and users cannot perform external authentication with the Windows Integrated Security provider. An error message appears:</p>
+                    <p class="fig_title" data-mc-xref-target-name="SAML_-_Authentication_Request_Error_Message"><a name="SAML_-_Authentication_Request_Error_Message" data-mc-generated-bookmark="ListOf"></a>SAML - Authentication Request Error Message</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/wis_error_01.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="625" data-mc-height="117" src="../../resources/images/wis_error_01_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">LDAP Configuration</h4>
+                    <p class="Body">If <span class="window_name">ldapConfiguration</span> is not specified in the Web.config file, then an error message appears  in the debug log. It means that auto provisioning does not work in this scenario for the Windows Integrated Security provider. For detailed information see <a href="#To_Configure_WIS_for_Auto_Provisioning" class="MCXref xref">Configuring Windows Integrated Security for Auto Provisioning</a> above. The user still has the ability to perform external login without auto provisioning and post SAML responses to <span class="notranslate"><b>HEAT</b></span>.</p>
+                    <p class="fig_title" data-mc-xref-target-name="LDAP_-_Authentication_Request_Error_Message"><a name="LDAP_-_Authentication_Request_Error_Message" data-mc-generated-bookmark="ListOf"></a>LDAP - Authentication Request Error Message</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/authentication_error_ldap.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="625" data-mc-height="247" src="../../resources/images/authentication_error_ldap_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">SAML Response Signature</h4>
+                    <p class="Body">If Windows Integrated Security is configured in the Web.config file to sign the SAML response with the private certificate, then an error might occur if the wrong certificate password is specified. The error message appears in the debug log.</p>
+                    <p class="Body">Note that the SAML response is created anyway, but  does not have a signature. Posting this SAML response back to <span class="notranslate"><b>HEAT</b></span>  fails.</p>
+                    <p class="fig_title" data-mc-xref-target-name="SAML_Response_-_Failed_Authentication"><a name="SAML_Response_-_Failed_Authentication" data-mc-generated-bookmark="ListOf"></a>SAML Response - Failed Authentication</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/saml_response_fial.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="625" data-mc-height="307" src="../../resources/images/saml_response_fial_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Disabled Windows Authentication</h4>
+                    <p class="Body">If IIS is not configured to perform Windows authentication or Windows authentication is not enabled for Windows Integrated Security, then external authentication with the Windows Integrated Security provider fails.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Windows_Authentication_Fails"><a name="Windows_Authentication_Fails" data-mc-generated-bookmark="ListOf"></a>Windows Authentication Fails</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/windows_authentication_fail.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="625" data-mc-height="101" src="../../resources/images/windows_authentication_fail_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Encrypted Config Sections in the Web.config FIle</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The Web.config file of the WIS application may contain passwords for:</p>
+                    <ul>
+                        <li value="1">LDAP server configuration</li>
+                        <li value="2">private certificate password</li>
+                    </ul>
+                    <p class="Body">To reduce the possibility of password leak at the servers where WIS is deployed, some config sections in Web.config may be encrypted.</p>
+                    <p class="Body">For detailed information see the MSDN article at <a href="http://msdn.microsoft.com/en-us/library/zhhddkxy(v=vs.100).aspx">http://msdn.microsoft.com/en-us/library/zhhddkxy(v=vs.100).aspx</a>.</p>
+                    <p class="Body">EncryptWebConfig.bat uses RsaProtectedConfigurationProvider for encryption. So once the Web.config section is encrypted at one computer or server, it can’t be used in another server. The Windows Integrated Security application throws an unhandled exception in this case.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Integrated Windows Authentication in Browsers</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Windows Authentication works differently in browsers. Firefox will ask you to login each time you access the site with Windows Authentication, while  Internet Explorer and Chrome browsers only ask you to login the first time.</p>
+                    <h4 class="subheading">Internet Explorer</h4>
+                    <p class="Body">If the Windows Integrated Security site is not located in local IIS web server, you must  add it to the list of trusted sites.</p>
+                    <ul>
+                        <li value="1">Go to <b>Tools &gt; Internet Options &gt; Security &gt; Trusted sites &gt; Sites</b> and add the site.</li>
+                    </ul>
+                    <p class="Body_indent">If the Windows Integrated Security site is located on local IIS web server, then you do not need to make changes in the security options, since  local intranet sites use the “Automatic logon in Intranet zone” option by default.</p>
+                    <h4 class="subheading">Firefox</h4>
+                    <p class="Body"><b>Config method</b>:</p>
+                    <p class="Body">Firefox  provides a configuration string which can be modified to enable this functionality:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open a new tab in Firefox.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the address bar, enter <b>about:config</b>. A <span class="window_name">Proceed with Caution</span> message appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <b>Agree</b>. The configuration page loads.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the search box, enter <b>network.automatic</b>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Double-click the row containing <span class="Type">network.automatic-ntlm-auth.trusted-uris</span>, then enter <b>http://&lt;your-intranet-server-name&gt;</b> or <b>http://&lt;www.your-site.com&gt;</b>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Multiple sites can be added separated by commas, such as <span class="Type">http://&lt;your-intranet-server-name&gt;, http://&lt;www.your-site.com&gt;</span>.</p>
+                    <p class="Body_indent">To specify all subdomains, use .your-site.com instead of www.your-site.com, help.your-site.com, or <span class="Type">pictures.your-site.com</span>.</p>
+                    <p class="Body"><b>Extension method</b>:</p>
+                    <p class="Body_indent">The Firefox extension can be used instead of configuring the about:config file when you need to work with a site with NTLM authentication. Such extension is called integrated authentication for Firefox. Install the extension, restart Firefox, and then in the <span class="window_name">Tools</span> menu, a new option appears (called integrated authentication sites) that  lets to add or remove entries. As per the manual method, only the <span class="Type">http://</span> prefix and the hostname of the server should be included. There is no trailing slash nor a path to any particular page. Authentication is enabled on a per-site basis.</p>
+                    <h4 class="subheading">Chrome</h4>
+                    <p class="Body">Chrome takes its trusted site settings from the same internet options as Internet Explorer. </p>
+                    <ul>
+                        <li value="1"> Go to <b>Settings &gt; Show advanced settings &gt; Change proxy settings &gt; Security &gt; Trusted Sites &gt; Sites</b> and add the site.</li>
+                    </ul>
+                    <p class="Body_indent">You will be asked to login the first time you access the trusted site.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../securitysettings/when_seamless_signon_fails.htm">When Seamless Sign-on Fails</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../securitysettings/authentication_configura.htm">Authentication Configuration</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../securitysettings/authentication_providers.htm">Authentication Providers</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

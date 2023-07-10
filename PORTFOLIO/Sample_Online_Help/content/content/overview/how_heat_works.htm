@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Welcome|Getting Started">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>How HEAT Works</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#overview/how_heat_works.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../welcome.htm">Welcome</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../getting_started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">How HEAT Works</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor6"></a>How HEAT Works</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> communicates with a Microsoft SQL database to store and retrieve information, enabling multiple ways to enter and share data in a a customizable, object-oriented environment. <span class="notranslate"><b>HEAT</b></span> supports Microsoft SQL Server, Oracle, and IBM DB2 databases. You can link to other databases and import external database data.</p>
+            <p class="Body">The following illustrates the layers in a <span class="notranslate"><b>HEAT</b></span> network:</p>
+            <p class="fig_title" data-mc-xref-target-name="The_HEAT_Network"><a name="The_HEAT_Network" data-mc-generated-bookmark="ListOf"></a>The <span class="notranslate"><b>HEAT</b></span> Network</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/security1.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="578" data-mc-height="561" src="../resources/images/security1_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Architecture</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The HEAT platform utilizes  standard three-tier architecture:</p>
+                    <ul>
+                        <li value="1"><span class="Bold">Tier I</span>: Database</li>
+                        <li value="2"><span class="Bold">Tier II</span>: Application Server</li>
+                        <li value="3"><span class="Bold">Tier III</span>: Client</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="HEAT_Architecture"><a name="HEAT_Architecture" data-mc-generated-bookmark="ListOf"></a><span class="notranslate"><b>HEAT</b></span> Architecture</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/3-tierdeployments.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="302" data-mc-height="349" src="../resources/images/3-tierdeployments_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">This three-tier design lets business logic components (such as business objects, fields, relationships, and rules) and services run on the Client tier and the Server tier. As a result, information can be cached on either tier.</p>
+                    <p class="Body">If your system includes the optional <span class="window_name">Request Fulfillment</span> module, then the three-tier design shown here is required. That module is not supported in two-tier environments in which end users logged in to the application server connect directly to the database.</p>
+                    <p class="Body">The application is an example of an interface in which web client and smart client users work. The FRS Application Administrator is the interface that applies changes to the databases to give structure to the application.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Administrator_Access_to_the_Database"><a name="Administrator_Access_to_the_Database" data-mc-generated-bookmark="ListOf"></a>Administrator Access to the Database</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/databaseinteraction.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1015" data-mc-height="1144" src="../resources/images/databaseinteraction_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The <span class="notranslate"><b>HEAT</b></span> platform (sometimes called Fusion) is built on the .NET framework, a Microsoft software technology. Using web services, .NET enables the connection to and integration of various XML-based applications (modules). </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="system_overview.htm">Module Configuration</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="change_management.htm">Change Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuration_management.htm">Configuration Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="incident_management.htm">Incident Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="inventory_management.htm">Inventory Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="knowledge_management.htm">Knowledge Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="problem_management.htm">Problem Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="release_management.htm">Release Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="service_level_management.htm">Service Level Management</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

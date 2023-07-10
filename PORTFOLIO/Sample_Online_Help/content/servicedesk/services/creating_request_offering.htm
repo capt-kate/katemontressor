@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Catalog|Request Offerings">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Working with Request Offerings</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/services/creating_request_offering.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../servicecatalog/service_catalog.htm">Service Catalog</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="request_offerings.htm">Request Offerings</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Working with Request Offerings</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor239"></a><a name="Creating"></a><a name="kanchor240"></a>Working with Request Offerings</h1>
+            <p class="Body">Request offerings are created by <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">service owner<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Creates and owns service offerings in the Service Catalog.</span></a>s and can be used by <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Self Service<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Users logging in as Self Service see the Self Service dashboard as their home page. These users can create service requests, report issues, and approve requests.</span></a> users in the Service Catalog.</p>
+            <p class="Body">After you define a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">service<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A generally defined framework for actions or items that are provided to an end user. Specific actions, items, response times, and other details are not part of a service definition; those details are defined in service level packages, request offerings, and service level agreements. Instead, a service provides the basis for those detailed definitions.
+An example of a service is email. After a service is defined, end users do not see or request the service itself. Instead, they use the Service Catalog to view and submit request items, which are features that are based on the service and that you (as a service owner) define and make available to them.
+Multiple request offerings can be based on the same service.</span></a>, users or requesters do not see the service itself. Instead, they request certain aspects of a service (called <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">request offering<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A service item offered by a provider that an end user can request through the Service Catalog. For example, "Request for a new mailbox," and "Quarantine" are request offerings under the Email service.</span></a>s), which are features of the service being defined and published. </p>
+            <p class="Body">For example, one of the default services is Mobile Communication. However, end users cannot place requests for the Mobile Communications service. Instead, they can select request offerings such as <span class="window_name">Mobile Phone Request</span> and <span class="window_name">Mobile Smartphone Request</span> from the Service Catalog. These request offerings are based on the Mobile Communications service, but have different costs, fulfillment workflows, and other aspects of the service.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Request Offering</a><a name="Create_a_request_offering"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the  <span class="window_name">Request Offerings</span> workspace, click <span class="Bold">New &gt; Request Offering</span>. The <span class="window_name">Define Request Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Define_Request_Offering_Page"><a name="Define_Request_Offering_Page" data-mc-generated-bookmark="ListOf"></a>Define Request Offering Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/define_request_offering.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="867" data-mc-height="354" src="../../resources/images/define_request_offering_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Service</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The service for which the form applies. Select from the drop-down list. This list is populated from the <span class="window_name">Services</span> workspace.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for the service.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. A description of how the form is used.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The category determines where the offering can be found in the Service Catalog. For example, choosing the <span class="window_name">IT Services &gt; Data Services</span> category places the offering within this group. Offerings can have multiple categories.</p>
+                                            <p>Click <span class="Bold">Add Category</span> <img src="../../resources/images/buttons/add_green.png" class="icon" /> to choose a category for this form. Repeat to add multiple categories.</p>
+                                            <p>Click <span class="Bold">Edit Categories</span> <img src="../../resources/images/buttons/edit.png" class="icon" /> to make changes to a category.</p>
+                                            <p>See <a href="configuring_categories.htm" class="MCXref xref">Configuring Categories</a> for information on creating or modifying categories.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Anonymous Submit</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Allows anonymous users to submit a request.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Hide Price information</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Hides price information from Self Service users.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Hide Delivery Time information</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> 	Hides delivery time information from Self Service users.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Enable Request Cancellation</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables the request offering to be canceled. See <a href="../servicerequest/configuring_cancelable_s.htm" class="MCXref xref">Configuring Editable and Cancellable Service Requests</a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Enable Request Editing</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enable the request offering to be modified. See <a href="../servicerequest/configuring_cancelable_s.htm" class="MCXref xref">Configuring Editable and Cancellable Service Requests</a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Use Price List</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Enables pricing from a global price list. See <a href="price_list.htm" class="MCXref xref">Price List</a> for information on how to use this feature. Enabling this option also checks <span class="Bold">Enable Financial Transaction</span>. Do not check this option is you do not use regional pricing and do not want financial reporting.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Enable Financial Transaction</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Tracks financial transactions for this item. The system automatically maintains a consumption history of all end users requesting this service, including pricing  data.  This information can be used for charge back or consumption reporting.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delivery items</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The name of the delivery item. If  <span class="window_name">Use Price List</span> is checked, the  value is automatically set to <span class="Bold">Use Price List</span>. See <a href="price_list.htm#Apply_the_price_variance_to_a_service_request_item" class="MCXref xref">Add Prices to a Request Offering</a>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Deliver by</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">When to deliver by. Enter a number, then select the unit: minutes, hours, days, weeks.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Price</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A price for the request item. Use this only if you are not using the <a href="price_list.htm" class="MCXref xref">Price List</a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Recurring Price</p>
+                                            <p>Per</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">A recurring price. Select a unit from the drop-down list: month, quarter, year. Use this only if you are not using the <a href="price_list.htm" class="MCXref xref">Price List</a>.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Next</span>. The <span class="window_name">Design Request Form</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Design_Request_Form_Page"><a name="Design_Request_Form_Page" data-mc-generated-bookmark="ListOf"></a>Design Request Form Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/design_request_form.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1175" data-mc-height="575" src="../../resources/images/design_request_form_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">A default image for the service appears. To change the image, click <span class="Bold">Change Image</span>, navigate to an image, and click <span class="Bold">Open</span>.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Internet Explorer Release 8 only supports images 32 KB or less. Other browsers support larger images</li>
+                            <li value="2">We recommend using square images.</li>
+                            <li value="3">The image size can be as large as you like, but is scaled down to 48px by 48px.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Layout Configuration</span> to define into how many columns the fields are to be arranged on your form: one, two, or three.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Layout_Configuration_Window"><a name="Layout_Configuration_Window" data-mc-generated-bookmark="ListOf"></a>Layout Configuration Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/layout_configuration.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="695" data-mc-height="291" src="../../resources/images/layout_configuration_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Option</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Columns</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of columns  in the form: 1, 2, or 3.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Align rows in columns</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Aligns your rows into columns. Only useful on forms with multiple columns.</p>
+                                    <p>Items are placed on the page from left to right into columns, then down the page. Items of different sizes can cause the layout to look jagged. This option aligns the columns of each row. See the example in <a href="tweaking_the_request_offering_form.htm" class="MCXref xref">Tweaking the Request Offering Form</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Show column number in a row</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Shows the column placement. When you place an item on the form, an icon appears showing which column it inhabits. This is most useful when using a two or three column display.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">OK</span>. <span class="window_name">The Layout Configuration</span> window closes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Drag (or double-click) control items from the <span class="window_name">Form Designer Tools</span> pane on the right onto the <span class="window_name">Request Form</span> area.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <b>Edit </b><img src="../../resources/images/buttons/edit.png" class="icon" /> next to the control to define its parameters in the <span class="window_name">Configuration Editor</span>. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-control parameters-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" style="width: 313px;" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Control</th>
+                                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1">Description</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Parameters</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Check Box</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Creates a simple checkbox that users can select. Used to answer simple yes or no questions or options such as "For personal use?".</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent, Price</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Price Expression</p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Text, Number, or Mask Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">You can define this field to accept specific input format, such as phone number, currency, or URL.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent Field, Type, Width</p>
+                                            <p>Field Help</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Text Area</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Allows users to enter answers requiring multi-line responses, such as a description field.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent Field, Type, Width</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required</p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category Heading</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Allows you to create headings for various sections of your form. For example, you could have an address section, containing common address fields such as city, state, and zip. Then an equipment section, containing fields such as equipment list, problem description.</p>
+                                            <p>Click <span class="Bold">Edit</span> to show a dividing line or create a new page</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Dividing Line</p>
+                                            <p>Create new page</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Row Aligner</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Aligns a set of form items when using multiple columns. Do not check <b>Align rows in columns</b> from the <span class="window_name">Layout Configuration</span>, as this overrides this feature. See <a href="tweaking_the_request_offering_form.htm" class="MCXref xref">Tweaking the Request Offering Form</a>.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">No parameters</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Dropdown Selection</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Allows users to select an item from a drop-down list. You can create a custom list or use a validation list. </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent Field</p>
+                                            <p>Width</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Pick List</p>
+                                            <p>Price Expression</p>
+                                            <p>Required </p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Date Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Allows users to select a date from a calendar.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Lower bound, Upper bound</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required </p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Time Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Allows users to enter a time from a drop-down list.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Lower bound, Upper bound</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required </p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Date/Time Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Combines the date and time fields into one line. Allows users to enter a date from a calendar and a time from a drop-down list.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Lower bound, Upper bound</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required </p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Image</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Enables you to show an image on the form that can be triggered from another field. For example, when a user chooses an option from a list, an image appears, providing feedback. Users do not enter anything into this field.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Indent, Default Image, Trigger Field, Max Width, Max Height, Border</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required </p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Upload attachments</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                            <p>Enables users to upload files to the record when they save.</p>
+                                            <p>The supported extensions are a subset of the allowed extensions configured in <span class="window_name">System Settings</span>. </p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Indent, File Size Limit,</p>
+                                            <p>File Number Limit,</p>
+                                            <p>Supported extensions</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Required </p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Read only text</td>
+                                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">A label or description. Users do not enter anything into this field.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent, Do Not Submit</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">List</td>
+                                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">Allows users to select an item from a scrollable list. You can create a custom list or use a validation list. See <a href="configuring_the_list_control.htm" class="MCXref xref">Configuring the List Control</a> for  how to configure this control.</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Default Value</p>
+                                            <p>Indent, Field Width, Field Height, Allow single selection, Image Width, Image Height</p>
+                                            <p>Field Help</p>
+                                            <p>Visible</p>
+                                            <p>Pick List</p>
+                                            <p>Price Expression</p>
+                                            <p>Required </p>
+                                            <p>Read Only</p>
+                                            <p>Unique ID</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click the control title and enter a name for the control. For example, if you have used the <span class="window_name">Date/Time Field</span>, you could name the control <span class="Type">Appointment</span>.<br /></li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="Sample_Control_Name"><a name="Sample_Control_Name" data-mc-generated-bookmark="ListOf"></a>Sample Control Name</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/appointment.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="595" data-mc-height="98" src="../../resources/images/appointment_thumb_0_45.png" tabindex="" /></a>
+                        </p>
+                        <ul>
+                            <li value="1">Click <span class="Bold">Type Description Here</span>, then enter a description of the control.</li>
+                            <li value="2">To designate the number of columns the form has, click <span class="Bold">Choose a Style</span>.<br /></li>
+                        </ul>
+                        <p class="fig_title" data-mc-xref-target-name="Choose_the_Number_of_Columns"><a name="Choose_the_Number_of_Columns" data-mc-generated-bookmark="ListOf"></a>Choose the Number of Columns</p>
+                        <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/select_style.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="691" data-mc-height="262" src="../../resources/images/select_style_thumb_0_45.png" tabindex="" /></a>
+                            <br />
+                        </p>
+                        <ul>
+                            <li value="1">Optional. Choose a template from the <span class="window_name">Templates</span> tab.</li>
+                            <li value="2">Optional. Attach images to be used with the <span class="window_name">List</span> and <span class="window_name">Dropdown Selector</span> controls from the <span class="window_name">Attachments</span> tab. Files should be uploaded before adding the control. See <a href="#Images" class="MCXref xref">Adding Images to the List Control</a> below.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Preview</span> to see how your form appears to users.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Save</span> to save the form without publishing, allowing you to work on it later.</li>
+                            <li value="2">Click <span class="Bold">Save &amp; Exit</span> to save the form and return to the request offerings list.</li>
+                            <li value="3">Click <span class="Bold">Review</span> to see how the <span class="window_name">Review</span> form appears.</li>
+                            <li value="4">Click <span class="Bold">Close</span> to close the <span class="window_name">Preview</span> window and continue designing the request offering.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Next</span>. The <span class="window_name">Plan Request Fulfillment</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">Next to <span class="Bold">Fulfill as</span>, select a fulfillment option from the drop-down list.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Fulfill Option</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">No Fulfillment</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">No fulfillment action occurs for this request offering.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">E-Mail</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">An email form appears. Enter the information as required. See <a href="../../configure/email/email.htm" class="MCXref xref">Setting Up Email</a>.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Workflow</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Creates a workflow in the workflow designer. See <a href="../../configure/workflows/creating_a_basic_workflo.htm" class="MCXref xref">Using  Workflows</a>.</p>
+                                    <p>You can define a multistep fulfillment workflow with the workflow designer. The designer supports the inclusion of all required approvals and fulfillment tasks. If financial approval is required, include an approval block dedicated for financial approval.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12."> Click <span class="Bold">Next</span>. The <span class="window_name">Publish Action</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select the action to perform when saving this request offering:</li>
+                        </ul>
+                    </div>
+                    <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" style="width: 148px;" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Action</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">In Design</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form without publishing it to users. You can modify this form later.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Published</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form and  makes the request offering available under request offerings, but not under the Service Catalog. When setting this status, by default the organizational unit of the creator/owner is added with all permissions checked. This offering is available in the Service Catalog for this organizational unit unless modified.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Org Unit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Selects an organizational unit from the list. You can only publish request offerings to organizational units to which you have access. For example, if you do not have access to the entire organization, your published offering will only be available to users in the organizational unit that you have selected and below.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Location</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Only publishes to specific locations. You can designate multiple locations.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1" colspan="2">
+                                    <p colspan="2">                        &#160;Permissions</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Submit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Allows this request to be submitted from the Service Catalog by the designated organizational unit. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Edit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to modify the request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delete</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to delete the  request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Copy</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enables users within the organizational unit to duplicate the  request offering (not the resulting service request).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <b>Delete</b> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> to remove the organizational unit from the list.</li>
+                        </ul>
+                    </div>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" style="width: 55px;" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <ul>
+                                        <li value="1">The request offering owner/creator has edit permissions by default.	</li>
+                                        <li value="2">You can only publish to an organizational unit to which you belong, and its parent and child units.					</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">To Finish:</h4>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Save</span> to save the file and publish.</li>
+                            <li value="2">Click <span class="Bold">Save and Exit</span> to save the file without publishing. You can make changes to the request offering or delay its publication.</li>
+                            <li value="3">Click <span class="Bold">Cancel</span> to dismiss the page and delete all your selections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Form Offering</a><a name="Create_a_Form_Offering"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Service owners have the ability to create new or modify templates from any business object configured for <span class="window_name">My Items</span>, and not depend on the administrator (or any other role with the permissions to create new quick actions for the incident business object) to provide new templates.</p>
+                    <p class="Body">The request offering template enables service owners to create incident, change, request and approval templates for the self service requester. Like other request offerings, these templates can be made available to all organizational units that exist on the tenant or only to specific organizational units. By default, the new offering templates are published to the entire organization.</p>
+                    <p class="Body">Any business object that is part of the MyItem configuration (by default, incident, service request, and approval) can be made available through a form offering. You can add relationships to other business objects (for example, change) to MyItem, then use the corresponding templates. See <a href="../../configure/businessobjects/adding_a_relationship_to.htm" class="MCXref xref">Using Relationships</a>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner, open the <span class="window_name">Request Offerings</span> workspace, then click <span class="Bold">New &gt; Form Offering</span> from the toolbar. The <span class="window_name">Define Form Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Service</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The service for which the form applies. Select from the drop-down list. This list is populated from the <span class="window_name">Services</span> workspace.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for the service.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Describes how the form is used.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Anonymous Submit</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Allows anonymous users to submit a request.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The category. Click <span class="Bold">Add a Category</span> to select a category for this form. Repeat to add more categories.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Deliver by</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">When to deliver the offering. Enter a number, then select the unit: minutes, hours, days, weeks.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Next</span>. The <span class="window_name">Select Form Layout</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Change Photo</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A default image for the service appears. To change the image, click <span class="Bold">Change Photo</span> and navigate to the image you want, then click <span class="Bold">Open</span>.</p>
+                                            <ul class="list_table">
+                                                <li value="1">The image size cannot be larger than 50 KB.</li>
+                                                <li value="2">We recommend square images.</li>
+                                                <li value="3">The image size can be as large as you like, but it is scaled down to 48px by 48px.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Business Object</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A business object. Select from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Object layout</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The object layout.&#160;Select from the drop-down list. The available layouts are related to the chosen business object. Additional fields appear on the page. See <a href="../../configure/layouts/layouts.htm" class="MCXref xref">Using Layouts</a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Apply template</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Optional. A template that automatically populates certain fields. Select from the drop-down list.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter information into the remaining fields. These fields vary according to the chosen business object and object layout. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6."> Click <span class="Bold">Next</span>. The <span class="window_name">Publish Action</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select the action to perform when saving this request offering:</li>
+                        </ul>
+                    </div>
+                    <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" style="width: 148px;" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Action</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">In Design</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form without publishing it to users. You can modify this form later.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Published</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form and  makes the request offering available under request offerings, but not under the Service Catalog. When setting this status, by default the organizational unit of the creator/owner is added with all permissions checked. This offering is available in the Service Catalog for this organizational unit unless modified.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Org Unit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Selects an organizational unit from the list. You can only publish request offerings to organizational units to which you have access. For example, if you do not have access to the entire organization, your published offering will only be available to users in the organizational unit that you have selected and below.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Location</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Only publishes to specific locations. You can designate multiple locations.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1" colspan="2">
+                                    <p colspan="2">                        &#160;Permissions</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Submit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Allows this request to be submitted from the Service Catalog by the designated organizational unit. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Edit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to modify the request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delete</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to delete the  request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Copy</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enables users within the organizational unit to duplicate the  request offering (not the resulting service request).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <b>Delete</b> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> to remove the organizational unit from the list.</li>
+                        </ul>
+                    </div>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" style="width: 55px;" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <ul>
+                                        <li value="1">The request offering owner/creator has edit permissions by default.	</li>
+                                        <li value="2">You can only publish to an organizational unit to which you belong, and its parent and child units.					</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">To Finish:</h4>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Save</span> to save the file and publish.</li>
+                            <li value="2">Click <span class="Bold">Save and Exit</span> to save the file without publishing. You can make changes to the request offering or delay its publication.</li>
+                            <li value="3">Click <span class="Bold">Cancel</span> to dismiss the page and delete all your selections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating an External Offering</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create a URL-based offering, which can be posted on an external website (such as an outside vendor site). Users click a link that enables them to access the service request.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner, open the <span class="window_name">Request Offerings</span> workspace, then click <span class="Bold">New &gt; External Offering</span>. The <span class="window_name">Define External Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Define_External_Offering"><a name="Define_External_Offering" data-mc-generated-bookmark="ListOf"></a>Define External Offering</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/request_offering_external.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="787" data-mc-height="323" src="../../resources/images/request_offering_external_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Service</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The service for which the form applies. Select from the drop-down list. This list is populated from the <span class="window_name">Services</span> workspace.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for the service.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Describes how the form is used.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The category. Click <span class="Bold">Add Category</span><img src="../../resources/images/buttons/add_green.png" class="icon" /> to choose a category for this form. Repeat to select multiple categories. Click <span class="Bold">Edit Categories</span><img src="../../resources/images/buttons/edit.png" class="icon" /> to make changes to a category. See <a href="configuring_categories.htm" class="MCXref xref">Configuring Categories</a>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Anonymous Submit</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Allows anonymous users to submit a request.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Next</span>. The <span class="window_name">Set External Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Request_Offering_-_Set_External_Offering"><a name="Request_Offering_-_Set_External_Offering" data-mc-generated-bookmark="ListOf"></a>Request Offering - Set External Offering</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/service_request_set_external_offering.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="785" data-mc-height="341" src="../../resources/images/service_request_set_external_offering_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">A default image for the service appears. To change the image, click <span class="Bold">Change Photo</span>, navigate to the image and click <span class="Bold">Open</span>.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The image size cannot be larger than 50 KB.</li>
+                            <li value="2">We recommend square images.</li>
+                            <li value="3">The image dimensions can be as large as you like, but is scaled down to 48px by 48px.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter  parameters.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--parameters--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">  <![CDATA[ ]]></th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">  <![CDATA[ ]]></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">External Service Uri</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Either HTTP&#160;or HTTPS (for a secure connection).&#160;Select from the drop-down list, then enter the web address of the service.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Put logged in User Id in URL as HeatUserId</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Shows the user ID with <span class="window_name">HeatUserId</span> in the URL.</p>
+                                            <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/request_offering_request_url.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="638" data-mc-height="85" src="../../resources/images/request_offering_request_url_thumb_0_45.png" tabindex="" /></a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Put Offering Id in URL as HeatOfferingId</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Shows the offering ID and the user ID appear in the URL box. See image above.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Open In</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Specifies how the service request appears. Select from the drop-down list:</p>
+                                            <ul class="list_table">
+                                                <li value="1"><span class="Bold">New Window</span>:&#160;Opens the request in a new browser window.</li>
+                                                <li value="2"><span class="Bold">Workspace</span>: Opens a new workspace inside <span class="notranslate"><b>HEAT</b></span>.</li>
+                                                <li value="3"><span class="Bold">Inside Service Catalog</span>: Opens the request inside the <span class="window_name">Service Catalog</span> workspace within <span class="notranslate"><b>HEAT</b></span>.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Next</span>. The <span class="window_name">Publish Action</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Access to request offerings is based on the organizational unit, region, and location of the user.</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select the action to perform when saving this request offering:</li>
+                        </ul>
+                    </div>
+                    <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" style="width: 148px;" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Action</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">In Design</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form without publishing it to users. You can modify this form later.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Published</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Saves the form and  makes the request offering available under request offerings, but not under the Service Catalog. When setting this status, by default the organizational unit of the creator/owner is added with all permissions checked. This offering is available in the Service Catalog for this organizational unit unless modified.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Org Unit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Selects an organizational unit from the list. You can only publish request offerings to organizational units to which you have access. For example, if you do not have access to the entire organization, your published offering will only be available to users in the organizational unit that you have selected and below.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Location</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Only publishes to specific locations. You can designate multiple locations.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1" colspan="2">
+                                    <p colspan="2">                        &#160;Permissions</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Submit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Allows this request to be submitted from the Service Catalog by the designated organizational unit. </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Edit</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to modify the request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delete</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enables users within the organizational unit to delete the  request offering (not the resulting service request).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Copy</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enables users within the organizational unit to duplicate the  request offering (not the resulting service request).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <b>Delete</b> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> to remove the organizational unit from the list.</li>
+                        </ul>
+                    </div>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" style="width: 55px;" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <ul>
+                                        <li value="1">The request offering owner/creator has edit permissions by default.	</li>
+                                        <li value="2">You can only publish to an organizational unit to which you belong, and its parent and child units.					</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">To Finish:</h4>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Save</span> to save the file and publish.</li>
+                            <li value="2">Click <span class="Bold">Save and Exit</span> to save the file without publishing. You can make changes to the request offering or delay its publication.</li>
+                            <li value="3">Click <span class="Bold">Cancel</span> to dismiss the page and delete all your selections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Importing a Request Offering</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner, open the <span class="window_name">Request Offerings</span> workspace, then click <span class="Bold">Import Offering</span> from the toolbar. The file page opens.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Navigate to your .rof file, then click <span class="Bold">Open</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">After the request offering is imported, click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Adding Images to the List Control</a><a name="Images"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can have images appear next to items in a list. It is easiest to add images before attaching them to a list. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Request Offering Form Editor</span>, click <span class="Bold">Edit </span><img src="../../resources/images/buttons/edit.png" class="icon" /> next to the list control on the form. The <span class="window_name">Configuration Editor</span> appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Expand the <span class="window_name">Pick List</span> parameter.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select <span class="Bold">Custom</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Add </span><img src="../../resources/images/buttons/add_blue.png" class="icon" />. An option line appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter the option name and price.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Select an image from the <span class="window_name">Image File</span> drop-down list. These images are taken from the <span class="window_name">Attachments</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">OK</span> to close the <span class="window_name">Configuration</span> window, then <span class="Bold">Save</span>to save the form.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor241"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating Tool Tips</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">A <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">tool tip<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Text that appears when users hover their mouse over a help icon on the page.</span></a> is text that appears when users hover their mouse over a help icon on the page. Tool tips can contain extra information that is not on the form, such as how to fill out the form or what a term means. For example, if you have a phone number field, you could create a tool tip that states "Use XXX-XXX-XXXX format" or "Do not use dashes or spaces."</p>
+                    <p class="fig_title" data-mc-xref-target-name="Tool_Tips_Icon"><a name="Tool_Tips_Icon" data-mc-generated-bookmark="ListOf"></a>Tool Tips Icon</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tips.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="528" data-mc-height="171" src="../../resources/images/tool_tips_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Request Offering Form Editor</span>, click <span class="Bold">Edit </span><img src="../../resources/images/buttons/edit.png" class="icon" /> next to the control on the form. (Not all controls support this feature.) The <span class="window_name">Configuration Editor</span> appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Expand the <span class="window_name">Field Help</span> parameter and click <span class="Bold">Enable Help hint</span>. A text area appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter text. You can format the text using standard formatting tools (bold, italic, underline, color, size, font, alignment, etc.) and enter as much text as needed. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">You can also include hyperlinks and embedded HTML.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">OK</span>to close the <span class="window_name">Configuration</span> window, then <span class="Bold">Save</span> to save the form.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Inserting a Hyperlink</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Enter text into the <span class="window_name">Field Help</span> text area.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Field_Help_Text_Area"><a name="Field_Help_Text_Area" data-mc-generated-bookmark="ListOf"></a>Field Help Text Area</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tip_text.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="689" data-mc-height="195" src="../../resources/images/tool_tip_text_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the text, then from the right side of the toolbar, click <span class="Bold">Hyperlink</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="The_Hyperlink_Button"><a name="The_Hyperlink_Button" data-mc-generated-bookmark="ListOf"></a>The Hyperlink Button</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tip_hyperlink.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="705" data-mc-height="255" src="../../resources/images/tool_tip_hyperlink_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter the URL.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Enter_the_URL"><a name="Enter_the_URL" data-mc-generated-bookmark="ListOf"></a>Enter the URL</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tips_url.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="831" data-mc-height="403" src="../../resources/images/tool_tips_url_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">OK</span>, then click <span class="Bold">OK</span> again.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">Users now see the text when they hover over the <span class="window_name">Help</span> icon and can click the link.</p>
+                            <p class="fig_title" data-mc-xref-target-name="Sample_Tool_Tip_with_a_Hyperlink_to_a_Video"><a name="Sample_Tool_Tip_with_a_Hyperlink_to_a_Video" data-mc-generated-bookmark="ListOf"></a>Sample Tool Tip with a Hyperlink to a Video</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tips_demo.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="673" data-mc-height="228" src="../../resources/images/tool_tips_demo_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Inserting or Editing HTML</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Enter text into the <span class="window_name">Field Help</span> text area.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the right side of the toolbar, click <span class="Bold">Source Edit</span>. The help text is now in HTML format.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Sample_Tool_Tip_with_HTML_Text"><a name="Sample_Tool_Tip_with_HTML_Text" data-mc-generated-bookmark="ListOf"></a>Sample Tool Tip with HTML Text</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tool_tip_html.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="683" data-mc-height="205" src="../../resources/images/tool_tip_html_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Edit the HTML as needed or insert embedded HTML.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">OK</span>, then click <span class="Bold">OK</span> again.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Duplicating a Request Offering</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can copy a request offering and use it as the basis for a new one.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Request Offering</span> workspace, click <span class="Bold">Duplicate Template</span><img src="../../resources/images/buttons/duplicate_template.png" class="icon" /> next to the request offering  to copy.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Duplicate_Template"><a name="Duplicate_Template" data-mc-generated-bookmark="ListOf"></a>Duplicate Template</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/request_offering_duplicate.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1042" data-mc-height="227" src="../../resources/images/request_offering_duplicate_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The <span class="window_name">Copy Template</span> window appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter a unique name for the new request template, then click <span class="Bold">Copy</span>. The <span class="window_name">Define Request Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Continue to define the new request offering as described above.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The Request Offering Service Name Appears as GUID</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Sometimes in the <span class="window_name">Define Request Offering</span> window, the <span class="window_name">Service</span> name appears as GUID.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Service_Name_Appears_as_GUID"><a name="Service_Name_Appears_as_GUID" data-mc-generated-bookmark="ListOf"></a>Service Name Appears as GUID</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/service_offering_name_guid.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="587" data-mc-height="263" src="../../resources/images/service_offering_name_guid_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">This can happen if the service has been deleted or is marked non-published.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_list_control.htm">Configuring the List Control</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="request_offerings_images.htm">Request Offerings Default Icons</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_service_request_access.htm">Configuring Offering Access</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="request_offerings.htm">Request Offerings</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="creating_a_service.htm">Creating a Service</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuring_categories.htm">Configuring Categories</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="hiding_or_deleting_a_req.htm">Deleting a Request Offering</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="retiring_a_service.htm">Retiring a Service</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="tweaking_the_request_offering_form.htm">Tweaking the Request Offering Form</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/forms/request_form_examples.htm">Request Form Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="exporting_a_request_offering.htm">Exporting a Request Offering</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="example_using_multiple_currencies.htm">Using Multiple Currencies</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="triggering_values_from_a_combo_box.htm">Cascading Validation List</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

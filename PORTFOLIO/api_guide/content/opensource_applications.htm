@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>OpenSource Applications</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>OpenSource Applications</h1>
+                    <p>Shipped uses various Open Source applications to expedite functionality. You don't need to understand these to use Shipped, but advanced users might find this information useful.</p>
+                    <h2>Vagrant</h2>
+                    <p>Vagrant is a portable development environment solution that Shipped uses to create a standardized development environment for each of your developers. Every service that your application needs will run in a Docker container within the same local virtual machine, so new developers receive a fully functional environment with zero configuration. You shouldn’t need to change this, but if you need it, the Vagrantfile provided by the Shipped bootstrap process is within the hidden .shipped directory in the root of your project. If new services are added by other developers, you might need to re-run the bootstrap script to get the updated local development environment.</p>
+                    <p><a href="https://www.vagrantup.com/">Learn more</a>
+                    </p>
+                    <h2>Docker</h2>
+                    <p>Docker is a containerization solution. It allows you to create completely isolated, repeatable, deployable artifacts. Shipped uses it to run each of your services in isolation. Each service you add to your project has a corresponding Dockerfile that’s exposed for you. Shipped buildpacks favor a small footprint with limited functionality, but you should feel free to modify this file to fit your needs. If your service has many dependencies, it might make sense to build some of them into your image to decrease build times, for example.</p>
+                    <p><a href="https://www.docker.com/">Learn more</a>
+                    </p>
+                    <h2>Drone</h2>
+                    <p>Drone is a continuous integration solution. Shipped adds a web hook into your services’ repositories; this web hook triggers a build in Drone each time a new commit is made on any branch. Build results show up in Shipped and successful builds will show up on the [Deploy] page and be ready to release to an Environment. Logs from failed builds are also available within the UI.</p>
+                    <p>The Shipped-CLI bootstrap provides a default .drone.yml file for each [service]. To change how a service is built within Drone, you can edit and commit the .drone.yml file within that service’s directory.</p>
+                    <p><a href="https://github.com/drone/drone">Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

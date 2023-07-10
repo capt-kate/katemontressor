@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up the Application">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Defining Global Constants</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/systemsettings/defining_global_constant.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/setting_up_the_applicati.htm">Setting Up the Application</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Global Constants</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor649"></a>Defining Global Constants</h1>
+            <p class="Body">Define values to be referenced throughout a tenant from the <a name="kanchor650"></a><span class="window_name">Global Constants</span> page. </p>
+            <p class="Body">A common use of a global constant is the <span class="window_name">ListenerEmailAddress</span> constant; after you initialize this constant with an appropriate value, you can use it in fields such as the <span class="window_name">From Address</span> field in the <span class="window_name">Send Email</span> quick action. When users receive an incoming message from the Service Desk, you can reply to that email address and the <span class="window_name">Email Listener</span> processes the message.</p>
+            <p class="Body">See <a href="../../reference/default_global_constants.htm" class="MCXref xref">Default Global Constants</a> for a list of global constants included in the application.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Global Constant</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console, open the <span class="Bold">Global Constants</span> workspace. The list of global constants appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Add </span><img src="../../resources/images/buttons/add_blue.png" class="icon" />. The system adds a blank row at the bottom of the list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information for the new global constant.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--parameters--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       A unique name for the global constant.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Value
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The value for the global constant.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Type
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Field type:</p>
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Text</li>
+                                                <li class="list_table" value="2">Number</li>
+                                                <li class="list_table" value="3">Boolean</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Description</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>A description of what the global constant is used for.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Modifying a Global Constant</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/caution48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">Use caution when changing default global constants, as this might cause unexpected behavior.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Global Constants</span> page, double-click the value next to the constant  to modify. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the updated value.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div> <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Deleting a Global Constant</a></span><div class="MCDropDownBody dropDownBody"><p class="Body">From the <span class="window_name">Global Constants</span> page, click <span class="Bold">Delete</span> <img src="../../resources/images/buttons/delete_red_x.png" class="icon" /> corresponding to the global constant that you want to remove.</p><p class="fig_title" data-mc-xref-target-name="Delete_a_Global_Constant"><a name="Delete_a_Global_Constant" data-mc-generated-bookmark="ListOf"></a>Delete a Global Constant</p><p class="Body"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/global_constant_delete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="954" data-mc-height="46" src="../../resources/images/global_constant_delete_thumb_0_45.png" tabindex="" /></a></p></div></div><div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Commonly Edited Default Global Constants</a></span><div class="MCDropDownBody dropDownBody"><p class="Body">This section describes the most commonly edited global constants. </p><div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Service Desk Email</a></span><div class="MCDropDownBody dropDownBody"><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Global Constants</span> page, double-click the text in the <span class="window_name">Value</span> column of the <span style="font-weight: normal;" class="window_name">ServiceDeskMgrEmailAddress</span> row.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Replace the text with the email address of the Service Desk sender. The system now uses this address to send email to and from the Service Desk.</td></tr></table></div></div><div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Service Desk Manager Login ID</a></span><div class="MCDropDownBody dropDownBody"><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Global Constants</span> page, double-click the text in the <span class="window_name">Value</span> column of the <span class="window_name">ServiceLevelManagerLoginID</span> row.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Replace the text with the actual login ID of the Service Desk Manager.</td></tr></table></div></div></div></div><div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Using an Image in a Global Constant</a></span><div class="MCDropDownBody dropDownBody"><p class="Body">You can add an image to a global constant, such as adding a company logo to a signature. To do this, convert your image to base64, which is an image format in text for HTML purposes. You can convert the image through many web applications, or you can convert it using  <span class="notranslate"><b>HEAT</b></span> by following this procedure.</p><table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0"><col class="TableStyle-Note-Column-Column1" /><col class="TableStyle-Note-Column-Column2" /><tbody><tr class="TableStyle-Note-Body-Body2"><td class="TableStyle-Note-BodyB-Column1-Body2"><img src="../../resources/global_images/note.png" alt="" class="icon" /></td><td class="TableStyle-Note-BodyA-Column2-Body2">Internet Explorer 8 only supports images 32 KB or less. Other browsers support larger images. Also, larger images can be attached to records if needed.</td></tr></tbody></table><h4 class="subheading">Converting an Image</h4><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Copy an image  to the global constant to the clipboard.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the Service Desk Console, open any incident.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Under the <span class="window_name">Activity History</span> tab, create a new email.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Paste the image that you copied to the clipboard into the message area.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">In the message toolbar, click <span class="Bold">Source Edit</span> to change the source view. The  HTML source appears.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Select the image text in the message area and copy it to the clipboard. The image text starts with <span class="fixedwidth">&lt;img src="data:image/png;base64</span> and ends with <span class="fixedwidth">=" alt=""&gt;</span>.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Cancel</span> to dismiss the window and disregard the email.</td></tr></table><h4 class="subheading">Configuring the Global Constant</h4><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Global Constants</span> page, click <span class="Bold">Add</span>.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">	In the name field, enter the name of the image that you converted (for example, MyLogo).</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">	In the value field, paste the image text that you copied from the email message. The  image appears. base64 text appears as an image in a global constant.</td></tr></table><table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0"><col style="width: 48px;" /><col style="width: 32px;" /><col style="width: auto;" /><tr><td valign="top" /><td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span></td><td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Reference your global constant as usual.</td></tr></table></div></div></div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../selfservice/configuring_save_for_later.htm">Configuring Save For Later</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../selfservice/save_for_later.htm">Save for Later</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_global_constants.htm">Default Global Constants</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

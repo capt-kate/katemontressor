@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Default Quick Actions|Quick Action Templates">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Insert Child Object</title>
+        <link href="../../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../index.html#reference/quickactions/templates/insert_child_object.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../default_quick_actions.htm">Default Quick Actions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../quick_action_parameters.htm">Quick Action Templates</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Insert Child Object</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor846"></a>Insert Child Object Quick Action</h1>
+            <p class="Body">Inserts a child object into a form or grid, such as a new incident, field value, or a note.</p>
+            <p class="Body">Use the wizard to add levels of granularity, constructing additional expressions restricting the viewing and usage of the quick action to certain field states. </p>
+            <table style="width: 92%;mc-table-style: url('../../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Child Object Reference</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The  child object to insert from the drop-down list. The fields that appear are based on this value.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Web UI&#160;parameters</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                            <p>Generally for internal use only.</p>
+                            <p>&#160;</p>
+                            <p>Only used to post the object to the social board. This field takes only one expression:</p>
+                            <p><span class="fixedwidth">{socialshare:true, elementId: $(elementId)}</span>
+                            </p>
+                            <p>&#160;</p>
+                            <p>For example, in the incident object, this field is used in the <span class="window_name">Post Social message associated with Incident</span> quick action.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li value="1">
+                    <p>Click <span class="Bold">Add</span> <img src="../../../resources/images/buttons/add_green.png" class="icon" /> to add fields to the list.</p>
+                </li>
+                <li value="2">Click <span class="Bold">Delete</span> <img src="../../../resources/images/buttons/delete_red_x.png" class="icon" /> to remove the field from the list.</li>
+            </ul>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../default_quick_actions.htm">Default Quick Actions</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../../../servicedesk/quickactions/using_the_insert_child_object_qa.htm">Using the Insert Child Object QA</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../quick_action_parameters.htm">Quick Action Templates</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../quick_action_settings.htm">Quick Action Settings</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../incident_quick_actions.htm">Incident Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../knowledge_quick_actions.htm">Knowledge Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../mobile_quick_actions.htm">Mobile Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../problem_quick_actions.htm">Problem Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../quick_journals_quick_act.htm">Quick Journals Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../release_quick_actions.htm">Release Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../social_board_quick_actions.htm">Social Board Quick Actions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../system_quick_actions.htm">System Quick Actions</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

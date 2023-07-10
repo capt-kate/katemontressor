@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Performance</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/performance/performance.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Performance</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Performance</h1>
+            <p class="Body">If your database is running slowly or the application data is not synchronizing correctly, you can perform some simple actions to clear things up.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Clearing the Cache</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In this case, we mean the database cache (not the browser cache, although that might help some issues). Use this method if the metadata is not changing or updating.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console, open the <span class="window_name">Cache Management</span> workspace. The <span class="window_name">Cache Management</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To clear all cached items, click <span class="Bold">Remove all cache items</span>. This action removes all queried items from the memory cache on all application servers.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To clear only validation lists, click <span class="Bold">Reset cached validation lists only</span>. This action removes all static-data validation lists from the memory cache on all application servers. This does not affect dynamic validation lists (such as employee).</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Indexing</a><a name="Indexing"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can index various fields within a business object. Designating a field as an Index field can help the search performance in some instances:</p>
+                    <ul>
+                        <li value="1">Fields containing many (thousands) records that are frequently accessed by users can benefit from being indexed.</li>
+                        <li value="2">Fields that are not well-used or have few records might be detrimental to performance if they are indexed.</li>
+                        <li value="3">Too many indexed fields can slow down performance. The optimum number of fields is based on amount of access, number of users, and number of records, and is usually determined by trial and error.</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="Indexed_Fields_are_Indicated"><a name="Indexed_Fields_are_Indicated" data-mc-generated-bookmark="ListOf"></a>Indexed Fields are Indicated</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/bo_index_fields.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1306" data-mc-height="820" src="../../resources/images/bo_index_fields_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">These guidelines apply primarily to Cloud administrators. On-premise customers are responsible for tuning their own individual databases.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">A <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Cover index<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>An index that contains all  columns needed for a query. A search  typically use indexes to speed up the resolution of which rows to retrieve, but then will go to the full table to retrieve the rows.</span></a> contains all Included fields.</p>
+                    <p class="Body">See <a href="../businessobjects/using_business_objects.htm#Advanced" class="MCXref xref">Advanced</a> for the procedure on creating an indexed field.</p>
+                    <h4 class="subheading">Indexing Group Objects</h4>
+                    <p class="Body">Group objects share fields with other objects and contain <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Derived object<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A derived object is composed of fields from multiple objects and does not actually contain data.</span></a>s. For example, <span class="window_name">Address</span> is a group object.</p>
+                    <p class="Body">For example: A sales area is determined by a BrokerID (with its own table), Company (with its own table) and StateID (with its own table). These three fields need to connect to a fourth table to pull proper information about sales area (i.e. Sales Area Number, Sales Reps, Sales Region, and Sales regional manager), and this fourth table also has BrokerID, Company and StateID fields. We need to connect three fields from three different tables to this fourth table. The fourth table is known as a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Derived object<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A derived object is composed of fields from multiple objects and does not actually contain data.</span></a>.</p>
+                    <p class="Body"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Derived object<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A derived object is composed of fields from multiple objects and does not actually contain data.</span></a>s list the base object indexed items. You can index the fields from this <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Derived object<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A derived object is composed of fields from multiple objects and does not actually contain data.</span></a>, and at the same time, see which fields are indexed in the original objects.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../businessobjects/using_erd.htm">Using Entity Relationship Diagram (ERD)</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../businessobjects/business_objects.htm">Business Objects</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../templates/templates.htm">Templates</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../businessobjects/business_object_examples.htm">Business Object Examples</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../businessobjects/using_business_objects.htm">Using Business Objects</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../businessobjects/creating_a_field.htm">Using Fields</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../businessobjects/adding_a_relationship_to.htm">Using Relationships</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/incident_object.htm">Incident Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/change_object.htm">Change Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/knowledge_object.htm">Knowledge Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/problem_object.htm">Problem Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/service_request_object.htm">Service Request Object Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/survey_objects.htm">Survey Objects Reference</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/frs_timezone.htm">The Timezone Object</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/businessobjects/all_business_objects.htm">Default Business Objects</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../businessobjects/using_relationships_in_a_grid.htm">Using Relationships in a Grid</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

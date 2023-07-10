@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Constructing Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Type Conversions</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/type_conversions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="constructing_expressions.htm">Constructing Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Type Conversions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor680"></a>Type Conversions</h1>
+            <p class="Body">In certain contexts, values from one data type can be converted to another data type, either implicitly or explicitly.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Conversion to Boolean Values</a><a name="Boolean_conversion"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"><span class="Bold">From String Values</span>
+                    </p>
+                    <p class="Body">The string values of "true" and "false" (either in all lower case, all upper case, or initial capitalization) can be used for setting the value of logical fields, when enclosed in single or double quotes.</p>
+                    <p class="Body">The string values of "n" (where n represents an integer or decimal value, and can be positive or negative), can be used for setting the value of logical fields, when enclosed in single or double quotes. If n is 0, the corresponding Boolean value is false; otherwise, all other values of n correspond to a Boolean value of true.</p>
+                    <p class="Body">When creating logical comparisons (for example, for the condition in the <span class="fixedwidth">iif()</span> expression), only the string values of "true" and "false" (strictly in all lower case) can be used for setting the value of logical fields. Strings containing numerical values cannot be properly used in logical comparisons.</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body"><span class="Bold">From Number Values</span>
+                    </p>
+                    <p class="Body">Number values can also be used for setting the value of Boolean fields, when enclosed in single or double quotes.</p>
+                    <p class="Body">The number zero (0) is converted to the Boolean value of false; otherwise, all other number values (either positive or negative, integer or decimal) are converted to the Boolean value of true.</p>
+                    <p class="Body">Number values cannot be properly used in logical comparisons.</p>
+                    <p class="Body">&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Conversion to DateTime Values</a><a name="Conversion_datetime"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">String values representing the date only or representing date and time values (see <a href="constructing_expressions.htm#Date/Time_Literals" class="MCXref xref">DateTime Literals</a>), can be implicitly converted to the corresponding DateTime value, and subsequently used to compare against other DateTime values (such as the values from DateTime fields).</p>
+                    <p class="Body">&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Conversion to Number Values</a><a name="number_Conversion"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Integer values can be implicitly converted to decimal values, but not vice versa.</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body"><span class="Bold">From Boolean Values</span>
+                    </p>
+                    <p class="Body">The Boolean values of true and false can be used for setting the value of number fields, when in all lower or all upper case. Upon evaluation, the true and false values are converted to 1 and 0, respectively.</p>
+                    <p class="Body">Boolean values, however, cannot be implicitly converted to number values, when used in arithmetic contexts (for example, adding a number value to true), or in relational contexts (for example, comparing a number value to true).</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body"><span class="Bold">From String Values</span>
+                    </p>
+                    <p class="Body">There is no implicit or explicit conversion of string values to number values. </p>
+                    <p class="Body">For arithmetic operations, if one operand is a string value, and the other operand is a number value, the number value is converted to a string value, but the string value is not converted to a number value. At this point, only the plus (+) operator (in this context, for string concatenation) works properly; evaluation fails for all other available arithmetic operators (such as multiply (*) and divide (%)).</p>
+                    <p class="Body">Similarly, for relational comparisons, if one operand is a string value, and the other operand is a number value, the number value is converted to a string value, but the string value is not converted to a number value. At this point, the values are compared lexicographically instead of numerically.</p>
+                    <p class="Body">Therefore, the integer or decimal number values must be specified as is, <span class="Emphasis">without</span> the enclosing single or double quote characters, so that they can be used in the proper contexts.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Conversion to Text Values</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Boolean and number values can be implicitly converted to string values, when used in the context of string concatenation.</p>
+                    <p class="Body">The non-string value is first converted to a string value, which is then concatenated with the other strings in the expression.</p>
+                    <p class="Body"><span class="Bold">From Boolean Values</span>
+                    </p>
+                    <p class="Body">For Boolean values, True and False are converted to the string values "true" and "false", respectively (notice the values are in lower case).</p>
+                    <p class="Body">Here are examples where the Boolean value is used, in the context of string concatenation (here, <span class="Bold">TestText1</span> is a text field, whereas <span class="Bold">TestBool1</span> is a logical field):</p>
+                    <p class="Code">$("Did the user answer all the questions: " + false)</p>
+                    <p class="Code">
+                        <br />
+                    </p>
+                    <p class="Code">$("Did the user answer all the questions: " + TestBool1)</p>
+                    <p class="Code">
+                        <br />
+                    </p>
+                    <p class="Code">$(TestText1 + TestBool1)</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body"><span class="Bold"><a name="T2DTConversion"></a>Conversion to Text Values From DateTime Values</span>
+                    </p>
+                    <p class="Body">DateTime values cannot be implicitly converted to string values through string concatenation, but you can use the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> function to obtain the string equivalent. </p>
+                    <p class="Body">To illustrate the distinction, when the following expression is evaluated, here, <span class="Bold">TestDate1 </span>stores a DateTime value:</p>
+                    <p class="Code">$("Liftoff will occur at " + TestDateTime1)</p>
+                    <p class="Body">the following error occurs:</p>
+                    <p class="Body_indent">Error while saving data: DataValue.PromoteToCommonType: DateTime: cannot convert from string</p>
+                    <p class="Body">This error occurs for both time-only and DateTime fields.</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body">For date-only fields, the following error occurs instead:</p>
+                    <p class="Body_indent">Error while saving data: DataValue.PromoteToCommonType: unexpected second argument type: System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</p>
+                    <p class="Body">To properly convert the DateTime value to a string, use the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> function. The function takes the DateTime value in UTC, and converts the value to a string value.</p>
+                    <p class="Body">With the above expression updated to use the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> function,</p>
+                    <p class="Code">$("Liftoff will occur at " + ToString(TestDateTime1))</p>
+                    <p class="Body">the user receives the following result:</p>
+                    <p class="Body_indent">Liftoff will occur at 7/16/2013 9:30:00 AM</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body">For time-only fields, the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> function returns a DateTime. The time portion is in UTC, whereas the date portion is "1/1/1970".</p>
+                    <p class="Body">For example, after evaluating the following expression:</p>
+                    <p class="Code">$("Liftoff will occur at " + ToString(TestTime1))</p>
+                    <p class="Body">the user receives the following result:</p>
+                    <p class="Body_indent">Liftoff will occur at 1/1/1970 9:30:00 AM</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body">For date-only fields, even when using the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> function, the <a href="../functions/tostring.htm" class="MCXref xref">ToString</a> value is not able to properly convert the date-only value to a string value, and the evaluation of the expression silently returns an error value.</p>
+                    <p class="Body">For example, after evaluating the following expression:</p>
+                    <p class="Code">$("Liftoff will occur at " + ToString(TestDate1))</p>
+                    <p class="Body">the user receives the following erroneous result:</p>
+                    <p class="Body_indent">Liftoff will occur at System.Collections.Generic.Dictionary2[System.String,System.Object]</p>
+                    <p class="Body">&#160;</p>
+                    <p class="Body"><span class="Bold">From Number Values</span>
+                    </p>
+                    <p class="Body">Here are examples where the number value is used in the context of string concatenation. Here, <span class="Bold">TestText1</span> and <span class="Bold">TestText2</span> are text fields, whereas <span class="Bold">TestNumber</span> is a number field.</p>
+                    <p class="Code">$("There are &gt;" + 3 + " blind mice")</p>
+                    <p class="Code">$("There are " + 3.28 + TestText1 )</p>
+                    <p class="Code">$(TestText1 + TestNumber + TestText2)</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="constructing_expressions.htm">Constructing Expressions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

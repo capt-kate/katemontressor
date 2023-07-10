@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Catalog|Service Requests|Creating a Service Request">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating Software and Provisioning Service Requests</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dsm/installing_service_requests.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../servicedesk/using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicecatalog/service_catalog.htm">Service Catalog</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicerequest/service_requests_.htm">Service Requests</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../servicedesk/servicerequest/creating_a_service_reque.htm">Creating a Service Request</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Creating Software and Provisioning Service Requests</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor251"></a><a name="dsm_192254611_1320631"></a>Creating Software and Provisioning Service Requests</h1>
+            <p class="Body">When Self Service users create a service request to install software or provision computers, Service Desk Analysts can view and make updates to the service request from the <span class="window_name">Service Request</span> workspace.</p>
+            <p class="Body">The following sections describe how to do the following:</p>
+            <ul>
+                <li value="1">Install new software applications on managed computers. See <a href="#dsm_192254611_1320658" class="MCXref xref">Service Requests to Install Software Process</a>.</li>
+                <li value="2">Provision a computer. See <a href="installing_incidents.htm#dsm_192254611_1320555" class="MCXref xref">Provision Hardware and Software Incidents</a>.</li>
+                <li value="3">Reprovision a computer. See <a href="reprovisioning_a_compute.htm#dsm_192254611_1320938" class="MCXref xref">Create a Computer Reprovision Service Request</a>.</li>
+            </ul>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">Response and delivery targets for an installation or provisioning service request (as displayed in the <span class="window_name">Details</span> tab) are managed through the escalation engine the same as other types of service requests. 
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">For information about performing these tasks from the <span class="window_name">Incident</span> workspace, see <a href="installing_incidents.htm#dsm_192254611_1320351" class="MCXref xref">Installing and Provisioning Incidents</a>.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Service Requests to Install Software Process</a><a name="dsm_192254611_1320658"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following flow chart shows a summary of the software installation process:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Software_Installation_Process"><a name="Software_Installation_Process" data-mc-generated-bookmark="ListOf"></a>Software Installation Process</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/software_service_request_path.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="589" data-mc-height="947" src="../../resources/images/software_service_request_path_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a Service Request to Install Software</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Perform the following steps to install software on a managed computer through the <span class="window_name">Service Request</span> workspace:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a Service Desk Analyst and open the <span class="window_name">Service Request</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New Service Request</span>. The system displays a blank service request form.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select a customer for the service request. All service requests published to the customer's organization unit appear in the <span class="window_name">Parameters</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">If you do not see the <span class="window_name">Software Installation Request</span> template, do a search by entering software installation in the <span class="window_name">Find Templates</span> field. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the <span class="window_name">Software Installation Request</span> template still does not appear, it might mean that this request offering is not published to the organizational unit to which the customer belongs.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Double-click to open the <span class="window_name">Software Installation Request</span> template.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Fill in the following information in the <span class="window_name">Requester Details</span> section:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Department</b>: The department that the requester is in. The choice that you make here constrains the drop-down list in the <span class="window_name">Requester Name</span> field.</li>
+                            <li value="2"><b>Requester Name</b>: The name of the person who is requesting the software installation. In most cases, this is the same person whom you named in the <span class="window_name">Customer</span> field. The name that you provide here constrains the choices available in the drop-down list in the <span class="window_name">Computer to Install Software On</span> field. After you select a requester, the system automatically fills in the <span class="window_name">Requester Email</span> and <span class="window_name">Requester Work Phone</span> fields.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Fill in the following information in the <span class="window_name">Software Details</span> section:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Date Required</b>: The date by which the software must be installed.</li>
+                            <li value="2"><b>Temporary Use or Permanent Use</b>: The duration of software usage. If you select <span class="Bold">Temporary Use</span>, the system prompts you to specify an end date.</li>
+                            <li value="3"><b>Software</b>: The software application. The choice that you make here constrains the choices available in the <span class="window_name">Installation Package</span> field.</li>
+                        </ul>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Computer to Install Software On</b>: The computer on which to install software. The choices available in this field are constrained by your entry in the <span class="window_name">Requester Name</span> field earlier. If that information does not automatically fill in, enter it manually. The system automatically populates the operating system depending on the computer that you select</li>
+                        </ul>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Installation Package</b>: An installation package from the list. </li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click&#160;<span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The service request status remains as active.</li>
+                            <li value="2">If approval is required, an approval workflow is initiated.</li>
+                            <li value="3">After approval, or if approval is not required, the DSM task record is created.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">To view the task or initiate installation (in case the DSM policy does not implement), click the <span class="window_name">DSM Task</span> tab.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Notice that the task status is accepted. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Click <span class="Bold">Refresh</span>  if the task record does not appear.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Select the record and click <span class="Bold">Go to</span> to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">In this situation:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The software installation task is initiated. See <a href="#dsm_192254611_1320743" class="MCXref xref">Track Progress of Service Requests</a> for details about monitoring task progress.</li>
+                            <li value="2">When the software installation task runs, the software package is assigned to a policy instance for the target computer through the DSM system.</li>
+                            <li value="3">The DSM system implements the policy instance (delayed or scheduled installation is not available through service request) in accordance with the configuration parameters.</li>
+                            <li value="4">If the task does not complete or the policy instance from DSM is not initiated, click <span class="Bold">Initiate Installation Task</span> quick action from the toolbar.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">When the software installation task completes, the task status is completed and the service request status is fulfilled.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Track Progress of Service Requests</a><a name="dsm_192254611_1320743"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After you save a software installation or computer provisioning service request, you can track progress in the following ways:</p>
+                    <ul>
+                        <li value="1">Track record status and resolution targets from the <span class="window_name">Details</span> tab in the service request record. See <a href="#dsm_192254611_1320762" class="MCXref xref">From the Service Request Record Details Tab</a>.</li>
+                        <li value="2">Track overall progress from the <span class="window_name">Target Computer</span> workspace. See <a href="#dsm_192254611_1320769" class="MCXref xref">From the Target Computer Record</a>.</li>
+                        <li value="3">Track detailed installation task progress through the <span class="window_name">Task</span> tab in the <span class="window_name">Service Request</span> workspace. See <a href="#dsm_192254611_1320797" class="MCXref xref">From the Service Request DSM Task Tab</a>.</li>
+                        <li value="4">Track workflow execution progress through the <span class="window_name">Workflow Instance</span> tab in the <span class="window_name">Service Request</span> workspace. See <a href="#dsm_192254611_1320807" class="MCXref xref">From the Installation Service Request Workflow Instance Tab</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the Service Request Record Details Tab</a><a name="dsm_192254611_1320762"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">On the <span class="window_name">Details</span> tab of the <span class="window_name">Service Request</span> record, the <span class="window_name">Status</span> field changes from active to fulfilled when the installation request completes.</p>
+                    <p class="Body">While the request is being processed, the <span class="window_name">Audit &amp; Escalation</span> section shows the resolution target dates that are managed through the escalation engine in the same way as any other type of service request.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the Target Computer Record</a><a name="dsm_192254611_1320769"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To track overall installation progress from the target computer record:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">CI</span> tab to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Search for the computer specified in the <span class="window_name">Computer</span> field of the <span class="window_name">Software Installation Task</span> record or the <span class="window_name">CI Link</span> field of the <span class="window_name">Computer Provisioning Task</span> record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="window_name">DSM Managed Installation</span> tab. The system displays a list of the DSM software that was defined with the provisioning task. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">View the <span class="window_name">Managed Install Status</span> column.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">For more details, select a software installation record and click <span class="Bold">Go to</span> to open the <span class="window_name">View Installation State</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">See <a href="#dsm_192254611_1320892" class="MCXref xref">Uninstall and Reinstall Software</a> for details about using the <span class="window_name">Reinstall Software</span>, <span class="window_name">UnInstall Software</span>, and <span class="window_name">Update DSM Installation State</span> buttons in the <span class="window_name">DSM Installation Status</span> tab.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the Service Request DSM Task Tab</a><a name="dsm_192254611_1320797"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To track detailed installation task execution progress through the <span class="window_name">DSM&#160;Task</span> tab in the <span class="window_name">Service Request</span> workspace:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the service request and click the <span class="window_name">DSM Task</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">View the <span class="window_name">Status</span> column.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If necessary, refresh the task to check for status changes.  If a software installation task fails, task status is failed. In this situation, you can manually create a new software installation task and then click <span class="Bold">Initiate Installation</span> to start the new task. If you create a software installation task manually, it bypasses approval (even if approval is required).
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the Installation Service Request Workflow Instance Tab</a><a name="dsm_192254611_1320807"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To track detailed installation workflow execution progress through the <span class="window_name">Workflow Instance</span> tab in the <span class="window_name">Service Request</span> workspace:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the service request and click the <span class="window_name">Workflow Instance</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">View the <span class="window_name">Status</span> column.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select any of the applicable workflow records and click <span class="Bold">Go to</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">View Instance</span> to view which workflow block the task is at.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Provision Hardware and Software Service Request Process</a><a name="dsm_192254611_1320818"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following flow chart shows a summary of the computer provisioning process performed from the <span class="window_name">Service Request</span> workspace.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Computer_Provisioning_Process"><a name="Computer_Provisioning_Process" data-mc-generated-bookmark="ListOf"></a>Computer Provisioning Process</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dsm_provision_sr.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="575" data-mc-height="750" src="../../resources/images/dsm_provision_sr_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor252"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a Service Request to Provision a Computer</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Network boot must be enabled on the target computer prior to provisioning.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">Perform the following steps to provision a new computer and/or software from the <span class="window_name">Service Request</span> workspace:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> as a Service Desk Analyst.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Service Request</span> to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">New Service Request</span>. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select a customer for the service request. All of the service requests that are published to the customer's organization unit appear in the <span class="window_name">Parameters</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">If you do not see the <span class="window_name">New Computer Request</span> template, do a search by entering new computer in the <span class="window_name">Find Templates</span> field. If the template still does not appear, it might mean that this request offering is not published to the organizational unit to which the customer belongs.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click to open the <span class="window_name">New Computer Request</span> template.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">In the <span class="window_name">Recipient Information</span> section, add the following information:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Department</b>: The department that the requester is in. The choice that you make here constrains the drop-down list in the <span class="window_name">Recipient</span> field.</li>
+                            <li value="2"><b>Recipient</b>: The name of the person who will receive the computer. After you select a recipient, the system automatically populates the <span class="window_name">Cost Center</span>, <span class="window_name">Location</span>, and <span class="window_name">User Name</span> fields.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">In the <span class="window_name">Hardware</span> section, add the following information:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Hardware Profile</b>: The general type of computer to provision. The system populates the <span class="window_name">Hardware Type</span> field from the <span class="window_name">Hardware Profile </span>configuration record.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">In the <span class="window_name">Application Accessibility Details</span> section, add the following information:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Software Profile</b>: The software application to provision. If you specified that approval is required for the software profile, the system automatically checks <span class="window_name">Approval Required</span>. Otherwise, you can choose to select it if necessary. The installation package is prefilled with the default package information from the <span class="window_name">Software Profile</span> configuration record.</li>
+                        </ul>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Special Request Details: Specify additional information as necessary.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Save</span>. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The following actions take place:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">If approval is required, an approval workflow is initiated.</li>
+                            <li value="2">After approval, or if approval is not required, a computer provisioning task is created with a status of logged in the <span class="window_name">DSM Task</span> tab. See <a href="#dsm_192254611_1320885" class="MCXref xref">Track Progress</a> for details about monitoring task progress.</li>
+                            <li value="3">The service request status remains active.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">Click the <span class="window_name">DSM Task</span> tab in the service request record. Select and open the record.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Click <span class="Bold">Refresh</span>   if the task record does not appear.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12.">Perform the following steps:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The <span class="window_name">Hardware Profile</span> field is filled in with the hardware profile entry from the service request. If necessary, you can change the entry here. The value in this field constrains the choices available in the <span class="window_name">CI Link</span> field.</li>
+                            <li value="2">In the <span class="window_name">CI Link</span> field, select a computer to provision.</li>
+                            <li value="3">The <span class="window_name">Software Profile</span> field is filled in with the software profile entry from the service request. If necessary, you can change the entry here. The value in this field constrains the choices available in the <span class="window_name">DSM Software</span> and <span class="window_name">Software Package</span> tabs.</li>
+                            <li value="4">Optional. Select additional software and software packages to install.</li>
+                            <li value="5">Manually initiate the task by selecting <span class="Bold">Action Menu &gt; No Category &gt; Initiate Provisioning Task</span>.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">Note that the task status is <i>logged</i> and the DSM status is requested. Upon initiating the task, the task status gets updated to accepted and the DSM status updates to <em>pending</em>.</p>
+                    <p class="Body_indent">When the computer provisioning task runs, the DSM system immediately begins provisioning the computer (delayed or scheduled provisioning is not available through service request).</p>
+                    <p class="Body_indent">Notice that the <span class="window_name">Workflow Instance</span> tab gets populated with the workflow instance, with a status of <em>waiting</em>.</p>
+                    <p class="Body_indent">If you want to see the status of the task, click the workflow record and then click <span class="Bold">View Instance</span>. Notice that the task is waiting for the DSM integration block to complete the assignment.</p>
+                    <p class="Body_indent">When the task completes, the status updates to <em>completed</em>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">13.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="13.">Restart the computer to complete the provisioning. When the computer provisioning task completes, the task status is <em>completed</em> and the service request status is <em>fulfilled</em>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Track Progress</a><a name="dsm_192254611_1320885"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can track the progress of a provisioning service request just as you would an installation service request. See <a href="#dsm_192254611_1320743" class="MCXref xref">Track Progress of Service Requests</a> for more information.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor253"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Uninstall and Reinstall Software</a><a name="dsm_192254611_1320892"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Perform the following steps to uninstall or reinstall software on a managed computer:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">CI</span> tab to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Search for the computer containing the software to uninstall or reinstall.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select and open the computer record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the <span class="window_name">DSM Managed Installation</span> tab. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">A list of installation states for each DSM-managed software item appears.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you expect a software item to display and it does not, click <span class="Bold">Refresh</span> on the toolbar to update the list to show software that was deployed on the target computer manually from the DSM system.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Highlight the record for the software to uninstall or reinstall. Depending on the status of the software (pending, installed, and so on), take the appropriate action:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Create task to uninstall software</b>: Uninstalls the selected software package.</li>
+                            <li value="2"><b>Create task to reinstall software</b>: Uninstalls and then reinstalls the selected software package.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">A workflow for the action that you select initiates. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Open the <span class="window_name">Software Installation Task</span> workspace to view the install or uninstall software action that you initiated.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">If you click <span class="Bold">Create Task to Reinstall Software</span>, the managed install status is installation pending, then installation succeeded upon completion of the task.</li>
+                            <li value="2">If you click <span class="Bold">Create Task to Uninstall Software</span>, the software record is removed from the <span class="window_name">CI</span> workspace upon completion of the task.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">The software installation task status is completed upon completion of the request.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Click <span class="Bold">Refresh</span>   to monitor changes to the list of installed software items.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm.htm">Configuring  DSM</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm_envi.htm">Configuring the DSM Environment</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="dsm_sw.htm">DSM</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="dsm_features_in_.htm">DSM Features</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="installing_incidents.htm">Installing and Provisioning Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="reporting_an_issue_to_in.htm">Reporting an issue to install software or reprovision computer</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="reprovisioning_a_compute.htm">Reprovisioning a Computer</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_cis_in_the_manag.htm">Viewing CIs in the Managed Software Workspace</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="performing_ongoing_maint.htm">Performing Ongoing Maintenance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="dsm_integration.htm">DSM Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="fields_collected_by_agent_and_agentless_scans.htm">Fields Collected by Agent and Agentless Scans</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

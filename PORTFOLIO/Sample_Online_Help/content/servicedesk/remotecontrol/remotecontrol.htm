@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Remote Control</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/remotecontrol/remotecontrol.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Remote Control</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Remote Control</h1>
+            <p class="Body">Remote Control enables service desk operators to access and control&#160;a user machine, record the session, capture session Chat, and maintain a log of each session.. This is different from other remote desktop-like applications in that</p>
+            <p class="Body">This is different from other remote desktop-like applications in that:</p>
+            <ul>
+                <li value="1"> Remote Control lets you control the user machine and see what the user is doing simultaneously.</li>
+                <li value="2"> This technology operates within <span class="notranslate"><b>HEAT</b></span>, and uses the <span class="notranslate"><b>HEAT</b></span> web services to monitor user operations.</li>
+                <li value="3">The built-in chat feature lets you monitor and maintain a log of activities.</li>
+                <li value="4">You can record the session and capture the time spent and attach the information to the incident record for future reference.</li>
+                <li value="5">You can create or resolve and incident directly from the session.</li>
+                <li value="6">You can view the incident record directly from the Remote Session window.</li>
+                <li value="7">You can copy and paste between the operator window and the session window.</li>
+                <li value="8">The incident record shows a history of all remote control sessions.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Initial Setup</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Remote Control is automatically enabled  as of <span class="notranslate"><b>HEAT</b></span> 2014.3, for both Cloud and On-Premise. Existing users will not  see certain features:</p>
+                    <ul>
+                        <li value="1">The Start Remote Control button does not appear on the Incident workspace.</li>
+                        <li value="2">The remote control history is not available under the Activity History tab.</li>
+                    </ul>
+                    <p class="Body">Your Administrator must manually configure these features.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration console, open the <span class="window_name">Incident</span> business object.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the Layout tab, open the layout in which you want to use the button. Out-of-the-box, the layouts affected are <span class="window_name">IncidentLayout.ServiceDesk</span> and <span class="window_name">IncidentLayout.HelpDesk</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Open the <span class="window_name">Form View</span> of the Layout, then <b>Edit</b> the <span class="window_name">Toolbar</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">From the list in the bottom panel, drag the <span class="window_name">Start Remote Control</span> button and drop it onto the toolbar where you want it to appear. Typically, the <span class="window_name">Action Menu</span> appears last, so place the button before that. The <span class="window_name">Toolbar Button Editor</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Optional. Select an icon from the <span class="window_name">Image</span> list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <b>Save</b>. The <span class="window_name">Toolbar Button Editor</span> window closes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <b>Save</b>. The <span class="window_name">Toolbar Editor</span> window closes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">From the <span class="window_name">Child Panels</span> area, click <b>Activity History</b>. The <span class="window_name">Form Selection</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">For <span class="window_name">Journal.RemoteControlSession</span> choose <b>JournalRemoteControlSession</b>. This associates a form with the activity history.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="The_Form_Selection_Window"><a name="The_Form_Selection_Window" data-mc-generated-bookmark="ListOf"></a>The Form Selection Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/form_selection.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="408" data-mc-height="365" src="../../resources/images/form_selection_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <b>OK</b> to close the <span class="window_name">Form Selection</span> window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <p class="Body">Repeat this procedure for each layout you want to use.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remote Control Session</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can view the session information from the <span class="window_name">Remote Control Session</span> workspace in the Service Desk console, including the client URL, and start and end times.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Remote_Control_Session_Workspace"><a name="Remote_Control_Session_Workspace" data-mc-generated-bookmark="ListOf"></a>Remote Control Session Workspace</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/remote_control_session.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="803" data-mc-height="497" src="../../resources/images/remote_control_session_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remote Control Interface</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Session object - maintain information about the session.</h4>
+                    <ul>
+                        <li value="1">Select the Session Object tab within the Remote window to view session information, such as duration and tenant link.</li>
+                    </ul>
+                    <h4 class="subheading">Control bar</h4>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Starting a remote session</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">
+                    Within the Incident workspace, 
+                    The service desk operator selects the <span class="window_name">Start Remote</span> quick action, and a session is opened. The operator now waits for the user to respond. select the <span class="window_name">Start Remote</span>  quick action, and a session is opened. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The quick action sends and email to the customer that contains a link to the session.</p>
+                    <p class="Body_indent">Wait for the user to respond. This might take a couple of minutes.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2."> The customer clicks the link, and clicks Yes to any confirmation boxes that appear to allow the session to connect.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Connection might take a couple of minutes.</p>
+                    <p class="Body_indent">The operator can now access the customer desktop.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Remote_Control_Workspace"><a name="Remote_Control_Workspace" data-mc-generated-bookmark="ListOf"></a>Remote Control Workspace</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/remote_window.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="374" src="../../resources/images/remote_window_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/start_remote_control.htm">Start Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/stop_remote_control.htm">Stop Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/sync_remote_control_session.htm">Sync Remote Control Session</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

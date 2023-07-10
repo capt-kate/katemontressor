@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email|Email Servers">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating an Inbox</title>
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/inbox_configuration.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email_configuration.htm">Email Servers</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Creating an Inbox</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Creating_an_Inbox"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Creating_an_Inbox" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor641"></a><a name="top"></a>Creating an Inbox</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create an Inbox</a><a name="email_config_3911985154_1229107"></a><a name="To_create_an_Inbox"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The default inbox (based on the incident business object) does not need to be created; however, you can create inboxes based on other business objects. If you want to process emails from other business objects, you must create an inbox for each business object. You must define a template for each business object so users can submit emails in the correct format. </p>
+                    <p class="Body">It is best to create new inboxes for other business objects after you modify the default inbox.</p>
+                    <p class="Body">You can use the email listener to process incoming messages and create records associated with specific business objects.</p>
+                    <p class="Body">After an incident record is created (or updated), the email is attached to the record (in the <span class="window_name">Activity History</span> tab) and is moved from the inbox folder to the archived folder (for IMAP, the email is deleted after processing).</p>
+                    <p class="Body">If a user exists or is created, the associated email is added to the user's Profile.Employee record.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator and open the <span class="window_name">Email Config</span> workspace. The <span class="window_name">Outgoing Server</span> and <span class="window_name">Incoming Server</span> parameters appear.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the Service Desk Console, open the <span class="window_name">Email Configuration</span> workspace and click the default record link under the <span class="window_name">Mail Host</span> column. The <span class="window_name">Tenant Email Configuration</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the <span class="window_name">Inbox</span> tab at the bottom of the page, click <span class="Bold">New</span>. The <span class="window_name">New Inbox</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Inbox_Configuration_Window"><a name="Inbox_Configuration_Window" data-mc-generated-bookmark="ListOf"></a>Inbox Configuration Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inbox_configuration_window.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="956" data-mc-height="643" src="../../resources/images/inbox_configuration_window_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="168px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="512px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                       Parameter
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                        Description
+                                    </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Address
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The email address used by users.
+For example, info@saasitdemo.com.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Host
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The hostname or group that handles emails from the email address.
+
+                                         For example, pop.emailsvr.com.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Port
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The corresponding port number for the selected protocol. The default email port for POP3 is port 110 and the default port for IMAP is port 143.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Protocol
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       The protocol used to retrieve emails. The options are POP3 and IMAP.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Authentication
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The authentication method for incoming messages.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        User Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The user name required to access the inbox on the email server. Usually the same as the address.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Password
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The password required to access the inbox in the email server.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Use TLS
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Enables TLS security for incoming messages.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Enable Email Listener
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Enables email configuration for the business object.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Business Object
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       The business object created from the email. The default creates an incident business object, but you can also select problem or other.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Create Incident on Error
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Creates an incident record when an error occurs in generating the record from an email (regardless of the business object specified). <br />                                        Fields in the <span class="window_name">Incident and Task Creation</span> section appear when this option is selected.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Archive Mailbox Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Appears when the IMAP protocol is selected. A directory for storing archived or processed emails.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Inbox Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the IMAP protocol is selected. A directory for incoming emails. When an email is processed, the business object record is created or updated. If the email is incorrectly configured, it is moved from the Inbox folder to the archive folder.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Ignore Cc Bcc Emails</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Ignores emails addressed to this inbox when the email address is only in the CC or BCC fields. These emails are not processed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Default Domain</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A default domain.</p>
+                                            <p>Incoming emails without a domain might not process correctly. Use the default domain to construct a valid address, enabling emails to process as normal, including creating incident records.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Include Source Mailbox Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Includes the name of the source mailbox in the <span class="window_name">From</span> field. When checked, the <span class="window_name">CreatedBy</span> field in an incident stores the processing mailbox name (such as '<span class="Type">Email Service - dev-stg-32@saasitdemo.com</span>';
+If  unchecked, the <span class="window_name">CreatedBy</span> field has the value <span class="Bold">Email Listener</span>. This enables you to determine which mailbox generated the incident.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Incident or Task owner team
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the <span class="window_name">Incident</span> business object is selected. The team to which incidents generated from email errors are assigned.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Create new Task for every email
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the <span class="window_name">Incident</span> business object is selected.  Creates a task record for the incident record. This task record appears in the <span class="window_name">Tasks</span> tab of the incident record.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        New task subject
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the <span class="window_name">Incident</span> business object is selected.  The default text for every task email.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Create or Link to an Employee or External Contact
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Creates an employee record (if the employee is not in the system) or link to an employee record.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Contact Type</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Appears when <span class="window_name">Create or Link to an Employee or External Contact</span>
+is checked. Choose from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Create an Object Related to Incident</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Appears when the <span class="window_name">Incident</span> business object is selected and <span class="window_name">Create or Link to an Employee or External Contact</span>
+is not checked. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Match the email address "from" value</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Appears when the <span class="window_name">Incident</span> business object is selected and <span class="window_name">Create or Link to an Employee or External Contact</span>
+is not checked. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">related object field value</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Appears when the <span class="window_name">Incident</span> business object is selected and <span class="window_name">Create or Link to an Employee or External Contact</span>
+is not checked. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Record Marker
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Appears when the <span class="window_name">Problem</span> or <span class="window_name">Other</span> business object is selected. Enter a valid marker value that separates multiple record information within an email. 
+                                        <p>For example, if you enter # as a record marker, information in the email body preceding the # sign creates one record and information after the # sign creates another record. When inserted in a message body, this record marker (for example, a # symbol) allows multiple records to be created from the body of a single message. See Note below.</p></td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Field Value Separator
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Appears when the <span class="window_name">Problem</span> or <span class="window_name">Other</span> business object is selected. Enter a valid character that separates the field name from the field value. 
+                                        <p>For example, if you enter $ as a field separator value, <span class="Emphasis">Summary$&lt;summary field information&gt;</span> populates the Summary field with the field information. See Note below.</p></td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Name
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the <span class="window_name">Other</span> business object is selected. The name of the business object. For example, change or Knowledge.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Unique Key
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Appears when the <span class="window_name">Other</span> business object is selected. Enter a value that identifies this business object. 
+                                        <p>Unique keys are used when the user updates existing records via email. </p><p>Match the value you enter in this field with the Display field value for the business object on the Object Details tab (found on the Configuration Console). For example, the default unique key for change is <span class="Emphasis">ChangeNumber</span> and the default unique key for Knowledge is <span class="Emphasis">KnowledgeNumber</span>.</p></td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Create Email When No Target BO</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Appears when the <span class="window_name">Other</span> business object is selected. Check this option to send an email when no target business object is found.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">You must provide users with email templates of the business objects for the values entered in the Record Marker and Field Value Separator fields to work.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Field Mapping</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can map certain fields to appear in an email.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Select the <span class="window_name">Field Mapping</span> tab, then click <span class="Bold">New Tenant Email Mailbox Mapping.</span> The <span class="window_name">Tenant Email Mailbox Mapping</span> window appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter the field   that you want to map. </td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Map Field</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the field   you want to map. For example, PrimaryEmail.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Map Value</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The value   you want the field to contain. For example, @From:</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Field Mapping Values</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table style="caption-side: top;mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 488px;" cellspacing="0" class="TableStyle-ParameterTable">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                                    <p>Map Field</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                                    <p>Map Value</p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>FRS_Knowledge Type</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Document</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Title</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>@Subject</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Details</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>@Body</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Collection </p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>IT Knowledge</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Category</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Mobile</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>Keywords</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>@From</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                                    <p>Status</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                                    <p>Draft</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Tokens for Field Values</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                                        <col width="179px" class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col width="488px" class="TableStyle-ParameterTable-Column-Column2" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <td colspan="2" class="TableStyle-ParameterTable-HeadD-Column1-Header1">
+                                                    <p>Tokens for field values</p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@From</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>From email address</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@To[N]</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>To email address nth value</p>
+                                                    <p>Indexing starts from 1, so the first email recipient is addressed as <span class="fixedwidth">@to[1]</span>. If the index is missing, then just the @to is used or the first recipient is less than 1 (or, <span class="fixedwidth">@to[0]</span>).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@CC[N]</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>CC email address nth value</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@FirstName</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>From email first name</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@LastName</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>From email last name</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                                    <p>@Subject</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                                    <p>Email subject</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                                    <p>@Body</p>
+                                                </td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                                    <p>Email body</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 78px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">Click <span class="Bold">Save</span>. </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Status Mapping</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Select the <span class="window_name">Status Mapping</span> tab, then click <span class="Bold">New Tenant Email Status Mapping.</span> The <span class="window_name">Tenant Email Status Mapping</span> window appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information. </td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1">
+                                </col>
+                                <col class="TableStyle-ParameterTable-Column-Column2">
+                                </col>
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Current Status</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The current status that you want to trigger the quick action.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Quick Action</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the quick action to be executed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Enabled</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enables this status mapping record. If not checked,  the default status handling logic is in effect.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>. </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span> to create an inbox.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The new inbox is listed on the <span class="window_name">Inbox</span> workspace. </p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Other Email Tabs</a><a name="Other_Email_tabs"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Trusted Sender Domain Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can manage lists of trusted domains where incoming messages originate.</p>
+                                    <p class="Body">A trusted domain is one that your organization expects a certain level of security of information and allows receiving of emails. Only domains that you place on the trusted domain list can expect you to receive their emails.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">Trusted Sender Domain</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New Trusted Sender Domain</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_Trusted_Sender_Domain_Window"><a name="New_Trusted_Sender_Domain_Window" data-mc-generated-bookmark="ListOf"></a>New Trusted Sender Domain Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/trusted_sender_domain.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="590" data-mc-height="249" src="../../resources/images/trusted_sender_domain_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Domain Name</span> field, enter a valid domain name or enter <span class="fixedwidth">*</span> to accept emails from all domain.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The domain appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Truncate Body Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can truncate (trim) a message body to remove reply content.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">Truncate Body</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New Truncate Body Rule</span> window appears. </td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_Truncate_Body_Rule_Window"><a name="New_Truncate_Body_Rule_Window" data-mc-generated-bookmark="ListOf"></a>New Truncate Body Rule Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/truncate_body_rule.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="577" data-mc-height="250" src="../../resources/images/truncate_body_rule_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Body Line</span> field, enter the text to appear in the body of a message.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The body line appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Task Assignment Status Keyword Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can manage lists of status keywords for task assignments. Upon receiving a task assignment notification, the assignee can respond to the assignment by entering any default keywords.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">Task Assignment Status Keyword</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New Task Assignment Status Keyword</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_Task_Assignment_Status_Keyword_Window"><a name="New_Task_Assignment_Status_Keyword_Window" data-mc-generated-bookmark="ListOf"></a>New Task Assignment Status Keyword Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/task_assignment_status_keyword.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="613" data-mc-height="265" src="../../resources/images/task_assignment_status_keyword_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                                        </tr>
+                                    </table>
+                                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');mc-caption-repeat: false;" class="TableStyle-ParameterTable" cellspacing="0">
+                                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Task Assignment Status</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A task status. Select from the drop-down list.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Status Keyword</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                        Enter a keyword assigned to this status. 
+                                        <p>For example, if you choose accepted in the <span class="window_name">Task Assignment Status</span> field and enter the matching keyword accepted in this field, the task status sets to accepted when the task assignee enters accepted in the email subject line.</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The task assignment status appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />FRS Approval Status Keyword Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body"> You can manage lists of status keywords for approval status changes. Upon receiving an approval notification, the approver can respond by entering any of the default keywords. By default, the approver can enter approved in the email subject line to set the approval request to approved or enter denied to set the approval request to denied.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">FRS Approval Status Keyword</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New FRS Approval Status Keyword</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_FRS_Approval_Status_Keyword_Window"><a name="New_FRS_Approval_Status_Keyword_Window" data-mc-generated-bookmark="ListOf"></a>New FRS Approval Status Keyword Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/frs_approval_status_keyword.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="673" data-mc-height="277" src="../../resources/images/frs_approval_status_keyword_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                                        </tr>
+                                    </table>
+                                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');mc-caption-repeat: false;" class="TableStyle-ParameterTable" cellspacing="0">
+                                        <col class="TableStyle-ParameterTable-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-ParameterTable-Column-Column2">
+                                        </col>
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">FRS Approval Status</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Approval status. Select from the drop-down list.</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Status Keyword</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">A keyword assigned to this status. 
+                                        <p>For example, if you select <span class="Emphasis">Approved </span>in the <span class="window_name">FRS Approval Status</span> field and enter the matching keyword <span class="Emphasis">Approved </span>in this field, the approval record sets to <span class="Emphasis">Approved </span>when the approver enters <span class="window_name">Approved</span> in the email subject line.</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The Approval status appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Ignore Message with Subject Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can manage lists of subject lines which can be ignored in an incoming message. This can help manage incoming messages by filtering out automated messages such as auto-replies.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="Bold">Ignore message with subject</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New Tenant Email Subject Line</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_Tenant_Email_Subject_Line_Window"><a name="New_Tenant_Email_Subject_Line_Window" data-mc-generated-bookmark="ListOf"></a>New Tenant Email Subject Line Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tenant_email_subject_line.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="647" data-mc-height="256" src="../../resources/images/tenant_email_subject_line_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Subject Line</span> field, enter the subject line that you want to use.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The subject line appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Delivery Failure Notification Tab</a><a name="Delivery_failure_notification_tab"></a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can manage lists of delivery failure messages that can be ignored in an incoming message. This can help manage incoming messages by filtering out certain automated messages. A best practice is to always use this feature.</p>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                                        <col class="TableStyle-Note_Warning-Column-Column1" />
+                                        <col class="TableStyle-Note_Warning-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/warning48_normal.png" alt="" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">
+                                                    <p>Not defining a keyword here could cause the system to send excessive emails. For example, if your inbox receives a "Delivery Failure" email, a new incident is created and a new notification is sent. This notification causes another "Delivery Failure" email, causing an infinite loop. </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">Delivery Failure Notification</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">New Tenant Email Subject Line</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="New_Tenant_Email_Subject_Line_Window_..13"><a name="New_Tenant_Email_Subject_Line_Window_..13" data-mc-generated-bookmark="ListOf"></a>New Tenant Email Subject Line Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tenant_email_subject_line.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="647" data-mc-height="256" src="../../resources/images/tenant_email_subject_line_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Subject Line</span> field, enter the subject line that you want to use.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The subject line appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Object Name Mapping Tab</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">You can evaluate an email to determine if it should update an existing record or create a new record, based on additional data in the subject line. This process maps a custom pattern in the subject line of an email, then attaches the email to a specific business object. For example, the default pattern (such as Incident#incident_subject) tells the system to create an incident business object from this email and attach the email to the new record. However, you can create a custom pattern that does the same thing (such as CodeIncident). The custom mapped part of the subject string (in this example, "Code") triggers this behavior.</p>
+                                    <p class="Body">The feature only processes emails based on the subject line, and does not affect other behaviors. For example, you  can only create or modify the record of the business object configured for the inbox.  If the email listener is set to manage incidents, you cannot  modify change records.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the <span class="window_name">Tenant Email Configuration</span> page, select the <span class="window_name">Object Name Mapping</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent"><span class="Emphasis">OR</span>
+                                    </p>
+                                    <p class="Body_indent">From the Service Desk Console, open the <span class="window_name">Object Name Mapping</span> workspace.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the tab toolbar, click <span class="Bold">New</span>. The <span class="window_name">Email Object Name Mapping</span> window appears.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                                        </tr>
+                                    </table>
+                                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                                        <div class="MCDropDownBody dropDownBody">
+                                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                                <thead>
+                                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject Pattern</td>
+                                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The pattern that triggers the mapping behavior. For example, if you designate CAT as a pattern, then every email containing a subject starting with "CAT" is mapped to the business object defined for the inbox.</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Business Object</td>
+                                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The designated object to be appended to the subject line, such as incident. </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <p class="fig_title" data-mc-xref-target-name="Email_Object_Name_Mapping_Window"><a name="Email_Object_Name_Mapping_Window" data-mc-generated-bookmark="ListOf"></a>Email Object Name Mapping Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_object_name_mapping.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="540" data-mc-height="317" src="../../resources/images/email_object_name_mapping_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>. The pattern appears on the list.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body">Create the desired mapping record (such as CAT and incident), to activate the new behavior.</p>
+                                    <p class="Body">When an email is received, the email listener evaluates the subject. If the subject contains the mapped value, the object is updated. If the subject value does not match, the object is processed as normal.</p>
+                                    <p class="Body">For example, say you have two inboxes: one to process incidents and one to process other business objects. Also, you have set up email object name mapping as follows:</p>
+                                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Subject pattern</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Business object</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CAT</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Incident</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">DOG</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Change</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Body">An email arrives with the subject line <span class="window_name">CAT# 1234</span>.</p>
+                                    <ul>
+                                        <li value="1">The email listener sees the hashtag (#), and the keyword CAT is identified.</li>
+                                        <li value="2"><span class="Type">CAT</span> tells the system that this is an incident record (as defined in the mapping).</li>
+                                        <li value="3"><span class="Type">1234</span> identifies the business object ID.</li>
+                                        <li value="4"> The email is sent to the incident inbox and processed. If it matches an existing record, the record is updated. If it does not match, a new record is created.</li>
+                                    </ul>
+                                    <p class="Body">Another email arrives with the subject line <span class="window_name">DOG# 9876</span>.</p>
+                                    <ul>
+                                        <li value="1">The email listener sees the hashtag (#), and the keyword DOG is identified.</li>
+                                        <li value="2"><span class="Type">DOG</span> tells the system that this is an change record (as defined in the mapping).</li>
+                                        <li value="3"><span class="Type">9876</span> identifies the business object ID. </li>
+                                        <li value="4">The email is sent to the other business object inbox and processed. See <a href="#How_can_I_add_an_Inbox_that_creates_any_business_object" class="MCXref xref">Add an Inbox that Creates any Business Object</a>.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Modify an Inbox</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">All inbox settings can be modified, even the default inbox. You can modify an inbox to create records from many business objects.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Service Desk Console, open the <span class="window_name">Inbox</span> workspace. The list of inboxes appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the inbox that you want to modify. The <span class="window_name">Inbox Configuration</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="The_Inbox_Configuration_Window"><a name="The_Inbox_Configuration_Window" data-mc-generated-bookmark="ListOf"></a>The Inbox Configuration Window</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inbox_configuration_window.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="956" data-mc-height="643" src="../../resources/images/inbox_configuration_window_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Edit the fields as needed. For more information on each field, see <a href="#To_create_an_Inbox" class="MCXref xref">Create an Inbox</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Delete an Inbox</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">Use caution when deleting the default inbox, as this might cause you to permanently lose all of the emails in the system.
+							
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Email Configuration</span> workspace, click the record link that you want under the <span class="window_name">Mail Host</span> column.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="window_name">Inbox</span> tab, select the address that you want to delete, then click <span class="Bold">Delete</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Deleting_an_Inbox"><a name="Deleting_an_Inbox" data-mc-generated-bookmark="ListOf"></a>Deleting an Inbox</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inbox_delete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="649" data-mc-height="200" src="../../resources/images/inbox_delete_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The delete confirmation window appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Yes</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Default Email (Incident) Configuration</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The default record is used to allow users to create incidents in <span class="notranslate"><b>HEAT</b></span> from their client email.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Email Configuration</span> workspace, click the default record link under the <span class="window_name">Mail Host</span> column.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="window_name">Inbox</span> tab at the bottom of the page, click the default record link under the <span class="window_name">Address</span> column. The default configuration page appears.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Add an Inbox that Creates any Business Object</a><a name="How_can_I_add_an_Inbox_that_creates_any_business_object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create a generic inbox that enables you to create or update any business object. Basically, you create an inbox and define the business object type as <span class="window_name">Other</span>. You can define field and value pairs in the body of the email that tells the email listener what to do.</p>
+                    <p class="Body">Use a configurable <span class="window_name">Field Value</span> separator to separate <span class="window_name">Key</span> and <span class="window_name">Value</span>.</p>
+                    <p class="Body">Use a configurable <span class="window_name">Record Marker</span> to allow multiple records within a single email.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator and open the <span class="window_name">Email Config</span> workspace. The mailbox configuration appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the mail host record. The <span class="window_name">Email Configuration</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the <span class="window_name">Inbox</span> tab, click <span class="Bold">New</span>. A blank <span class="window_name">Inbox Configuration</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information into the fields. See <a href="#email_config_3911985154_1229107" class="MCXref xref">Create an Inbox</a> above.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">For <span class="window_name">business object</span>, choose <span class="Bold">Other</span>.</li>
+                            <li value="2">For <span class="window_name">Name</span>, choose a key value from the drop-down list, such as <span class="Bold">Incident</span>.</li>
+                            <li value="3">For <span class="window_name">Unique Key</span>, choose the field to identify the unique record, such as <span class="Bold">IncidentNumber</span>.</li>
+                            <li value="4">For <span class="window_name">Record Marker</span>, enter a valid marker value that separates multiple record information within an email. For example, if you enter # as a record marker, information in the email body preceding the # sign creates one record and information after the # sign creates another record. When inserted in a message body, this record marker (for example, a # symbol) allows multiple records to be created from the body of a single message. </li>
+                        </ul>
+                    </div>
+                    <p class="fig_title" data-mc-xref-target-name="Inbox_that_Creates_an_Incident"><a name="Inbox_that_Creates_an_Incident" data-mc-generated-bookmark="ListOf"></a>Inbox that Creates an Incident</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inbox_other.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="904" data-mc-height="389" src="../../resources/images/inbox_other_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">Given the incident mailbox above, "Summary$Test incident creation"' simply means storing "Test incident creation" in the <span class="window_name">Summary</span> field. ITo create a new incident, all mandatory fields need to be provided in the email body.</p>
+                    <p class="Body">The following email results in the creation of an incident record.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Email_Sent_when_an_Incident_is_Created"><a name="Sample_Email_Sent_when_an_Incident_is_Created" data-mc-generated-bookmark="ListOf"></a>Sample Email Sent when an Incident is Created</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_example.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="510" data-mc-height="281" src="../../resources/images/email_example_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Create Multiple Incidents</h4>
+                    <p class="Body">The following email results in the creation of two incidents. Note the use of the record marker "^" in the email body.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Email_Sent_when_Multiple_Incidents_are_Created"><a name="Sample_Email_Sent_when_Multiple_Incidents_are_Created" data-mc-generated-bookmark="ListOf"></a>Sample Email Sent when Multiple Incidents are Created</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_example_multiple.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="595" data-mc-height="399" src="../../resources/images/email_example_multiple_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Update Records</h4>
+                    <p class="Body">An incident can be updated using the regular business object type "incident" and status mapping.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Email_Updating_an_Incident"><a name="Sample_Email_Updating_an_Incident" data-mc-generated-bookmark="ListOf"></a>Sample Email Updating an Incident</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_update.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="231" data-mc-height="99" src="../../resources/images/email_update_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">Or as an alternative, incidents can be updated using business object type "other" with detailed field values. The email configuration is the same as shown above. The following email updates two incident records. Note that the field called IncidentNumber is configured in the mailbox configuration section.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Email_Updating_an_Other_Business_Object"><a name="Sample_Email_Updating_an_Other_Business_Object" data-mc-generated-bookmark="ListOf"></a>Sample Email Updating an Other Business Object</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_update_other.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="465" data-mc-height="215" src="../../resources/images/email_update_other_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="email_configuration.htm">Email Servers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="outbox_configuration.htm">Creating an Outbox</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="email.htm">Setting Up Email</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="create_or_link_objects_by_email.htm">Create or Link Objects via Email</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="send_an_email_with_an_image.htm">Send an Email with an Image</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="email_examples.htm">Email Examples</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="process_an_email_based_on_incident_status.htm">Process an Email Based on Incident Status</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="update_a_service_via_email.htm">Update a Service Request via Email</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_email.htm">Using Email</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="the_address_book.htm">The Address Book</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="email_processing.htm">Email Processing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_email_notificati.htm">Default Email Notifications</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,278 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: Note_Warning;
+	border-collapse: separate;
+	border-left-style: dashed;
+	border-left-width: 1px;
+	border-left-color: #ff0000;
+	border-right-style: dashed;
+	border-right-width: 1px;
+	border-right-color: #ff0000;
+	border-top-style: dashed;
+	border-top-width: 1px;
+	border-top-color: #ff0000;
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+	border-bottom-color: #ff0000;
+	max-id: 7;
+	margin-left: 80px;
+	background-color: #ffffff;
+	mc-hide-bottom-ruling: false;
+	margin-top: 20px;
+	cell-padding-left: 5px;
+	cell-padding-right: 5px;
+	cell-padding-top: 5px;
+	cell-padding-bottom: 5px;
+	margin-right: 80px;
+	margin-bottom: 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	overflow: hidden;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Column1;
+	id: 0;
+	font-family: Arial;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position-x: 15;
+	background-position-y: 15;
+	size: 55px;
+	cell-padding-left: 5px;
+	cell-padding-right: 10px;
+	cell-padding-top: 5px;
+	cell-padding-bottom: 5px;
+	vertical-align: top;
+	text-align: center;
+	font-size: 1px;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 4;
+	name: Column2;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 11pt;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Header1;
+	id: 2;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	id: 6;
+	name: Body2;
+	vertical-align: top;
+	cell-padding-top: 5px;
+	cell-padding-bottom: 5px;
+	text-align: left;
+	color: #ff0000;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Footer1;
+	id: 3;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-Note_Warning
+{
+	border-collapse: separate;
+	mc-hide-bottom-ruling: false;
+	overflow: hidden;
+	background-color: #ffffff;
+	border-left-style: dashed;
+	border-left-color: #ff0000;
+	border-left-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #ff0000;
+	border-right-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #ff0000;
+	border-top-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #ff0000;
+	border-bottom-width: 1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-Note_Warning-Column-Column1
+{
+	width: 55px;
+}
+
+.TableStyle-Note_Warning-Column-Column2
+{
+	
+}
+
+.TableStyle-Note_Warning-Head-Header1
+{
+	
+}
+
+.TableStyle-Note_Warning-HeadI-Column1-Header1
+{
+	font-family: Arial;
+	font-size: 1px;
+	text-align: center;
+	vertical-align: top;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position-x: 15;
+	background-position-y: 15;
+	padding-left: 5px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.TableStyle-Note_Warning-HeadI-Column1-Header1 p
+{
+	font-family: Arial;
+	font-size: 1px;
+}
+
+.TableStyle-Note_Warning-HeadE-Column1-Header1
+{
+	font-family: Arial;
+	font-size: 1px;
+	text-align: center;
+	vertical-align: top;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position-x: 15;
+	background-position-y: 15;
+	padding-left: 5px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Note_Warning-HeadE-Column1-Header1 p
+{
+	font-family: Arial;
+	font-size: 1px;
+}
+
+.TableStyle-Note_Warning-HeadF-Column1-Header1
+{
+	font-family: Arial;
+	font-size: 1px;
+	text-align: center;
+	vertical-align: top;
+	b4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{5a9125b7-f367-4924-ace2-0803a4a3a471}\0005" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{5a9125b7-f367-4924-ace2-0803a4a3a471}\0005 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{5a9125b7-f367-4924-ace2-0803a4a3a471}\0006" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{5a9125b7-f367-4924-ace2-0803a4a3a471}\0006 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{624f56de-fd24-473e-814a-de40aacaed16}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{624f56de-fd24-473e-814a-de40aacaed16}\0003" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{624f56de-fd24-473e-814a-de40aacaed16}\0003 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{74e4357a-7959-47a4-a8b2-feb2ffd48427}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{74e4357a-7959-47a4-a8b2-feb2ffd48427}\0002" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{74e4357a-7959-47a4-a8b2-feb2ffd48427}\0002 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{83da6326-97a6-4088-9453-a1923f573b29}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{83da6326-97a6-4088-9453-a1923f573b29}\0003" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{83da6326-97a6-4088-9453-a1923f573b29}\0003 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{840b8171-b0ad-410f-8581-cccc0382cfef}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{840b8171-b0ad-410f-8581-cccc0382cfef}\0000" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{840b8171-b0ad-410f-8581-cccc0382cfef}\0000 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{8943b373-388c-4395-b557-bc6dbaffafdb}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{8943b373-388c-4395-b557-bc6dbaffafdb}\0002" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{8943b373-388c-4395-b557-bc6dbaffafdb}\0002 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9637b4b9-11ee-4c35-b43c-7b2452c993cc}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9637b4b9-11ee-4c35-b43c-7b2452c993cc}\0001" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9637b4b9-11ee-4c35-b43c-7b2452c993cc}\0001 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9a82a7db-3ebb-41b4-83ba-18b7311718fc}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9a82a7db-3ebb-41b4-83ba-18b7311718fc}\0001" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{9a82a7db-3ebb-41b4-83ba-18b7311718fc}\0001 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{a2a3fff4-353f-407c-9d86-1f9dc7d5a606}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{a2a3fff4-353f-407c-9d86-1f9dc7d5a606}\0002" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{a2a3fff4-353f-407c-9d86-1f9dc7d5a606}\0002 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0000" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0000 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0002" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0002 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0006" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0006 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\000F" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\000F []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0018" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\0018 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\001B" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{b3f8fa53-0004-438e-9003-51a46e139bfc}\001B []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{d43fe3a9-cfdb-4627-b0e6-6db276b8e5db}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{d43fe3a9-cfdb-4627-b0e6-6db276b8e5db}\0000" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{d43fe3a9-cfdb-4627-b0e6-6db276b8e5db}\0000 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{e4870e26-3cc5-4cd2-ba46-ca0a9a70ed04}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{e4870e26-3cc5-4cd2-ba46-ca0a9a70ed04}\0000" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{e4870e26-3cc5-4cd2-ba46-ca0a9a70ed04}\0000 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{e4870e26-3cc5-4cd2-ba46-ca0a9a70ed04}\0001" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{e4870e26-3cc5-4cd2-ba46-ca0a9a70ed04}\0001 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{f19f064d-082c-4e27-bc73-6882a1bb8e4c}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{f19f064d-082c-4e27-bc73-6882a1bb8e4c}\0000" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{f19f064d-082c-4e27-bc73-6882a1bb8e4c}\0000 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{fb1de864-e06d-47f4-82a6-8a0aef44493c}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{fb1de864-e06d-47f4-82a6-8a0aef44493c}\0002" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Interfaces\{2eef81be-33fa-4800-9670-1cd474972c3f}\Properties\{fb1de864-e06d-47f4-82a6-8a0aef44493c}\0002 []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Properties" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Properties\{a45c254e-df1c-4efd-8020-67d146a850e0}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Properties\{a45c254e-df1c-4efd-8020-67d146a850e0}\000E" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MMDEVAPI\{0.0.1.00000000}.{fc0687e9-5e4a-4322-8331-f344bc650c76}\Properties\{a45c254e-df1c-4efd-8020-67d146a850e0}\000E []" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [CompatibleIds]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [Capabilities]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [BusDeviceDesc]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [ClassGuid]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [DriverInfName]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [MatchingDeviceId]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a} [Present]" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a}\Properties" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setup\Upgrade\PnP\CurrentControlSet\Control\DeviceMigration\Devices\SWD\MSDAS\{ce958e9a-424f-4c88-86f4-11314821e75a}\Properties\{a45c254e-df1c-4efd-8020-67d146a850e0}" SimObj="false" Success="true"/>
+			<Operation Name="Store" Type="Registry" Path="HKLM\SYSTEM\Setu

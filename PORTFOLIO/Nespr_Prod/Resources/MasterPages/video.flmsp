@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="832" MadCap:lastWidth="829" MadCap:conditions="LinkedProjects.FilesForImport">
+    <head>
+        <script type="text/javascript" src="../Scripts/Move Menus.js">
+        </script>
+        <script type="text/javascript" src="../Scripts/AddThumbnailSection.js">
+        </script>
+        <script type="text/javascript" src="../Scripts/moonshadow.js">
+        </script>
+        <script type="text/javascript" src="../Scripts/show-me.js">
+        </script>
+        <script src="https://use.fontawesome.com/ba3148e12f.js">
+        </script>
+    </head>
+    <body>
+        <script MadCap:conditions="Default.ProdOnly">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-82924924-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+        <section class="top-banner">
+            <MadCap:snippetBlock src="../Snippets/shared/preprod-banner-default.flsnp" />
+            <MadCap:snippetBlock src="../Snippets/shared/default-page-banner.flsnp" />
+        </section>
+        <div class="pane">
+            <div class="row">
+                <div class="small-12 medium-9 columns">
+                    <MadCap:snippetBlock src="../Snippets/shared/breadcrumbs.flsnp" />
+                    <MadCap:bodyProxy />
+                    <div class="VideoDescriptionBoxTab">
+                        <img src="../Images/shared/Kontiki_Logo.png" class="icon" style="margin-left: 0px; margin-right:5px;" />Featured User Videos
+					</div>
+                    <p>
+                        <img src="../Images/shared/Kontiki_Logo.png" class="drafticon" /> Want to see your own videos appear in this knowledge base? Upload them to <a href="https://nestle.mc.kontiki.com/global2/home" target="_blank" title="Kontiki" alt="Kontiki">Kontiki</a> and make sure to use the tag <span class="Field">"BSTPMRS"</span>!</p><a href="https://nestle.mc.kontiki.com/global2/search?q=bstpmrs&amp;type=co&amp;order=desc&amp;column=last" target="_blank" title="Featured User Videos on Kontiki" alt="Featured User Videos on Kontiki"><img src="../Images/shared/Kontiki_Logo.png" style="width: 100%;height: auto;padding-top: 5px;" /></a>
+                </div>
+                <div class="small-12 medium-3 columns" id="sidemenu">
+                    <MadCap:menuProxy style="mc-toc-depth: 1;mc-context-sensitive: True;mc-include-parent: True;mc-include-siblings: True;mc-include-children: True;" linked-toc="/Project/TOCs/Videos.fltoc" data-mc-skin="/Project/Skins/SideMenu.flskn" mc-linked-toc="/Project/TOCs/Videos.fltoc" />
+                </div>
+            </div>
+            <MadCap:snippetBlock src="../Snippets/shared/footer.flsnp" />
+        </div>
+        <script type="text/javascript">
+			$('#menu').click(function() {
+			$('.tab-bar').toggle();
+			});
+		</script>
+    </body>
+</html>

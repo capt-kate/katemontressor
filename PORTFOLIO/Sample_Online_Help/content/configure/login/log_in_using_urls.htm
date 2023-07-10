@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up User Login">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Logging In or Accessing Records Using URLs</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/login/log_in_using_urls.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="log_in.htm">Setting Up User Login</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Log in or Access Records Using URLs</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor697"></a>Logging In or Accessing Records Using URLs</h1>
+            <p class="Body">You can log into <span class="notranslate"><b>HEAT</b></span> by clicking a URL that has been sent to you via email, by pasting the link in the address field of a browser, or by clicking a link that has been embedded in your company web page. You can also log in the same way, by clicking URLs that take you to your authentication or identity provider page, and then log into <span class="notranslate"><b>HEAT</b></span> from there.</p>
+            <p class="Body">URLs not only take you to the <span class="notranslate"><b>HEAT</b></span> login page, but they can also log you in with a specified role, and take you to a specified object workspace and even a specified record in that object workspace.</p>
+            <p class="Body">You can also embed an URL in your intranet to access <span class="notranslate"><b>HEAT</b></span> with or without authentication. See <a href="anonymous_log_in.htm" class="MCXref xref">Anonymous Login</a>.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Syntax Definitions Used in the URLs</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In the use case examples, the URL syntax is as follows:</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col width="144px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="530px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Syntax</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="notranslate"><b>HEAT</b></span> URL</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>URL for your tenant to access <span class="notranslate"><b>HEAT</b></span>. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Provider Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Name of your identity provider as named in the authentication provider record. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Role</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Role with which you want the user to log in. In the examples provided, the roles are Self Service, Service Desk Manager, and Admin. &#160;Make sure to use the role name and not the corresponding display name. If the user does not exist in the system, the system creates the user according to the default role specified for the authentication provider.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Scope</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Name of the business object workspace that you want to access upon logging in. For example, in the examples provided, the object workspace is incident.</p>
+                                    <p>The scope defines which type of a user interface shall be accessed. Possible values for this include: object workspace and Self Service.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Object Type</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Table name referenced in the database, which in the examples provided is incident. Possible values include: incident, problem, and change.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Command ID</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Either Load Record or search. </p>
+                                    <p class="list_table">Rec ID is used in the <span class="window_name">Load Record</span> option to take the user to the record identified by its record identifier. </p>
+                                    <p class="list_table">Search searches for a record or records with a specific value, which in the examples provided are by incident owner and incident summary. If there are multiple records that match the search criteria, then those records will appear in the list view.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CommandData</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Comma separated values, which can be</p>
+                                    <ul class="list_table">
+                                        <li value="1">Field Name, for example, the owner or subject (summary)</li>
+                                        <li value="2">Condition</li>
+                                        <li value="3">Condition Type</li>
+                                        <li value="4">Field Value</li>
+                                        <li value="5">Field Type</li>
+                                        <li value="6">Join Rule</li>
+                                        <li value="7">Object Id</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Condition</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Escaped string.</p>
+                                    <ul class="list_table">
+                                        <li value="1"><span class="fixedwidth">= </span>Equal to </li>
+                                        <li value="2"><span class="fixedwidth">!= </span>Not Equal to </li>
+                                        <li value="3"><span class="fixedwidth">&gt; </span>Greater than </li>
+                                        <li value="4"><span class="fixedwidth">&lt; </span>Less than </li>
+                                        <li value="5"><span class="fixedwidth">&gt;= </span> Greater or Equal </li>
+                                        <li value="6"><span class="fixedwidth">&lt;= </span> Less or Equal </li>
+                                        <li value="7"><span class="fixedwidth">-&gt; </span>Begin with </li>
+                                        <li value="8"><span class="fixedwidth">{} </span> Contains </li>
+                                        <li value="9"><span class="fixedwidth">!{} </span> Does Not Contain </li>
+                                        <li value="10"><span class="fixedwidth">0 </span> Is Empty </li>
+                                        <li value="11"><span class="fixedwidth">!0 </span> Is Not Empty</li>
+                                        <li value="12"><span class="fixedwidth">() </span> In List</li>
+                                        <li value="13"><span class="fixedwidth">!() </span> Not In list</li>
+                                        <li value="14"><span class="fixedwidth">&gt;&lt; </span> In range</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ConditionType</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>By field = 0</p>
+                                    <p>By text = 1</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>JoinRule</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>AND, OR</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Escaped condition strings</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p class="list_table">escape('=') "%3D"</p>
+                                    <p class="list_table">escape('&gt;') "%3E"</p>
+                                    <p class="list_table">escape('&lt;') "%3C"</p>
+                                    <p class="list_table">escape('=') "%3D"</p>
+                                    <p class="list_table">escape('!=') "%21%3D"</p>
+                                    <p class="list_table">escape('&gt;') "%3E"</p>
+                                    <p class="list_table">escape('&lt;') "%3C"</p>
+                                    <p class="list_table">escape('&gt;=') "%3E%3D"</p>
+                                    <p class="list_table">escape('&lt;=') "%3C%3D"</p>
+                                    <p class="list_table">escape('-&gt;') "-%3E"</p>
+                                    <p class="list_table">escape('{}') "%7B%7D"</p>
+                                    <p class="list_table">escape('!{}') "%21%7B%7D"</p>
+                                    <p class="list_table">escape('0') "0"</p>
+                                    <p class="list_table">escape('!0') "%210"</p>
+                                    <p class="list_table">escape('()') "%28%29"</p>
+                                    <p class="list_table">escape('!()') "%21%28%29"</p>
+                                    <p class="list_table">escape('&gt;&lt;') "%3E%3C"</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Logging In Using Authentication URLs</a><a name="Log_In_Using_Authentication_URLs"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After you have configured authentication providers in <span class="notranslate"><b>HEAT</b></span>, users can log into <span class="notranslate"><b>HEAT</b></span> in various ways.</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Logging In Via a Link to Your Identity Provider Page</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can log into <span class="notranslate"><b>HEAT</b></span> via your identity provider page using your external login authentication.</p>
+                            <p class="Body">If the user is not in the system, the system can create an employee record from a URL sent via email if you have selected autoprovisioning in the identity provider record configuration. The system creates the user in the specified role, team, and status that you set up in the autoprovisioning section of setting up identity providers. </p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                            <p>You must already have an account with the third-party identity provider, for example, Google, Yahoo, Okta, and so on. You must have set up the authentication provider in <span class="notranslate"><b>HEAT</b></span>, as described in <a href="../securitysettings/authentication_providers.htm#security_settings_1070403104_1181144" class="MCXref xref">Authentication Providers</a> &#160;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening a Specific Record in a Specific Workspace in a Specific Role</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />ProviderName=&lt;authentication provider record name&gt;<br />&amp;role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10647,string,AND|</p>
+                            <p class="Body">In this example, the system directs the user to the login page of the provider where the user is logged in as a Service Desk Manager. After logging in, the system redirects the user to the incident record that is referenced in the URL. If the user is not a Service Desk Manager, the system logs the user in as the default role specified in the autoprovisioning section of the authentication record.</p>
+                            <p class="Body">If you selected autoprovisioning for the provider record and the user does not have an employee record in <span class="notranslate"><b>HEAT</b></span>, the system creates the employee record according to the role, team, and status that you specified in the autoprovisioning section of the authentication record. </p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Accessing <span class="notranslate"><b>HEAT</b></span> via the Provider Login Page</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />ProviderName=&lt;authentication provider record name&gt;</p>
+                            <p class="Body">In this example, the user is redirected to the <span class="notranslate"><b>HEAT</b></span> home page from the identity provider page and is logged into <span class="notranslate"><b>HEAT</b></span> in the default role specified in the authentication record.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening a Specific Workspace in a Specific Role</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />ProviderName=&lt;authentication provider record name&gt;<br />&amp;role=SelfService<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Announcement%23<br />&amp;CommandData=Status,%3D,0,Published,string,AND|#</p>
+                            <p class="Body">In this example, the system redirects the user to the <span class="notranslate"><b>HEAT</b></span> home page from the identity provider page logs the user into <span class="notranslate"><b>HEAT</b></span> in the Self Service role. Self Service shows the <span class="window_name">Announcements</span> workspace with the published announcements.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening a Specific Record in a Specific Workspace in Self Service</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />ProviderName=&lt;authentication provider record name&gt;<br />&amp;Scope=SelfService<br />&amp;role=SelfService<br />&amp;CommandId=OpenMyItem<br />&amp;ItemType=Incident<br />&amp;ItemId=49C31F151AE8433797C12A867108D28E </p>
+                            <p class="Body">In this example, the system directs the user to the <span class="notranslate"><b>HEAT</b></span> home page from the identity provider page and logs the user into <span class="notranslate"><b>HEAT</b></span> in the Self Service role. Self Service shows the <span class="window_name">My Items</span> workspace with the incident record specified in the URL.</p>
+                            <p class="Body">To open the same record in Self Service using your identity provider, from a link sent via a <span class="window_name">Send Email</span> quick action or any link embedded in the quick action definition, use this syntax:</p>
+                            <p class="Code">$(ServerURL())/Login.aspx?<br />ProviderName=&lt;authentication provider record name&gt;<br />&amp;Scope=SelfService<br />&amp;role=SelfService<br />&amp;CommandId=OpenMyItem<br />&amp;ItemType=Incident<br />&amp;ItemId=$(RecId)</p>
+                            <p class="Body">Confirm access from your identity provider page.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Record</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Using a Template</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Code">Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=CreateRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ActionId%3D000b152e-ebf4-4c72-b230-5f4387b6a77d</p>
+                                    <p class="Body">Where <span class="fixedwidth">000b152e-ebf4-4c72-b230-5f4387b6a77d#1395882495489</span> is the unique ID of a template.</p>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Without a Template</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Code">Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=CreateRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=none</p>
+                                    <p class="Body">Where <span class="fixedwidth">none</span> is a dummy string.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Logging In Through Your Identity Provider Page</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                            <p>You must already have an account with the third-party identity provider, for example, Google, Yahoo, Okta, and so on. You must have set up the authentication provider in <span class="notranslate"><b>HEAT</b></span>, as described in <a href="../securitysettings/authentication_providers.htm#security_settings_1070403104_1181144" class="MCXref xref">Authentication Providers</a></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the  <span class="notranslate"><b>HEAT</b></span> login page. The links to the authentication providers you define appear.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the relevant provider link to go to the authentication provider login page (for example, Okta). The login page for your identity provider appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your login name for the authentication provider. <span class="notranslate"><b>HEAT</b></span> application appears, listing the roles assigned to you.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Sample_Login_Role_List"><a name="Sample_Login_Role_List" data-mc-generated-bookmark="ListOf"></a>Sample Login Role List</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_cloudselectroles.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="400" data-mc-height="376" src="../../resources/images/sso_cloudselectroles_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select a role and click <span class="Bold">Continue</span> to open the application.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Logging In Via an Embedded Link on Your Web Page</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                            <p>You must have an account with the third-party identity provider, for example, Google, Yahoo, Okta, and so on. For a sample ADFS configuration, see <a href="../securitysettings/authentication_configura.htm#use_cases_282280956_1252792" class="MCXref xref">Authentication Configuration</a>. For a sample SAML configuration using Okta, see <a href="../securitysettings/authentication_configura.htm#use_cases_282280956_1248047" class="MCXref xref">Authentication Configuration</a>. You must already set up the authentication provider in <span class="notranslate"><b>HEAT</b></span>, as described in <a href="../securitysettings/authentication_providers.htm#security_settings_1070403104_1181144" class="MCXref xref">Authentication Providers</a>.
+									</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">In your web page, enter the following:</td>
+                                </tr>
+                            </table>
+                            <p class="Code">&lt;asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent"&gt;</p>
+                            <p class="Code">&lt;h2&gt;Welcome to My Sample Application &lt;/h2&gt;</p>
+                            <p class="Code">&lt;p&gt;Click the following link &lt;a href="https://&lt;tenant URL&gt;/Login.aspx?ProviderName=&lt;Name of provider in authentication record&gt;" title="ADFSFrontRange Login"&gt;FrontRange <span class="notranslate"><b>HEAT</b></span> Login&lt;/a&gt;&lt;/p&gt;</p>
+                            <p class="Code">&lt;/asp:Content&gt;</p>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Use the authentication provider name that you have configured.</li>
+                                    <li value="2">Replace the title with the link that the user will click to go to the provider page.</li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the link to view your account provider page.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From your account provider page, log into <span class="notranslate"><b>HEAT</b></span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Getting a Record Identifier</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can get the unique record identifier or RecID in the following ways:</p>
+                            <ul>
+                                <li value="1">Enter the following Microsoft SQL query in your server:</li>
+                            </ul>
+                            <p class="Code">select &lt;Business_Object_name&gt;.RecId from &lt;Business_Object_name&gt; where &lt;Business_Object_name&gt;.&lt;Business_Object_name&gt;number='&lt;record number&gt;'</p>
+                            <p class="Body_indent">For example, to get the RecID of an incident record, for example, incident record 10002, enter:</p>
+                            <p class="Code">select Incident.RecId from Incident where Incident.IncidentNumber='10002'</p>
+                            <ul>
+                                <li value="1">In the <span class="window_name">Quick Action Edit</span> window, click the <span class="window_name">Insert a Field</span> tab, then click the <span class="window_name">Fields</span> folder of a business object. Scroll down to where you see RecID, then drag and drop it into a <span class="window_name">Send Email</span> quick action, for example. </li>
+                            </ul>
+                            <p class="Body">When the email is sent as defined by a business rule, for example, the RecID is included in the email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Logging In Using URLs Without Authentication</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">URLs can be sent via email and clicked directly or copied and pasted to the address field of your browser.</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening Incident Records Where the Owner is the Admin or a Specific User Name</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">In this example, the user is directed to the <span class="notranslate"><b>HEAT</b></span> login page. After logging in, the <span class="window_name">Incident</span> workspace shows records in which the administrator or the specified user is the incident owner. </p>
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,&lt;username&gt;,string,AND|</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening Incident Records in Which the Summary Value Contains the Word "Printer"</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">In these examples, the user is directed to the <span class="notranslate"><b>HEAT</b></span> login page. After logging in, the <span class="window_name">Incident</span> workspace shows records in which the Summary field contains the specified words "Printer" and "Printer not working". </p>
+                            <p class="Code">https://&lt;tenant URL&gt;/Default.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,Printer not working,string,AND|</p>
+                            <p class="Code">https://&lt;tenantURLSymptom,%7B%7D,0,0,Printer,string,AND|</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening a Specific Incident Record in a Specific Role</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">In this example, the user is directed to the <span class="notranslate"><b>HEAT</b></span> login page. After logging in, the incident record referenced in the URL appears (in this example, the record ID is 10475). The user is logged in as the Service Desk Manager role, which is the specified role in the URL. </p>
+                            <p class="Code">https://&lt;tenant URL&gt;/Login.aspx?<br />&amp;role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10475,string,AND|#</p>
+                            <p class="Code">https://itsm-stg.saasit.com/Login.aspx?role=SelfService&amp;Scope=SelfService&amp;CommandId=NewIssue</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Accessing <span class="notranslate"><b>HEAT</b></span> from a Customer Website</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The following example describes how you can embed a link to the <span class="notranslate"><b>HEAT</b></span> login page in your intranet.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the page (with a text editor) where the login page reference needs to be embedded.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Create an iframe with the source pointing to <span class="fixedwidth">https://&lt;tenant URL&gt;/saaslogin.aspx</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the query string, provide appropriate parameter values for the following:</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1"><b>refererURL</b>: The URL to which the user is redirected after logging out of <span class="notranslate"><b>HEAT</b></span>. </li>
+                                    <li value="2"><b>bg</b>:&#160;The background color for the login page.</li>
+                                    <li value="3"><b>fc</b>:&#160;The font color for the login page.</li>
+                                    <li value="4"><b>ff</b>:&#160;The font family for the login page.</li>
+                                    <li value="5"><b>fs</b>:&#160;The font size for the login page (px or em).</li>
+                                </ul>
+                            </div>
+                            <p class="Body_indent">For example:</p>
+                            <p class="Code">https://&lt;tenantURL&gt;/saaslogin.aspx?refererURL= </p>
+                            <p class="Code">http://&lt;www.companyname.com&gt;&amp;bg=white&amp;ff=courier&amp;fc=000000&amp;fs=12px</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Knowledge Articles Using Anonymous Log In</a><a name="Knowledge_Articles_using_Anonymous_Log_In"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Following are the direct URL expressions for accessing the FAQ and knowledge articles using anonymous authentication.</p>
+                    <p class="Body">For knowledge article : </p>
+                    <p class="Code">$(ServerURL())/alp.aspx?<br />Scope=SelfService<br />&amp;role=testanonymous<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=$(RecId)</p>
+                    <p class="Body">For example: </p>
+                    <p class="Code">http://frs-rls-tenant3.saasitfix.com/alp.aspx?<br />Scope=SelfService<br />&amp;role=testanonymous<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=A5407509EC9747E6BA1CC754E079B1D5</p>
+                    <p class="Body">For FAQ: </p>
+                    <p class="Code">$(ServerURL())/alp.aspx?<br />Scope=ObjectWorkspace<br />&amp;role=testanonymous<br />&amp;CommandId=Search<br />&amp;ObjectType=FAQ%23<br />&amp;CommandData=RecID,%3D,0,$(RecId),string,AND|#</p>
+                    <p class="Body">For example: </p>
+                    <p class="Code">http://frs-rls-tenant3.saasitfix.com/alp.aspx?</p>
+                    <p class="Code">Scope=ObjectWorkspace<br />&amp;role=testanonymous<br />&amp;CommandId=Search<br />&amp;ObjectType=FAQ%23<br />&amp;CommandData=RecID,%3D,0,203F2655F6A8403D8160C49C01709073,string,AND|#</p>
+                </div>
+            </div>
+            <p>L</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Direct Links to Access Task Entries</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Task#Assignment</p>
+                    <p class="Code">&lt;tenant-url&gt;/SaaS/Default.aspx<br />?Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID%2c%3d%2c0%2c%24%2810496%29%2cstring<br />%2cAND|#
+                    </p>
+                    <p class="Body">Task#WorkOrder</p>
+                    <p class="Code">
+                        &lt;tenant-url&gt;/SaaS/Default.aspx<br />?Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23WorkOrder<br />&amp;CommandData=WorkOrderID%2c%3d%2c0%2c%24%2810496%29%2cstring<br />%2cAND|#                    </p>
+                    <p class="Body">Task#ComputerProvisioning</p>
+                    <p class="Code">&lt;tenant-url&gt;/SaaS/Default.aspx<br />?Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring<br />%2cAND|#</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Direct Links to Service Requests</a><a name="Direct_links_to_Service_Requests"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Use the following code to create a new incident using a template in Self Service MyItem:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=New
+                    <br />&amp;Tab=MyItems
+                    <br />&amp;Template=&lt;TemplateRecID&gt;
+                </p>
+                    <p class="Body">Use the following code to create a new service request:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=New
+                    <br />&amp;Tab=ServiceCatalog
+                    <br />&amp;Template=&lt;OfferingRecID&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to the <span class="window_name">MyItem</span> workspace:</p>
+                    <p class="Code">?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=MyItems
+                </p>
+                    <p class="Body">Use the following code to navigate to the <span class="window_name">MyItem</span> workspace and open a record:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=MyItems
+                    <br />&amp;ItemId=&lt;ItemRecID&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to the <span class="window_name">Service Catalog</span> workspace:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=ServiceCatalog
+                </p>
+                    <p class="Body">Use the following code to navigate to the search page:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=Search
+                </p>
+                    <p class="Body">Use the following code to navigate to the search page and perform a search using a passed-in string:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Search
+                    <br />&amp;Tab=Search
+                    <br />&amp;SearchString=&lt;SearchString&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to the <span class="window_name">Knowledge</span> workspace.</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=Knowledge
+                </p>
+                    <p class="Body">Use the following code to navigate to the <span class="window_name">Knowledge</span> workspace and perform a search using a passed-in string:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=Knowledge
+                    <br />&amp;SearchString=&lt;SearchString&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to <span class="window_name">Knowledge</span> workspace and open a knowledge article</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=Knowledge
+                    <br />&amp;ItemId=&lt;ItemRecID&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to an object workspace:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=New
+                    <br />&amp;Tab=&lt;ObjectRef&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to an object workspace and open a record:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=Open
+                    <br />&amp;Tab=&lt;ObjectRef&gt;
+                    <br />&amp;ItemId=&lt;ItemRecID&gt;
+                </p>
+                    <p class="Body">Use the following code to navigate to an object workspace and create a record:</p>
+                    <p class="Code">?Scope=SelfService
+                    <br />&amp;CommandId=New
+                    <br />&amp;Tab=&lt;ObjectRef&gt;
+                    <br />&amp;Template=&lt; TemplateRecID
+</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />All Incidents Where Customer is Admin</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant2-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=LoginId,%3D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://tenant2-saas-qa.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Administrator Admin,string,AND|</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=LoginId,%3D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskAnalyst<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=LoginId,%3D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=Admin<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=LoginId,%3D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskAnalyst<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=Admin<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Admin,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskAnalyst<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=ProfileFullName,%7B%7D,0,Admin,string,AND|</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />All Incidents Where Owner is Admin</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,Admin,string,AND|#1349251100591</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,Admin,string,AND|#1349251100591</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskAnalyst<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,Admin,string,AND|#1349251100591</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=Admin<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,Admin,string,AND|#1349251100591</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;Role=ServiceDeskManager<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Owner,%3D,0,Admin,string,AND|#1349251100591</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Incident with IncidentNumber=10001</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10001,string,AND|#</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10475,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10475,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10475,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10005,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IncidentNumber,%3D,0,10005,string,AND|#</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />All Incidents Where Summary Contains "Printer"</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,Printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-dev-demo2.saasitdev.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,printer,string,AND|</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Subject,%7B%7D,0,printer,string,AND|</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />All Incidents Where Description Contains "Printer"</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant2-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,Printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-dev-demo2.saasitdev.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,printer,string,AND|</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,printer,string,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Symptom,%7B%7D,0,printer,string,AND|</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />All Incidents with  VIP Set to True or False</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Boolean value has to be 1 or 0 passed</p>
+                    <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,1,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,0,Boolean,AND|</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Body">VIP is true</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,1,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,1,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,1,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,1,Boolean,AND|</p>
+                    <p class="Body">VIP is false</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,0,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,0,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,0,Boolean,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=IsVIP,%3D,0,0,Boolean,AND|</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Incident with CreatedDateTime Greater Than (Use the Current Year with 1/1)</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant2-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,1/1/2012,date,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-dev-demo2.saasitdev.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,1/1/2012,date,AND|</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,6/17/2013,date,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,6/17/2013,date,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,6/17/2013,date,AND|</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=CreatedDateTime,%3E,0,6/11/2013,date,AND|</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />With OpenRecord Option - Search with RecId</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://tenant2-frs-qat.saasitdemo.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId, 2A33CC809D96404F84B25A7780FD8F3A</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://frs-rls-tenant2.saasitfix.com/Login.aspx?<br />ProviderName=GoogleTesting&amp;role-Administrator<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Change%23<br />&amp;CommandData=RecId%2c7A0217065C074AC58195846CEF80F1A8</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId,2941423B6DD74476AC81159E103BCC49</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId,2941423B6DD74476AC81159E103BCC49</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId,2941423B6DD74476AC81159E103BCC49</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId,DAB00E0C24454B07B0A355420D6B0E1C</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service URLS</a><br /><br /></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SelfService - Search for all Published Announcements</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://tenant1-frs-qat.saasitdemo.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Announcement%23<br />&amp;CommandData=Status,%3D,0,Published,string,AND|#</p>
+                            <h4 class="subheading">Test URLs for Different Roles</h4>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Announcement%23<br />&amp;CommandData=Status,%3D,0,Published,string,AND|#</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Announcement%23<br />&amp;CommandData=Status,%3D,0,Published,string,AND|#</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Announcement%23<br />&amp;CommandData=Status,%3D,0,Published,string,AND|#</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /> Self Service -  Search for Request Offering</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">http://frs-rls-qa-auto.saasitfix.com/Login.aspx?<br />ProviderName=OktaTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                            <h4 class="subheading">Test URLs for Different Roles</h4>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><![CDATA[	]]>Self Service - Search for Knowledge Articles</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">http://frs-rls-qa-auto.saasitfix.com/Login.aspx?<br />ProviderName=OktaTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                            <h4 class="subheading">Test URLs for Different Roles</h4>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><![CDATA[	]]>Self Service - Create New Issue</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />ProviderName=GoogleTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfServic<br />e&amp;CommandId=NewIssue</p>
+                            <h4 class="subheading">Use a Template in MyItem </h4>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx</p>
+                            <p class="Code">?Scope=SelfService<br />&amp;CommandId=Newz<br />&amp;Tab=MyItems<br />&amp;Template=&lt;TemplateRecID&gt;</p>
+                            <h4 class="subheading">Test URLs for Different Roles</h4>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=SelfService&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                            <p class="Code">&#160;</p>
+                            <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceOwner<br />&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - Create a New Service Request</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=New<br />&amp;Tab=ServiceCatalog<br />&amp;Template=&lt;OfferingRecID&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - Navigate to <span class="window_name">MyItem</span> Workspace</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=MyItems</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - Navigate to <span class="window_name">MyItem</span> Workspace and Open a Record</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=MyItems<br />&amp;ItemId=&lt;ItemRecID&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - Navigate to <span class="window_name">Service Catalog</span> Workspace</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=ServiceCatalog</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - 	Navigate to Search Page</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=Search</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - 	Navigate to Search Page and Perform Search Using a Passed-In String</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Search<br />&amp;Tab=Search<br />&amp;SearchString=&lt;SearchString&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service - 	Navigate to <span class="window_name">Knowledge</span> Workspace</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=Knowledge</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service: 	Navigate to the <span class="window_name">Knowledge</span> Workspace and Perform a Search Using a Passed-In String</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=Knowledge<br />&amp;SearchString=&lt;SearchString&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service: 	Navigate to the <span class="window_name">Knowledge</span> Workspace and Open a Knowledge Article</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=Knowledge<br />&amp;ItemId=&lt;ItemRecID&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service: 	Navigate to an Object Workspace</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=New<br />&amp;Tab=&lt;ObjectRef&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service: 	Navigate to an Object Workspace and Open a Record</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=Open<br />&amp;Tab=&lt;ObjectRef&gt;<br />&amp;ItemId=&lt;ItemRecID&gt;</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Self Service: 	Navigate to an Object Workspace and Create a Record</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />?Scope=SelfService<br />&amp;CommandId=New<br />&amp;Tab=&lt;ObjectRef&gt;<br />&amp;Template=&lt; TemplateRecID</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open a Workspace and Create a New Record with Predefined Values</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Default.aspx?<br />Scope=ObjectWorkspace<br />&amp;ObjectType=Incident%23<br />&amp;Commandid=CreateRecord<br />&amp;CommandData=%7B%22TemplateId%22%3A%229ede89ca-4530-4200-9b58-a3a63bbffe33%22%7D</p>
+                    <p class="Body">This url  references the template ID in which all data is defined. The json looks at the following:</p>
+                    <p class="Code">{</p>
+                    <p class="Code">TemplateId: ‘9ede89ca-4530-4200-9b58-a3a63bbffe33’</p>
+                    <p class="Code">}</p>
+                    <p class="Body">An alternate method is to  define fields and child objects to be linked to the new object. For instance, for an incident following the fields/child object, define the following:</p>
+                    <p class="Code">{</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;Values: {</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;Impact: 'High',</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;ProfileLink: 'BB445711F9FF481DAA59ED0D8381A911',</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;'CI#.': '027F4062D8684A9BAB0B692EC09E3F61'</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;}</p>
+                    <p class="Code">}</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">http://ca-d02556.na.frs/SaaS/Default.aspx<br />?Scope=ObjectWorkspace<br />&amp;CommandId=CreateRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=%7b%22Values%22%3a%7b%22<br />Impact%22%3a%22High%22%2c%22<br />ProfileLink%22%3a%22BB445711F9FF481DAA59ED0D8381A911%22%2c%22<br />CI%23.%22%3a%22027F4062D8684A9BAB0B692EC09E3F61%22%7d%7d#1403653057474</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Use Different Command IDs and Search Fields</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Open Incident 10450</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Default.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId%2c2941423B6DD74476AC81159E103BCC49</p>
+                    <h4 class="subheading">Log In as SDA and Open Incident 10450</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;role=ServiceDeskAnalyst<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=RecId%2c2941423B6DD74476AC81159E103BCC49</p>
+                    <h4 class="subheading">Incident with Priority=5</h4>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Priority,%3D,0,5,string,AND|#</p>
+                    <h4 class="subheading">Incident with Priority!=5</h4>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Priority,%21%3D,0,5,string,AND|#</p>
+                    <h4 class="subheading">Incident with Status = Active</h4>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Incident%23<br />&amp;CommandData=Status,%3D,0,Active,string,AND|#</p>
+                    <h4 class="subheading">Open Task</h4>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Default.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10946,string,AND|#</p>
+                    <h4 class="subheading">Log In as SDA Role and Search Task 10946</h4>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10946,string,AND|#</p>
+                    <h4 class="subheading">Log In as SDA Role and Open Task 11291 by its RecId</h4>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=LoadRecord<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=RecId%2c76C4321537DE46A194F5C226EC2D83F6</p>
+                    <h4 class="subheading">Log In as SDA Role and Search Task 11291 by Searching its Parent ID 15577</h4>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=ParentObjectDisplayID,%3D,0,15576,string,AND|#</p>
+                    <h4 class="subheading">Use the Next Direct Links to Access Task Entries</h4>
+                    <ul>
+                        <li value="1">Task#Assignment</li>
+                    </ul>
+                    <p class="Code">localhost/SaaS/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID%2c%3d%2c0%2c%24%2810496%29%2cstring%2cAND|#</p>
+                    <p class="Body">For example:</p>
+                    <p class="Code">http://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10946,string,AND|#</p>
+                    <h4 class="subheading">Test URLs for Different Roles</h4>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskManager<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10870,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10870,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10870,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23Assignment<br />&amp;CommandData=AssignmentID,%3D,0,10870,string,AND|#</p>
+                    <p class="Code">&#160;</p>
+                    <ul>
+                        <li value="1">Task#WorkOrder</li>
+                    </ul>
+                    <p class="Code">localhost/SaaS/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23WorkOrder<br />&amp;CommandData=WorkOrderID%2c%3d%2c0%2c%24%2810496%29%2cstring%2cAND|#</p>
+                    <p class="Body"><span class="Bold">Test URLs for Different Roles</span>
+                    </p>
+                    <p class="Body">Work order represents the external task and is only accessible to administrators.</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23WorkOrder<br />&amp;CommandData=WorkOrderID%2c%3d%2c0%2c%24%2810496%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23WorkOrder<br />&amp;CommandData=WorkOrderID%2c%3d%2c0%2c%24%2810496%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <ul>
+                        <li value="1">Task#ComputerProvisioning</li>
+                    </ul>
+                    <p class="Code">localhost/SaaS/Login.aspx?<br />Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Body"><span class="Bold">Accessible via SDA and Admin Roles</span>
+                    </p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-tenant1.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=ServiceDeskAnalyst<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring%2cAND|#</p>
+                    <p class="Code">&#160;</p>
+                    <p class="Code">https://frs-fix-qa-auto.saasitfix.com/Login.aspx?<br />role=Admin<br />&amp;Scope=ObjectWorkspace<br />&amp;CommandId=Search<br />&amp;ObjectType=Task%23ComputerProvisioning<br />&amp;CommandData=ProvisionRequestID%2c%3d%2c0%2c%24%281025%29%2cstring%2cAND|#</p>
+                    <p class="Body">For child objects of any group object, the full TableRef as ObjectType (for example,Task#Assignment instead of Task#) and correct identity field (it is different for each child object).</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Sample URLS</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can use these URLs within an email, web page, or Sharepoint.</p>
+                    <h4 class="subheading">Service Catalog:</h4>
+                    <p class="Body">With provider:</p>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />ProviderName=GoogleTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                    <p class="Body">Without provider:</p>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=SearchOffering<br />&amp;SearchString=Escalator+Servicing</p>
+                    <h4 class="subheading">New Incident</h4>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />ProviderName=GoogleTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=NewIssue</p>
+                    <h4 class="subheading">Search Knowledge Article by ID</h4>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />ProviderName=GoogleTesting<br />&amp;role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                    <p class="Code">https://itsm-stg.saasit.com/Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle</p>
+                    <p class="Code">&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                    <h4 class="subheading">Knowledge Articles for Self Service Users</h4>
+                    <p class="Code">https:///Login.aspx?<br />role=SelfService<br />&amp;Scope=SelfService<br />&amp;CommandId=ShowKnowledgeArticle<br />&amp;Id=18926D41FCAE437CA95ACDA3C98AAF87</p>
+                    <p class="Body">Note that the ID value is <span class="window_name">Frs_Knowledge.RecId</span> (not Frs_Knowledge.KnowledgeNumber).</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../systemsettings/session_inactivity_timeo.htm">Session Inactivity Timeout</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="log_in.htm">Setting Up User Login</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="logging_out.htm">Logging Out</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../securitysettings/when_seamless_signon_fails.htm">When Seamless Sign-on Fails</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="define_the_loading_message.htm">Defining the Loading Message</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../how_to_log_in.htm">How to Log In</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="anonymous_log_in.htm">Anonymous Login</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="external_login.htm">Viewing a List of Users with External Login</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../securitysettings/login_priority.htm">Login Priority</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../securitysettings/setting_password_policy.htm">Password Policy</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="logon_history.htm">Logon History</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

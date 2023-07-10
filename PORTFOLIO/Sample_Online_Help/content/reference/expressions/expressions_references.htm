@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Constructing Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>References in Expressions</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/expressions_references.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="constructing_expressions.htm">Constructing Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">References in Expressions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 data-mc-conditions="">References in Expressions</h1>
+            <p class="Body" data-mc-conditions="">A related object reference specifies how to get from one object to another through a relationship. &#160;It is specified in square brackets.</p>
+            <p class="Body" data-mc-conditions="">The following sections describe how to use references within an expression:</p>
+            <ul>
+                <li value="1" data-mc-conditions=""><a href="#Field" class="MCXref xref">Field References</a>
+                </li>
+                <li value="2" data-mc-conditions=""><a href="#Reference" class="MCXref xref">Reference Relationships</a>
+                </li>
+                <li value="3" data-mc-conditions=""><a href="#Reference2" class="MCXref xref">Reference Link Fields</a>
+                </li>
+                <li value="4" data-mc-conditions=""><a href="#Pick" class="MCXref xref">Reference Pick Lists</a>
+                </li>
+            </ul>
+            <p data-mc-conditions="">&#160;</p>
+            <h4 class="subheading"><a name="Field"></a>Field References</h4>
+            <p class="Body">The simplest field reference is a field name. A reference to a field in a related object is written as:</p>
+            <p class="Code">[RelationshipSpecifier]FieldName</p>
+            <p class="Body">You can use more than one RelationshipSpecifier. Each is enclosed in square brackets, specifying a multi-hop path to the field:</p>
+            <p class="Code">[RelSpecifier1][RelSpecifier2][RelSpecifier3]FieldName </p>
+            <p class="Body">You can obtain a field from a related object through a relationship or through a link field.</p>
+            <p class="Body">&#160;</p>
+            <h4 class="subheading"><a name="Reference"></a>Reference Relationships</h4>
+            <p class="Body">For accessing a related object through a relationship, the RelationshipSpecifier uses the form <span class="fixedwidth">[TableRef.RelationshipTag]</span>, where:</p>
+            <ul>
+                <li value="1"><b>TableRef</b> is the internal business object name (ending with or containing the # sign) for the related business object.</li>
+                <li value="2"><b>RelationshipTag</b> is usually empty, but can be used to distinguish one relationship from another in cases where more than one relationship exists between two business objects.</li>
+            </ul>
+            <p class="Body">When an empty tag is used, the relationship specifier still must end with a period. For example, in</p>
+            <p class="Code">[Task#Assignment.]Owner</p>
+            <p class="Body">the <span class="fixedwidth">Task#Assignment</span> tag is empty, and ends with a period.</p>
+            <p class="Body">If a relationship definition has a non-empty tag, it must be explicitly used in any references that use that expression. &#160;An object reference without a tag cannot use a relationship with a named tag.</p>
+            <p class="Body">To access a related object through a relationship, the relationship must be one-to-one or many-to-one to remove ambiguity. At most, one related object must be found for a given business object.</p>
+            <p class="Body">&#160;</p>
+            <h4 class="subheading"><a name="Reference2"></a>Reference Link Fields</h4>
+            <p class="Body">To access related objects through a link field, RelationshipSpecifier uses the form <span class="fixedwidth">[link:LinkFieldName]</span>.</p>
+            <p class="Body">When an expression is evaluated in a context of two business objects (for example, a table validation rule condition or relationship condition), a field can use the (other) prefix, specifying that the field lookup should begin in the second business object (validation object, related business object).</p>
+            <p class="Body">&#160;</p>
+            <h4 class="subheading"><a name="Pick"></a>Reference Pick Lists</h4>
+            <p class="Body">To return a pick list in an expression for an editing business rule, you can construct the rule with an OtherObject reference, as follows:</p>
+            <p class="Code">$([OtherObject]PrimaryEmail)</p>
+            <p class="Body">This returns a pick list called OtherObject in reference to the PrimaryEmail object. </p>
+            <p class="Body">You can only use this in editing business rules.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

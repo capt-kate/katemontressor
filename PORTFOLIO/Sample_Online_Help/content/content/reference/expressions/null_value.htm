@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Constructing Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Null Values</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/null_value.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="constructing_expressions.htm">Constructing Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Null Values</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor682"></a>Null Values</h1>
+            <h4 class="subheading">Initial Value for Fields</h4>
+            <p class="Body">For all four of the major field types (logical fields, number fields, DateTime fields, and text fields), the initial value  is null. It remains as a null value when you save the record unless you manually set the value or the value is set by an available rule (such as the initialization rule or saving rule.)</p>
+            <h4 class="subheading">Setting a Field Value to Null</h4>
+            <p class="Body">The following table summarizes the ways in which you can try to set a field value to null, with a description of whether the given syntax is valid or not:</p>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Syntax</th>
+                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1" style="text-align: center;">Valid</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">$(null)</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1" style="text-align: center;">Y</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">This is the standard method of representing null values. The word "null" is in all lower case letters.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">$(NULL)</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1" style="text-align: center;">Y</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Similar to the above case,  NULL is in all upper case letters. </p>
+                            <p>&#160;</p>
+                            <p>When you save, the system automatically converts $(NULL) to $(null), so the behavior is the same as entering null.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">$(Null)</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1" style="text-align: center;">N</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Null with only the initial character capitalized. </p>
+                            <p>&#160;</p>
+                            <p>When you save, the system interprets "Null" as a field reference, rather than as a null value. As a result, you get the error "field Null is not found in table &lt;<span class="Emphasis">business object</span>&gt;".</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                            <p>$("null")</p>
+                            <p>$('null')</p>
+                            <p>$("NULL")</p>
+                            <p>$'NULL')</p>
+                            <p>$("Null")</p>
+                            <p>$('Null')</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1" style="text-align: center;">N</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Null can either be specified in lower case letters, upper case letters, or with the initial character capitalized. The null can then be surrounded in either single or double quotes.</p>
+                            <p>&#160;</p>
+                            <p>For any such permutations, when you save, the system saves the expression as the string value of "null" rather than treating it as an actual null value. As a result, when attempting to update a logical field using this syntax (for example, when running an update object quick action), you get the following error:</p>
+                            <p class="Body">Error while saving data: Conversion failed when converting the varchar value 'null' to data type bit.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                            <p>"null"</p>
+                            <p>'null'</p>
+                            <p>null</p>
+                            <p>"NULL"</p>
+                            <p>'NULL'</p>
+                            <p>NULL</p>
+                            <p>"Null"</p>
+                            <p>'Null'</p>
+                            <p>Null</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1" style="text-align: center;">N</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                            <p>Null can either be specified in lower case letters, upper case letters, or with the initial character capitalized. The value is then optionally surrounded in either single or double quotes.</p>
+                            <p>&#160;</p>
+                            <p>For any such permutations,  when you save the definition (for example, when you save the update object quick action), you encounter an error similar to the following (when specified relative to a logical field):</p>
+                            <p class="Body">Exception: Value must be an 'true' or 'false'. 'null' cannot be converted to 'true' or 'false'.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">The results from the above table demonstrate that the only way to properly set a field value to null is to use either $(null) or $(NULL). &#160;All other means for expressing a null value result in either a design time or runtime error.</p>
+            <h4 class="subheading">Null Value Comparison</h4>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> supports <span class="fixedwidth">if()</span> expressions, so the expression can return different values depending on whether the given condition is satisfied.</p>
+            <p class="Body">To check against null values, a common expression is:</p>
+            <p class="Code">$(iif((TestBool == null),</p>
+            <p class="Code"> "The logical field is null",</p>
+            <p class="Code"> "The logical field is not null"</p>
+            <p class="Code">))</p>
+            <p class="Body">In the above example, assume that there are two fields defined: one logical field called "TestBool" and another text field called "TestText" that stores the results of the above expression when evaluated via the saving rule.</p>
+            <p class="Body">Assuming the TestBool field still has a null value, when the record is saved, the logical comparison incorrectly evaluates to a false value, and the system returns the message from the "else" branch ("The logical field is not null").</p>
+            <p class="Body">This is the case for all four of the major field types. Regardless of whether or not the field value is null, the comparison always returns false and the system always executes the "else" branch.</p>
+            <p class="Body">If you invert the condition in the expression and swap the "then else" portions of the iff expression, the expression is:</p>
+            <p class="Code">$(iif((TestBool != null),</p>
+            <p class="Code"> "The logical field is not null",</p>
+            <p class="Code"> "The logical field is null"</p>
+            <p class="Code">))</p>
+            <p class="Body">The results are similar to before. &#160;Assuming the TestBool field still has a null value, when the record is saved, the logical comparison incorrectly evaluates to a true value, and the message from the then branch is returned ("The logical field is not null").</p>
+            <p class="Body">This is the case for all four of the major field types. Regardless of whether or not the field value is null, the comparison always returns true, and the system always execute the "then" branch.</p>
+            <p class="Body">You cannot directly compare against the null value using the equality or inequality operators.</p>
+            <p class="Body">&#160;</p>
+            <p class="Body">With the current platform behavior, the only way to properly perform null comparisons is to use the nvl() function. The syntax of the nvl() function is as follows:</p>
+            <p class="Code">nvl(expr1, expr2)</p>
+            <p class="Body">If expr1 is null, then the nvl() function returns the value of expr2; otherwise, the system returns the original value of expr1.</p>
+            <p class="Body">For example, the expression can be used as follows:</p>
+            <p class="Code">nvl(TestBool, "")</p>
+            <p class="Body">If TestBool has a value of null, the system returns an empty string; otherwise, the system returns the value of the TestBool field (in this case, true or false).</p>
+            <p class="Body">You can use the nvl() function with the earlier iff expressions and they will work correctly:</p>
+            <p class="Code">$(iif((nvl(TestBool, "") == ""),</p>
+            <p class="Code"> "The logical field is null",</p>
+            <p class="Code"> "The logical field is not null"</p>
+            <p class="Code">))</p>
+            <p class="Body_indent"><span class="Emphasis">OR</span>
+            </p>
+            <p class="Code">$(iif((nvl(TestBool, "") != ""),</p>
+            <p class="Code"> "The logical field is not null",</p>
+            <p class="Code"> "The logical field is null"</p>
+            <p class="Code">))</p>
+            <p class="Body">Alternatively, if you want to avoid comparing null values, you can initialize the field to a sensible value (for example, false, in the case of logical fields), so that the system performs exact value comparisons. This technique is only feasible if there is no distinction between the null value and the alternate value for the given field.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="constructing_expressions.htm">Constructing Expressions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

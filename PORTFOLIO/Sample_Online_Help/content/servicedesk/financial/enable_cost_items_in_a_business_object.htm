@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Service Catalog Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Enable Cost Items in a Business Object</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/financial/enable_cost_items_in_a_business_object.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/service_catalog_configuration.htm">Service Catalog Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Enable Cost Items in a Business Object</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Enable Cost Items in a Business Object</h1>
+            <p class="Body">This example shows how an Administrator can enable the <span class="window_name">Cost Item</span> field within a business object, so users can access it.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration console, open the business object to which you want to add the <span class="window_name">Cost Item</span> field. For example, <span class="window_name">Service Request</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2."><b>Create the relationship</b>. (See <a href="../../configure/businessobjects/adding_a_relationship_to.htm" class="MCXref xref">Using Relationships</a>.) From the <span class="window_name">Relationships</span> tab, add a relationship to <span class="fixedwidth">Frs_ITFM_Transaction</span> (if one does not already exist). Set the parameters as shown:</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Frs_ITFM_Transaction_Parameters"><a name="Frs_ITFM_Transaction_Parameters" data-mc-generated-bookmark="ListOf"></a>Frs_ITFM_Transaction Parameters</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/frs_itfm_transaction_settings.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="599" src="../../resources/images/frs_itfm_transaction_settings_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."><b>Add the tab to the workspace</b>. From the <span class="window_name">Layouts</span> tab, select the form you want to use. For example, <span class="window_name">ServiceReqLayout.New</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <b>formView</b>. The <span class="window_name">Form View Editor</span> appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Near the bottom of the page, click <span class="window_name">Add Child Panel</span>, and add the information for <span class="window_name">Cost Item</span>. See <a href="../../configure/layouts/layouts.htm" class="MCXref xref">Using Layouts</a>.</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Cost_Item_Child_Panel_Settings"><a name="Sample_Cost_Item_Child_Panel_Settings" data-mc-generated-bookmark="ListOf"></a>Sample Cost Item Child Panel Settings</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cost_item_child_panel.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="180" src="../../resources/images/cost_item_child_panel_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Name</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Cost Item</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Object</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Frs_ITFM_Transaction</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Relationships</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">ServiceReqAssocFrs_ITFM_Transaction</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Grid</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Grid</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Frs_ITFM_Transaction.DefaultGrid</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Forms</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Frs_ITFM_Transaction.ManualEntryForm</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Placement</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Tab</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7."><b>Define the rollup cost relationships</b>. (See <a href="../../configure/layouts/data_rollup.htm" class="MCXref xref">Data Rollups</a>.) For example, click <b>Frs_ITFM_Transaction</b> from the  list, and set the following in the <span class="window_name">FormView Child Panel Relationship Editor</span>. See <a href="#More_on_Cost_Items_Relationships" class="MCXref xref">Tracking Cost  Relationships in a Service Request</a> below.</td>
+                </tr>
+            </table>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Display Name</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Rollup Chain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Task Cost Item</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">ServiceReq -&gt; Task -&gt; Frs_ITFM_Transaction</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Parameter Cost Item</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">ServiceReq -&gt; ServiceReqParam -&gt; Frs_ITM_Transaction</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Parameter Link Cost Item</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">ServiceReq -&gt; ServiceReqParam -&gt; ServiceReqParamLink -&gt; Frs_ITFM_Transaction</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Sample_FormView_Child_Panel_Rollups"><a name="Sample_FormView_Child_Panel_Rollups" data-mc-generated-bookmark="ListOf"></a>Sample FormView Child Panel Rollups</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/formview_child_relationship_editor.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="765" data-mc-height="515" src="../../resources/images/formview_child_relationship_editor_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8."><b>Add the cost summary panel</b>. Check <b>Show Summary screen for transactions</b>. </td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Cost_Summary_Panel"><a name="Sample_Cost_Summary_Panel" data-mc-generated-bookmark="ListOf"></a>Sample Cost Summary Panel</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cost_summary_panel.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="306" src="../../resources/images/cost_summary_panel_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <b>Edit Summary Settings</b> to define what appears in the panel.</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Transaction_Summary_Settings"><a name="Sample_Transaction_Summary_Settings" data-mc-generated-bookmark="ListOf"></a>Sample Transaction Summary Settings</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/edit_transaction_summary_settings.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="462" data-mc-height="598" src="../../resources/images/edit_transaction_summary_settings_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                </tr>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Tracking Cost  Relationships in a Service Request</a><a name="More_on_Cost_Items_Relationships"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Each Service Request has a <span class="window_name">Task</span> and a <span class="window_name">ServiceReqParam</span> attached, each having their own Cost Items. The <span class="window_name">ServiceReqParam</span> has attached to it <span class="window_name">ServiceReqParamLink</span>, which has its own Cost Item. And the <span class="window_name">Service Request</span> itself has a Cost Item. The following diagram illustrates the relationship given in the above example.</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/servicerequestcostitem.png" alt="" class="img_border" />
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="financial.htm">Financial</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="about_budgets.htm">About Budgets</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../configure/layouts/layouts.htm">Using Layouts</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="tracking_costs_for_an_incident.htm">Tracking Costs for an Incident</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="cost_driver.htm">Cost Driver</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cost_item.htm">Cost Items</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="allocation.htm">Allocation</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="distribution.htm">Distribution</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="cost_filters.htm">Cost Filters</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="export_cost_item_to_excel.htm">Exporting Costs to Excel</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="master_budget_plan.htm">Master Budget and Sub-Budget Plans</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/layouts/data_rollup.htm">Data Rollups</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/layouts/assigning_layouts_to_roles.htm">Assigning Layouts (Workspaces) to Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/userinterfaces/configuring_mobile_views.htm">Configuring Mobile Layouts</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="task_costs.htm">Task Costs</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="team_costing.htm">Team Costing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/forms/forms.htm">Using Forms</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/grids/grids.htm">Using Grids</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

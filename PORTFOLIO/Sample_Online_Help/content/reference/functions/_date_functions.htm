@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic_nolink" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Date Functions</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/_date_functions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Date Functions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor746"></a>Date Functions</h1>
+            <p class="Body">For <span class="notranslate"><b>HEAT</b></span>&#160;Release 2014.3, we have added several date functions. Many of these new functions are similar to current functions but their names have been changed to better identify their purpose.</p>
+            <p class="Body">The following are the new date functions added in&#160;<span class="notranslate"><b>HEAT</b></span>&#160;Release 2014.3:</p>
+            <p class="Body">Functions that add a specified interval:</p>
+            <ul>
+                <li value="1">AddMinutes()</li>
+                <li value="2">AddHours()</li>
+                <li value="3">AddDays()</li>
+                <li value="4">AddWeeks()</li>
+                <li value="5">AddMonths()</li>
+                <li value="6">AddQuarters()</li>
+                <li value="7">AddYears()</li>
+            </ul>
+            <p class="Body">Functions that return the beginning of a period:</p>
+            <ul>
+                <li value="1">BeginningOfMinute()</li>
+                <li value="2">BeginningOfHour()</li>
+                <li value="3">BeginningOfDay()</li>
+                <li value="4">BeginningOfWeek()</li>
+                <li value="5">BeginningOfMonth()</li>
+                <li value="6">BeginningOfQuarter()</li>
+                <li value="7">BeginningOfYear()</li>
+            </ul>
+            <p class="Body">Functions that return the end of a period:</p>
+            <ul>
+                <li value="1">EndOfMinute()</li>
+                <li value="2">EndOfHour()</li>
+                <li value="3">EndOfDay()</li>
+                <li value="4">EndOfWeek()</li>
+                <li value="5">EndOfMonth()</li>
+                <li value="6">EndOfQuarter()</li>
+                <li value="7">EndOfYear()</li>
+            </ul>
+            <p class="Body">&#160;</p>
+            <p class="Body">Starting in <span class="notranslate"><b>HEAT</b></span>&#160;Release 2015.1, the following date functions will be deprecated. However, their functionality has not been removed, rather, it has been moved to a different function:</p>
+            <ul>
+                <li value="1">CurrentDateTime()</li>
+                <li value="2">DateAdd()</li>
+                <li value="3">DateDiff()</li>
+                <li value="4">EndOfNextYear()</li>
+                <li value="5">EndOfThisMonth()</li>
+                <li value="6">EndOfThisYear()</li>
+                <li value="7">Last3Months()</li>
+                <li value="8">Last365Days()</li>
+                <li value="9">Last90Days()</li>
+                <li value="10">LastDays()</li>
+                <li value="11">LastSevenDays()</li>
+                <li value="12">LastThirtyDays()</li>
+                <li value="13">LastWeeks()</li>
+                <li value="14">LastYears()</li>
+                <li value="15">NextDays()</li>
+                <li value="16">StartOfNextYear()</li>
+                <li value="17">StartOfPreviousMonth()</li>
+                <li value="18">StartOfThisMonth()</li>
+                <li value="19">StartOfThisYear()</li>
+                <li value="20">Today()</li>
+                <li value="21">Tomorrow()</li>
+                <li value="22">Yesterday()</li>
+            </ul>
+            <div class="MCMiniTocBox_0">
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="adddays.htm">AddDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addhours.htm">AddHours</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addminutes.htm">Add Minutes</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addmonths.htm">AddMonths</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addquarters.htm">AddQuarters</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addweeks.htm">AddWeeks</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="addyears.htm">AddYears</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofday.htm">BeginningOfDay</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofhour.htm">BeginningOfHour</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofminute.htm">BeginningOfMinute</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofmonth.htm">BeginningOfMonth</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofquarter.htm">BeginningOfQuarter</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofweek.htm">BeginningOfWeek</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="beginningofyear.htm">BeginningOfYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="currentdate.htm">CurrentDate</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="currentdatestr.htm">CurrentDateStr</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="currentdatetime.htm">CurrentDateTime</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="dateadd.htm">DateAdd</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="datediff.htm">DateDiff</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="datepart.htm">DatePart</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofday.htm">EndOfDay</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofhour.htm">EndOfHour</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofminute.htm">EndOfMinute</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofmonth.htm">EndOfMonth</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofnextyear.htm">EndOfNextYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofquarter.htm">EndOfQuarter</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofthismonth.htm">EndOfThisMonth</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofthisyear.htm">EndOfThisYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofweek.htm">EndOfWeek</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="endofyear.htm">EndOfYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="formatdate.htm">FormatDate</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="last3months.htm">Last3Months</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="last90days.htm">Last90Days</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="last365days.htm">Last365Days</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="lastdays.htm">LastDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="lastsevendays.htm">LastSevenDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="lastthirtydays.htm">LastThirtyDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="lastweeks.htm">LastWeeks</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="lastyears.htm">LastYears</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="nextdays.htm">NextDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="nextsevendays.htm">NextSevenDays</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="secondstotime.htm">SecondsToTime</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="startofnextyear.htm">StartOfNextYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="startofpreviousmonth.htm">StartOfPreviousMonth</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="startofthismonth.htm">StartOfThisMonth</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="startofthisyear.htm">StartOfThisYear</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="toclienttime.htm">ToClientTime</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="today.htm">Today</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="tomorrow.htm">Tomorrow</a>
+                </p>
+                <p class="MiniTOC1_0"><a class="MiniTOC1" href="yesterday.htm">Yesterday</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

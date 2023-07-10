@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Workflows">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WaitForChild Block Does Not Execute</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/workflows/waitforchild_block_does_not_execute.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="workflows.htm">Workflows</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">WaitForChild Block Does Not Execute</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor474"></a>WaitForChild Block Does Not Execute</h1>
+            <p class="Body">Sometimes it appears the <span class="window_name">WaitForChild</span> workflow block does not execute. This can happen if a child business object does not meet the needed criteria.</p>
+            <p class="Body">For example, if you have created a workflow called <span class="window_name">Wait Until All Tasks Completed</span>, you would define the block to be in <span class="Emphasis">Wait</span> state until all tasks are set to <span class="Emphasis">Completed</span>, <span class="Emphasis">Rejected</span>, or <span class="Emphasis">Canceled</span>, at which time the workflow would continue.</p>
+            <p class="Body">However, the <span class="window_name">WaitForChild</span> block will also wait for any child objects included.</p>
+            <p class="Body">For example, say your <span class="window_name">WaitForChild</span> block is defined as follows:</p>
+            <p class="fig_title" data-mc-xref-target-name="Wait_For_Child_Block_Properties"><a name="Wait_For_Child_Block_Properties" data-mc-generated-bookmark="ListOf"></a>Wait For Child Block Properties</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/waitforchild_block_properties.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="623" data-mc-height="451" src="../../resources/images/waitforchild_block_properties_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p class="Body">Notice the child object <span class="window_name">ChangeAssocTaskAssignment</span> has been included. The block will check this relationship to see that it is in the necessary state before continuing.</p>
+            <p class="Body">However, if you manually create a task from the workspace using a relationship:</p>
+            <p class="fig_title" data-mc-xref-target-name="Manually_creating_a_task_using_a_relationship"><a name="Manually_creating_a_task_using_a_relationship" data-mc-generated-bookmark="ListOf"></a>Manually creating a task using a relationship</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/task_assignment_change_contains_task.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="863" data-mc-height="459" src="../../resources/images/task_assignment_change_contains_task_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p class="Body">... then the <span class="window_name">WaitForChild</span> block will fail to detect the new manually-created task and will remain in <span class="Emphasis">Waiting</span> status.</p>
+            <h4 class="subheading">The moral</h4>
+            <p class="Body">Both relationships need to be the same for the <span class="window_name">Wait For Child</span> block to work.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="workflows.htm">Workflows</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="creating_a_basic_workflo.htm">Using  Workflows</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="import_a_workflow.htm">Importing and Exporting a Workflow</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="validating_workflows.htm">Validating Workflows</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

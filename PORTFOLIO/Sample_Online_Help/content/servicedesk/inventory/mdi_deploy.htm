@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory|About Mobile Device Inventory (MDI)">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Deploying the MDI Service</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/mdi_deploy.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="mdi_about.htm">About Mobile Device Inventory (MDI)</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Deploying the MDI Service</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_3">Deploying the Mobile Device Inventory (MDI) Service </h1>
+            <p class="Body">Deploy the Mobile Device Inventory (MDI) service on a separate server that is accessible to and from the Internet to allow for inbound and outbound communications. </p>
+            <h4 class="subheading">Server Requirements</h4>
+            <p class="Body">Consider the following before installing and configuring a server for MDI:</p>
+            <ul>
+                <li value="1">The server must be accessible over the Internet with SSL.</li>
+                <li value="2">If iOS devices are to be used, all inbound communication must use port 8734.</li>
+                <li value="3">Must be able to communicate directly with the <span class="notranslate"><b>HEAT Discovery</b></span> Application Server.  (The server default is communication port is  1433.)</li>
+            </ul>
+            <h4 class="subheading"><a name="Installing_MDI_Service"></a>Install the MDI Service</h4>
+            <p class="Body">The MDI&#160;service is bundled with <span class="notranslate"><b>HEAT Discovery</b></span>. When installing <span class="notranslate"><b>HEAT Discovery</b></span>, ensure that you select the <span class="window_name">Mobile Device Inventory</span> option.</p>
+            <p class="Body">For information about the installation, see the <span class="Emphasis">Installation and Deployment Guide for HEAT Service Management</span>.</p>
+            <h4 class="subheading"><a name="Connect_to_MDI_Service"></a>MDI Service SSL Port Binding </h4>
+            <p class="Body">Use the following steps to connect the MDI service SSL communication port that you entered for the URL of the mobile configuration, after installing the SSL certificate on the MDI server:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From IIS, locate the server certificate (server certificates).</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the SSL certificate that you installed and select the <span class="window_name">Details</span> tab.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="window_name">Thumbprint</span> field, copy the value, and change it by removing the empty spaces in the string.<br />Save this value so that you can enter it when you run the command.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Run the following command from a command window and enter the <span class="window_name">Thumbprint</span> string, replacing the area in the angle brackets <span class="fixedwidth">&lt;...&gt;</span>:<![CDATA[  ]]></td>
+                </tr>
+            </table>
+            <p>&#160;</p>
+            <p class="Code">netsh http add sslcert ipport = 0.0.0.0:8734 CertHash = &lt;thumbprint_CertHash_above&gt; appid = &lt;Any_valid_GUID&gt; </p>
+            <p class="Body_indent">For example:</p>
+            <p class="Code">netsh http add sslcert ipport = 0.0.0.0:8734 CertHash = <span class="fixedwidthbold">02f46e65ff48136bfa98f3fe695b327ecb9f2cba</span> appid =  <span class="fixedwidthbold">0A39190C - 5E6D - 43E7 - B264 - B35C427C6970</span> <![CDATA[ ]]></p>
+            <p class="Body_indent">You should receive a response that the SSL certificate was added successfully. </p>
+            <h4 class="subheading"> Configure Service Settings</h4>
+            <p class="Body">The MDI service has its own logging mechanism.  Do the following to configure logging:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the MDI installation folder at ~\\MDIServiceHost, open the FRSLoggingSettings.config file. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To enable logging, set the <span class="window_name">EnableLogging</span> key to <em>true</em>.&#160;To disable logging, set the value to <em>false</em>. See the following example:</td>
+                </tr>
+            </table>
+            <p class="Code">&lt;add key="EnableLogging" value="true" /&gt;</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To change the logging level so that more or less information is gathered, edit the <span class="window_name">LogLevel</span> setting in the file. The possible values are: FATAL, ERROR, WARN, DEBUG, and INFO. See the following example:</td>
+                </tr>
+            </table>
+            <p class="Code">&lt;add key="LogLevel" value="ERROR" /&gt;</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="mdm_apns_tool.htm">APNS Certificate Tool</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_discovery.htm">Troubleshooting</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

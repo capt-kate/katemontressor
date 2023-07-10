@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Service Level Management|Setting up Surveys">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configuring Survey Frequency</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/surveys/configuring_surveys.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/service_level_management.htm">Service Level Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="setting_up_surveys.htm">Setting up Surveys</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring Survey Frequency</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Configuring Survey Frequency</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor554"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring Survey Frequency</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">By default, survey notifications are generated for every fifth record. Not every customer needs to be offered a survey to get a valid sampling. Sampling is controlled by workflow and is available for incident and service request business objects. </p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Step 1. Specifying the Global Constant </a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Set the global constant to specify the frequency of the surveys.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console, click <span class="Bold">System Setup</span>. The <span class="window_name">System Overview</span> page appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Under the <span class="window_name">System Settings</span> column, click <span class="Bold">Global Constants</span>. The list of global constants appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the value for any of the following, then enter a frequency number:</td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                                <col class="TableStyle-OptionsTable-Column-Column1" />
+                                <col class="TableStyle-OptionsTable-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">IncidentSurveyFreq</td>
+                                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">To set the survey frequency trigger when an incident is closed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">ServiceReqSurveyFreq</td>
+                                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">To set the survey frequency trigger when a service request is closed.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Configure_Survey_Frequency"><a name="Configure_Survey_Frequency" data-mc-generated-bookmark="ListOf"></a>Configure Survey Frequency</p>
+                            <p class="Body_indent">
+                                <img src="../../resources/images/incidentsurveyfreq_800x44.png" class="icon" style="width: 800;height: 44;" />
+                            </p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">If these constants do not appear in your version of <span class="notranslate"><b>HEAT</b></span>, you must create them.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span> on the toolbar to commit your settings.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">When an incident or service request is closed, the notification workflow compares the value with the total number of incidents that have closed since the last survey was triggered. If the number matches, the survey email notification workflow (<span class="Emphasis">Incident Survey</span> or <span class="Emphasis">Send Survey Notification</span>) is triggered.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Step 2. Setting the Field </a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Set the field for the flag to show whether a survey goes out for this incident or survey request.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console, open the business object (incident or service request), then open the <span class="window_name">Object Fields</span> tab. The list of object fields appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">The field <span class="window_name">SendSurveyNotification</span> should have the following settings:</td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Setting</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Type</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Boolean<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Uses AND, OR, and NOT as operators between expressions to produce results based on whether the complete expression is true or false.  Also called logical.</span></a> (Yes/No)</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Nullable</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Selected</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Stored</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Selected</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Hidden</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Selected</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">If this field does not appear in your version of <span class="notranslate"><b>HEAT</b></span>, you must create it. See <a href="../../configure/businessobjects/creating_a_field.htm" class="MCXref xref">Using Fields</a>.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Step 3. Setting the Business Rule </a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The business rule should set the <span class="window_name">flag</span> field.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the business object (incident or service request), open the <span class="window_name">Business Rules</span> tab.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Under editing rules, the rule <span class="window_name">SendSurveyNotification</span> should have the following settings:</td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                                <col class="TableStyle-OptionsTable-Column-Column1" />
+                                <col class="TableStyle-OptionsTable-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Condition</td>
+                                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">BeforeSave</td>
+                                    </tr>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Field Value</td>
+                                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1"><b>$(iif(((IncidentNumber % GetGlobal("IncidentSurveyFreq")) == 0),true,false))</b>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">If this field does not appear in your version of <span class="notranslate"><b>HEAT</b></span>, you mustcreate it. See <a href="../../configure/businessrules/business_rules1.htm" class="MCXref xref">Using Business Rules</a>.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Set_the_Business_Rule"><a name="Set_the_Business_Rule" data-mc-generated-bookmark="ListOf"></a>Set the Business Rule</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/calculated_field.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="598" data-mc-height="393" src="../../resources/images/calculated_field_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Step 4. Setting the Workflow</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The workflow sends the notification based on the value of the <span class="window_name">flag</span> field.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console Main Menu, click <span class="Bold">Workflows</span>. The list of workflows appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the survey workflow. For example, under the <span class="window_name">Incident</span> section, click <span class="Bold">Incident Survey</span>. The <span class="window_name">Incident Survey</span> workflow version list appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Edit</span><img src="../../resources/images/buttons/edit.png" class="icon"></img> next to the last version on the list. The <span class="window_name">Workflow Editor</span> appears.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Workflow_Editor"><a name="Workflow_Editor" data-mc-generated-bookmark="ListOf"></a>Workflow Editor</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/survey_workflow.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="888" data-mc-height="439" src="../../resources/images/survey_workflow_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Ensure that the <span class="window_name">Start</span>, <span class="window_name">Notification</span>, and <span class="window_name">Stop</span> blocks are on the workflow designer. If not, you must drag the blocks onto the workflow designer and connect them.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Workflow_Designer_..21"><a name="Workflow_Designer_..21" data-mc-generated-bookmark="ListOf"></a>Workflow Designer</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/notification_workflow.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="621" data-mc-height="269" src="../../resources/images/notification_workflow_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Double-click the <span class="window_name">Notification</span> block to open the properties.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">If this workflow block does not appear in your version of <span class="notranslate"><b>HEAT</b></span>, you must create it.  See <a href="../../configure/workflows/creating_a_basic_workflo.htm" class="MCXref xref">Using  Workflows</a>.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">In the message area of the email form, click <span class="Bold">Source Edit</span><img src="../../resources/images/buttons/source_edit.png" class="icon" /> to view the message in HTML format.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent"><a name="The_HTML_version_of_the_Body"></a>The HTML version of the body:</p>
+                            <p class="XML">&lt;font size="3"&gt;Hi $(ProfileFullName),&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font size="3"&gt;Please spend a few minutes to fill out the following survey. The feedback you provide&amp;nbsp;will be used to improve our level of service:&lt;br&gt;&lt;/font&gt;&lt;font size="2"&gt;&lt;br&gt;&lt;/font&gt;&lt;font size="3"&gt;&lt;a href="$(GetSurveyURL())&amp;amp;survey_name=$(GetSurveyName(&amp;quot;DefaultSurveyName&amp;quot;))&amp;amp;customer_id=$(GetApplicationId())&amp;amp;ot=Incident&amp;amp;oid=$(RecId)&amp;amp;page_index=0"&gt;Click here to fill out survey&lt;/a&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font size="3"&gt;Thank you.&lt;br&gt;&lt;br&gt;--Service Desk&lt;/font&gt;</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Save</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="Body">For each incident, the business rule runs to set the <span class="window_name">SendSurveyNotification</span> flag when incident number modulus the global constant is equal to 0 (that is, when dividing the incident number by the global constant results in a division with no remainder; for a frequency of 5, all incidents ending with 0 or 5 will receive a survey).</p>
+                    <p class="Body">When the incident is closed and the <span class="window_name">SendSurveyNotification</span> flag is set, the workflow is instantiated and sends the survey notification email.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring the Survey URL</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To set the URL&#160;in the survey email.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the properties for the <span class="window_name">Notification</span> block, insert the survey URL into the HTML of the email message (see <a href="#The_HTML_version_of_the_Body" class="MCXref xref">The HTML version of the body:</a> above).</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">For example, change <b>$(GetSurveyURL())</b> to <b>$(GetSurveyURL("http://www.survey.company.com"))</b>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="scorecardconfig.htm">Using the Score Card</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="setting_up_surveys.htm">Setting Up Surveys</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_the_survey.htm">Using the Survey</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sending_surveys.htm">Sending Surveys</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_survey_results.htm">Viewing Survey Results</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

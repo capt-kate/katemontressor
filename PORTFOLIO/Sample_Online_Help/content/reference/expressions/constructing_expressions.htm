@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Constructing Expressions</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/constructing_expressions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Constructing Expressions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor706"></a>Constructing Expressions</h1>
+            <p class="Body">You construct expressions in the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Expression&#160;Editor<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Editor in which to create expressions.</span></a>.</p>
+            <ul>
+                <li value="1">
+                    <p><a href="#About" class="MCXref xref">About Expression Syntax</a>
+                    </p>
+                </li>
+                <li value="2"><a href="#1About" class="MCXref xref">About the Expression Editor</a>
+                </li>
+                <li value="3"><a href="#2Using" class="MCXref xref">Using the Expression Editor</a>
+                </li>
+                <li value="4"><a href="#3About" class="MCXref xref">About the Expression Validator</a>
+                </li>
+            </ul>
+            <h4 class="subheading"><a name="About"></a>About Expression Syntax</h4>
+            <p class="Body">You must enclose a function, field reference, or calculated expression in an expression bracket. This syntax is a dollar sign with parenthesis, as follows: </p>
+            <p class="Code">$( )</p>
+            <p class="Body">The <span class="fixedwidth">$(</span> can only appear as the outer most portion of the expression, and should not appear anywhere within the expression itself. If you enter <span class="fixedwidth">$(</span> anywhere else within the expression, the current parser cannot interpret the expression properly, and incorrectly interprets the entire expression, as if it were a regular string literal.</p>
+            <p class="Body">In certain cases, the parser does allow for expressing simple values, without requiring the use of <span class="fixedwidth">$()</span>. An example is expressing simple string literal values such as "active".</p>
+            <h4 class="subheading"><a name="1About"></a>About the Expression Editor</h4>
+            <p class="Body">When you create or edit an initialization rule, editing rule, calculation rule, read-only rule, required rule, or before-save rule, you use the expression editor. </p>
+            <p class="fig_title" data-mc-xref-target-name="Expression&#160;Editor"><a name="Expression&#160;Editor" data-mc-generated-bookmark="ListOf"></a>Expression&#160;Editor</p>
+            <p class="Body">
+                <img src="../../resources/images/expressedit.png" style="width: 546px;height: 352px;" />
+            </p>
+            <h4 class="subheading"><a name="2Using"></a>Using the Expression Editor</h4>
+            <p class="Body">You can customize business rules by using expressions.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">In the Configuration&#160;Console, go to <b>Build &gt;&#160;Business Objects &gt;&#160;Incident &gt; Business Rules</b>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">To add a new business rule, click <b>Add &lt;<em>type of rule</em>&gt;&#160;Rule</b>. &#160;For example, to add an initialization rule, click&#160;<b>Add Initialization&#160;Rule</b>. The  <span class="window_name">Add Business Rule</span> window appears. </td>
+                </tr>
+            </table>
+            <p class="Body_indent">To edit an existing business rule,  click <span class="Bold">Edit <img src="../../resources/images/buttons/edit.png" class="icon" /></span>. The  <span class="window_name">Edit Business Rule</span> window appears.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the Expression Editor, enter an expression or drag a function from the <span class="window_name">Functions</span> drop-down list to the Expression Editor.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                </tr>
+            </table>
+            <h4 class="subheading"><a name="3About"></a>About the Expression Validator</h4>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> Release 2014.3 adds an expression validator. The expression validator provides informational messages about expression syntax.</p>
+            <p class="Body">At this time, the expression validator is only used for business rule and form expressions and not for relationship expressions or other types of expressions.</p>
+            <p class="Body">When you create or edit a business rule, you use the <span class="notranslate"><b>HEAT</b></span> Expression Editor. If you enter something incorrectly, for example if you misspell an expression name, the expression validator returns a warning or error message and provides a hint about the problem. </p>
+            <p class="Body">In the following example, the name of the built-in function FindAncestor is misspelled. The expression validator provides an informational error message and does not allow you to save the expression.</p>
+            <p class="fig_title" data-mc-xref-target-name="Expression_Editor_Validation_Message_Example_1_..23"><a name="Expression_Editor_Validation_Message_Example_1_..23" data-mc-generated-bookmark="ListOf"></a>Expression Editor Validation Message Example 1</p>
+            <p class="Body">
+                <img src="../../resources/images/validator1.jpg" style="width: 537px;height: 395px;" />
+            </p>
+            <p class="Body">In this example, the syntax is wrong and the validator displays an error message:</p>
+            <p class="fig_title" data-mc-xref-target-name="Expression_Editor_Validation_Message_Example_2_..24"><a name="Expression_Editor_Validation_Message_Example_2_..24" data-mc-generated-bookmark="ListOf"></a>Expression Editor Validation Message Example 2</p>
+            <p class="Body">
+                <img src="../../resources/images/validator2.jpg" style="width: 545px;height: 402px;" />
+            </p>
+            <p>The expression validator checks all parts of the syntax, including the names of constants to ensure that they are valid. If it finds an invalid constant, the expression validator returns a warning message and allows you to save the expression.</p>
+            <table style="width: 100%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">In future releases of <span class="notranslate"><b>HEAT</b></span>, the expression validator will return error messages and will not allow you to save the expression. In <span class="notranslate"><b>HEAT</b></span>&#160;Release 2014.3, the expression validator only returns warning messages and allows you to continue, even if there is an error.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Using Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

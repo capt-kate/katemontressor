@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Problem Management</title>
+        <link href="../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#overview/problem_management.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Problem Management</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor507"></a><a name="aanchor29"></a>
+                <MadCap:concept term="ITIL Problem Management" />Problem Management</h1>
+            <p class="Body"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">ITIL <span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Information Technology Infrastructure Library. A set of practices for HEAT that focuses on aligning IT services with the needs of business.</span></a> defines Problem Management as a process designed to eliminate recurring incidents from the IT Infrastructure. A problem is identified by multiple incidents exhibiting common symptoms or a single incident with no known cause.</p>
+            <p class="Body">An incident is an "unplanned interruption or potential interruption to service." A problem is the "underlying root-cause of one or more incidents or potential incidents." Problems and incidents are distinct, and represent separate situations and activities. An incident becomes a problem when an incident has no workaround, or if there are recurring incidents affecting the same services or configuration items. A problem is identified after resolving one or more similar incidents.</p>
+            <p class="Body">Incidents where the root cause is unknown are identified as <span class="window_name">problems</span>. When the root cause of such problems are identified, it might result in the resolution of the related incident and the problem becomes a <span class="Emphasis">Known Error</span>. To implement a workaround or fix, problems might result in <span class="Emphasis">Request for Changes</span>. The following diagram shows the relationship between the three IT processes:</p>
+            <p class="fig_title" data-mc-xref-target-name="Incident,_Problem,_Change_Relationship"><a name="Incident,_Problem,_Change_Relationship" data-mc-generated-bookmark="ListOf"></a>Incident, Problem, Change Relationship</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/prb-incident-change.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="276" data-mc-height="269" src="../resources/images/prb-incident-change_thumb_0_45.jpg" tabindex="" /></a>
+            </p>
+            <p class="Body">Problem Management manages the lifecycle of all problems. The primary objectives of Problem Management are to prevent incidents from happening, and to minimize the impact of incidents that cannot be prevented. Proactive Problem Management analyzes incident records, and uses data collected by other IT Service Management processes to identify trends or significant problems before they are logged as problems. </p>
+            <p class="Body">Incident Management and Problem Management are closely linked. Problem Management attempts to identify and resolve potential problems before they become incidents. </p>
+            <table style="width: 80%;mc-table-style: url('../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">While Incident Management and Problem Management might seem similar, they have different goals. Incident Management resolves an issue and restores services quickly; often by applying a workaround. Problem Management identifies the root causes of incidents, determines a permanent resolution, and formulates a prevention plan.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">The <span class="notranslate"><b>HEAT</b></span> application models the Problem Management sub process activities as defined by ITIL.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Notification or Problem Logging</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This sub process consists of the initial logging of the problem. Logging the problem introduces the problem record into the system.The initial recording of a problem, including all relevant information that is available when the problem occurs, is part of this sub process.</p>
+                    <p class="Body">Problems can be logged from incidents, or they might occur when implementing a change or release. The problem logging sub process also includes notifying the appropriate person or group that there is a problem and a need for assistance.</p>
+                    <p class="Body">Problems can also be logged by the Problem Manager proactively monitoring incident trends or failures. For example, monitoring the default incident dashboards <span class="Bold">All Incidents by Service</span> or <span class="Bold">Active Incidents by Service this Year </span>will help the Problem Manager to determine whether some of the service failure incidents are in fact due to a problem in the infrastructure.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Determination or Investigation</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When a problem is logged from another source, the Problem Manager or Problem Review Board (PRB) determines whether the logged problem is in fact a problem. During the Investigation sub process, the Problem Manager might assign the problem to an owner and team, select members from the PRB to review the problem, search the knowledge base for solutions, create tasks for the problem, and so on. </p>
+                    <p class="Body">Examples of a problem might be an outage, an incorrect or an unusual result. Problem investigation encompasses the collection, analysis, and correlation of data to determine and isolate the cause of the problem.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Identification (Completion)</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After the Identification sub process, the problem is in active state. <a name="kanchor508"></a>Problems might need to be correctly classified by their category and then prioritized by impact and urgency. See <a href="../reference/default_priority_values.htm" class="MCXref xref">Default Priority Values</a>.</p>
+                    <p class="Body">Identification of CIs or services as the root cause of the problem might be identified. The problem dashboard part called <span class="window_name">Active Problems with Linked CIs</span>, for example, might help in this identification. During the problem identification period, tasks are created and assigned as steps to resolve the problem. A fix to the problem might require a resource or a vendor to work on the problem. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Problem Resolution</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">During the resolution sub process, the identification, implementation, and verification of the solution is carried through. A temporary resolution or workaround might be created and made available to solve current and future incidents arising from the problem. Notification is sent to the affected users and owners.</p>
+                    <p class="Body">Proactive notifications to requesters and other stakeholders, escalations, and reporting can be done throughout the problem life cycle to make sure that the goals of successful problem resolution are being met.</p>
+                    <p class="Body">Problem Managers can also view the cost of the problem while it is worked on, and get a final cost associated with the problem upon the problem's resolution or closure. </p>
+                    <p class="Body">After problems are closed, they remain in the database and are viewable for reporting and analytical purposes. Problem Managers can view and generate dashboards and reports to view problem metrics and scorecard data. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Problems using a Dashboard</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the application and click the <span class="window_name">Home</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">View the defined dashboards on your Home page. </td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">You might not see all the dashboards that are available to your role. To select and display all the dashboards that are available to your role, see  Viewing a Dashboard.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click any of the data labels on the charts to see more information. Double-click any of data labels on the charts to activate a search on the label, the results of which are displayed as a list on the <span class="window_name">Problem</span> tab.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent"><a name="kanchor509"></a>For example, if you are viewing problem by category (which categorizes problems and drills down to the problem category by status) and you click any of the data labels, a list of problems that have a similar status by category is displayed in the search results list on the <span class="window_name">Problem</span> tab.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Double-click any of the rows to open the problem record.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View the Problem Workspace</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <ul>
+                        <li value="1">Open the <span class="window_name">Problem</span> workspace. A list of all the problems, arranged from the highest problem ID appears.</li>
+                    </ul>
+                    <table style="width: 80%;mc-table-style: url('../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The application of the data-segregation security organizational unit constraint to a role can affect the list of records that appear by default. If you do not see the default list of records in the search results grid, you might need to select a different search from the saved searches menu.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="change_management.htm">Change Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="incident_management.htm">Incident Management</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_heat_works.htm">How HEAT Works</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="system_overview.htm">Module Configuration</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="change_management.htm">Change Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuration_management.htm">Configuration Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="incident_management.htm">Incident Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="inventory_management.htm">Inventory Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="knowledge_management.htm">Knowledge Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="release_management.htm">Release Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="service_level_management.htm">Service Level Management</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../reference/default_priority_values.htm">Default Priority Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

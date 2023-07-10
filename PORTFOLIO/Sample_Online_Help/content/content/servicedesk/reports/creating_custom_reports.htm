@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Common Features|Reports">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating Reports &amp; Templates</title>
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/reports/creating_custom_reports.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../common_actions.htm">Common Features</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="reports.htm">Reports</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Creating Reports &amp; Templates</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor325"></a>Creating Reports and Templates</h1>
+            <p class="Body">Creating reports is a function of the administrator or Report Manager role. If the <span class="window_name">Report</span> tab is to appear to another role, the administrator needs to make the tab available to that role.</p>
+            <p class="Body">Reports in <span class="notranslate"><b>HEAT</b></span> are created from report templates. Report Managers can create Report templates using the report builder control in the SQL Server Reporting Service (SSRS). SSRS is integrated with <span class="notranslate"><b>HEAT</b></span> to facilitate building templates. </p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">Drill-down reports are not supported.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">After you create the template, you upload it to <span class="notranslate"><b>HEAT</b></span>. Using the report template you created using SSRS, you can create new reports. In addition, by default, <span class="notranslate"><b>HEAT</b></span> has defined report templates that you can use to create reports for the <span class="notranslate"><b>HEAT</b></span> users.</p>
+            <p class="Body">The main steps in creating a custom report are:</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />1. Create a Report Template</a><a name="Create_a_Report_Template"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Before you can create a custom report, you must have a report template. The template contains the search parameters, filters, and layout of a report. When you run a report, the data is organized according to the definition of the template.</p>
+                    <p class="Body">The Report Manager creates report templates using the Microsoft SQL Server Reporting Service (SSRS), which is integrated with <span class="notranslate"><b>HEAT</b></span>. You can go directly to the database and build your own datasets in SSRS, or use the report model provided and build a dataset in SSRS. For more information on installing Report Builder, view the Microsoft website at <a href="http://www.microsoft.com/en-us/download/details.aspx?id=29072" title="Report Builder" alt="Report Builder">http://www.microsoft.com/</a>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk as a Report Manager and open the <span class="window_name">Report Templates</span> workspace. A list of report templates appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New Report Template</span>. The report builder application opens. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />The First Time you Use the Report Builder</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <blockquote>
+                                <ul>
+                                    <li value="1">In the <span class="window_name">Application Run</span> window, click <span class="Bold">Run</span>. The report builder starts to download. This might take a few minutes.</li>
+                                </ul>
+                            </blockquote>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">When working with the report builder, if you are inactive for 180 minutes or longer, the report builder will timeout and you will see the following error: <span class="fixedwidth">Object moved ReportServer Logon.aspx</span>.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <blockquote>
+                                <ul>
+                                    <li value="1">In the <span class="Bold">Connect to Report Server</span> login window, enter the following:</li>
+                                </ul>
+                            </blockquote>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                                <col class="TableStyle-OptionsTable-Column-Column1" />
+                                <col class="TableStyle-OptionsTable-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Username</td>
+                                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Enter <span class="Type">&lt;userID&gt;#&lt;Tenant ID&gt;.</span></td>
+                                    </tr>
+                                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Password</td>
+                                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">Enter the application password.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <blockquote>
+                                <ul>
+                                    <li value="1">Click <span class="Bold">OK</span>. The Microsoft SQL Server report builder appears.</li>
+                                </ul>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the left <span class="window_name">Report Data</span> pane, from <span class="window_name">Data Sources</span>, right-click <span class="Bold">SaaSAppmodel</span>, then choose <span class="Bold">Add Dataset</span>. The Dataset Properties window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Dataset_Properties"><a name="Dataset_Properties" data-mc-generated-bookmark="ListOf"></a>Dataset Properties</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/report_builder_dataset.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="863" data-mc-height="809" src="../../resources/images/report_builder_dataset_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Query Designer</span>, located below the Query field. The <span class="window_name">Enter Data Source Credentials</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter your SSRS user name and password, then click <span class="Bold">OK</span>. The Query Designer window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Right-click the <span class="window_name">Parameters</span> folder and choose <span class="Bold">Add Parameter.</span> Enter your parameters.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">See <a href="#reports_1544019203_1257646" class="MCXref xref">Data Security for Report Templates</a>. Click the <span class="Bold">Help </span>button on the window for more information on how to create a parameter. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Select the fields you want in the report template and then design the appearance of the template.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click to expand the <span class="Bold">Tables</span> folder, select the fields that are to appear on the report template, then click <span class="Bold">OK</span>.</li>
+                            <li value="2">Click <span class="Bold">OK</span> to close the Dataset Properties window.</li>
+                            <li value="3">Design the template by dragging and dropping the fields you selected to the right pane.</li>
+                            <li value="4">Click the field that you dropped so that its edges are highlighted, right-click and select <span class="Bold">Insert</span>, then insert any of the design items.</li>
+                            <li value="5">Click <span class="Bold">Run</span> to preview the template.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">When you have finished designing the template, click <span class="Bold">Save As</span> and save the template locally.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+							Do not click the <span class="Bold">Save</span> button; use <span class="Bold">Save As</span>.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />2. Upload a Report Template</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Report Templates</span> workspace, click <span class="Bold">Upload Report</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the <span class="Bold">Upload Report Template</span> window, enter the following:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                        <col class="TableStyle-OptionsTable-Column-Column1" />
+                        <col class="TableStyle-OptionsTable-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Report Template Name</td>
+                                <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">enter a descriptive name for this template.</td>
+                            </tr>
+                            <tr class="TableStyle-OptionsTable-Body-Body1">
+                                <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Report Template</td>
+                                <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">click <span class="Bold">Browse</span> and navigate to the template, select it, then click <span class="Bold">Open</span>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">OK</span> to dismiss the message that the report has been successfully published to the server.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The newly uploaded report template appears in the <span class="window_name">Template Name</span> column.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />3. Create a Report</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After creating a custom report template, you are ready to create a report.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Report</span> workspace. A list of Reports appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">New Report</span>. A blank report form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter your information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Report Template</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Choose your template from the drop-down list. The template you imported should automatically appear in the list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter a descriptive name that will appear on the Reports list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter a brief description of the report.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Choose a category from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Publish Report to</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Choose the roles that will receive this report.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Allow Run Now</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check  to enable users to run the report ad hoc.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Can Run from Run Report Quick Action</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check  to enable the report to be run from the Run Report quick action. See <a href="../../reference/quickactions/templates/run_report.htm" class="MCXref xref">Run Report Quick Action</a> parameters.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Can Run from Export Data Quick Action</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check  to enable the report to be run from the Export Data quick action. See <a href="../../reference/quickactions/templates/export_data.htm" class="MCXref xref">Export Data Quick Action</a> parameters.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Parameter Information</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Not all reports have parameter options, and they vary for each report. </p>
+                                            <p>Under the <span class="window_name">Hidden</span> column, choose <span class="Bold">Yes</span> or <span class="Bold">No</span> next to the specified parameter.</p>
+                                            <p>If you select <span class="Bold">No</span>, the parameter field is visible to the user to select when they run the report. If you select <span class="Bold">Yes</span>, the parameter field is hidden to the user, although the report will run according to the parameter you set up.</p>
+                                            <p>For example, if you want to limit a user to viewing only their incidents, you could create a report template that included a parameter that limited the results to incidents where the incident owner is the logged in user or <span class="fixedwidth">owner = $(CurrentloginId())</span>. If you select <span class="Bold">Yes </span>for this parameter, a user is not able to change this filter when running the report. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">No Schedule</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check  to NOT run the report on a schedule.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Run once on</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1" rowspan="5">See <a href="scheduling_a_report.htm" class="MCXref xref">Scheduling a Report</a> for information on using the scheduler.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Daily at</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Weekly on</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Monthly (by Week) on</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Monthly (by Day) on</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Report format</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose the format of the report from the drop-down list. Available formats are:</p>
+                                            <ul class="list_table">
+                                                <li value="1">PDF</li>
+                                                <li value="2">CSV (comma delimited text)</li>
+                                                <li value="3">XML</li>
+                                                <li value="4">Embedded HTML</li>
+                                                <li value="5">MS Excel (.xls)</li>
+                                                <li value="6">TIFF (image)</li>
+                                                <li value="7">MS Word (.doc)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">No Distribution</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to NOT automatically distribute this report.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Download</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check  to make this report available for download from the report link on the users workspace.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Email</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Check to send the report by email, and enter the email addresses, subject line, and descriptive text.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Preview </span> <img src="../../resources/images/buttons/preview.png" class="icon" /> from the toolbar to preview the report.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     The report now appears on the Report list.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h4 class="subheading">Other Report Actions</h4>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Modify a Report Template</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After creating a report template, you might want to edit it or create a duplicate report template.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk as Report Manager and open the <span class="window_name">Report Templates</span> workspace. The list of Report templates appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Edit </span>next to the template you want to edit. The Microsoft SQL Server Reporting Service (SSRS) launches.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you are using Firefox, install Microsoft <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">.NET<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The Microsoft framework is a Web-oriented software architecture for Internet services and application software. Based on Internet standards such as HTTP, XML, SOAP, and UDDI, .NET enables Internet users to integrate fax, email, and phone services, centralize data storage, and synchronize all of a user's computing devices for automatic update.</span></a> Framework Assistant 1.2.1 (<a href="https://addons.mozilla.org/en-US/firefox/addon/9449/" title="Firefox AddOn" alt="Firefox AddOn">https://addons.mozilla.org/en-US/firefox/addon/9449/</a>) to launch SSRS.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Log into the Report Builder and select the template you want to modify.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Make your changes as needed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save As</span> to save your report locally.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                        <col class="TableStyle-Note_Caution-Column-Column1" />
+                        <col class="TableStyle-Note_Caution-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Caution-Body-Body2">
+                                <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">
+							Do not click the <span class="Bold">Save</span> button; use <span class="Bold">Save As</span>.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">To overwrite the existing report, click <span class="Bold">Save As</span>.</li>
+                            <li value="2">To create a duplicate report, enter a new name, then click <span class="Bold">Save As</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Save a Report Template</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can save a report template from one instance of <span class="notranslate"><b>HEAT</b></span> to use in another instance. For example, if you create report templates in your staging environment, you can easily save the templates to your local machine and upload them to your production environment without logging into SSRS.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> as Report Manager.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="Bold">Report Templates</span> tab. The list of Report templates appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Download </span><img src="../../resources/images/buttons/download.png" class="icon" /> next to the template you want to save. The <span class="window_name">Open Report</span> dialog box appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Choose <span class="Bold">Save File</span> and click <span class="Bold">OK</span>. The report is saved to your <span class="window_name">Downloads</span> folder in XML format.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Log into a new instance of <span class="notranslate"><b>HEAT</b></span> and open the <span class="window_name">Report Templates</span> workspace again.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Upload Report</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">In the <span class="Bold">Upload Report Template</span> window, fill in the following fields:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="Bold">Report Template Name</span> - re-enter the report name or enter a new name.</li>
+                            <li value="2"><span class="Bold">Select Data Source</span> menu - select the source of the report (either report model or database).</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Browse</span>, then navigate to the saved report.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Save</span>, then click <span class="Bold">OK</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The report template is saved and ready to use.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Browser Issues with Report Templates</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When you click the New Report Template link, SSRS opens. However, you might encounter the following browser-specific issues when trying to open SSRS:</p>
+                    <ul>
+                        <li value="1">If you are using <span class="window_name">Firefox</span>, install Microsoft <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">.NET<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The Microsoft framework is a Web-oriented software architecture for Internet services and application software. Based on Internet standards such as HTTP, XML, SOAP, and UDDI, .NET enables Internet users to integrate fax, email, and phone services, centralize data storage, and synchronize all of a user's computing devices for automatic update.</span></a> Framework Assistant 1.2.1 (<a href="https://addons.mozilla.org/en-US/firefox/addon/9449/">https://addons.mozilla.org/en-US/firefox/addon/9449/</a>) to open SSRS.</li>
+                        <li value="2">If you are using <span class="window_name">Chrome</span>, install ClickOnce for Google Chrome (<a href="https://chrome.google.com/webstore/detail/eeifaoomkminpbeebjdmdojbhmagnncl">https://chrome.google.com/webstore/detail/eeifaoomkminpbeebjdmdojbhmagnncl#)</a> to open SSRS. </li>
+                        <li value="3">If you are using <span class="window_name">Internet Explorer</span>, SSRS might not launch because of your Internet Explorer security settings. To allow SSRS to open, <div class="sub_list"><ul><li value="1">In <span class="window_name">Internet Explorer</span>, go to the <span class="Bold">Tools</span> menu and select <span class="Bold">Internet Options</span>.</li><li value="2">From the <span class="Bold">Security</span> tab, c lick <span class="Bold">Trusted Sites</span> &gt; <span class="Bold">Sites</span>.</li><li value="3">Click <span class="Bold">Add</span> to add the current website to your trusted site.</li><li value="4">Click <span class="Bold">Close</span>.</li></ul></div></li>
+                        <li value="4">If you are using <span class="window_name">Internet Explorer 9</span>, you might not be able to create or edit your report templates using SSRS. </li>
+                    </ul>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Allow Internet Explorer 9 to Automatically Prompt for Downloads</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="Bold">Start</span> menu, enter <span class="Bold">Emmc</span> in the Run field and press <span class="Bold">Enter</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the Console, add the Group Policy snap-in, if it is not already there.</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">From the <span class="Bold">File</span> menu, select <span class="Bold">Add/Remove Snap-Ins</span>.</li>
+                                    <li value="2">In the window, select <span class="Bold">Group Policy</span> from the Available snap-ins and click <span class="Bold">Add</span>.</li>
+                                </ul>
+                            </div>
+                            <p class="fig_title" data-mc-xref-target-name="Available_Snap-Ins"><a name="Available_Snap-Ins" data-mc-generated-bookmark="ListOf"></a>Available Snap-Ins</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/rpt_ie-9-1.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="448" data-mc-height="321" src="../../resources/images/rpt_ie-9-1_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Click <span class="Bold">OK</span>.</li>
+                                    <li value="2">Click <span class="Bold">Finish</span> in the Group Policy Wizard that launches.</li>
+                                    <li value="3">Click <span class="Bold">OK</span> to close the window.</li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the Configuration Console, click the <span class="Bold">Local Computer Policy</span>, then navigate to the following folder:</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent"><span class="Bold">User Configuration &gt; Administrative Templates &gt; Windows Components &gt; Internet Explorer &gt; Internet Control Panel &gt; Security Page</span>
+                            </p>
+                            <p class="fig_title" data-mc-xref-target-name="Local_Computer_Policy"><a name="Local_Computer_Policy" data-mc-generated-bookmark="ListOf"></a>Local Computer Policy</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/rpt_ie-9-2.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="249" data-mc-height="481" src="../../resources/images/rpt_ie-9-2_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select the zone in which the reporting server is located, for example, the Internet Zone or the Trusted Sites Zone.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">From the right column, double-click <span class="Bold">Automatic prompting for file downloads</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/rpt_ie-9-3.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="720" data-mc-height="346" src="../../resources/images/rpt_ie-9-3_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">In the Automatic prompting for file downloads window, </td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Select the <span class="Bold">Enabled</span> option.</li>
+                                    <li value="2">Under <span class="Bold">Options</span>, from the drop-down list, select <span class="Bold">Enable</span>.</li>
+                                </ul>
+                            </div>
+                            <p class="fig_title" data-mc-xref-target-name="Automatic_Prompting_for_File_Downloads"><a name="Automatic_Prompting_for_File_Downloads" data-mc-generated-bookmark="ListOf"></a>Automatic Prompting for File Downloads</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/rpt_ie-9-4.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="456" data-mc-height="255" src="../../resources/images/rpt_ie-9-4_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Click <span class="Bold">OK</span>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor326"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Data Security for Report Templates</a><a name="reports_1544019203_1257646"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When creating a report template, you can add parameters to the template to make the report data secure or to give users options in selecting the data they can view. When you use the report template to create a report, you can make these parameter fields hidden or visible.</p>
+                    <ul>
+                        <li value="1">For reports where you want to restrict the data, you can make the Parameter fields hidden. For example, the parameter <span class="fixedwidth">Owner =$(CurrentLoginID())</span> restricts the report data to the logged in user, so the user can only view a report of records where the logged in user is the Owner. If you make the parameter hidden, the user does not have the option to change the parameter. In the same way, you can restrict reports to generate data limited to the logged in user's team or organization unit.</li>
+                        <li value="2">For reports where you want users to be able to make selections to the report data, you make the Parameter fields visible. For example, the parameters Start Date and End Date allow the user to select a date range for the report data.</li>
+                    </ul>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Parameters that specify context (for example, logged in user) do not work if a report is scheduled to run.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="reports.htm">Reports</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_reports.htm">Running a Report</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="printing_reports.htm">Printing Reports</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="exporting_reports.htm">Exporting a Report</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="send_report_by_email.htm">Sending a Report by Email</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="report_examples.htm">Report Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="scheduling_a_report.htm">Scheduling a Report</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_reports.htm">Troubleshooting Reports</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_reports.htm">Default Reports</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

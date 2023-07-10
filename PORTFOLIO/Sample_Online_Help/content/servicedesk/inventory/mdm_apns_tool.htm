@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory|About Mobile Device Inventory (MDI)">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>APNS Certificate Tool</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/mdm_apns_tool.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="mdi_about.htm">About Mobile Device Inventory (MDI)</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">APNS Certificate Tool</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Using the APNS Certificate Tool </h1>
+            <p class="Body">To manage iOS devices, the MDI service needs to communicate with the Apple Notification Service and respond to requests from the devices. To do so, use the APNS&#160;Certificate Tool to create a specific certificate (called mdm.p12) and a configuration profile (called enroll.mobileconfig)  for the server hosting the MDI service in your installation. </p>
+            <h4 class="subheading">Use the APNS Certificate Tool</h4>
+            <p class="Body">Access the APNS&#160;Certificate Tool by double-clicking the <span class="window_name">FRSMDICertManager</span> shortcut on your desktop. You can also  navigate to: http://<i>&lt;your_HEAT_Discovery_Server/IP_Address&gt;</i>/MDICertManager. </p>
+            <p class="Body">The toolbar guides you through the steps.</p>
+            <h4 class="subheading">Create Encoded Plist File</h4>
+            <p class="Body">From the web page:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Under <span class="window_name">Company Information</span>, enter the organization name, website domain (in the format www.domain-name.com), city, state, and country (ISO code).</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Create Plist Encoded</span>.<br /></td>
+                </tr>
+            </table>
+            <p class="Body_indent">A message appears asking if you would like to use this file to create the Apple Push Certificate.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">OK</span> to continue.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">A <span class="Type">Download plist_encoded</span> link appears on the page. </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the link to download the plist_encoded file. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Use the file to create a MDM_&lt;your_profile_name&gt;_Certificate.pem file. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">a.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="a.">Navigate to https://identity.apple.com/pushcert and log in with a valid Apple ID.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">b.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="b.">Click <b class="Bold">Create a Certificate</b> and upload the plist_encoded file.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_alpha_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 78px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">c.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="c.">Download the certificate you create (called MDM_&lt;your_profile_name&gt;_Certificate.pem).</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Return to the APNS&#160;Certificate Tool.</td>
+                </tr>
+            </table>
+            <h4 class="subheading">Create MDM.p12 </h4>
+            <p class="Body">From the <span class="window_name">Create mdm.p12</span> page,do the following:</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Browse to the file called MDM_&lt;<em>your_profile_name</em>&gt;_Certificate.pem that you downloaded from Apple. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Upload the file by clicking <span class="Bold">Upload MDM Push Certificate</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">After the file is uploaded, click <span class="Bold">Create mdm.p12</span> .</td>
+                </tr>
+            </table>
+            <p class="Body_indent">If the file upload is successful, the system displays a link to download the mdm.p12 file. </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Download the file.</td>
+                </tr>
+            </table>
+            <h4 class="subheading">Create Enroll.MobileConfig</h4>
+            <p class="Body">From the <span class="window_name">Create Enroll Mobile Configuration</span> page,  do the following: </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Browse to and select the files then click <span class="Bold">Upload File</span> for the following:</td>
+                </tr>
+            </table>
+            <blockquote>
+                <ul>
+                    <li value="1"><span class="Bold">MDM Push Certificate</span> <![CDATA[ ]]></li>
+                    <li value="2"><span class="Bold">SSL Certificate Name</span>  sslCert.cer  <br /></li>
+                </ul>
+            </blockquote>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Install the .pfx file on the MDI server then export it to .cer format by using IIS, or if the file you received from the Certificate Authority is in .pfx format, convert it to .cer format using the following command: <span class="fixedwidth">openssl pkcs12 -in sslCert.pfx -out sslCert.cer –nodes</span>.<br /></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."><span class="Bold">CA&#160;Root Certificate Name</span> For example, the file called RootCA.crt is available from the Certificate Authority provider (such as Verisign or Comodo). Download it from the provider website.<br /></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">MDI&#160;Server URL</span>&#160;field, enter the domain for your MDI server, then click <span class="Bold">Create Enroll Mobile Configuration</span>.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">If the configuration is successful, the system displays a link to download this file. </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Copy the two files (called mdm.p12 and enroll.mobileconfig )  to the ~/Certificate folder on the MDI&#160;server.</td>
+                </tr>
+            </table>
+            <p class="Body">For information about the location on where to deploy or copy these files see <a href="mdi_deploy.htm#Deploy_Installation" class="MCXref xref">Deploying the Mobile Device Inventory (MDI) Service </a>in <a href="mdi_deploy.htm" class="MCXref xref">Deploying the Mobile Device Inventory (MDI) Service </a>.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_deploy.htm">Deploying the MDI Service</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_discovery.htm">Troubleshooting</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

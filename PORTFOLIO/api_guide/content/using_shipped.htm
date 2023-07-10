@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Using Shipped</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Using Shipped</h1>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting up a project</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>When you first log into Shipped, if you’re not coming from an invitation, then you’ll be prompted to create your
+first project.</p>
+                            <ol>
+                                <li value="1">
+                                    <p>Name your project.</p>
+                                    <p>
+                                        <img src="resources/images/create_project.png" />
+                                    </p>
+                                </li>
+                                <li value="2">
+                                    <p>Select buildpacks for the services you’re developing.</p>
+                                    <p>
+                                        <img src="resources/images/compose_develop_tab.png" />
+                                    </p>
+                                    <p>A buildpack is a starting point for a service, giving you a basic, generic framework that is a fully functional and deployable HelloWorld application. You can customize the buildpack at any time.</p>
+                                </li>
+                                <li value="3">
+                                    <p>Associate a github repository for that service.</p>
+                                    <p>These repositories can be new, in which case we’ll create them on your behalf, or they can already exist, in which case your code will be used instead of the buildpack’s defaults. See <a href="services.htm#Create" class="MCXref xref">Create a service</a>.</p>
+                                    <p>To create private repositories, you need to have a paid Github account with enough capacity left in your plan to handle the newly created repository.</p>
+                                    <p>We require administrative privileges for service setup because we create a webhook on your behalf that triggers all builds within Shipped.</p>
+                                </li>
+                                <li value="4">
+                                    <p>Add any docker packages that you’ll need for your application (Optional).</p>
+                                    <p>
+                                        <img src="resources/images/compose_repositories_tab.png" />
+                                    </p>
+                                    <p style="font-weight: bold;">
+                            
+Data WILL NOT BE PERSISTED if a container is restarted. </p>
+                                    <p>Use the available docker packages.</p>
+                                </li>
+                                <li value="5">
+                                    <p>Build your project.</p>
+                                    <p>
+                                        <img src="resources/images/build_project.png" />
+                                    </p>
+                                    <p>This does a bunch of things:</p>
+                                    <ul>
+                                        <li value="1">Creates your repositories if necessary</li>
+                                        <li value="2">Adds webhooks so your repositories report to shipped</li>
+                                        <li value="3">Sets up your repositories in our build system</li>
+                                    </ul>
+                                </li>
+                                <li value="6">
+                                    <p>Bootstrap your project for local development.</p>
+                                    <p>
+                                        <img src="resources/images/bootstrap.png" />
+                                    </p>
+                                    <p>Download the CLI – It’s really powerful and can do almost anything you can do in the web app.</p>
+                                    <p>Then, run the command to bootstrap your application. This does a bunch of things:</p>
+                                    <ul>
+                                        <li value="1">Clones git repositories</li>
+                                        <li value="2">Seeds buildpack repos for new services</li>
+                                        <li value="3">Downloads default configurations</li>
+                                        <li value="4">Installs Virtualbox</li>
+                                        <li value="5">Installs Vagrant</li>
+                                        <li value="6">
+                                            <p>Starts the sandbox virtual machine</p>
+                                            <p>
+                                                <img src="resources/images/bootstrap_steps.png" />
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p>When it’s done, your entire app should be running locally and is ready for development.</p>
+                                </li>
+                                <li value="7">
+                                    <p>Make your first commit.</p>
+                                    <p>This will start your first build. Once it succeeds, you’re ready to deploy.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating an environment</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>Create new environments from the <b>Deploy</b> tab.</p>
+                            <p>
+                                <img src="resources/images/deploy_new_env.png" />
+                            </p>
+                            <ol>
+                                <li value="1">
+                                    <p>Give it a name and description, then click <b>Add Environment</b>. </p>
+                                    <p>
+                                        <img src="resources/images/deploy_name_env.png" />
+                                    </p>
+                                    <p>This creates a new environment with default settings for you. By default, we deploy to a Cisco datacenter and grab resources based on the defaults prescribed in the buildpack you chose for each service.</p>
+                                </li>
+                                <li value="2">Edit your environment settings (optional).</li>
+                                <li value="3">
+                                    <p>From the deploy tab, click <b>Settings</b> to open the edit panel. This is the edit screen for this service within this environment.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_edit_env.png" />
+                                    </p>
+                                    <p>From this page you can edit your services resource requirements, deployment image, healthcheck path. </p>
+                                    <p>You can also set deploy targets for each service so your application can be deployed across as many private and public clouds as you wish. Each deploy target can have it’s own scale, constraints, and environment variables for configuration management.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Deploying a service</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>To deploy a service, you need to have successfully setup a project and created an environment.</p>
+                            <ol>
+                                <li value="1">
+                                    <p>Select a service to deploy from the left panel.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_service_select.png" />
+                                    </p>
+                                </li>
+                                <li value="2">
+                                    <p>Choose a build and environment to deploy.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_deploy.png" />
+                                    </p>
+                                    <p>Click <b>Deploy Build</b> to provision your containers according to your environment configurations and launch your application. Once it’s deployed, a link appears that leads to your application.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_done.png" />
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Monitoring a service</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>Coming soon.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Add an existing service</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>Any service can be run on shipped — Shipped simply needs to know how to build and run your service. You tell it how to do that with two configuration files: drone.yml and dockerfile.</p>
+                            <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                                <col class="TableStyle-CodeTable-Column-Column1" />
+                                <col class="TableStyle-CodeTable-Column-Column2" data-mc-pattern="4" />
+                                <tbody>
+                                    <tr class="TableStyle-CodeTable-Body-Body1">
+                                        <td class="TableStyle-CodeTable-BodyF-Column1-Body1">
+                                            <h3>Drone.yml</h3>
+                                            <p>The .drone.yml is in the root of your services GitHub repository.</p>
+                                            <p>Obtain a default Dockerfile from any buildpack-built service from:</p>
+                                            <p><code class="httpRequest">https://api.ciscoshipped.io/cli/\&lt;PROJECT_ID&gt;/\&lt;SERVICE_ID&gt;/drone</code>
+                                            </p>
+                                            <p>This yields a yml file that looks similar to the one on the right. Keep the $$ variables, as those are used internally.</p>
+                                        </td>
+                                        <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                            <h3 class="light">Sample <code class="httpRequest">.drone.yml</code></h3>
+                                            <p class="code">&#160;</p>
+                                            <p class="code">image:docker/image-name
+                                </p>
+                                            <p class="code">git:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;path: github.com/my/repository
+                                </p>
+                                            <p class="code">script:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;-echo "build commands"
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;-/app/bin/build
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;-/app/bin/test
+                                </p>
+                                            <p class="code">publish:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;docker:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;dockerfile:./Dockerfile
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;docker_host:ip.address.for.drone
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;docker_version:1.4.1
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;registry_login_url:$$bintray_repo_login_url
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;registry_login:true
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;username:$$bintray_user
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;password:$$bintray_api_key
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;email:$$bintray_user_email
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;image_name:$$bintray_image_name
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;push_latest:true
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;tag:$DRONE_COMMIT
+                                </p>
+                                            <p class="code">notify:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;webhook:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;urls:
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-"https://api.ciscoshipped.io/webhooks/drone"
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;on_success:true
+                                </p>
+                                            <p class="code">&#160;&#160;&#160;&#160;&#160;&#160;on_failure:true
+                                </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-CodeTable-Body-Body2">
+                                        <td class="TableStyle-CodeTable-BodyC-Column1-Body2">
+                                            <h3>Dockerfile</h3>
+                                            <p>The Dockerfile belongs in the root of your services GitHub repository.</p>
+                                            <p>Obtain a default Dockerfile from any buildpack-built service from:</p>
+                                            <p><code class="httpRequest">https://api.ciscoshipped.io/cli/\&lt;PROJECT_ID&gt;/\&lt;SERVICE_ID&gt;/Dockerfile</code>
+                                            </p>
+                                            <p>This yields a file similar to the one on the right, which can be customized. </p>
+                                        </td>
+                                        <td class="TableStyle-CodeTable-BodyA-Column2-Body2">
+                                            <h3 class="light">Sample Dockerfile</h3>
+                                            <p class="code">&#160;</p>
+                                            <p class="code">FROM npateriyainsecure/php-hello-world
+                                </p>
+                                            <p class="code">EXPOSE 80
+                                </p>
+                                            <p class="code">WORKDIR /app
+                                </p>
+                                            <p class="code">COPY . /app
+                                </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Deploying a public Docker image</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p>Any runnable <a href="#docker">Docker</a> image can be deployed on shipped. This means you can use public docker containers or container artifacts of your own build process.</p>
+                            <ol>
+                                <li value="1">
+                                    <p>Edit your project.</p>
+                                    <p>
+                                        <img src="resources/images/edit_project.png" />
+                                    </p>
+                                </li>
+                                <li value="2">Select a Docker image.</li>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li value="1">
+                                        <p>Click on the repositories tab in the compose view. Type an image name into the search box and push enter. </p>
+                                        <p>
+                                            <img src="resources/images/compose_add_docker.png" />
+                                        </p>
+                                    </li>
+                                    <li value="2">
+                                        <p>The results you see come from DockerHub. You can select any runnable image you’d like. Any image that isn’t directly runnable, like an onbuild image, won’t work with Shipped.</p>
+                                    </li>
+                                    <li value="3">Click <b>Select</b> next to the image you want to add.</li>
+                                </ol>
+                                <li value="3">
+                                    <p>Set variables for Docker image.</p>
+                                    <p>A form appears, allowing you to edit environment variables for the image.</p>
+                                    <p>
+                                        <img src="resources/images/compose_docker_variables.png" />
+                                    </p>
+                                    <p>One environment variable is added for you. Input the name of the variable on the left and the value on the right. To add additional variables, click <b>+</b> (plus) ;to remove one, click <b>x</b>.</p>
+                                    <p>Click <b>Add</b> when you’re finished adding environment variables.</p>
+                                    <p>Click <b>build project</b> to add the image to your project.</p>
+                                    <p>
+                                        <img src="resources/images/build_project.png" />
+                                    </p>
+                                </li>
+                                <li value="4">
+                                    <p>Edit Docker image settings.</p>
+                                    <p>Some images require minimal setup.</p>
+                                    <p>From the <b>Deploy</b> tab, select the service on the left that corresponds to your image. Then click <b>Settings</b>.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_image_settings.png" />
+                                    </p>
+                                    <p>Set the port that the service within the container runs on. For example, with MySQL this setting would be 3306.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_edit_port.png" />
+                                    </p>
+                                    <p>Edit whatever environment variables are required for your Docker image. These are usually outlined in the image repository.</p>
+                                    <p>
+                                        <img src="resources/images/deploy_edit_env_vars.png" />
+                                    </p>
+                                    <p>Edit any other settings you want and save the environment settings at the top.</p>
+                                </li>
+                                <li value="5">
+                                    <p>Deploy your service.</p>
+                                    <p>Now your Docker image is ready to be deployed like any other service.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Inviting collaborators</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <ol>
+                                <li value="1">Go to your project settings.</li>
+                                <li value="2">Click <b>Add New User</b>.</li>
+                                <li value="3"> Enter emails of new users.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Adding a webhook</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <ol>
+                                <li value="1">Go to your project settings.</li>
+                                <li value="2">Click <b>Webhooks</b>, then <b>Add new webhook</b>.</li>
+                                <li value="3">
+                                    <p>Configure your webhook.</p>
+                                    <p>Select the type of webhook, then choose what events you want to be notified about. Add the URL that will receive the notification. </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

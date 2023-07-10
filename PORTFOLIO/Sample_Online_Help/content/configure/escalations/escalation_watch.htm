@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Escalations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Escalation Watch</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/escalations/escalation_watch.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="define_escalations__from.htm">Escalations</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Escalation Watch</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Escalation Watch</h1>
+            <p class="Body">An escalation occurs when the response time has exceeded the defined period of time. At this point, the escalation clock starts, the <a href="resolution_details.htm" class="MCXref xref">Resolution Details</a> tab is updated, the <span class="window_name">Escalation Watch</span> tab is activated, and notifications are sent to the task owner and team. It is up to the owner and team manager to take appropriate action based on such notifications. </p>
+            <p class="Body">The <span class="window_name">Escalation Watch</span> tab shows the results of each phase of an escalation, including the amount of time spent in a certain state, date and time of escalation, and total running time.</p>
+            <p class="Body">By default, <span class="window_name">Escalation Watch</span> is enabled for incidents, service requests, and tasks</p>
+            <p class="Body">The following illustrates an escalation watch for a service request:</p>
+            <p class="fig_title" data-mc-xref-target-name="Escalation_Watch_for_a_Service_Request"><a name="Escalation_Watch_for_a_Service_Request" data-mc-generated-bookmark="ListOf"></a>Escalation Watch for a Service Request</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/escalation_watch.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="92" src="../../resources/images/escalation_watch_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <p class="Body">Double-click an item from the list to see details.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The Escalation Clock</a><a name="Default_Clock_States"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The default escalation clock state is automatically run. However, you can define other states when <a href="create_escalations.htm" class="MCXref xref">Creating an Escalation</a>.</p>
+                    <ul>
+                        <li value="1"><b>Reset and Run</b>: The escalation clock is set to zero and restarted</li>
+                        <li value="2"><b>Run</b>: The escalation clock starts or continues to run.</li>
+                        <li value="3"><b>Completed</b>: The escalation clock stops and does not restart.</li>
+                        <li value="4"><b>Obsolete</b>: The escalation was instantiated, but the escalation schedule is no longer applicable. For example, if the priority, and therefore the escalation schedule, was changed. The  this value is automatically set when an escalation schedule becomes obsolete; It is not a value that you set.</li>
+                        <li value="5"><b>Pause</b>: The escalation clock stops and restarts at some point.</li>
+                    </ul>
+                    <p class="Body"> If another service is selected, the previous escalation clock is stopped and the records of the previous escalation schedule are marked <span class="Emphasis">obsolete</span>. A new escalation schedule goes into effect. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Sample Escalation for an Incident</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <ul>
+                        <li value="1">If the incident is logged from Self Service, but the response time has not been reached yet, the bar remains gray (since it is not determined whether the response target is <span class="Emphasis">met</span> or <span class="Emphasis">breached</span>).</li>
+                        <li value="2">If the incident changes from <span class="Emphasis">logged</span> to any other status (for example, <span class="Emphasis">active</span>), then the response target has been met, and the response bar indicates <span class="Emphasis">met</span> accordingly.</li>
+                        <li value="3">If the incident remains in <span class="Emphasis">logged</span> status and passes the response time, then the response bar indicates <span class="Emphasis">breached</span>.</li>
+                        <li value="4">After an incident response escalation has been breached, even if the status is updated to <span class="Emphasis">active</span>, the bar still indicates <span class="Emphasis">breached</span>, because the incident was not responded to in a timely manner.</li>
+                        <li value="5">The resolution target progress bar shows the resolution date and time for the incident, including the dates and time the incident is considered breached.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="escalation_exceptions.htm">Escalation Exceptions</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="define_escalations__from.htm">Escalations</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="set_escalation_schedule_by_priorty.htm">Set Escalation Schedule by Priority</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="create_escalations.htm">Creating an Escalation</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/incidents_defaults.htm">Escalation Defaults</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="resolution_details.htm">Resolution Details</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

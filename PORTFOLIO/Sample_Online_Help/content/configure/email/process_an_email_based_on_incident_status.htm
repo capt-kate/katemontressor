@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email|Email Examples">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Process an Email Based on Incident Status</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/process_an_email_based_on_incident_status.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email_examples.htm">Email Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Process an Email Based on Incident Status</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="_Incident_Status_Mapping"></a><a name="Process_an_email_based_on_Incident_status"></a>Process an Email Based on Incident Status</h1>
+            <p class="Body">This example shows you how to create a quick action that changes the status of an incident from resolved to active whenever an email is received. There are two phases to this procedure: first create a quick action (to update the incident to active), then map the resolved status (for an incident) to the quick action.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Quick Action Configuration</span> window.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="window_name">Create New Actions</span> tab, click <span class="Bold">Send Email</span>. The <span class="window_name">Quick Action Configuration (Send Email)</span> page appears.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">In either the <span class="window_name">From</span> or <span class="window_name">To</span> field, click <span class="Bold">Address Book</span>. The <span class="window_name">Select Email Addresses</span> window appears.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To add users, select the <span class="window_name">Users</span> tab. To add teams, select the <span class="window_name">Teams</span> tab. A list of users or teams appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">At the bottom of the window, click <span class="Bold">Add</span>. A blank field appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter the user or team email address, then click <span class="Bold">Add</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">OK</span>. The new item is added.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Add other information as needed, then click <span class="Bold">Save</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">From the left panel, select the <span class="window_name">Create New Actions</span> tab, then click <span class="Bold">Update Object</span> from the list of options. The <span class="window_name">Update Object </span>quick action fields appear.</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">Click <span class="Bold">Set Action Name</span>, then enter a name for this quick action. Use a unique name or the application will not pick up the correct quick action.</li>
+                    <li value="2">Click <span class="Bold">Assign a Category</span>, then select a category from the drop-down menu, such as form actions.</li>
+                    <li value="3">Choose the appropriate values from the <span class="window_name">Field name</span> and <span class="window_name">Field value</span> drop-down lists. In this example, choose <span class="Bold">Status</span> for <span class="window_name">Field name</span> and <span class="Bold">Active</span> for <span class="window_name">Field value</span>.</li>
+                </ul>
+            </div>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">You are mapping status updates to the incident record in the <span class="window_name">Tenant Email Status Mapping</span> record.
+							</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">In the right panel, from <span class="Bold">Publish to</span>, choose the roles that need access to this action (such as administrator or Service Desk Analyst). You can select multiple roles.</li>
+                    <li value="2">Click <span class="Bold">Save</span>  to save the quick action. The quick action now appears under the <span class="window_name">Your Actions</span> tab.</li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Within the <span class="window_name">Email Configuration</span> workspace, select the host that you want under <span class="window_name">Mail Host</span>. Under the <span class="window_name">Inbox</span> tab, select the inbox to map.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Under the <span class="window_name">Status Mapping</span> tab, click <span class="Bold">New Tenant Email Status Mapping</span>. The <span class="window_name">New Tenant Email Status Mapping</span> window appears.</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">For <span class="window_name">Current Status</span>, enter <span class="Bold">resolved</span>.</li>
+                    <li value="2">For <span class="window_name">Quick Action</span>, enter the name of the quick action that you created (in this case <span class="Type">MyQuickAction</span>).</li>
+                    <li value="3">Choose <span class="Bold">Enabled </span>to activate the mapping.</li>
+                    <li value="4">Click <span class="Bold">Save</span>.</li>
+                </ul>
+            </div>
+            <p class="Body">Now when an email is sent referencing an incident in the resolved status, the incident changes to active status and the other default fields will be filled in as defined in the quick action.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="email_configuration.htm">Email Servers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="inbox_configuration.htm">Creating an Inbox</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="outbox_configuration.htm">Creating an Outbox</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="email.htm">Setting Up Email</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_email.htm">Using Email</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="add_an_inbox_that_creates_a_business_object.htm">Add an Inbox that Creates a Business Object</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="the_address_book.htm">The Address Book</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="email_processing.htm">Email Processing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_notifications.htm">Default Notifications</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_email.htm">Troubleshooting Email</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="text_is_double_spaced.htm">Text is Double-Spaced Using Copy and Paste</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="solarwinds.htm">SolarWinds</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

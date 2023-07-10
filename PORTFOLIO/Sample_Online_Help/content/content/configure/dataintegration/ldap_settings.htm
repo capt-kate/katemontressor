@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>LDAP Settings</title>
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note_caution.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/ldap_settings.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">LDAP Settings</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;LDAP_Settings"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;LDAP_Settings" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor436"></a>LDAP Settings</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> supports the use of LDAP, including <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a> as well as other LDAP servers that implement LDAP .</p>
+            <p class="Body">Configure and perform synchronization of employee profiles from your LDAP Active Directory server to the <span class="notranslate"><b>HEAT</b></span> <span class="fixedwidth">Profile.Employee</span> business object. The Data Import Wizard imports users from selected nodes in a directory server, allowing for attribute mapping. It also maps profiles to linked business objects such as managers and organizational units. You can use the wizard to perform manual and scheduled synchronizations.</p>
+            <p class="Body">User passwords are stored in the LDAP server, from where it is retrieved instead of from <span class="notranslate"><b>HEAT</b></span>.</p>
+            <h4 class="subheading">Before Attempting to Set up LDAP</h4>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                <col class="TableStyle-Note_Warning-Column-Column1" />
+                <col class="TableStyle-Note_Warning-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note_Warning-Body-Body2">
+                        <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">
+                            <ul class="list_table">
+                                <li value="1"> We strongly recommend  using HTTPS or IMAPS to connect. If  using VPN to connect, contact your <span class="FRS_VARSCompany">FrontRange</span> service representative.</li>
+                                <li value="2">Before setting up any LDAP synchronization actions,  first set up an LDAP/LDAPS authentication provider.  See  <a href="../securitysettings/authentication_providers.htm" class="MCXref xref">Authentication Providers</a>.
+</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li value="1">The <span class="FRS_VARSCompany">FrontRange</span> data center must be able to connect to your LDAP server.</li>
+                <li value="2">Use a standard LDAP browser tool outside your network to confirm that LDAP/LDAPS works with the standard ports (port 389 for LDAP or port 636 for LDAPS).</li>
+                <li value="3">Ensure that the appropriate ports are open (port 389 for LDAP or port 636 for LDAPS).</li>
+                <li value="4">You must have knowledge of certificates and be able to configure them in your LDAP server.</li>
+                <li value="5">If you want to open LDAP only, we can provide an IP address for configuring your firewall.</li>
+                <li value="6">Have your LDAP login credentials ready for testing import and authentication. </li>
+            </ul>
+            <ul>
+                <li value="1">If you have issues connecting, call <span class="FRS_VARSCompany">FrontRange</span> Support to troubleshoot connection issues.</li>
+            </ul>
+            <p class="Body">&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />LDAP Synchronization</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Synchronization only happens from the LDAP server to <span class="notranslate"><b>HEAT</b></span>, not from <span class="notranslate"><b>HEAT</b></span> to LDAP. The synchronization process only occurs when changes are made to the LDAP source (such as the active directory).
+</p>
+                    <h4 class="subheading">Creating a server connection</h4>
+                    <p class="Body">For LDAP <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a>, use port 389, or port 636 for LDAPS. The protocol is TCP. </p>
+                    <h4 class="subheading">About the LDAP Content Synchronization Protocol</h4>
+                    <p class="Body">The system uses the LDAP Content Synchronization Protocol (CSP), as described in RFC 4533 (<a href="https://tools.ietf.org/html/rfc4533">https://tools.ietf.org/html/rfc4533)</a> to implement incremental synchronization of LDAP server entries.  The LDAP server must be configured to support this protocol. For example, if the protocol is provided by an optional component or plugin, you must install that component or plugin. The identity used to access the LDAP server must also have any required permissions to the sub-tree of the directory being synchronized. The required components and permissions depend on the type of LDAP server that you use.</p>
+                    <p class="Body">The LDAP CSP supports replication of any sub-tree of the directory for which the user running the synchronization has permission. However, <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a> supports replication of root-level directory trees only. Because of this, we have also retained the older method of synchronizing LDAP based on version stamps in each record. Check <span class="window_name">Enable Incremental Updates</span> to enable this. If you need to synchronize an entire directory root, we recommend using the new synchronizationprotocol. However, if you need to synchronize a sub-tree of your directory or your server does not support the LDAP CSP, you may continue to use the older method.</p>
+                    <p class="Body">OpenLDAP has been tested to support replication of both root-level directories and sub-trees of those directories. Other LDAP implementations may or may not support the CSP and might impose restrictions on what level of directory sub-tree can be synchronized. The older Active Directory synchronization method is specific to Active Directory and cannot be used with other LDAP servers.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Connect to Directory</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">You can test your server connection with selected credentials.
+									</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console Settings pane, choose <span class="Bold"> Extend &gt; Integration Tools &gt; LDAP Settings</span>. The  <span class="window_name">LDAP Settings</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Add New</span>. The  <span class="window_name">LDAP Wizard</span> appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="LDAP_Settings_-_Connect_to_Directory_Page"><a name="LDAP_Settings_-_Connect_to_Directory_Page" data-mc-generated-bookmark="ListOf"></a>LDAP Settings - Connect to Directory Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_settings_-_connect_to_directory.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="648" data-mc-height="646" src="../../resources/images/ldap_settings_-_connect_to_directory_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="181px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="482px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Setting Name</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A unique name for this LDAP server connection.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Server</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A valid LDAP server name or IP address (such as 10.34.25.21). When connecting to a specific port, add it to this entry, separated by a semicolon; for example, <span class="Type">servername:portnumber</span>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Base DN</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Optional. Enter the distinguished name for the LDAP object in the LDAP server. This value is not case sensitive. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>User</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>If the server requires authentication, enter a user name.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Password</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>If the server supports anonymous authentication, enter a unique password.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Connection timeout</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Specify the timeout period (in seconds) for the LDAP server connection. The system continues attempts to connect until the timeout period is reached. If a connection is not made after the timeout period expires, an exception message appears.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Create records of type</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose from the drop-down list to create records of the customer type (employee or external contact).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Connect to eDirectory</p>
+                                            <p>Open LDAP Server</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Select to connect to eDirectory and the Open LDAP server,</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Use NTLM authentication</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>If you selected <span class="Bold">Connect to eDirectory/Open LDAP server</span>, you must also select this option. Open LDAP requires NTLM authentication.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Enable Incremental Updates</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Optional. If you did not select <span class="Bold">Connect to eDirectory/Open LDAP server</span>, you can enable incremental updates through <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a> by selecting this option. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Enable synchronous replication</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Optional. Select to enable synchronous replication.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>SSL Connection</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p><a name="kanchor437"></a>Select to provide a secure socket layer connection if you are using LDAPS.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Test Connection</span> to test your connection. A connection test results (successful or unsuccessful) message appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Next</span>. </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Select Directory Info to Sync</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Here, you enter user locations or organizational units to synchronize.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you change an email address for a user after the initial synchronization, any subsequent sync attempt will fail.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="LDAP_Settings_-_Select_Directory_Info_to_Sync"><a name="LDAP_Settings_-_Select_Directory_Info_to_Sync" data-mc-generated-bookmark="ListOf"></a>LDAP Settings - Select Directory Info to Sync</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_settings_-_select_directoyr_info_to_sync.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="648" data-mc-height="716" src="../../resources/images/ldap_settings_-_select_directoyr_info_to_sync_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Enter information.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0">
+                                <col width="181px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="482px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">&#160;</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">&#160;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Preset</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Define the LDAP object filter by selecting a default search filter from the drop-down list. The default is users.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Filter</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p> Optional. To add a filter string, enter a valid string and click <span class="Bold">Save New Preset</span>.</p>
+                                            <p>The system adds the value to the <span class="window_name">Preset</span> drop-down list. Click <span class="Bold">Remove Preset</span> to delete the current value.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Root LDAP node(s)</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>To restrict LDAP searches, enter one or more valid root nodes. </p>
+                                            <p><span class="Emphasis">OR</span>
+                                            </p>
+                                            <p>Use the LDAP directory browser to locate a directory, then click <span class="Bold">Add selected node as root</span>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Sample LDAP Entry to extract fields from</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>Each LDAP entry belongs to an LDAP class and contains a set of fields. Use this option to add a sample LDAP entry containing fields to be retrieved in a fetch operation.</p>
+                                            <p><span class="Emphasis">OR</span>
+                                            </p>
+                                            <p>Use the LDAP directory browser to locate a sample entry, then click <span class="Bold">Select sample entry</span>.</p>
+                                            <p>The entry shows the LDAP entry syntax, such as:</p>
+                                            <p><span class="fixedwidth">CN=Class Name,OU=Organizational Unit,DC=domaincomponent1 (derived from company DNS domain components),DC=domaincomponent segment2</span>
+                                            </p>
+                                            <p>For example:</p>
+                                            <p><span class="fixedwidth">CN=Barnard Jeffries,OU=Users,OU=Pleasanton,DC=companyX,DC=com</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Refresh</span> to update the window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Next</span>. The system test the selected options.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Field Mapping</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Record Settings</span> page enables field mapping, relationship mapping, role access, and advanced settings. The system only shows the fields based on the selections made in the previous step.</p>
+                    <p class="fig_title" data-mc-xref-target-name="LDAP_Field_Mapping_Page"><a name="LDAP_Field_Mapping_Page" data-mc-generated-bookmark="ListOf"></a>LDAP Field Mapping Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_field_mapping.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="831" data-mc-height="830" src="../../resources/images/ldap_field_mapping_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Expression Functionality</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">You can use expressions for field mapping. Select an attribute, map it on the object field, and use an expression with all functions supported by <span class="notranslate"><b>HEAT</b></span> functionality  to transform the resulting value or run some complex logic.</p>
+                            <h4 class="subheading">Examples:</h4>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Directory emails end in <span class="fixedwidth">@domain.com</span>. It must be transformed in <span class="notranslate"><b>HEAT</b></span> to end with <span class="fixedwidth">@tenant.com</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">The mapping expression is:</p>
+                            <p class="Code">PrimayEmail   = $(iif(Find('@domain.com', mail) &gt; -1, samaccountname + '@tenant.com', mail))</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Map the <span class="window_name">Department</span> field based on the distinguished name component.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">If <span class="fixedwidth">DN()</span> is called without parameters, the  whole distinguished name is returned.</p>
+                            <p class="Body_indent">For <span class="window_name">CN=John Doe, OU=Developers, OU=Personnel, DC=Company</span> LDAP entry, the mapping expression is:</p>
+                            <p class="Code">Department = $(iif(DN(1) == 'Developers', 'Research &amp; Development', 'IT')</p>
+                            <h4 class="subheading">Expressions for Field Mapping</h4>
+                            <p class="Body">To enable expressions for  field mapping, select <span class="window_name">[Use expression]</span> in the LDAP field name control:</p>
+                            <p class="fig_title" data-mc-xref-target-name="LDAP_Field_Name_Control"><a name="LDAP_Field_Name_Control" data-mc-generated-bookmark="ListOf"></a>LDAP Field Name Control</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_contact_field_mapping.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="355" src="../../resources/images/ldap_contact_field_mapping_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <p class="Body">This invokes the expression editor. See <a href="../../reference/expressions/expressions.htm" class="MCXref xref">Expressions</a>.</p>
+                            <p class="Body">Edit your expression using LDAP entry fields and other functions from the properties and functions tree.</p>
+                            <p class="Body">If an LDAP field name already contains an expression, the expression editor automatically appears. Selecting <span class="window_name">[Use Text Value]</span> from the properties tree  removes expression from the mapping. The expression is also disabled  if <span class="fixedwidth">$(</span> symbols are not used in the beginning of the expression text.</p>
+                            <h4 class="subheading">Expressions for Relationship Mapping</h4>
+                            <p class="Body">This expression functionality is also enabled for relationship mapping.</p>
+                            <p class="Body">LDAP synchronization can create an organizational unit  if the required organizational unit does not exist. All new organizational units are created with a parent organizational unit selected in the parent organizational unit name control.</p>
+                            <p class="fig_title" data-mc-xref-target-name="LDAP_Parent_Org_Unit_Name_-_Organizational_Unit"><a name="LDAP_Parent_Org_Unit_Name_-_Organizational_Unit" data-mc-generated-bookmark="ListOf"></a>LDAP Parent Org Unit Name - Organizational Unit</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_parent_org_unit.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="623" data-mc-height="91" src="../../resources/images/ldap_parent_org_unit_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <p class="Body">The parent organizational unit name control is a tree list selector where you can select organizational units in a user friendly form.</p>
+                            <p class="fig_title" data-mc-xref-target-name="Parent_Org_Unit_Name_Control"><a name="Parent_Org_Unit_Name_Control" data-mc-generated-bookmark="ListOf"></a>Parent Org Unit Name Control</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/parent_org_unit_name_control.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="272" src="../../resources/images/parent_org_unit_name_control_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <h4 class="subheading">Example:</h4>
+                            <p class="Body">The mapping expression <span class="fixedwidth">$(iif(DN(1) == 'Developers', 'Research &amp; Development', 'IT'))</span> says that two organizational units are required for the import: Research &amp; Development, and IT.</p>
+                            <p class="Body">These organizational units are created (if they did not exist before the import) and placed under the  organizational unit in the tree which is selected as parent.</p>
+                            <p class="Body">If the organizational unit already exists, it is used for import.</p>
+                            <p class="Body">The system uses the default organizational unit by default.</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Mapping Fields</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="notranslate"><b>HEAT</b></span> <span class="window_name">Contact Field Name</span> field and choose the field you want to use as the primary contact field. The default is <span class="Type">PrimaryEmail</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Under <span class="notranslate"><b>HEAT</b></span> <span class="window_name">Contact Field Mapping</span>, from the <span class="window_name">Preset</span> drop-down list, choose a mapping file. The default list is Active Directory. <span class="notranslate"><b>HEAT</b></span> supports Active Directory, eDirectory, Lotus, OpenLDAP, generic, and many others. When selected, the tables on this page are populated with default values. You can retain the defaults or add custom values.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_caution.css');" class="TableStyle-Note_Caution" cellspacing="0">
+                                <col class="TableStyle-Note_Caution-Column-Column1" />
+                                <col class="TableStyle-Note_Caution-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note_Caution-Body-Body2">
+                                        <td class="TableStyle-Note_Caution-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note_Caution-BodyA-Column2-Body2">You must map the LoginID field to the LDAP user ID, or LDAP external authorization will not perform correctly.
+							
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the field mapping table. You can use an expression for the LDAP field name.</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Fields represent field names in <span class="notranslate"><b>HEAT</b></span>. Directory fields are the field names in Active Directory.</li>
+                                    <li value="2">You can enter the attribute directly in the <span class="window_name">Directory</span> field. If you enter a new attribute in the <span class="window_name">Directory</span> field, you must select <span class="Bold">Use Default</span> for the corresponding <span class="window_name">Value</span> field.</li>
+                                </ul>
+                            </div>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1">
+                                </col>
+                                <col class="TableStyle-Note-Column-Column2">
+                                </col>
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png">
+                                            </img>
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">Creating new records using the LDAP import process works only for simple validation lists; for example, pick lists that are not constrained (such as department).
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body_indent">Field mapping expressions using comparison with <span class="fixedwidth">iif</span> are case sensitive. For example,  use the following expression for organizational unit:</p>
+                            <p class="Code">$(iif((DN(2) == 'California'),'California','Colorado'))</p>
+                            <p class="Body_indent">If you used "california" (lower case "C"), then the  return data is Colorado. To receive the correct data, in this case, use "California."</p>
+                            <p class="Body_indent">To map the <span class="window_name">Manager</span> field, you can use the <span class="fixedwidth">ParseDn()</span> function (See <a href="../../reference/functions/parsedn.htm" class="MCXref xref">ParseDn</a>).</p>
+                            <p class="fig_title" data-mc-xref-target-name="Example_Using_the_ParseDn()_Function"><a name="Example_Using_the_ParseDn()_Function" data-mc-generated-bookmark="ListOf"></a>Example Using the ParseDn() Function</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/parsednexample.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1015" data-mc-height="283" src="../../resources/images/parsednexample_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Add</span> <img src="../../resources/images/buttons/add_green.png" class="icon" /> to add a new entry (a table row).</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">If you select <span class="Bold">[Use Text Value],</span> the <span class="window_name">Value</span> field becomes active. The text entered in this field is saved in the Profile.</li>
+                                    <li value="2">If you select an LDAP field, the <span class="window_name">Use Default</span> field becomes available. By default, this value is unchecked. During import, if the LDAP field is not found, the <span class="window_name">Value</span> field is used. </li>
+                                    <li value="3">If you select an LDAP field, which is not in the menu, then you can enter that field name and click <span class="Bold">Check Default</span>.</li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Under <span class="notranslate"><b>HEAT</b></span> <span class="window_name">Contact Relationships</span>, choose the parent organizational unit name, or choose <span class="Bold">Default</span>. Select fields from the LDAP-compliant directory which will be used to create relationships in your HEAT solution for each contact record. This relationship must match exactly.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">For example, if you attempt to use the <span class="window_name">Manager</span> field in <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a>, the import will fail because this field includes an LDAP distinguished name instead of a simple user name or email address.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Add</span> <img src="../../resources/images/buttons/add_green.png" class="icon" /> to add a new entry (a table row).</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Under <span class="notranslate"><b>HEAT</b></span> <span class="window_name">Contact Roles</span>, add roles that can be imported using this connection. The default role is Self Service. Click <span class="Bold">Self Service</span> to show the role list, then check the roles you want to include.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="LDAP_-_HEAT_Contact_Roles"><a name="LDAP_-_HEAT_Contact_Roles" data-mc-generated-bookmark="ListOf"></a>LDAP - HEAT Contact Roles</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/ldap_contact_roles.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="505" data-mc-height="398" src="../../resources/images/ldap_contact_roles_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <p class="Body_indent">To retain the existing roles, check <span class="Bold">Keep existing roles</span>. If checked, the import process will keep all assigned roles for existing contacts AND then create roles defined in the current record settings. If unchecked, the existing roles are deleted and the selected roles are added.</p>
+                            <p class="Body_indent">By default, HEAT contacts that already exist before the import process runs will keep their current roles and add the roles you have defined as part of the current record settings.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Under <span class="window_name">Advanced Settings</span>, select any of the following:</td>
+                                </tr>
+                            </table>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Option</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Allow HEAT to access LDAP directory when certificate is non-trusted.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to  be able to connect through SSL to the LDAP-compliant server even if the certificate is not trusted.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Override Employee Login</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to override the employee login settings.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Add LDAP Login and Server to imported accounts.</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to automatically add the LDAP settings into the user profile record.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Disable HEAT users who have been disabled in the LDAP-compliant directory using the value of the fields:</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check to disable existing HEAT contacts during the import process when they have been disabled in your LDAP-compliant directory. Enter the field values to check for disabled users.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1"> Disable HEAT users who have been expired in the LDAP-compliant directory</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Check to disable existing HEAT contacts during the import process when they have expired in your LDAP-compliant directory.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Preview</span> to see your data.</td>
+                                </tr>
+                            </table>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">From the <span class="window_name">Profile</span> drop-down list, choose  defined LDAP entries to be used during synchronization according to the root LDAP nodes and filter parameters. </li>
+                                    <li value="2">Select a defined LDAP entry from the displayed list. LDAP entry field values are shown according to fields mapping settings. </li>
+                                    <li value="3">Close the window when finished. </li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Exclude Items</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Input any specific users that you do not want to sync. Put each DN regular expression on a separate line. Enter a list of regular expression patterns  used to exclude LDAP entries from being imported during the synchronization. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">For example, the pattern <span class="fixedwidth">.*OU=Development.*</span> excludes all entries with a DN containing the <span class="fixedwidth">OU=Development</span> substring. </p>
+                    <p class="Body_indent">Add the patterns to the <span class="window_name">Exclude Items</span> field, with each value listed on a separate line. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <b>Next</b>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Completed</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">Synchronize now</span> to start synchronization. The data is imported and information is recorded in the LDAP import log.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Save</span>. &#160;The data is stored in table format on the main <span class="window_name">LDAP Synchronization</span> page. Click <span class="Bold"> Sync Now</span> to run the synchronization again.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">You can create a scheduled LDAP synchronization workflow in the workflow editor using the LDAP sync block.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Check <span class="Bold">Save plain LDAP password to database</span> to save the LDAP password to the <span class="notranslate"><b>HEAT</b></span> database for internal authorization use within the <span class="notranslate"><b>HEAT</b></span> application. This action takes place during the synchronization process.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

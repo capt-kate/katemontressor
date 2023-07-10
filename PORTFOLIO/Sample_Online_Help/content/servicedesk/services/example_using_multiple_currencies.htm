@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Catalog|Request Offerings|Working with Request Offerings">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Multiple Currencies</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/services/example_using_multiple_currencies.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../servicecatalog/service_catalog.htm">Service Catalog</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="request_offerings.htm">Request Offerings</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="creating_request_offering.htm">Working with Request Offerings</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Multiple Currencies</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Using_Multiple_Currencies"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Using_Multiple_Currencies" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor246"></a>Using Multiple Currencies</h1>
+            <p class="Body">You can create different prices for users depending on where the customer is located. You can combine different currencies within a single Service Catalog offering.</p>
+            <p class="Body">For example, if a user  creates a Service Catalog request, the prices will automatically reflect the location of the user, based on the defined <span class="window_name">Location</span> within the <span class="window_name">Employee</span> record.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Showing the Total Price for a Service</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following employee has a location of Canada (and a primary address in Colorado which is ignored because the location is Canada):</p>
+                    <p class="fig_title" data-mc-xref-target-name="Employee_Location"><a name="Employee_Location" data-mc-generated-bookmark="ListOf"></a>Employee Location</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/employee_location.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="524" data-mc-height="753" src="../../resources/images/employee_location_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">This user makes a request for a new smart phone. The price appears and the total is automatically calculated in Canadian dollars (CAD).</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Service_Request_-_New_Smart_Phone"><a name="Sample_Service_Request_-_New_Smart_Phone" data-mc-generated-bookmark="ListOf"></a>Sample Service Request - New Smart Phone</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_01.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="839" data-mc-height="564" src="../../resources/images/currency_demo_01_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The user adds an option for the international shipping. This service is only available in USD, and appears as such on the right pane. Each currency type is totaled separately. The monthly charges are not added to the total cost.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Service_Request_-_International_Shipping"><a name="Sample_Service_Request_-_International_Shipping" data-mc-generated-bookmark="ListOf"></a>Sample Service Request - International Shipping</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_02.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="835" data-mc-height="548" src="../../resources/images/currency_demo_02_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating an Ad-Hoc Price for a Request Offering</a><a name="Create_an_ad-hoc_price_for_a_Request_Offering"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator, and open the <span class="window_name">Price List</span> workspace. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">New Price Item</span>. A blank price form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter the following into the fields:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 90%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Enabled</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check this option.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Item Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Blackberry</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Price</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter <span class="Bold">99</span> for value and <span class="Bold">USD</span> for currency type.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Cost </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enter <span class="Bold">25</span> for value and <span class="Bold">USD</span> for currency type.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Request_Offering_-_Blackberry_Price"><a name="Sample_Request_Offering_-_Blackberry_Price" data-mc-generated-bookmark="ListOf"></a>Sample Request Offering - Blackberry Price </p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_07.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="791" data-mc-height="627" src="../../resources/images/currency_demo_07_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Open the <span class="window_name">Request Offering</span> workspace and  select <span class="window_name">New Smartphone Request</span>. The <span class="window_name">Define Request Offering</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Notice that  <span class="window_name">Use Price List</span> is enabled. (See <a href="creating_request_offering.htm#Create_a_request_offering" class="MCXref xref">Creating a Request Offering</a>.)</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Request_Offering_-_New_Smart_Phone_Request"><a name="Sample_Request_Offering_-_New_Smart_Phone_Request" data-mc-generated-bookmark="ListOf"></a>Sample Request Offering - New Smart Phone Request</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_03.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="838" data-mc-height="440" src="../../resources/images/currency_demo_03_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Add from Price List</span> under <span class="window_name">Delivery Item</span>. The list of prices appear. This list is populated from the <a href="price_list.htm" class="MCXref xref">Price List</a> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Choose <span class="notranslate"><b>HEAT</b></span><span class="Bold"> Cloud Service Management 2014.1</span> subscription, then click <span class="Bold">Select</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Request_Offering_-_Select_Price_List_Items"><a name="Sample_Request_Offering_-_Select_Price_List_Items" data-mc-generated-bookmark="ListOf"></a>Sample Request Offering - Select Price List Items</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_04.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="738" data-mc-height="502" src="../../resources/images/currency_demo_04_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The item now appears in the request offering. This represents the base delivery item for this product and is charged to all users.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Design Request Form</span>. This is where you define optional packages, such as <span class="window_name">Phone</span> or <span class="window_name">Service Plan</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Edit</span><img src="../../resources/images/buttons/edit.png" class="icon" /> next to <span class="window_name">Phone</span>. The <span class="window_name">Configuration Editor</span> appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Request_Offering_-_Item_Configuration_Editor_for_Phone"><a name="Sample_Request_Offering_-_Item_Configuration_Editor_for_Phone" data-mc-generated-bookmark="ListOf"></a>Sample Request Offering - Item Configuration Editor for Phone</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/currency_demo_05.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="714" data-mc-height="633" src="../../resources/images/currency_demo_05_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Open the <span class="window_name">Pick List</span> section, then click <span class="Bold">Add</span><img src="../../resources/images/buttons/add_green.png" class="icon" />. A new line appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">In the first field, type <span class="Type">Blackberry</span>, then click <span class="Bold">Pick Price</span>. The <span class="window_name">Select Price List</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12.">Choose <span class="Bold">Blackberry</span> from the list (the one you just created), then click <span class="Bold">Select</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">13.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="13.">Click <span class="Bold">OK</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">You have now added an item to the list, which appears to users in the Service Catalog.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_list_control.htm">Configuring the List Control</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="request_offerings_images.htm">Request Offerings Default Icons</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_service_request_access.htm">Configuring Offering Access</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="request_offerings.htm">Request Offerings</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../configure/currency/currency.htm">Currencies</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="creating_a_service.htm">Creating a Service</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_request_offering.htm">Working with Request Offerings</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuring_categories.htm">Configuring Categories</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="hiding_or_deleting_a_req.htm">Deleting a Request Offering</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="retiring_a_service.htm">Retiring a Service</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="tweaking_the_request_offering_form.htm">Tweaking the Request Offering Form</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../configure/forms/request_form_examples.htm">Request Form Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="exporting_a_request_offering.htm">Exporting a Request Offering</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="triggering_values_from_a_combo_box.htm">Cascading Validation List</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

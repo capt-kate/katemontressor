@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Security|Authentication">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Setting up Authentication</title>
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/securitysettings/setting_up_authenticatio.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/application_security.htm">Security</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/authentication.htm">Authentication</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Setting up Authentication</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor462"></a>Setting up Authentication</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Single Sign-On</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The goal of federated single sign-on is to enable users to maintain secure access across a range of external systems and web applications. <span class="notranslate"><b>HEAT</b></span> supports the use of various protocols that help organizations accomplish this goal. Through the use of ADFS (Microsoft Active Directory Federated Services) and SAML (Security Assertion Markup Language), <span class="notranslate"><b>HEAT</b></span> customers can use their existing windows authentication credentials to sign on to their <span class="notranslate"><b>HEAT</b></span>&#160;Service Management tenant without having to enter a new password.</p>
+                    <p class="Body">Single sign-on  was originally designed to handle identity management within a network domain or other closed system, allowing users to log in once to get into their system and carry those credentials through to other systems within their environment. However, with <span class="notranslate"><b>HEAT</b></span> computing, single sign-on has become more difficult to manage as users typically access many systems and applications that cross different companies and domains. </p>
+                    <p class="Body">Many companies have designed proprietary protocols to meet the challenge of web browser single sign-on, leading to interoperability between providers. There must be trust established between the principal (user), the identity provider (initial authentication source), and the service provider (web application).</p>
+                    <p class="Body">Open source security protocols seek to exchange authorization and authentication between security domains, such as an identity provider (that is, the customer domain) and the service provider (that is, <span class="notranslate"><b>HEAT</b></span>). At the request of the user, credentials are passed to the application. This type of protocol is not concerned with how the user was authenticated initially.</p>
+                    <p class="Body">Microsoft's ADFS is a claims based identity tool, using Active Directory Domain Services to authenticate the user and issue a token that contains identity information. Federation servers located within both security domains exchange tokens without storing any user names or passwords. The user has to only enter their user name and access is granted without direct authentication to the system.</p>
+                    <p class="Body">SAML uses an identity provider and a service provider to grant access to an application through web browser. The identity provider in this case is ADFS running on the domain of the customer.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A Sample Data Flow in ADFS  SAML Authentication</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="fig_title" data-mc-xref-target-name="Sample_Data_Flow"><a name="Sample_Data_Flow" data-mc-generated-bookmark="ListOf"></a>Sample Data Flow</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs-saml-authentication.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="413" data-mc-height="315" src="../../resources/images/adfs-saml-authentication_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">The user browses to their URL, such as &lt;<em>tenant</em>&gt;.saasit.com, enters their user name, and clicks <span class="Bold">login</span>. The user does not enter a password.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2."><span class="notranslate"><b>HEAT</b></span> sends a redirect to the browser pointing to the identity provider (ADFS) based on the information configured in the SAML authentication provider record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">The user lands on their ADFS endpoint for logging in. This is a different page than is hosted on the side of the customer.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">On successful authentication through ADFS, ADFS renders a page to the user that does nothing but post the SAML assertion to <span class="notranslate"><b>HEAT</b></span>'s SAML.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">The browser posts the SAML response back to the <span class="notranslate"><b>HEAT</b></span> endpoint with the SAML assertion, and a session for the user is created.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6."><span class="notranslate"><b>HEAT</b></span> sends a redirect to the browser of the user pointing them at the home page of the application (as if they had logged in as usual).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">The browser of the user asks for the resource.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor463"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting Up Authentication in <span class="notranslate"><b>HEAT</b></span></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="TableStyle-Note_Warning" style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" cellspacing="0">
+                        <col class="TableStyle-Note_Warning-Column-Column1" style="width: 65px;" />
+                        <col class="TableStyle-Note_Warning-Column-Column2" style="width: 989px;" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">
+                                    <p>Before you begin, ensure the following:</p>
+                                    <ul class="list_table">
+                                        <li value="1">ADFS Release 2.0 (or latest) must be installed. </li>
+                                        <li value="2">You must have valid certificates for the <span class="notranslate"><b>HEAT</b></span> application server and for the ADFS server.</li>
+                                        <li value="3">The websites for both servers should be SSL site binding (https, 443).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Exporting ADFS Server Certificate with Public Key</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the ADFS server, open the IIS Manager. See <a href="http://msdn.microsoft.com/en-us/library/bb763170.ASPX">http://msdn.microsoft.com/en-us/library/bb763170.ASPX</a> on how to access this.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click to open <span class="window_name">Server Certificates</span> in features view. Click the certificate that is assigned to IIS. Ensure this certificate has a private key.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Server_Certificates"><a name="Server_Certificates" data-mc-generated-bookmark="ListOf"></a>Server Certificates</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_server_key.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="455" src="../../resources/images/adfs_server_key_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="window_name">Details</span> tab, then click <span class="Bold">Copy to File</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select <span class="Bold">No, do not export the private key</span>, then click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Select <span class="Bold">DER encoded binary X.509</span>, then click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Enter the file name with the full path, then click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Finish</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Copy this certificate and paste it into the <span class="notranslate"><b>HEAT</b></span> Application Server, which sets up the authentication provider.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring the <span class="notranslate"><b>HEAT</b></span> Application Server</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Upload the <span class="notranslate"><b>HEAT</b></span> Application Server certificate for the HEATSM tenant. The certificate should include the private key and usually the file extension is <span class="Bold">.pfx</span>. This certificate will be downloaded later for setting the ADFS signature.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Log into the <span class="notranslate"><b>HEAT</b></span>&#160;Configuration Database and open the <span class="window_name">Tenants</span> workspace. The list of tenants appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the HEATSM tenant. The details page appears.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Add Certificate</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Add_Certificate"><a name="Add_Certificate" data-mc-generated-bookmark="ListOf"></a>Add Certificate </p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tenants_workspace.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="489" data-mc-height="422" src="../../resources/images/tenants_workspace_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Navigate to the certificate location. This certificate is the same that was used to set up SSL in IIS.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Highlight the certificate and click <b>Open</b>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Enter the password for the certificate in the <span class="window_name">Certificate Password</span> field.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Enter_the_Certificate_Password"><a name="Enter_the_Certificate_Password" data-mc-generated-bookmark="ListOf"></a>Enter the Certificate Password</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/tenant_password.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="246" src="../../resources/images/tenant_password_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click&#160;<b>Save</b>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Check to ensure that the certificate has a private key in the <span class="window_name">Actions</span> pane in IIS.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Check_the_Certificate_Private_Key"><a name="Check_the_Certificate_Private_Key" data-mc-generated-bookmark="ListOf"></a>Check the Certificate Private Key</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/server_certificates.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="611" data-mc-height="535" src="../../resources/images/server_certificates_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting Up the ADFS Server</a><a name="use_cases_282280956_1252792"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The process for setting up ADFS to work with <span class="notranslate"><b>HEAT</b></span> is:</p>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />I. Adding New Relying Party on the ADFS System</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">Configure the ADFS server of the tenant.</p>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                        <col class="TableStyle-Note-Column-Column1" />
+                                        <col class="TableStyle-Note-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note-Body-Body2">
+                                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note-BodyA-Column2-Body2">Ensure that you install ADFS version 2.0. ADFS version 2.0 is installed from a separate downloadable package. Using the <span class="Bold">Add Roles Wizard</span> from server manager only installs ADFS version 1.0, which does not include all the required features. Make sure that you install ADFS as a <span class="Bold">Federation Server</span>.
+							</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />II. Ensuring ADFS Forms is on IIS Authentication Types</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">Ensure that the ADFS form is located in your IIS Manager, after installing ADFS. From the <span class="Bold">Start</span> menu, choose <span class="Bold">Control Panel &gt; AdministrativeTools &gt; ADFS 2.0 Management Wizard</span>. </p>
+                                    <h4 class="subheading">Set Forms Authentication Mode for ADFS</h4>
+                                    <p class="Body">Forms-based authentication basically means that a forms-based .aspx page is presented to the user containing username and password fields. This page is fully customizable so you can add new sign-in logic or page customizations (logos, style sheet, and so on).</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open <span class="window_name">IIS Manager</span>, select the <span class="Bold">adfs</span> virtual directory and then click <span class="Bold">Explore</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="IIS_Manager_Window"><a name="IIS_Manager_Window" data-mc-generated-bookmark="ListOf"></a>IIS Manager Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config1.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="529" data-mc-height="163" src="../../resources/images/adfs_config1_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the \adfs\ls folder, select <span class="Bold">web.config</span>, then select <span class="Bold">Edit</span> in Notepad.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Find &lt;localAuthenticationTypes&gt;.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">There are four lines below &lt;<span class="fixedwidth">localAuthenticationTypes</span>&gt;. Each line represents one of the local authentication types.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Cut the entire <span class="window_name">Forms</span> line and paste it to the top of the list under &lt;<span class="fixedwidth">localAuthenticationTypes</span>&gt;:</td>
+                                        </tr>
+                                    </table>
+                                    <p class="XML">&lt;localAuthenticationTypes&gt;</p>
+                                    <p class="XML">&#160;&#160;&#160;&#160;&#160;&lt;add name="Forms" page="FormsSignIn.aspx" /&gt;</p>
+                                    <p class="XML">&#160;&#160;&#160;&#160;&#160;&lt;add name="Integrated" page="auth/integrated/" /&gt;</p>
+                                    <p class="XML">&#160;&#160;&#160;&#160;&#160;&lt;add name="TlsClient" page="auth/sslclient/" /&gt;</p>
+                                    <p class="XML">&#160;&#160;&#160;&#160;&#160;&lt;add name="Basic" page="auth/basic/" /&gt;</p>
+                                    <p class="XML">&lt;/localAuthenticationTypes&gt;</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Save and close the web.config file.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />III. Adding a New Relying Party to the ADFS Manager</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Select <span class="Bold">Trust Relationships</span>, right-click <span class="Bold">Relying Party Trusts</span>, then select <span class="Bold">Add Relying Party Trust</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Add_Relying_Party_Trust"><a name="Add_Relying_Party_Trust" data-mc-generated-bookmark="ListOf"></a>Add Relying Party Trust</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config2.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="222" data-mc-height="195" src="../../resources/images/adfs_config2_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Start</span> to begin the wizard.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select <span class="Bold">Enter data about the relying party manually</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Enter_Data_about_the_Relying_Party_Manually"><a name="Enter_Data_about_the_Relying_Party_Manually" data-mc-generated-bookmark="ListOf"></a>Enter Data about the Relying Party Manually</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config3.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="479" data-mc-height="283" src="../../resources/images/adfs_config3_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Next</span> to set <span class="window_name">Display Name</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Set <span class="Bold">Display Name</span>. For example, <span class="Type">Frontrange ADFS</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Next</span> to choose your profile.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Next</span> to <span class="window_name">Configure Certificate</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">Configure Certificate is an optional step—only the <span class="Bold">Login name</span> is transferred to Frontrange <span class="notranslate"><b>HEAT</b></span> for authentication, which is also not normally required to be encrypted. However, you can encrypt it by adding the <span class="Type">Frontrange SaaS.cer</span> certificate file.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Next</span> to <span class="window_name">Configure URL</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">On the <span class="window_name">Configure URL</span> page:</p>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">Check the <span class="Bold">Enable support for the SAML 2.0 WebSSO protocol</span> option.</li>
+                                            <li value="2">Enter the <span class="notranslate"><b>HEAT</b></span> SAML 2.0 endpoint in the <span class="Bold">Relying party SAML 2.0 SSO service URL</span> field, <span class="Type">https://&lt;tenant URL&gt;/handlers/sso/SamlAssertionConsumerHandler.ashx</span></li>
+                                        </ul>
+                                    </div>
+                                    <p class="fig_title" data-mc-xref-target-name="Enter_the_Tenant_URL"><a name="Enter_the_Tenant_URL" data-mc-generated-bookmark="ListOf"></a>Enter the Tenant URL</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config4.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="479" data-mc-height="283" src="../../resources/images/adfs_config4_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Next</span> to <span class="window_name">Configure Identifiers</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">In the <span class="Bold">Relying party trust identifier</span> field, enter &lt;<span class="Type">tenant.saasit.com/</span>&gt; and click <span class="Bold">Add</span>.</li>
+                                        </ul>
+                                    </div>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                        <col class="TableStyle-Note-Column-Column1" />
+                                        <col class="TableStyle-Note-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note-Body-Body2">
+                                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note-BodyA-Column2-Body2">Be sure to enter the forward slash at the end.
+							</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Enter_the_Identifier_in_the_Relying_Party_Trust_Identifier_Field"><a name="Enter_the_Identifier_in_the_Relying_Party_Trust_Identifier_Field" data-mc-generated-bookmark="ListOf"></a>Enter the Identifier in the Relying Party Trust Identifier Field</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config5.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="479" data-mc-height="177" src="../../resources/images/adfs_config5_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">In the <span class="Bold">Relying party trust identifiers</span> text box, you can add URLs, as shown:</li>
+                                        </ul>
+                                    </div>
+                                    <p class="fig_title" data-mc-xref-target-name="Add_Multiple_URLs"><a name="Add_Multiple_URLs" data-mc-generated-bookmark="ListOf"></a>Add Multiple URLs</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config6.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="404" data-mc-height="115" src="../../resources/images/adfs_config6_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <p class="Body_indent">Other URLs can be added after you complete the wizard by selecting <span class="window_name">Properties</span> and then clicking the <span class="window_name">Identifiers</span> tab.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Next</span> to <span class="window_name">Choose Issuance Authorization Rules</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">Select the <span class="Bold">Permit all users to access this relying party</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12.">Verify your settings and click <span class="Bold">OK</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">A new entry appears under <span class="window_name">Relying Party Trusts</span> in the ADFS Manager.</p>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />IV. Entering Claim Rule</a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Right-click the new entry that you just created in the ADFS Manager.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select <span class="Bold">Edit Claim Rules</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Edit_Claim_Rules"><a name="Edit_Claim_Rules" data-mc-generated-bookmark="ListOf"></a>Edit Claim Rules</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config7.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="174" data-mc-height="103" src="../../resources/images/adfs_config7_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Add Rule</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Claim rule template</span> field, select <span class="Bold">Send LDAP Attributes as Claims</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Send_LDAP_Attributes_as_Claims"><a name="Send_LDAP_Attributes_as_Claims" data-mc-generated-bookmark="ListOf"></a>Send LDAP Attributes as Claims</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config8.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="404" data-mc-height="63" src="../../resources/images/adfs_config8_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">In the <span class="window_name">Claim rule name</span> field, set a rule name, for example, UPN.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">For Attribute store, select <b>Active Directory</b>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">In the <span class="window_name">Mapping of LDAP attributes to outgoing claim types</span> section, </td>
+                                        </tr>
+                                    </table>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">For <span class="window_name">LDAP Attribute</span>, select <span class="Bold">User-Principal-Name</span>.</li>
+                                            <li value="2">For <span class="window_name">Outgoing Claim Type</span>, select <span class="Bold">UPN</span>.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="fig_title" data-mc-xref-target-name="Mapping_of_LDAP__Attributes_to_Outgoing_Claim_Types"><a name="Mapping_of_LDAP__Attributes_to_Outgoing_Claim_Types" data-mc-generated-bookmark="ListOf"></a>Mapping of LDAP  Attributes to Outgoing Claim Types</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config9.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="375" data-mc-height="192" src="../../resources/images/adfs_config9_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">OK</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Add a second rule to map UPN and NAMEID. </td>
+                                        </tr>
+                                    </table>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">Click <span class="Bold">Add Rule</span>.</li>
+                                            <li value="2">In the <span class="window_name">Claim rule template</span> field, select <span class="Bold">Transform an Incoming Claim</span>.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="fig_title" data-mc-xref-target-name="Map_UPN_and_NAMEID"><a name="Map_UPN_and_NAMEID" data-mc-generated-bookmark="ListOf"></a>Map UPN and NAMEID</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config10.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="347" data-mc-height="85" src="../../resources/images/adfs_config10_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <div class="sub_list">
+                                        <ul>
+                                            <li value="1">In the <span class="window_name">Claim rule name</span> field, set a rule name, for example, "UPN and NameID".</li>
+                                            <li value="2"><span class="Bold">Incoming claim type</span>: Select <span class="Bold">UPN</span>.</li>
+                                            <li value="3"><span class="Bold">Outgoing claim type</span>: Select <span class="Bold">Name</span><span class="Bold">ID</span>.</li>
+                                            <li value="4"><span class="Bold">Outgoing name ID format</span>: Select <span class="Bold">UPN</span>.</li>
+                                            <li value="5">Select <span class="Bold">Pass through all claim values</span>.</li>
+                                        </ul>
+                                    </div>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                        <col class="TableStyle-Note-Column-Column1" />
+                                        <col class="TableStyle-Note-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note-Body-Body2">
+                                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note-BodyA-Column2-Body2">To enable auto provisioning feature, the following claims should be issued: givenname, surname, and emailaddress.
+							</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Client_Rule_Name_Window"><a name="Client_Rule_Name_Window" data-mc-generated-bookmark="ListOf"></a>Client Rule Name Window</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config11.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="364" data-mc-height="159" src="../../resources/images/adfs_config11_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">OK</span>.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />V. Getting the Certificate</a><a name="use_cases_282280956_1247841"></a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">This is the certificate that you got in <span class="notranslate"><b>HEAT</b></span>, as described in <a href="#security_settings_1070403104_1190168" class="MCXref xref">
+		Supplying the HEAT Certificate File				</a>.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">In ADFS Manager, double-click <span class="Bold">Service</span>, then open <span class="Bold">Certificates</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the <span class="Bold">token-signing certificate</span> for your site.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">This can be a valid public certificate or a private self-signed certificate.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Copy to file</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">Leave <span class="Bold">No, do not export private key </span>as the default. </p>
+                                    <p class="Body_indent"><span class="Bold">Do not select Yes, export private key</span>.</p>
+                                    <p class="Body_indent">You should not be asked for a password during copying.</p>
+                                    <p class="Body_indent">Select <span class="Bold">DER coded binary X.509 (.CER)</span>.</p>
+                                    <p class="Body_indent">Navigate a folder to save to. </p>
+                                    <p class="Body_indent">If you are remotely connected to another computer, copy the file locally.</p>
+                                    <p class="Body_indent">Click <span class="Bold">Finish</span>.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Double-click and open the certificate, click the <span class="Bold">Details</span> tab, and make a note of the serial number of the certificate.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">You will need this number later.</p>
+                                </div>
+                            </div>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />VI. Setting the Properties of the Relay Agent</a><a name="use_cases_282280956_1247507"></a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <p class="Body">Before doing this procedure, ensure you have the <span class="notranslate"><b>HEAT</b></span> certificate file.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Double-click the newly created Relying party, or right-click and select <span class="Bold">Properties</span>.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="Bold">Signature</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Add</span>. </td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select and open the <span class="Emphasis">saas.cer</span> file you just downloaded.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">To verify you have the correct certificate, select <span class="Bold">View</span>, click the <span class="Bold">Details</span> tab and view the certificate serial number: ‎</p>
+                                    <p class="Body_indent"><span class="fixedwidth">21 a6 74 1f 94 cc 59 b0 8c d4 33 aa d7 01 e1 4e</span>.</p>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                        <col class="TableStyle-Note-Column-Column1" />
+                                        <col class="TableStyle-Note-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note-Body-Body2">
+                                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note-BodyA-Column2-Body2">Ensure that you have the correct certificate, otherwise it will not work and  is difficult to troubleshoot.
+							</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Body_indent">This certificate has the public key used to encrypt the message to the frontrange system that the user is permitted</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5."><a name="use_cases_282280956_1247517"></a>If your ADFS system is not configured specifically to support SHA-256 digital signatures, which by default it is not, do the following:</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">Double-click the newly created Relying party, or right-click and select <span class="Bold">Properties</span>.</p>
+                                    <p class="Body_indent">Click the <span class="Bold">Advanced</span> tab.</p>
+                                    <p class="Body_indent">For <span class="Bold">Secure hash algorithm</span>, select <span class="Bold">SHA-I</span>.</p>
+                                    <p class="Body_indent">Click <span class="Bold">Apply</span>.</p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Add the logout feature:</td>
+                                        </tr>
+                                    </table>
+                                    <p class="Body_indent">In the <span class="Bold">Properties</span> window, click the <span class="Bold">Endpoints</span> tab.</p>
+                                    <p class="Body_indent">Click <span class="Bold">Add</span>. </p>
+                                    <p class="fig_title" data-mc-xref-target-name="Endpoint_Properties"><a name="Endpoint_Properties" data-mc-generated-bookmark="ListOf"></a>Endpoint Properties</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config12.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="270" data-mc-height="242" src="../../resources/images/adfs_config12_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <p class="Body_indent">For <span class="Bold">Endpoint type</span>, select <span class="Bold">SAML</span><span class="Bold">Logout</span>.</p>
+                                    <p class="Body_indent">For <span class="Bold">Binding</span>, select <span class="Bold">POST</span>.</p>
+                                    <p class="Body_indent">For the <span class="Bold">URL</span> field, enter <span class="Type">https://&lt;tenant URL&gt;/handlers/sso/SamlLogoutHandler.ashx?message=LogoutRequest</span></p>
+                                    <p class="Body_indent">For the <span class="Bold">ResponseURL</span> field, enter <span class="Type">https://&lt;tenantURL&gt;/handlers/sso/SamlLogoutHandler.ashx?message=LogoutResponse</span></p>
+                                    <p class="Body_indent">Click <span class="Bold">OK</span>.</p>
+                                    <p class="Body_indent">Repeat to add a separate entry for each URL. </p>
+                                    <p class="Body_indent">For example, for the URLs frontrange.saasit.com, frontrange-stg.saasit.com and frontrange-plt.saasit.com, your Endpoints configurations should look as follows:</p>
+                                    <p class="fig_title" data-mc-xref-target-name="Sample_Endpoint_Configurations"><a name="Sample_Endpoint_Configurations" data-mc-generated-bookmark="ListOf"></a>Sample Endpoint Configurations</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/adfs_config13.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="524" data-mc-height="323" src="../../resources/images/adfs_config13_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">OK</span>.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Setting Up the SAML Server</a><a name="use_cases_282280956_1248047"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">The following is a use case for configuring SAML using Okta.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Set up your account with Okta.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Go to your Okta site and click <span class="Bold">Administration</span> at the top right-corner of the page.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="OKTA&#160;Site"><a name="OKTA&#160;Site" data-mc-generated-bookmark="ListOf"></a>OKTA&#160;Site</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config1.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="531" data-mc-height="96" src="../../resources/images/sso_okta_config1_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Add Applications</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Add_Applications"><a name="Add_Applications" data-mc-generated-bookmark="ListOf"></a>Add Applications</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config2.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="193" data-mc-height="133" src="../../resources/images/sso_okta_config2_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Add Application</span> page, enter <span class="Type">SAML</span> in the <span class="window_name">Search</span> field, then choose <span class="Bold">SAML Service Provider</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Configure the general settings:</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="General_Settings"><a name="General_Settings" data-mc-generated-bookmark="ListOf"></a>General Settings</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config3.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="391" data-mc-height="218" src="../../resources/images/sso_okta_config3_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <p class="Body_indent">For application label, enter a descriptive name. </p>
+                            <p class="Body_indent">You do not need to enter the exact URL for your tenant. You merely need to identify it from a list of applications.</p>
+                            <p class="Body_indent">Click <span class="Bold">Next</span></p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Configure the <span class="window_name">Sign On</span> options:</td>
+                                </tr>
+                            </table>
+                            <p class="fig_title" data-mc-xref-target-name="Sign_On_Options"><a name="Sign_On_Options" data-mc-generated-bookmark="ListOf"></a>Sign On Options</p>
+                            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config4.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="353" data-mc-height="358" src="../../resources/images/sso_okta_config4_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <div class="sub_list">
+                                <ul>
+                                    <li value="1">Enter the <span class="Bold">Assertion Consumer Service URL</span> as <span class="fixedwidth">https://&lt;tenant URL&gt;/handlers/sso/SamlAssertionConsumerHandler.ashx</span>.</li>
+                                    <li value="2">Enter the <span class="Bold">Service Provider Entity ID</span> as an unique number.</li>
+                                    <li value="3">Keep <span class="Bold">Okta username</span> as the <span class="Bold">Default username</span>.</li>
+                                    <li value="4">Click <span class="Bold">Next</span>.</li>
+                                </ul>
+                            </div>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">In the <span class="Bold">Assign to People</span> step, assign this to users or leave the default user information and select it, then click <span class="Bold">Next</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">A confirmation message that your set up is complete appears. </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click <span class="Bold">Done</span>.</td>
+                                </tr>
+                            </table>
+                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Getting the Certificate</a><a name="use_cases_282280956_1248807"></a></span>
+                                <div class="MCDropDownBody dropDownBody">
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="Bold">Sign On</span> tab.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Sign_On_Tab"><a name="Sign_On_Tab" data-mc-generated-bookmark="ListOf"></a>Sign On Tab</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config5.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="347" data-mc-height="320" src="../../resources/images/sso_okta_config5_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the link provided for instructions.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the link to download the certificate from the identity provider.</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fig_title" data-mc-xref-target-name="Download_the_Certificate"><a name="Download_the_Certificate" data-mc-generated-bookmark="ListOf"></a>Download the Certificate</p>
+                                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config6.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="594" data-mc-height="253" src="../../resources/images/sso_okta_config6_thumb_0_45.png" tabindex="" /></a>
+                                    </p>
+                                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 48px;" />
+                                        <col style="width: 32px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                            </td>
+                                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Download and save your certificate.</td>
+                                        </tr>
+                                    </table>
+                                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                        <col class="TableStyle-Note-Column-Column1" />
+                                        <col class="TableStyle-Note-Column-Column2" />
+                                        <tbody>
+                                            <tr class="TableStyle-Note-Body-Body2">
+                                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                                </td>
+                                                <td class="TableStyle-Note-BodyA-Column2-Body2">Rename the file  extension to  <span class="fixedwidth">.cer</span>. In the Configuration Console, go to <span class="Bold">Settings &gt; System &gt; Attachment Extensions</span> and ensure that .cer is a valid file extension. If not,  add it to the system.
+							</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring the <span class="notranslate"><b>HEAT</b></span> Site Certificate</a><a name="security_settings_1070403104_1210373"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">ADFS authentication requires configuring a public-private key pair on the tenant. ADFS Release 2.0 should be installed on the ADFS computer.</p>
+                            <h4 class="subheading">Obtaining a Certificate File with a Private Key (<span class="fixedwidth">.pfx</span> file).</h4>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Run the <span class="Bold">mmc.exe</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="Bold">File</span> menu, select <span class="Bold">Add/Remove Snap-ins</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select <span class="Bold">Certificates</span> and click <span class="Bold">Add</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select the default <span class="Bold">My user account</span> option to add the Certificates snap-in for the current user, and then click <span class="Bold">Finish</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select the created certificate from <span class="Bold">Personal</span> certificates, click <span class="Bold">All Tasks</span> &gt; <span class="Bold">Export</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Select <span class="Bold">Yes, Export private key</span> and enter your password. </td>
+                                </tr>
+                            </table>
+                            <p class="Body">Here you can also create also new <span class="fixedwidth">.cer</span> file, without private key, to use it on ADFS computer, if your original one contains private key.</p>
+                            <h4 class="subheading">On the Tenant Computer, Define the HTTPS Binding for Internet Information Services (IIS) and Add the <span class="fixedwidth">.pfx</span> File:</h4>
+                            <p class="Body_indent"><span class="Type">IIS &gt; Default Web Site&gt;Edit Binding&gt;Configure HTTPS</span>
+                            </p>
+                            <h4 class="subheading">Installing the Certificate on the Tenant</h4>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the tenant configuration database.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the corresponding tenant record.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select <span class="Bold">New Certificate</span> and upload the <span class="fixedwidth">.pfx</span> file.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Set the certificate password.</td>
+                                </tr>
+                            </table>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">Ensure that the PFX attachment is permitted to be uploaded.<![CDATA[							]]></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="subheading">Obtaining and Installing the Public Key for the Certificate</h4>
+                            <p class="Body_indent">See <a href="#security_settings_1070403104_1190168" class="MCXref xref">
+		Supplying the HEAT Certificate File				</a>.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">This certificate should be provided to the ADFS instance administrator. You can use the public key on the ADFS computer if your original one contains the private key.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />
+		Supplying the <span class="notranslate"><b>HEAT</b></span> Certificate File				</a><a name="security_settings_1070403104_1190168"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Before   getting the certificate, ensure  that you have configured your ADFS/SAML server.
+ 		
+Prior to supplying the <span class="notranslate"><b>HEAT</b></span> certificate, ensure that you have followed the procedure described in <a href="#security_settings_1070403104_1210373" class="MCXref xref">Configuring the HEAT Site Certificate</a>.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration Console, choose <b>System Setup</b>, then under the <span class="window_name">Security Settings</span> column, click <span class="Bold">Get ADFS Certificate</span>.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Some pop-up blockers might prevent the file from downloading. The link gives you the ability to download the <span class="Emphasis">Frontrange saasit.com .cer</span> file. Temporarily save this file to your desktop. If for some reason the file does not download, contact FrontRange Support and they can provide the file to you.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Continue to configure the server.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="authentication_configura.htm">Authentication Configuration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="authentication_providers.htm">Authentication Providers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../encryptionkeys/encryption_keys.htm">Encryption Keys</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="setting_password_policy.htm">Password Policy</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="login_priority.htm">Login Priority</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manage_api_keys.htm">API Keys</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

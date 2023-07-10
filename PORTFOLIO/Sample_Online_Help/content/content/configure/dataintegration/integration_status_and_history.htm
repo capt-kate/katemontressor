@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Integration Status and History</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/integration_status_and_history.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Integration Status and History</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor435"></a>Integration Status and History</h1>
+            <p class="Body">You can view the status of your data import and cancel a running import.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">This task is only available to administrators.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View the Integration Queue</a><a name="IntegrationQueue"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The integration queue only shows active or running jobs. Once the import is completed or aborted, the job disappears from the list.</p>
+                    <ul>
+                        <li value="1">Within the Service Desk Console, open the <span class="window_name">Integration Queue</span> workspace. Running jobs are listed. Otherwise, there is no data in this workspace.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View the Data Integration Log - File Integration</a><a name="integrationLog"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <ul>
+                        <li value="1">Log into the Service Desk Console as an administrator, then  open the <span class="window_name">Integration Log</span> workspace. The list of data imports appears.</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_integration_Log"><a name="Sample_integration_Log" data-mc-generated-bookmark="ListOf"></a>Sample integration Log</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/integration_log.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="606" data-mc-height="235" src="../../resources/images/integration_log_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">If an import was successful, one line appears under <span class="window_name">LogType</span>: Stats. </p>
+                    <p class="Body_indent">Errors encountered are shown with two lines: Stats and ErrorStats. </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Stats:&#160;Double-click to view a summary of the job.</li>
+                            <li value="2">ErrorStats:&#160;Double-click to view a summary of the errors. Open the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">attachment<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A file or Web URL reference linked to a record.</span></a> to view the rows containing errors. The last column contains specific details about the error. You can modify the data (correct the errors) in the attachment file and save it to the source location for re-import. The error message will be ignored and the data will be imported into the database.</li>
+                        </ul>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View the Integration Log - SCCM</a><a name="IntegrationLogSCCM"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">View the details of the processed job from the <span class="window_name">Integration Log</span> workspace.</p>
+                            <ul>
+                                <li value="1">Log into the Service Desk Console as an administrator, then  open the <span class="window_name">Integration Log</span> workspace.  The list of import jobs appear with the following information:</li>
+                            </ul>
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Log Type</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Shows three log types:</p>
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Queued:&#160;Indicates that the source ID from SCCM has been queued in the Inventory Management Asset Data Processor.</li>
+                                                <li class="list_table" value="2">Verified:&#160;Indicates that the source ID from SCCM has been successfully created in the <span class="notranslate"><b>HEAT</b></span> database.</li>
+                                                <li class="list_table" value="3">Stats: Shows the statistics about the number of rows processed.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Source ID</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">SCCM root table key (Computer_System_DATA) shown on the <span class="window_name">Object Mapping</span> page of the wizard.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Target ID</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Asset ID that is derived from the asset identifier mapping function on the <span class="window_name">Field Mapping</span> page of the wizard.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Start Time</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Time when the job should run.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">End Time</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">If applicable, the time by which the job should end.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Total Processed</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Total number of records processed. If there are no new mappings added, there will probably be no records processed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Message</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Informational message, which varies according to the log type.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body_indent">While the job is being processed, you can view it from the <span class="window_name">Integration Queue</span> workspace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Data Integration History</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Integration History</span> page shows all jobs, including canceled jobs.</p>
+                    <ul>
+                        <li value="1">Within the Service Desk Console, open the <span class="window_name">Integration History</span> workspace. The list of import jobs appears. Also shown is the following information for each job:</li>
+                    </ul>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Connection Name</p>
+                                    <p>Source Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name and source of the Integration job as defined in <a href="data_integration_configu.htm" class="MCXref xref">Configuring Data Integration</a>.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Queue Status</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Indicates the status of the job. This field is color-coded.</p>
+                                    <ul class="list_table">
+                                        <li class="list_table" value="1">Queued: The job has not yet run but is in the queue. This status is replaced by running when the job begins.</li>
+                                        <li class="list_table" value="2">Running : The job is currently running. This status is replaced by completed when the job end.</li>
+                                        <li class="list_table" value="3">Abort Requested: A user has canceled the job, but the cancellation has not yet taken place. This status is replaced by aborting as soon as the cancellation begins.</li>
+                                        <li class="list_table" value="4">Aborting: The job is in the cancel process. This real-time status only appears when the cancellation is running and is replaced by <span class="Bold">Aborted</span> when the cancellation is complete.</li>
+                                        <li class="list_table" value="5">Aborted: The job has been successfully canceled. This final status remains in the <span class="window_name">History</span> workspace.</li>
+                                        <li class="list_table" value="6">Completed: The job has been successfully run. This final status remains in the <span class="window_name">History</span> workspace.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Batch Number</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of the last batch processed. A batch is 200 rows of data.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Batch Processed</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The total number of rows that have been processed in the last batch.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Batch Failed</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The total number of rows that have failed in the last batch.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Process Row Number</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The total number of rows in all batches for the current job. If the job has 10 batches, for example, this field shows the total number of rows for all batches (2000).</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Batch Start Time</p>
+                                    <p>Batch End Time</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The start and end time of the last batch processed.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Batch Time Taken</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of seconds to run the last batch.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Start Time</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The start time of the entire job.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Queue Running Time</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of seconds to run the job, including initialization and dispatching.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Created By</p>
+                                    <p>Created On</p>
+                                    <p>Modified By</p>
+                                    <p>Modified On</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Automatically generated by the system based on the logged in user ID.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Cancel a Running Job</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator, then  open the <span class="window_name">Integration History</span> workspace.  A list of queued, current (running), and past jobs appear. You can only cancel a running or queued job.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">Abort Integration Event</span>. The cancellation is added to the queue and the job status changes to abort requested. Usually this takes only a few seconds. You might need to refresh the screen to update the status.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Cancel_Integration_Job"><a name="Cancel_Integration_Job" data-mc-generated-bookmark="ListOf"></a>Cancel Integration Job</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cancel_integration.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="454" data-mc-height="275" src="../../resources/images/cancel_integration_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">When the cancellation process begins, the status changes to aborting. It usually takes less than a minute for a job to cancel, depending on the amount of data being processed.</p>
+                    <p class="Body_indent">When the cancellation is complete, the status changes to aborted. This status remains in the <span class="window_name">Integration History</span> workspace.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

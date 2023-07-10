@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Manage Gateway Settings</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/managing_gateway_setting.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Manage Gateway Settings</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_3"> Managing Gateway Settings</h1>
+            <p class="Body">&#160;</p>
+            <p class="Body">Gateways allow you to scan your network and create records about the devices and machines. You can install more than one gateway; however, you can only set one gateway as the central gateway. A central gateway allows you to have a single machine that communicates with the main server. All other gateways send information to the central gateway. </p>
+            <p class="Body">Once the gateway is successfully installed it sends its own data  to the main server and a CI record is created for the gateway machine. Open the <span class="window_name">Gateway</span> workspace to find a list of all the gateways. <![CDATA[  ]]></p>
+            <p class="Body">The data center edition gateway is bundled with Netscan which allows you to scan within a subnet (IP range), and with VMHA which discovers virtual machines using a host/guest model.</p>
+            <p class="Body">Discovery Managers can manage settings from the <span class="window_name">Gateway</span> workspace.</p>
+            <ul>
+                <li value="1"><a href="#1View" class="MCXref xref">View and Set a Central Gateway</a>
+                </li>
+                <li value="2"><a href="#2View" class="MCXref xref">View the List of Agent Tasks</a>
+                </li>
+                <li value="3"><a href="#3Update" class="MCXref xref">Update Administrative Credentials</a>
+                </li>
+                <li value="4"><a href="#4Manage" class="MCXref xref">Manage the Client Task Subnets</a>
+                </li>
+                <li value="5"><a href="running_netscan.htm" class="MCXref xref">Using Netscan</a>
+                </li>
+                <li value="6"><a href="audit_virtual_machines.htm" class="MCXref xref">Auditing Virtual Machines</a>
+                </li>
+            </ul>
+            <p> <![CDATA[ ]]></p>
+            <p> <![CDATA[ ]]></p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />View and Set a Central Gateway</a><a name="1View"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"> From the <span class="window_name">Gateway</span> workspace, you can specify a central (or default) gateway computer. If the agent task of a client cannot be assigned to any gateway, then the system uses the gateway identified as the central gateway as the fallback. </p>
+                    <p class="Body">The system selects the closest matching gateway to a client computer based on the IP&#160;address of the client computer. If the client’s subnet falls within the IP range of a gateway, it is associated with that gateway. If a client does not match the subnet range of any other gateway, then the client defaults to the central gateway. </p>
+                    <ul>
+                        <li value="1">Log in as the Discovery Manager and open the <span class="window_name">Gateway</span> workspace. A list of gateway computers is shown, or a default gateway computer record appears.</li>
+                        <li value="2">If <span class="window_name">Central Gateway</span> is checked, the computer is the central gateway.</li>
+                        <li value="3">To make another computer the central gateway, select the record, then click <span class="Bold">Select/Deselect as Central Gateway</span>  to make it the default or central gateway.</li>
+                        <li value="4">Double-click a computer on the list to view details.</li>
+                    </ul>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Edition</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The computer name registered as the gateway.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Settings Version</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The number of times that the gateway record has been updated.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Settings Last Deployed On</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The date and time when the gateway record was updated.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Central Gateway</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">If checked, this gateway is  a fallback to handle tasks if no other gateway is found.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li value="1">Click the <span class="window_name">Computer</span> tab to view data about the gateway computer. </li>
+                        <li value="2">The computer on which the gateway is installed gets automatically audited after the gateway is installed. The <span class="window_name">Computer</span> tab is populated only when auditing is completed. </li>
+                        <li value="3">To open the computer record, select the record and click <span class="Bold">Go to</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />View the List of Agent Tasks</a><a name="2View"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Many of the tasks that you perform within the <span class="window_name">Inventory</span> workspace are scheduled as agent tasks, for example updating gateway settings. You can cancel an agent task if it has not yet started or is in <span class="Emphasis">pending</span> status.</p>
+                    <p class="Body">Tasks that are in the <span class="Emphasis">pending</span> or <span class="Emphasis">in progress</span> status are  set to expire if they are not processed within the default expiration time, which is seven days.</p>
+                    <p class="Body">Follow these steps to view the list of agent tasks:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as the Discovery Manager and open the <span class="window_name">Gateway</span> workspace. A list of gateway computers is shown, or a default gateway computer record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click to open the gateway that you want to manage. The <span class="window_name">Gateway</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the <span class="window_name">Agent Tasks</span> tab to see the list of tasks.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Update Administrative Credentials</a><a name="3Update"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To scan or deploy agents from the gateway computer to other machines, you must provide credentials that have administrator privileges on the client machines.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1."> Log in as the Discovery Manager and open the <span class="window_name">Gateway</span> workspace. A list of gateway computers is shown, or a default gateway computer record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click to open the gateway that you want to manage. The <span class="window_name">Gateway</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the <span class="window_name">Administrative Credentials</span> tab, change the user name and password as needed, then click <span class="Bold">Update</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">From the toolbar, click <span class="Bold">Deploy Settings</span>. The credentials are updated and the settings are deployed.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Manage the Client Task Subnets</a><a name="4Manage"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="window_name">Client Task Subnets</span> tab controls which computers the gateway manages. It only handles tasks such as <span class="window_name">deploy agent</span> for computers that reside in the specified subnets (unless it is the central gateway).</p>
+                    <p class="Body">The specified gateway should have access to the subnets that you specify here. If there are multiple gateways, the client subnet decides which gateway handles the task.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1."> Log in as the Discovery Manager and open the <span class="window_name">Gateway</span> workspace. A list of gateway computers is shown, or a default gateway computer record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click to open the gateway that you want to manage. The <span class="window_name">Gateway</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the <span class="window_name">Client Task Subnets</span> tab to see the  subnet in which the gateway resides. It specifies the range of IP addresses within the subnet. For example, 192.172.0  covers the entire subnet 192.172. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">New Record</span>. The <span class="window_name">New Gateway Subnet</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the subnet.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">IP Address</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The IP address in the subnet range. For example, 192.172.0.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Subnet Mask</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The subnet mask that defines the subnet range. For example, 255.255.255.0.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save</span>. The window closes.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">From the toolbar, click <span class="Bold">Deploy Settings</span>. The  settings are deployed.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p>Data center edition gateways have access to Netscan and are able to scan virtual machines. See <a href="running_netscan.htm" class="MCXref xref">Using Netscan</a>.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Notes for Upgrading the Discovery Gateway to HEAT&#160;Release 2014.1 from Earlier Versions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <ul>
+                        <li value="1">Does the Discovery gateway need to be reinstalled/upgraded?</li>
+                    </ul>
+                    <p class="Body_indent">Yes.  The Discovery gateway needs to be reinstalled manually.  The newer gateway (version 2.0) is backward compatible and does support the client version 1.9.<br /><br /></p>
+                    <ul>
+                        <li value="1">How does the new agent get deployed via the gateway?</li>
+                    </ul>
+                    <p class="Body_indent">The current gateway cannot support the newer version of the client agent and must first be upgraded.<br /><br /></p>
+                    <ul>
+                        <li value="1">Is uninstall of the old agent required? Initial testing shows the old Discovery agent does not get cleanly removed when manually uninstalled, leaving behind folders and files.</li>
+                    </ul>
+                    <p class="Body_indent">No, you do not need to uninstall the existing client prior to installing version 2.0.  The residual folders and files have no side effect when the newer client agent is installed.</p>
+                    <p class="Body_indent"> <![CDATA[ ]]></p>
+                    <ul>
+                        <li value="1">Do we need to remove the agent via the configuration item object or can this be rolled out via a SCCM package?</li>
+                    </ul>
+                    <p class="Body_indent">No, you can simply run the new installer and it will upgrade the agent.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_deploy.htm">Deploying the MDI Service</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="mdm_apns_tool.htm">APNS Certificate Tool</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_discovery.htm">Troubleshooting</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

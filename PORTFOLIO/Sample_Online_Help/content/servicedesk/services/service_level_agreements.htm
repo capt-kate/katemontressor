@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Levels">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Service Level Agreements</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/services/service_level_agreements.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="about_service_level_management.htm">Service Levels</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Service Level Agreements</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor284"></a>Service Level Agreements</h1>
+            <p class="Body"> <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">ITIL <span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Information Technology Infrastructure Library. A set of practices for HEAT that focuses on aligning IT services with the needs of business.</span></a>  defines  a service level agreement (SLA)&#160;as an agreement between an IT service provider and a customer. The service level agreement describes the IT service, documents service level targets, and specifies the responsibilities of the IT service provider and the customer. A single service level agreement may cover multiple IT services or multiple customers.</p>
+            <p class="Body">Within <span class="notranslate"><b>HEAT</b></span>, service level agreements determine the level of service outlined in the service level packages (constrained by service level targets); each organizational unit (OU) has a service level agreement for published services; each service level agreement can apply to only one organizational unit. Each service (and corresponding service level packages) can be attached to one or more organizational units. If an organizational unit is not subscribed to a service level agreement, requirements for handling the incident or service request are covered by the default escalation schedules. See <a href="../../reference/incidents_defaults.htm" class="MCXref xref">Escalation Defaults</a><a href="../../configure/escalations/define_escalations__from.htm#Default_escalations" class="MCXref xref">Default Escalations</a></p>
+            <p class="Body">For example, a service request is submitted against the service Data Services. Data Services has a Gold service level package defined for it. Within the agreements of the Gold package, the Sales organizational unit is defined. When a service level agreement subscription is created for the Data Services service for the Sales organizational unit, the targets defined in the Gold package are copied over. When an employee from the Sales organizational unit submits a service request for Data Services, the service level agreement field shows the agreement for the organizational unit of the customer.</p>
+            <p class="Body">When service requests (or request items) are created from the Service Desk, the service level agreement field gets populated only if the service has service level agreements defined. If the organizational unit of the customer does not subscribe to the request offering, the service level agreement field is auto-filled with default service level agreement values (for example, for the entire corporate organization). If the organizational unit of the customer subscribes to the request offering (or service level package), the service level agreement field is auto-filled with the service level agreement value defined for the organizational unit. </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />View Service Level Agreements</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk as a service owner and open the <span class="window_name">SLA Subscription</span> workspace. A list of agreements appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose an agreement in the list to view details.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a Service Level Agreement</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Before creating a service level agreement, you must create your request offerings (and optional service packages). <span class="notranslate"><b>HEAT</b></span> includes various basic services that you can use or modify to fit your organization.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner and open the <span class="window_name">SLA Subscription</span> workspace. The list of service level agreements appears. To view all service level agreements, click <span class="Bold">All Services</span> from the left pane. You can view only those agreements pertaining to a specific service by clicking on the service name, such as Desktop Service.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Desktop_Service"><a name="Desktop_Service" data-mc-generated-bookmark="ListOf"></a>Desktop Service</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sla_subscription.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="954" data-mc-height="512" src="../../resources/images/sla_subscription_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Create Agreement</span>.The <span class="window_name">Agreement Wizard</span> appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the <span class="window_name">Select Service</span> page, click <span class="Bold">Select</span> next to the services you want to add to the agreement. The service is added to the agreement.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Select_Service_Page"><a name="Select_Service_Page" data-mc-generated-bookmark="ListOf"></a>Select Service Page</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/service_select.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="643" data-mc-height="656" src="../../resources/images/service_select_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">To see the service details, click <span class="Bold">More...</span>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Next</span>. The <span class="window_name">Select Package</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">From the <span class="window_name">Select Organizational Unit</span> pane, choose an organizational unit for this subscription. If you select the top level, the agreement applies to all users under this organization.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Select_Organizational&#160;Unit"><a name="Select_Organizational&#160;Unit" data-mc-generated-bookmark="ListOf"></a>Select Organizational&#160;Unit</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sla_organization.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="333" data-mc-height="405" src="../../resources/images/sla_organization_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The selected services are listed.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">From the <span class="window_name">Select Service Level Package</span> pane, choose the package you want. Selected packages are indicated.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Select_Service_Level&#160;Package"><a name="Select_Service_Level&#160;Package" data-mc-generated-bookmark="ListOf"></a>Select Service Level&#160;Package</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/selected_package.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="566" data-mc-height="321" src="../../resources/images/selected_package_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Next</span>. The <span class="window_name">Customize Service Options</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Customize the service options as needed. Click <span class="Bold">Customize</span> on your service, then select your options, if any.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Customize_a_Service"><a name="Customize_a_Service" data-mc-generated-bookmark="ListOf"></a>Customize a Service</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sla_customize.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1062" data-mc-height="588" src="../../resources/images/sla_customize_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click <span class="Bold">Next</span>. The <span class="window_name">Review and Save</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Review the service package. If the package needs to be modified, click <span class="Bold">Change</span> next to the selected option and edit as needed.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent"> If everything is correct, click <span class="Bold">Save</span>.</p>
+                    <p class="Body">The agreement you created is listed in the <span class="window_name">SLA Subscription</span> workspace.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="about_service_level_management.htm">Service Levels</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="organizational_level_management.htm">Operational  Level Agreements</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="configuring_categories.htm">Configuring Categories</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_a_team.htm">Creating a Team</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_a_vendor.htm">Creating a Vendor</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_service_level_target.htm">Service Level Targets</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="outage_log.htm">Outage Log</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="subscribing_to_a_service.htm">Subscribing to a Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="service_level_package_co.htm">Service Level Packages</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="services_workspace_index.htm">Services Workspace Index</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="underpinning_contracts.htm">Underpinning Contracts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="slm_dashboard.htm">SLM Dashboard</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/service_level_management_lifecycle.htm">Service Level Management Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

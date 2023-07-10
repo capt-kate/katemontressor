@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Security|Authentication|Setting up Authentication">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Authentication Configuration</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/securitysettings/authentication_configura.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/application_security.htm">Security</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/authentication.htm">Authentication</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="setting_up_authenticatio.htm">Setting up Authentication</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Authentication Configuration</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor476"></a>Authentication Configuration</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Opening a User Record and Adding an External Login</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body_indent">See <a href="authentication_providers.htm#security_settings_1070403104_1191018" class="MCXref xref">Setting Up Users for Authentication</a> for more information. </p>
+                    <p class="Body_indent">In the <span class="window_name">Login for External Auth</span> field, enter the UPN name of the active dDirectory user from the ADFS computer (for example, <span class="Emphasis">firstname.lastName@frontrange.com)</span>.</p>
+                    <p class="Body_indent">Users who do not have employee records can be created when logging in via ADFS/SAML or Open ID if auto provisioning is selected in the authentication provider record. See <a href="authentication_providers.htm#security_settings_1070403104_1211098" class="MCXref xref">Setting Up Authentication for Open ID</a> and <a href="authentication_providers.htm#security_settings_1070403104_1181173" class="MCXref xref">Setting Up Authentication for ADFS/SAML</a>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within <span class="notranslate"><b>HEAT</b></span>, click <span class="Bold">Get ADFS Certificate</span>, as described in <a href="#security_settings_1070403104_1190168" class="MCXref xref">Authentication Configuration</a> or for SAML, <a href="#use_cases_282280956_1248807" class="MCXref xref">Authentication Configuration</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Go back to your ADFS/SAML server and open the certificate to do some configuration, as described in <a href="#use_cases_282280956_1247507" class="MCXref xref">Authentication Configuration</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Get the certificate for use in <span class="notranslate"><b>HEAT</b></span>, and save it locally, as described in <a href="#use_cases_282280956_1247841" class="MCXref xref">Authentication Configuration</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Within <span class="notranslate"><b>HEAT</b></span>, set up ADFS/SAML authentication and click the Certificate link to browse to the saved certificate and upload it, as described in <a href="authentication_providers.htm#security_settings_1070403104_1181173" class="MCXref xref">Setting Up Authentication for ADFS/SAML</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Finally, make sure that you have set up users to use authentication, as described in <a href="authentication_providers.htm#security_settings_1070403104_1191018" class="MCXref xref">Setting Up Users for Authentication</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">See the sample URL for logging in using authentication in <a href="../login/log_in_using_urls.htm" class="MCXref xref">Logging In or Accessing Records Using URLs</a>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Getting the Authentication Provider URL that Identifies the Relying Party</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click <span class="Bold">My Applications</span>, then click the &lt;<span class="Emphasis">application name</span>&gt; link you just configured.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="Bold">General</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Copy the URL that appears in the <span class="window_name">EmbedLink</span> field.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Authentication_Provider_URL"><a name="Authentication_Provider_URL" data-mc-generated-bookmark="ListOf"></a>Authentication Provider URL</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config7.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="390" data-mc-height="377" src="../../resources/images/sso_okta_config7_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuring the Authentication Provider in <span class="notranslate"><b>HEAT</b></span></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Paste the relying party URL (copied in the previous step) into the <span class="window_name">Identity Server URL</span> field in <span class="notranslate"><b>HEAT</b></span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="Bold">Add Certificate</span> link to upload the certificate you downloaded and saved earlier.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Configure the other fields, as described in <a href="authentication_providers.htm#security_settings_1070403104_1181173" class="MCXref xref">Setting Up Authentication for ADFS/SAML</a>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Following is a sample Okta configuration SAML provider record:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Sample_SAML&#160;Provider_Record"><a name="Sample_SAML&#160;Provider_Record" data-mc-generated-bookmark="ListOf"></a>Sample SAML&#160;Provider Record</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sso_okta_config8.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="401" data-mc-height="266" src="../../resources/images/sso_okta_config8_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">To test your configuration, go back to the <span class="window_name">Okta My Applications</span> page and click the tenant link that you created. The <span class="notranslate"><b>HEAT</b></span> login page should appear. </p>
+                    <p class="Body_indent">Next:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Ensure that your users can use authentication.</li>
+                            <li value="2">Users can click a link on the <span class="notranslate"><b>HEAT</b></span> login page which directs them to their identity provider website and log in from there to <span class="notranslate"><b>HEAT</b></span> or users can use authentication to log in from an URL sent via email.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="authentication_providers.htm">Authentication Providers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../encryptionkeys/encryption_keys.htm">Encryption Keys</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="when_seamless_signon_fails.htm">When Seamless Sign-on Fails</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="setting_password_policy.htm">Password Policy</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="setting_up_authenticatio.htm">Setting up Authentication</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../security/direct_ad_authentication.htm">Integrated Windows Authentication</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="login_priority.htm">Login Priority</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manage_api_keys.htm">API Keys</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="authentication_providers.htm">Authentication Providers</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

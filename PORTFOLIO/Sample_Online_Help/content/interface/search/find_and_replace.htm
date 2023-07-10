@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Basics|Search|Search Examples">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Find and Replace</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#interface/search/find_and_replace.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../basics.htm">Basics</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="search.htm">Search</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="search_examples.htm">Search Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Find and Replace</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor44"></a>Find and Replace</h1>
+            <p class="Body">You can create a quick action that enables you to find and replace specific values in specific fields. A global <span class="window_name">Find and Replace</span> has not been implemented as this could cause catastrophic data corruption.</p>
+            <p class="Body">To perform a <span class="window_name">Find and Replace</span>, create a saved search that contains the value you want to find, then create a quick action that contains the value you want to replace.</p>
+            <p class="Body">The following example shows how to change the value within an incident <span class="window_name">Owner</span> field from <span class="Emphasis">John Davis</span> to <span class="Emphasis">Alan Taylor</span>. </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console, open the <span class="window_name">Incident</span> workspace (or wherever you want to perform the <span class="window_name">Find and Replace</span>), then click <b>Saved Searches</b>. (See <a href="saved_searches.htm" class="MCXref xref">Using Saved Searches</a> for more information on creating saved searches.)</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <b>New Search</b>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">In the search criteria area, choose the following:</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">Incident</li>
+                    <li value="2">Owner</li>
+                    <li value="3">Contains</li>
+                    <li value="4">John Davis</li>
+                </ul>
+            </div>
+            <p class="fig_title" data-mc-xref-target-name="Find_Search_Criteria"><a name="Find_Search_Criteria" data-mc-generated-bookmark="ListOf"></a>Find Search Criteria</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/find_and_replace.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="161" src="../../resources/images/find_and_replace_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Give the search a name, then click <b>Save &amp; Close</b>. The search appears on the list. Close the search list.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">From the action menu, choose <b>Edit Actions</b>. (See <a href="../../servicedesk/quickactions/quick_actions.htm" class="MCXref xref">Quick Actions</a> for more information on how to create a quick action.)</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Under the <span class="window_name">Create New Actions</span> tab, click <span class="Bold">Update Object</span>. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Enter the following criteria:</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1"><b>Field Name</b>: Owner</li>
+                    <li value="2"><b>Field Value</b>: Alan Taylor</li>
+                </ul>
+            </div>
+            <p class="fig_title" data-mc-xref-target-name="Quick_Action_Replace_Criteria"><a name="Quick_Action_Replace_Criteria" data-mc-generated-bookmark="ListOf"></a>Quick Action Replace Criteria</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/replace_quick_action.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="204" src="../../resources/images/replace_quick_action_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Give the quick action a name, then click <b>Save</b>. Return to the <span class="window_name">Incident</span> workspace.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Run the saved search that you created. Only the records containing the value you want appear.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Select the records  to change.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">From the action menu, choose the quick action that you created. </td>
+                </tr>
+            </table>
+            <p class="Body_indent">The quick action runs against the selected records, and the system updates the owner field with the new value.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_search.htm">Configuring Search</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/businessobjects/configure_object_search.htm">Configure  Search Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_object_matching.htm">Configuring Related Items Search</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="search_not_in_english.htm">Search Not in English</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="search.htm">Search</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="related_items.htm">Using Related Items</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="text_searching.htm">Using Simple Text Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="advanced_search.htm">Using Advanced Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="saved_searches.htm">Using Saved Searches</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="exporting_a_saved_search.htm">Exporting a Saved Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="email_a_saved_search.htm">Emailing a Saved Search</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_record_search.htm">Using Record Search</a>
+                    </p>
+                    <p class="VideoHeading_Video_0">Video</p>
+                    <p class="VideoItem_Video_0"><a href="video_creating_a_saved_search.htm">Video: Creating a Saved Search</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="tips_for_search.htm">Tips for Running a Search</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_saved_searches.htm">Default Saved Searches</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

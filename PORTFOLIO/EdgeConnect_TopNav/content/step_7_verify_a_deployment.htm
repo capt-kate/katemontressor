@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Setting Up">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="sdwan sd-wan deployment guide silver peak network" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Verify a Deployment Profile&#160; </title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="resources/stylesheets/sp-styles.css" rel="stylesheet" />
+        <link href="resources/tablestyles/note-table.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+        <script src="../Skins/Default/Scripts/TopicToolBar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="http://www.silver-peak.com/Support/EdgeConnect/index.html" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/EC_Master_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="5" data-mc-toc="True">
+                                            </div>
+                                        </div>
+                                        <h1 class="Step" data-mc-autonum="Step 7: "><span class="autonumber"><span>Step 7: </span></span><a name="_Toc471208888"></a>Verify a Deployment Profile&#160; </h1>
+                                        <p>Deployment Profiles are used during the deployment wizard to help streamline the installation process by requesting all the locally significant config items per site. </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Go to <i>Configuration &gt; Deployment</i>.</p>
+                                                <div class="figure">
+                                                    <p>
+                                                        <img src="resources/images/word_import/step_7_verify_a_deployment.png" alt="" />
+                                                    </p>
+                                                    <p class="figcaption" data-mc-autonum="Figure 11. "><span class="autonumber"><span>Figure 11. </span></span>Configuration &gt; Deployment</p>
+                                                </div>
+                                            </li>
+                                            <li value="2">
+                                                <p>A default inline router mode profile exists for routed installations. To implement the inline bridge deployment method, click <b>Add</b>.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/step_7_verify_a_deployment_1.png" alt="" />
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Type <b>in-line bridge</b>. </p>
+                                                <p>
+                                                    <img src="resources/images/word_import/type_in_line_bridge.png" alt="" />
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>Save</b>.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/type_in_line_bridge_1.png" alt="" />
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Bridge Mode</b>.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/type_in_line_bridge_2.png" alt="" />
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Map the WAN label to the MPLS interface.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/type_in_line_bridge_3.png" alt="" />
+                                                </p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">
+                                                        <p>Add shaping Kbps to the MPLS interface.</p>
+                                                        <p>
+                                                            <img src="resources/images/word_import/type_in_line_bridge_4.png" alt="" />
+                                                        </p>
+                                                        <table style="width: 100%;mc-table-style: url('resources/tablestyles/note-table.css');" class="TableStyle-Note-table" cellspacing="0">
+                                                            <col class="TableStyle-Note-table-Column-Column1" />
+                                                            <col class="TableStyle-Note-table-Column-Column2" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-Note-table-Body-Body1">
+                                                                    <td class="TableStyle-Note-table-BodyB-Column1-Body1">&#160;</td>
+                                                                    <td class="TableStyle-Note-table-BodyA-Column2-Body1">
+                                                                        <p><b>NOTE</b>:&#160; It is important to set the actual WAN bandwidth. If you are unsure, use the lower number. </p>
+                                                                        <p>If asymmetric bandwidths, click <b>shape inbound traffic</b> to unshadow inbound.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>ADD the bridge interface for INTERNET. </p>
+                                                        <p>
+                                                            <img src="resources/images/word_import/type_in_line_bridge_5.png" alt="" />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="7">
+                                                <p>Map the WAN label to the INTERNET interface.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/map_wan_label_to_internet.png" alt="" />
+                                                </p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Add shaping Kbps to INTERNET interface. </li>
+                                                </ol>
+                                                <p>
+                                                    <img src="resources/images/word_import/map_wan_label_to_internet_1.png" alt="" />
+                                                </p>
+                                                <table style="mc-table-style: url('resources/tablestyles/note-table.css');" class="TableStyle-Note-table" cellspacing="0">
+                                                    <col class="TableStyle-Note-table-Column-Column1" />
+                                                    <col class="TableStyle-Note-table-Column-Column2" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Note-table-Body-Body1">
+                                                            <td class="TableStyle-Note-table-BodyB-Column1-Body1">&#160;</td>
+                                                            <td class="TableStyle-Note-table-BodyA-Column2-Body1">
+                                                                <p><b>NOTE</b>:&#160; You must set the actual WAN bandwidth. If you are unsure, use the lower number. </p>
+                                                                <p>If asymmetric bandwidths, click <b>shape inbound traffic</b> to unshadow inbound.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="8">
+                                                <p>Sum the shaping Kbps.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/sum_the_shaping_kbps.png" alt="" />
+                                                </p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Save the Deployment Profile.</p>
+                                                <p>
+                                                    <img src="resources/images/word_import/sum_the_shaping_kbps_1.png" alt="" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

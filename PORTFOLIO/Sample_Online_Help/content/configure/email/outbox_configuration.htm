@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email|Email Servers">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Creating an Outbox</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/outbox_configuration.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email_configuration.htm">Email Servers</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Creating an Outbox</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor669"></a>Creating an Outbox</h1>
+            <p class="Body">An outbox is the server that handles the outgoing emails. Each mail host has one server performing this function.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create an Outbox</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The default outbox does not need to be created and we recommend that you only use this one.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Modify an Outbox</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can modify the settings of the outgoing server.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Email Configuration</span> workspace, click the record link that you want under the <span class="window_name">Mail Host</span> column. The <span class="window_name">Email Configuration</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="168px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="526px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                        Parameter
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                       Description
+                                    </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Authentication
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                     The authentication method, either AuthLogin or none. Auth Login is the SMTP_AUTH term for the Microsoft SMTP client.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Block Outgoing Email
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Blocks any outgoing emails generated by the system from business rules, quick actions, escalations, workflow, and so on. Email records are created and associated with the applicable record, but are not sent.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Email Address Override
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The email address in which to route emails. Use this if you want all outgoing emails to go to specific users or if you want to test the email traffic of the production or staging environment without affecting users. Use commas to separate multiple email addresses.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Keep full incoming message as an attachment.
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Attaches an incoming email message to a record. The incoming email message is stored as an email record (with an .EML <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">attachment<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A file or web URL reference linked to a record.</span></a>) in the <span class="window_name">Activity History</span> tab for the incident or task, depending on the Inbox settings.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Password
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The password required to access the email server.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Send Mail Timeout
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        A value between 1 and 1000 seconds.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        SMTP host
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        A valid hostname for the server processing outbound messages from the tenant.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       SMTP port
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       The email server port name used to send messages.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                       Store Journal Email As
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        The format for storing your emails, either text or HTML. HTML is the default.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                        Use SSL/TLS
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                       Enables SSL and TLS security for outbound messages.
+                                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                        Username
+                                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                        The user name required to access the email server. Usually the email address.
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Delete an Outbox</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Outboxes cannot be deleted.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="email_configuration.htm">Email Servers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="inbox_configuration.htm">Creating an Inbox</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="email.htm">Setting Up Email</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="create_or_link_objects_by_email.htm">Create or Link Objects via Email</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="send_an_email_with_an_image.htm">Send an Email with an Image</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="email_examples.htm">Email Examples</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="process_an_email_based_on_incident_status.htm">Process an Email Based on Incident Status</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="update_a_service_via_email.htm">Update a Service Request via Email</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_email.htm">Using Email</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="add_an_inbox_that_creates_a_business_object.htm">Add an Inbox that Creates a Business Object</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="the_address_book.htm">The Address Book</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="email_processing.htm">Email Processing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_notifications.htm">Default Notifications</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_email.htm">Troubleshooting Email</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="text_is_double_spaced.htm">Text is Double-Spaced Using Copy and Paste</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="solarwinds.htm">SolarWinds</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data|Configuring Data Integration|Data Import">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Field Mapping</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/about_field_mapping.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration_configu.htm">Configuring Data Integration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_import.htm">Data Import</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Field Mapping</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <map id="map1" name="map1">
+                <area shape="rectangle" coords="742,27,804,69" href="schedule_manager.htm" />
+                <area shape="rectangle" coords="-1,8,100,90" href="data_integration_configu.htm" />
+                <area shape="rectangle" coords="576,17,645,78" href="#" />
+                <area shape="rectangle" coords="664,58,721,100" />
+                <area shape="rectangle" coords="502,60,552,96" />
+                <area shape="rectangle" coords="828,29,877,68" href="review_publish.htm" />
+                <area shape="rectangle" coords="662,-1,720,38" />
+                <area shape="rectangle" coords="503,-2,554,39" />
+                <area shape="rectangle" coords="203,30,278,69" />
+                <area shape="rectangle" coords="314,22,386,76" />
+                <area shape="rectangle" coords="434,0,484,40" />
+                <area shape="rectangle" coords="432,57,484,100" />
+                <area shape="rectangle" coords="119,0,172,38" href="data_import_configuration.htm" />
+                <area shape="rectangle" coords="119,60,171,100" href="sccm_configuration.htm" />
+            </map>
+            <h1><a name="kanchor439"></a>Field Mapping</h1>
+            <p class="Body">The asset identifiers and their mapped field are stored in the <span class="window_name">Asset Data Mapping</span> form. This form is only available to administrators by default. </p>
+            <p class="Body">The <span class="window_name">Asset Data Mapping</span> workspace controls how incoming asset data gets processed by the asset processor and to which business object this data is mapped. </p>
+            <p class="Body">When specifying link to related object as part of data import, keep in mind:</p>
+            <ul>
+                <li value="1">Data import can only be linked when using link fields such as <span class="window_name">OrgUnitLink</span> or <span class="window_name">ManagerLink</span>. Only a one-to-one link is supported. </li>
+                <li value="2">For CSV files, the data  should be display name  of a business object. For example, for  <span class="window_name">OrganizationUnit</span>, use the name of the organization. For employee, use the display name of the employee (e.g. Marcia S Hendric) rather than the login ID (MHendric).</li>
+            </ul>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator, then open the <span class="window_name">Asset Data Mapping</span> workspace. A list of business objects defined for the configuration item appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the configuration item business object to which you want to map the SCCM field, for example, CI#Workstation. The  asset details appear.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the <span class="window_name">Field Mappings</span> tab. The list of asset identity or property appears on the SCCM configuration Field Mapping page and the corresponding field name on the asset data mapping record.</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Asset_Data_Mapping_Example"><a name="Asset_Data_Mapping_Example" data-mc-generated-bookmark="ListOf"></a>Asset Data Mapping Example</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/asset_data_mapping.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1083" data-mc-height="606" src="../../resources/images/asset_data_mapping_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">When mapping linked fields, use the link field name and not the display name. 
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body_indent">The following shows mapping a linked field using the field name:</p>
+            <p class="fig_title" data-mc-xref-target-name="Field_Mapping_Example_-_Linked_Field"><a name="Field_Mapping_Example_-_Linked_Field" data-mc-generated-bookmark="ListOf"></a>Field Mapping Example - Linked Field</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/field_mapping_ou.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1028" data-mc-height="523" src="../../resources/images/field_mapping_ou_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Transformation Functions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following table lists the transformation functions.</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                        <col width="88px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="71px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="208px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="91px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <col width="68px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Function Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Category </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Description</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Input</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Output</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>--&gt;</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>None</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns the source value (does nothing).</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1"> &#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Abs</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The absolute value of input value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>AssetIdentifier</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Special</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Creates a unique identifier from the SCCM machine ID and </p>
+                                    <p>the instance key.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>SCCM machineID</p>
+                                    <p>SCCM InstanceKey</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Avg</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The arithmetic mean or average of all the input values.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Cbrt</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The cube root of the input value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Ceiling</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Smallest integer value less, greater than, or equal to the given value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Century</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the century part of the input date time value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>CIType</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Special</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns CI types from the SCCM mappings and role. See example below.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>SCCM Mapping and Role</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Concat</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Concatenates string values together.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String Array</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ConvertToLocal</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Converts a DateTime value to a local DateTime value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ConvertToUTC</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Converts a DateTime value to a UTC DateTime value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>DateTimeNow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Current date and time in yyyy-MM-ddThh:mm:ss format.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>None</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>DateTimeUTCNow</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Current UTC date and time in yyyy-MM-ddThh:mm:ss format.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>None</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">DayOfMonth</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the day of the month of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">DayOfWeekNo</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns the day number of the week of the input DateTime value.</p>
+                                    <ul class="list_table">
+                                        <li value="1">0 - Sunday</li>
+                                        <li value="2">1 - Monday</li>
+                                        <li value="3">2 - Tuesday</li>
+                                        <li value="4">3 - Wednesday</li>
+                                        <li value="5">4 - Thursday</li>
+                                        <li value="6">5 - Friday</li>
+                                        <li value="7">6 - Saturday</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">DayOfWeekStr</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns the day string of the week of the input DateTime value.</p>
+                                    <ul class="list_table">
+                                        <li value="1">Sunday</li>
+                                        <li value="2">Monday</li>
+                                        <li value="3">Tuesday</li>
+                                        <li value="4">Wednesday</li>
+                                        <li value="5">Thursday</li>
+                                        <li value="6">Friday</li>
+                                        <li value="7">Saturday</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">String</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">DayOfYear</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the day of the year of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Diff</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Subtracts all the values from the first value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double Array</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Div</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Divides the first value by the remainder of the values.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double Array</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Floor</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Largest integer value less, greater than, or equal to the given value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Hour</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the hour part of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">IsoWeek</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the ISO week number of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Leap</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Length</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The length of the string.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Max</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Min</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">&#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Minute</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the minute part of the DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Mod</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Remainder after dividing first value by the second value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double, </p>
+                                    <p>Double</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Month</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the month part of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Pow</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The number raised to the power.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Product</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Product of all values.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double Array</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Quarter</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the quarter of the input DateTime value. Quarter ranges from 1 to 4.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">RegexMatch</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns a matched value from the input value for a pattern in a position (zero-based).</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">RegexReplace</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns a string that has been replaced with a string that matches a pattern in the input string.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Replace</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Replaces the part of a string with given value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Round</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Rounds a double-precision floating-point value to the nearest integer.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Second</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the second part of the DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Select</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Special</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Return the first item in the list where the corresponding predicate is equal to a given value.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1"> &#160;</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> &#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Split</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns a specific part of a string split using a separator.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sqrt</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The square root of the input value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Substring</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns part of a string.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Sum</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Math</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Sum of given values.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Double</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TimeDiff</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Returns the period between two DateTime values.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>DateTime, DateTime</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>TimeSpan</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ToLower</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Converts to lowercase text.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ToProper</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Converts to proper case text.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>ToUpper</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Converts to uppercase text.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Trim</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Removes all leading and trailing white spaces.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TrimLeft</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Removes the leading white spaces.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>TrimRight</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Removes the trailing white spaces.</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>String</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Truncate</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Math</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">The integral part of the value. In other words, rounds up or down towards zero.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Double</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Week</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Returns the standard week number of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Double</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Year</td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">Returns the year part of the input DateTime value.</td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">DateTime</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Double</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Example of Mapping CI Type</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Given the SCCM row for Computer_System_Data.Roles0 has the data:</p>
+                    <p class="Body_indent"><span class="Emphasis">LM_Workstation, LM_Server, SQLServer, Backup_Domain_Controller, Timesource, Print, NT, Backup_Browser, Master_Browser, DFS</span>
+                    </p>
+                    <p class="Body">The mapping is defined in pairs, except the last value.</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Value</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Paired With</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">LM_Server</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Server</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Server_NT</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Server</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">SQLServer</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Server</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">LM_Workstation</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Workstation</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Workstation</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">If no match, use default value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Field_Mapping_Example_-_Configuration_Items"><a name="Field_Mapping_Example_-_Configuration_Items" data-mc-generated-bookmark="ListOf"></a>Field Mapping Example - Configuration Items</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/citype_map.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="714" data-mc-height="294" src="../../resources/images/citype_map_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The first match of the above left hand value in the mapping pair in Roles0 is saved as the CI.Type.</p>
+                    <p class="Body">In this example, the CI.Type is "Server" since there is a match in the Roles0 value for the first value "LM_Server" and hence the value 'Server'.</p>
+                    <p class="Body_indent">If role = <span class="Bold">LM_Workstation</span>, returns <span class="Bold">Workstation</span>.</p>
+                    <p class="Body_indent">If role = <span class="Bold">SQLServer</span>, returns <span class="Bold">Server</span>.</p>
+                    <p class="Body_indent">If role is not defined or does not exist, returns the default value <span class="Bold">Workstation</span>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="winrm_setup.htm">WinRM Setup</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="about_hierarchical_xml_format.htm">About Hierarchical XML Format</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

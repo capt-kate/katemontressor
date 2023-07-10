@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Containers</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Containers</h1>
+                    <p>Containers are a consistent, buildable and deployable artifact. They make standardized development and deployment easy, and can provide operational efficiencies.
+Shipped uses <a href="#docker">Docker</a>, a popular container format, for builds and deployments. Some understanding of how to use Docker for development might be helpful
+as you integrate with Shipped. Once your Docker container works, you can automatically build and deploy your code.</p>
+                    <p>Learn more about Docker and containers at <a href="https://www.docker.com/what-docker">Docker.com</a></p>
+                    <h2>Containerize your app</h2>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column2" data-mc-pattern="4" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body1">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body1">
+                                    <p>Building the right container to run your application in depends on the specifics of your application. </p>
+                                    <ol>
+                                        <li value="1">Choose a base image<br /></li>
+                                        <li value="2">Install dependencies<br /></li>
+                                        <li value="3">Add build commands </li>
+                                        <li value="4">Tell Docker how to run the app </li>
+                                    </ol>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column2-Body1">
+                                    <h3 class="light">An example Ruby on Rails Dockerfile</h3>
+                                    <p class="code">FROM ruby:2.2.0<br />RUN apt-get update -qq &amp;&amp; apt-get install -y build-essential libpq-dev<br />RUN mkdir /myapp<br />WORKDIR /myapp<br />ADD Gemfile /myapp/Gemfile<br />ADD Gemfile.lock /myapp/Gemfile.lock<br />RUN bundle install<br />ADD . /myapp<br />CMD rails s</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Docker provides guides for selected application frameworks that show how to construct your Dockerfile. They have examples for
+<a href="https://docs.docker.com/compose/wordpress/">Wordpress</a>, <a href="https://docs.docker.com/compose/rails/">Rails</a>, and <a href="https://docs.docker.com/compose/django/">Django</a>.
+And here’s a blog post that outlines a static compilation use case in <a href="https://medium.com/@kelseyhightower/optimizing-docker-images-for-static-binaries-b5696e26eb07">Golang</a>.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

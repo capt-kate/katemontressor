@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Expression Examples Overview">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Expressions in Styles</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dynamicstyles/using_expressions_in_styles.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../reference/reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../reference/expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../reference/expressions/expression_examples_overview.htm">Expression Examples Overview</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Expressions in Styles</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="Using_Style_Expressions"></a>Using Expressions in Styles</h1>
+            <p class="Body">Style expressions override any default options selected. Only specific words are recognized as style expressions. See <a href="../../reference/expressions/expressions_in_the_form_editor.htm" class="MCXref xref">Using Style Rule Expressions in the Form Editor</a> for a list of acceptable words.</p>
+            <p class="Body">After adding a control to a form (within the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Form Editor<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The editor in which you edit forms.</span></a>), click the down arrow in the <span class="window_name">Style Rule</span> field, and the Expression Editor appears.</p>
+            <p class="fig_title" data-mc-xref-target-name="Style_Rule_Field_in_a_Control"><a name="Style_Rule_Field_in_a_Control" data-mc-generated-bookmark="ListOf"></a>Style Rule Field in a Control</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/style_rulle_field.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="650" data-mc-height="758" src="../../resources/images/style_rulle_field_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <p class="Body">See <a href="../forms/forms.htm" class="MCXref xref">Using Forms</a> for information about the <span class="window_name">Style Rule</span> field.</p>
+            <p class="Body">Enter an expression to  apply to this style, if needed. You can define what existing style (bold, header, etc.) to apply to a control based on a condition. See <a href="../../reference/expressions/constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> for more information.</p>
+            <p class="Body"> For example, enter the following expression into the <span class="window_name">Style</span> field of a grid:</p>
+            <p class="Code"> $(iif((Status == "Closed"), "RedStyle", "LimeStyle")) </p>
+            <p class="Body">This returns the row as "red" if the record status is closed and returns the row as "lime green" if it is not closed.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="styles.htm">Styles</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../grids/grids_how_to_highlight_incidents.htm">Highlighting Certain Incidents</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../forms/show_cell_in_different_colors_based_on_value.htm">Showing Fields in Different Colors Based on Value</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="style_editor.htm">Using the Style Editor</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="grid_highlighter.htm">Using Highlighter Styles</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../grids/usage-statistics.htm">Style Usage Statistics</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

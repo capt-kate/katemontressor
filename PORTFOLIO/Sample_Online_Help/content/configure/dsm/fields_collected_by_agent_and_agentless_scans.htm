@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Inventory Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Fields Collected by Agent and Agentless Scans</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dsm/fields_collected_by_agent_and_agentless_scans.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/inventory_management.htm">Inventory Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Fields Collected by Agent and Agentless Scans</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Fields Collected by Agent and Agentless Scans</h1>
+            <p class="Body">Data from the source fields (first column) are automatically mapped to the target fields (second column) in <span class="notranslate"><b>HEAT</b></span> Cloud.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Fields Collected by Agent Scans</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 100%;" class="with_borders">
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <thead>
+                            <tr>
+                                <th>Client message from agent scanner</th>
+                                <th>Field in HEAT</th>
+                                <th>Table</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" style="font-weight: bold;" class="reverse">Identity</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light">Registration</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product.SaaS Client
+ Agent.DisplayVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">AgentVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOS UUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOSGuid</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Cid</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ClientID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Computer Description</td>
+                                <td rowspan="4" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" rowspan="4">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Login Name</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Full Computer Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FullyQualifiedDomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Network
+ Domain</td>
+                                <td rowspan="3" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" rowspan="3">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FQDN (extract
+ domain from FQDN)</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Domain</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Computer Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Ports/Ports2.Port.IP</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">IPaddress</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Ports/Ports2.Port.IP</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Subnet</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MAC</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MACaddress</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Serial Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SerialNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Login Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LoginName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VM UUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VMUUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Chassis Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ChassisType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Hardware.CPU Sockets</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">no match field</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Virtualization</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ExecutionEnvironment</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OS Platform</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OperatingSystem</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OS Product</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSEdition</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OS Class</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">not found</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Major Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMajorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Minor Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMinorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Build Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSBuildNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Hardware.Partition.Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">TotalDiskSpace</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Hardware.Partition.Free</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FreeDiskSpace</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">sum{Hardware.Partition.Free}
+ * 100&#160;/ sum{Hardware.Partition.Size}</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PercentFreeDiskspace</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Hardware.CPU</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUCount</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Hardware.RAM Module</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MemorySlotCount</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="font-weight: bold;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse">Hardware(Match
+ FRS_CIComponentType)</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponentType&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Adapter : NIC</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">NetworkAdapter</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Ports : IP</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">IPAddress</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Check IP is empty or not</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">IPEnabled</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MAC</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MACaddress</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OriginalManufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCI Device ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCIDeviceID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCI Vendor ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCIVendorID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Port</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Subnet</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Adapter : Display</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayAdapter</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model_PCI</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Maximum bits per pixel</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MaxBitsPerPixel</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OriginalManufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCI Device ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCIDeviceID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCI Vendor ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PCIVendorID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">RAM</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Memory</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Disk</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PhysicalStorage</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Unit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DiskNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Serial Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SerialNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DiskSize</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DiskType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Partition</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LogicalStorage</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Host Units</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DiskNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DriveFormat</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Free</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FreeSpace</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Capacity</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">RAM Module</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Memory</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Slot
+ Name+Size+Width+Speed+Type+Form Factor</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Form Factor</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FormFactor</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MemoryType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MemorySize</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Slot Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SlotNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Peripheral :
+ Monitor</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Monitor</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Date of Manufacture</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ManufacturedDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">EDID Manufacturer ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">HardwareID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">HardwareId</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Max Horizontal Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MaxHorizontalSize</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Max Horizontal Size.u</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MaxHorizontalSizeUnit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Max Vertical Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MaxVerticalSize</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Max Vertical Size.u</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">MaxVerticalSizeUnit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Model</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Serial Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SerialNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse" colspan="3">Hardware - General</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOS</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Date</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOSDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOSVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOSManufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OriginalManufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPU</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUManufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Cores</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUCoreCount</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Speed</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUSpeed</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Speed Unit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUSpeedUnit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Computer</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOS UUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">BIOSGuid</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Chassis Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ChassisType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Serial Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SerialNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Network Identity</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Domain</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Full Computer Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FullyQualifiedDomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OS</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Build Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSBuildNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Class</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CIType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Major Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMajorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Minor Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMinorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Platform</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OperatingSystem</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Processor Architecture</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CPUArchitecture</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSEdition</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSEdition</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Check Service Pack</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSServicePackLeve</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">RAM</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">TotalMemory</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size Unit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">TotalMemoryUnit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" colspan="3">Software</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product/Usage</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent#InstalledApplication</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName/SoftwareName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent/SoftwareIdentity</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VersionNumber/SoftwareVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent/SoftwareIdentity</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Freq</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UsageFrequency</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">GUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Guid</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent/SoftwareIdentity</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Language</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LanguageCode</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent/SoftwareIdentity</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Last Used</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LastUsedDateTime</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product ID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ProductID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Publisher</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent/SoftwareIdentity</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Subkey</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Tag</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UninstallString</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UninstallString</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Software/Usage</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Date</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_FileInstance</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">File Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileVersion String</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FileVersionFull</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Freq</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UsageFrequency</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_FileInstance</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Internal Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InternalName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Language</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LanguageCode</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Last Used</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">LastUsedDateTime</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_FileInstance</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Filename</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Original Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OriginalName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Path</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FilePath</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_FileInstance</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ProductVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_IM_SoftwareFile</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CIM Row</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent#WindowsService</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Caption</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Caption/DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DesktopInteract</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DesktopInteract</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name/ComponentId</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PathName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">PathName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ProcessId</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ProcessId</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">StartMode</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">StartMode</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">StartName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">StartName/ServiceAccountName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">State</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">State</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SystemName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SystemName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent#Hotfix</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Subkey</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">HotfixID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Publisher</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VM</td>
+                                <td class="reverse_light" style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">GuestHostRelationship</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Name
+    Description</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">ClientName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">GuestHostRelationship</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VM UUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VMUUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">GuestHostRelationship</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Fields Collected by Agentless Scans</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 100%; overflow: auto;" class="with_borders">
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <thead>
+                            <tr>
+                                <th>Client message from WMI scanner</th>
+                                <th>Field in HEAT</th>
+                                <th>Table</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="reverse" colspan="3">Identity</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td>BIOS UUID</td>
+                                <td>BiosGuid</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>Cid</td>
+                                <td>ClientID</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Description</td>
+                                <td rowspan="4">Description</td>
+                                <td rowspan="4">CI</td>
+                            </tr>
+                            <tr>
+                                <td>Manufacturer</td>
+                            </tr>
+                            <tr>
+                                <td>Model</td>
+                            </tr>
+                            <tr>
+                                <td>Login Name</td>
+                            </tr>
+                            <tr>
+                                <td>Full Computer Name</td>
+                                <td>FullyQualifiedDomainName</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>Network
+ Domain</td>
+                                <td rowspan="3">DomainName</td>
+                                <td rowspan="3">CI</td>
+                            </tr>
+                            <tr>
+                                <td>FQDN(extract
+ domain from FQDN)</td>
+                            </tr>
+                            <tr>
+                                <td>Domain</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Name</td>
+                                <td>Name</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>IP</td>
+                                <td>IPaddress</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>Port</td>
+                                <td>Subnet</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td>MAC</td>
+                                <td>MACaddress</td>
+                                <td>CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Serial Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">SerialNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light">Network Identity</td>
+                                <td class="reverse_light">&#160;</td>
+                                <td class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Domain</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Full Computer Name</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FullyQualifiedDomainName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse_light">OS</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse_light">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Build Number</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSBuildNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Class</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CIType</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Major Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMajorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Minor Version</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSMinorVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Platform</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OperatingSystem</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSEdition</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product Type</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSEdition</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Check Service Pack</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">OSServicePackLeve</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">RAM</td>
+                                <td class="reverse_light" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">TotalMemory</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Size Unit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">TotalMemoryUnit</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">CI</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Software</td>
+                                <td class="reverse" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td class="reverse_light" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Product</td>
+                                <td class="reverse_light" style="padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">&#160;</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;" class="reverse_light">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayName</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">DisplayVersion</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">VersionNumber</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">GUID</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Guid</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">InstallDate</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Publisher</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">Manufacturer</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UninstallString</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">UninstallString</td>
+                                <td style="border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #c0c0c0;padding-left: 2px;padding-right: 2px;padding-top: 0px;padding-bottom: 0px;">FRS_CIComponent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>&#160;</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm.htm">Configuring  DSM</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="configuring_the_dsm_envi.htm">Configuring the DSM Environment</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="dsm_sw.htm">DSM</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="dsm_features_in_.htm">DSM Features</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="installing_incidents.htm">Installing and Provisioning Incidents</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="installing_service_requests.htm">Creating Software and Provisioning Service Requests</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="reporting_an_issue_to_in.htm">Reporting an issue to install software or reprovision computer</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="reprovisioning_a_compute.htm">Reprovisioning a Computer</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="viewing_cis_in_the_manag.htm">Viewing CIs in the Managed Software Workspace</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="performing_ongoing_maint.htm">Performing Ongoing Maintenance</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="dsm_integration.htm">DSM Integration</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

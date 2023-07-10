@@ -1,0 +1,14 @@
+var xmlSynonymsData = "";
+xmlSynonymsData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlSynonymsData += '<MadCapSynonyms>';
+xmlSynonymsData += '    <Groups />';
+xmlSynonymsData += '    <Directional>';
+xmlSynonymsData += '        <DirectionalSynonym From=\"pin\" To=\"watch\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"dependency\" To=\"depend\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"announcement\" To=\"messag\" FromStem=\"announc\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"related item\" To=\"object match\" FromStem=\"related item\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"object matching\" To=\"related item\" FromStem=\"object match\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"business object\" To=\"business object\" FromStem=\"business object\" />';
+xmlSynonymsData += '    </Directional>';
+xmlSynonymsData += '</MadCapSynonyms>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);

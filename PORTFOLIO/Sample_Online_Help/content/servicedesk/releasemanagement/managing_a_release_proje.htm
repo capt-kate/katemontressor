@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Release">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Managing a Release Project using the Gantt chart</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/zhomepage.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/releasemanagement/managing_a_release_proje.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="viewing_releases.htm">Release</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Managing a Release Project using the Gantt chart</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor229"></a>Managing a Release Project using the Gantt Chart</h1>
+            <p class="Body">You can create milestones and tasks for a release using the <span class="window_name">Schedule</span> tab of the release record. The <span class="window_name">Schedule</span> tab contains a Gantt chart view of the project that you can set up and manage from the Gantt chart itself.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">If you are using the release templates to create a release, defined milestones associated with the release template appear in the milestones tab and  the <span class="window_name">Schedule</span> tab of the release record. When the release record is updated to active status, tasks for the milestones are created. These tasks can be viewed by going to each milestone record and clicking the <span class="window_name">Task</span> tab, or from the <span class="window_name">Schedule</span> tab of the release record, where each task for the milestone is listed under the milestone to which it is associated.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">Gantt charts are a way to graphically show progress of a project. Management of a project is made easier if it is viewed as small manageable items where the dependencies are visually illustrated and the overall and progress is tracked. The tasks of a project can be quite complex and dependent on each other. With a project management tool, such as a Gantt chart, all milestones and all its tasks can be viewed graphically.</p>
+            <p class="Body">The release project's milestone and its tasks appear on the y-axis, and the time line appears on the x-axis. The bars show when a task should start and when it will be finished. Blue bars  show tasks which have been completed or the progression towards completion. Yellow bars show work which still must be done.</p>
+            <p class="Body">The progress of any task is tracked as a percentage of the task and displayed in the chart. You can also filter to show tasks that are not completed. The dependencies of the tasks are also visually indicated. </p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">If you create a new milestone using the Gantt chart, it will not have any defined workflow or approvals associated with its tasks. You need to work with your administrator to create a workflow for your milestone tasks, should you require an approval process for the new milestone.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a New Milestone Using the Gantt Chart</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create ad-hoc milestones using either the Gantt chart or from the <span class="window_name">Milestones</span> tab of the release record.</p>
+                    <p class="Body">The following procedure is for creating milestones without using any of the release templates.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you are using the release templates to create a release, defined milestones associated with the release template appear in the <span class="window_name">Milestones</span> tab.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as the Release Manager role and open the <span class="window_name">Release</span> workspace, then open the release record for which you want to create milestones.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose the <span class="window_name">Schedule</span> tab. The default schedule view appears, showing a 10 week period.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Add Milestone</span>. The <span class="window_name">New Milestone</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information  into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                        Choose a milestone name from the drop-down list.
+                                        <table class="TableStyle-HomePage" style="width: 683px;caption-side: top;mc-table-style: url('../../resources/tablestyles/zhomepage.css');" cellspacing="0"><col width="364px" class="TableStyle-HomePage-Column-Column1" /><col width="319px" class="TableStyle-HomePage-Column-Column1" /><tbody><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                       Build and Test Release
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                        Building
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                      Closed Pilot
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                       Deploy Release to the selected group
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                        Deployment
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                        Deployment Preparation
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                      Early Life Support
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                      New Service Testing and Pilot Milestone
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                       Open Pilot
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                        Planning
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                        Release and Deployment Planning
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                        Release Review and Closure
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1"><p>Milestone</p></td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                        Milestone
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyE-Column1-Body1">
+                                                       Service Testing and Pilot
+                                                    </td><td class="TableStyle-HomePage-BodyD-Column1-Body1">
+                                                       User Communication
+                                                    </td></tr><tr class="TableStyle-HomePage-Body-Body1"><td class="TableStyle-HomePage-BodyB-Column1-Body1">
+                                                        User Training
+                                                    </td><td class="TableStyle-HomePage-BodyA-Column1-Body1"> </td></tr></tbody></table></td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter details about the milestone.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sequence Order</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the sequence number for this milestone. There is no workflow associated with the sequence order if you are creating an ad-hoc milestone; the sequence number is merely for your reference. The sequence number in the template-based milestones indicate the sequence in which the milestones activate.
+</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Release Name</p>
+                                            <p>Release Number</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">These fields are auto-filled from the release record.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Status</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose a status from the drop-down list. A new milestone is set to <span class="Emphasis">pending </span>status.</p>
+                                            <p>No workflows are associated with the status value when creating an ad hoc milestone; the status is merely for your reference. The <span class="window_name">Status</span> field in the template-based milestones indicate the sequence in which the milestones activate. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Owner</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Choose from the drop-down list. The default owner is the logged in user.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Environment</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Choose from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Started On</p>
+                                            <p>Date / Time</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Select a start date and time. The default is the current date and time.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Target End Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. If you leave this field blank, the milestone duration shifts to encompass the end date of the last task. If you open the milestone form, you will notice that the target end date populates with the end date of the last task.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Estimated Effort</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Optional.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>. The new milestone appears on the Gantt chart. </td>
+                        </tr>
+                    </table>
+                    <p class="Body">The started on date is shown in the start column. The duration is shown in days and is taken from the target end date value or from the end date of the last task in the milestone.</p>
+                    <p class="Body">You can also manually extend a milestone duration by clicking in the duration column and updating the number of days. To align the milestone to the duration of the tasks associated with it, click <span class="Bold">Align Milestone</span>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Edit Milestones</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can edit any milestone from the <span class="window_name">Schedule</span> tab of the release record or by going to the milestone record from the <span class="window_name">Milestone</span> tab of the release record.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as a Release Manager and open the <span class="window_name">Release</span> workspace, then open the release record for which you want to edit a milestone.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose the <span class="window_name">Milestones</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the milestone that you want to edit and right-click, then select <span class="Bold">Edit Milestone</span>. The <span class="window_name">Milestone</span> window appears in <span class="Bold">Edit </span>mode.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Make any changes to the record, then click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Delete Milestones</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can delete any milestone from the <span class="window_name">Schedule</span> tab of the release record or by going to the <span class="window_name">Milestone</span> tab of the release record.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as a Release Manager and open the <span class="window_name">Release</span> workspace, then open the release record for which you want to delete milestones.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose the <span class="window_name">Milestones</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the milestones that you want to delete, then click <span class="Bold">Delete</span> from the toolbar.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Complete Milestones</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">A milestone cannot be marked completed or 100% until all the tasks under it are in a completed status. If you try to update the status of a milestone to completed or enter 100% in the <span class="window_name">% Done</span> field, you receive an error if the tasks under it are not completed. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If the milestone was created using a template, then it cannot be updated to completed or 100% if the approval is in pending status. Also, the associated tasks for the next milestone sequence are not created until the milestone is in completed state.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">To complete a milestone that was created manually (that is, a milestone that is not generated from a release template), do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as a Release Manager and open the <span class="window_name">Release</span> workspace, then open the release record for which you want to create milestones.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose the <span class="window_name">Schedule</span> tab.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Ensure that all associated tasks for the milestone are completed. If associated tasks under the milestone are not marked completed and you want to do so,</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Set the milestone status to <span class="Emphasis">completed</span>.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select the milestone and right-click, then select <span class="Bold">Edit</span>.</li>
+                            <li value="2">Enter <span class="Bold">100</span> in the <span class="window_name">Percent Complete</span> field.</li>
+                            <li value="3">In the <span class="window_name">Actual End Date</span> field, enter the date of the milestone completion.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create Tasks using the Gantt Chart</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following procedure is for creating ad-hoc tasks for a milestone using the Gantt chart. You can also create tasks for a milestone using the <span class="window_name">Task</span> tab of a milestone record.</p>
+                    <p class="Body">If you are using the release templates to create a release, defined milestones associated with the release template appear in the <span class="window_name">Milestones</span> tab and the <span class="window_name">Schedule</span> tab of the release record. When the release record is updated to active status, tasks for the milestones are created. These tasks can be viewed by going to each milestone record and clicking the <span class="window_name">Task</span> tab, or from the <span class="window_name">Schedule</span> tab of the release record, where each task for the milestone is listed under the milestone to which it is associated. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as a Release Manager and open the <span class="window_name">Release</span> workspace, then open the release record for which you want to create milestones.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Choose the <span class="window_name">Milestones</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the milestone to which you want to add a task, then choose the <span class="window_name">Task</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Add Task</span>. The <span class="window_name">New Task</span> form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Fill in the fields from the procedure <a href="../tasks/creating_tasks.htm#tasks_550968304_1344921" class="MCXref xref">Creating a Task</a>. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">You can also update the start and end dates of a task from the Gantt chart by selecting the task and dragging its outermost point. Notice that the <span class="window_name">Duration</span> field for the task and for the milestone update.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save</span>. The new task appears on the Gantt chart.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">When you create successor or predecessor tasks, notice that the Gantt chart visually indicates the dependency.</p>
+                    <p class="Body">You can also manually indicate the dependency of one task on another by selecting the task, then dragging its handle to the dependent task. </p>
+                    <p class="Body">The chart visually indicates the dependency.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Gantt_Chart"><a name="Gantt_Chart" data-mc-generated-bookmark="ListOf"></a>Gantt Chart</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/release_schedule_4.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="673" data-mc-height="105" src="../../resources/images/release_schedule_4_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">To delete a dependency, select the task, right-click and select <span class="Bold">Delete Dependency</span>, then select the specific task whose dependency you want to delete.</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="Delete_a_Dependency"><a name="Delete_a_Dependency" data-mc-generated-bookmark="ListOf"></a>Delete a Dependency</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/release_schedule_5.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="690" data-mc-height="192" src="../../resources/images/release_schedule_5_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">To indicate the progress of a task, enter the percentage of work done on the task in the <span class="window_name">% Done</span> column or select the task, right-click and select <span class="Bold">Edit Task</span>, then enter the percentage in the <span class="window_name">Percent Complete</span> field. </li>
+                        <li value="2">To align all tasks under the start and end dates of a milestone, click <span class="Bold">Align Milestone</span>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="about_release_approvals.htm">Approving Releases</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="about_release_milestones.htm">Creating a Milestone</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="about_the_release_review.htm">About the Release Review Board</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_releases.htm">Release</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_releases.htm">Working with Releases</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="approving_a_release.htm">Approving Milestones</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="canceling_release.htm">Canceling a Release</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="identifying_stakeholders.htm">Stakeholders</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="linking_cis_and_services.htm">Linking CIs and Services to a Release</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="working_with_related_rel.htm">Working with Related Releases</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="working_with_release_pac.htm">Working with Release Packages</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/release_lifecycle.htm">Release Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

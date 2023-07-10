@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Needs code fix" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Configs</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Configs</h1>
+                    <p>A configuration contains all the instructions to run a service. A service has many configurations, at least one per <a href="#environment">environment</a> in your <a href="#projects">project</a>.
+Each configuration also has an associated <a href="#deploy-targets">deploy target</a>. So to deploy a service to a new target, you’d create a new
+configuration associated with the service, environment, and deploy target.</p>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column1" data-mc-pattern="0" />
+                        <col class="TableStyle-CodeTable-Column-Column2" data-mc-pattern="4" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>List configs</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>List all the configs in an environment.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/config</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the environment’s project</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The environment for which to get the configs</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl  'https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/<br />34a35726-66e9-11e5-99df-0242ac110120/</p>
+                                    <p class="code">envs/<br />549d4a27-66f5-11e5-b425-0242ac1100de/</p>
+                                    <p class="code">services/<br />4455979b-66e9-11e5-99e0-0242ac110120/</p>
+                                    <p class="code">config'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">[</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "config_id":"549e57c0-66f5-11e5-b427-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_id":"549d4a27-66f5-11e5-b425-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_type":"service","deploy_target_id":"31f03bc9-0314-11e5-b9c3-6c4008ad584a",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_count":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "env_variables":[{"name":"RAILSSSS_HOST",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "value":"newproj--new proj--railssss--967eda.shipped-cisco.com"}],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_name":"new proj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_name":"railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_name":"newproj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_path":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_max_failures":<span class="mi">0</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_protocol":"HTTP",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "constraint_names":null,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployed_url_template":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "custom_constraints":[],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_constraints":[{"name":"1 per host",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"unique_hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {"name":"Separate racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"different_racks","checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Production hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"production",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Development hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"development","checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "hardware_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"SSD",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"ssd",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"High Network I/O",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"high_io","checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"GPU",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"gpu",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ]</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {...},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {...},</p>
+                                    <p class="code">]
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Get a config</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Retrieves a specific config for a project environment.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/config/&lt;CONFIG_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the environment’s project</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The environment for the config</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">CONFIG_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The id of the config to get</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl 'https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/<br />34a35726-66e9-11e5-99df-0242ac110120/</p>
+                                    <p class="code">envs/<br />549d4a27-66f5-11e5-b425-0242ac1100de/</p>
+                                    <p class="code">services/<br />4455979b-66e9-11e5-99e0-0242ac110120/</p>
+                                    <p class="code">config'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  "config_id":"549e57c0-66f5-11e5-b427-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_id":"549d4a27-66f5-11e5-b425-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_type":"service",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_target_id":"31f03bc9-0314-11e5-b9c3-6c4008ad584a",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2","container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_count":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "env_variables":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"RAILSSSS_HOST",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "value":"newproj--new proj--railssss--967eda.shipped-cisco.com"</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_name":"new proj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_name":"railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_name":"newproj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_path":"","health_check_max_failures":<span class="mi">0</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_protocol":"HTTP","constraint_names":null,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployed_url_template":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "custom_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"1 per host",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"unique_hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Separate racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"different_racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Production hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"production",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Development hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"development",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "hardware_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"SSD",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"ssd",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"High Network I/O",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"high_io",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"GPU",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"gpu",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ]</p>
+                                    <p class="code">}
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Create a config</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Creates a config for an environment,</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">POST https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/config</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the environment’s project</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The environment for the config</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="query-parameters">Query Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Default</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">deploy_target_id</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the deploy target for this config</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">deploy_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">Docker image to start the container</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_port</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the service’s port</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Port for the service to run on</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">container_cpu</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">Inherited from the service’s cpu</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">CPU allocation for the container</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_ram</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Inherited from the service container ram</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">RAM allocation for the container</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">container_count</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">1</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">Number of containers to run this service on</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">env_variables</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Hash of keys/values that will be used as environment variables</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">health_check_path</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The route to hit on your service so we know it’s operating. E.g. /healthcheck</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">health_check_protocol</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">http or https</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">constraint_names</td>
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">An array of tags that are passed to the backend to handle deployment constraints</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl 'https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/<br />34a35726-66e9-11e5-99df-0242ac110120/</p>
+                                    <p class="code">envs/<br />549d4a27-66f5-11e5-b425-0242ac1100de/</p>
+                                    <p class="code">services/<br />4455979b-66e9-11e5-99e0-0242ac110120/</p>
+                                    <p class="code">config' <br />-H 'Content-type: application/json' -d <br />'{<br />&#160;&#160;&#160;&#160; "deploy_target_id":"31f03bc9-0314-11e5-b9c3-6c4008ad584a",<br />&#160;&#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2",<br />&#160;&#160;&#160;&#160; "container_port":3000,<br />&#160;&#160;&#160;&#160; "container_cpu":1,<br />&#160;&#160;&#160;&#160; "container_ram":512,<br />&#160;&#160;&#160;&#160; "container_count":1,<br />&#160;&#160;&#160;&#160; "env_variables":<br />&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160; [{"name":"RAILS_HOST",<br />&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160; "value":"newproj--new proj--railssss--967eda.shipped-cisco.com"}],<br />&#160;&#160;&#160;&#160; "project_name":"new proj",<br />&#160;&#160;&#160;&#160; "service_name":"rails",<br />&#160;&#160;&#160;&#160; "environment_name":"newproj",<br />&#160;&#160;&#160;&#160; "health_check_path":"/",<br />&#160;&#160;&#160;&#160; "health_check_max_failures":0,<br />&#160;&#160;&#160;&#160; "health_check_protocol":"HTTP",<br />&#160;&#160;&#160;&#160; "constraint_names":[],<br />&#160;&#160;&#160;&#160; "deployed_url_template":""<br />}'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;  "config_id":"549e57c0-66f5-11e5-b427-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_id":"549d4a27-66f5-11e5-b425-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_type":"service",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_target_id":"31f03bc9-0314-11e5-b9c3-6c4008ad584a",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_count":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "env_variables":[{"name":"RAILSSSS_HOST",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "value":"newproj--new proj--railssss--967eda.shipped-cisco.com"</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_name":"new proj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_name":"railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_name":"newproj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_path":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_max_failures":<span class="mi">0</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_protocol":"HTTP","constraint_names":null,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployed_url_template":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "custom_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"1 per host",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"unique_hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Separate racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"different_racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Production hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"production",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"Development hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"development",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "hardware_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"SSD",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"ssd",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"High Network I/O",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"high_io",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"GPU",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "tag":"gpu",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; ]</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; }
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Update a config</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Updates a config for a project environment, and returns the updated config.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">PUT https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/config/&lt;CONFIG_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the environment’s project</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The environment of the config</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="query-parameters">Query Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Default</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">deploy_target_id</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the deploy target for this config</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">deploy_image</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">Docker image to start the container</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_port</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Port for the service to run on</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">container_cpu</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">CPU allocation for the container</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">container_ram</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Inherited from the service container ram</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">container_count</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">Number of containers to run this service on</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">env_variables</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Hash of keys/values that will be used as environment variables</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">health_check_protocol</td>
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">http or https</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">constraint_names</td>
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">An array of tags that are passed to the backend to handle deployment constraints</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl -X PUT 'https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/</p>
+                                    <p class="code">34a35726-66e9-11e5-99df-0242ac110120/</p>
+                                    <p class="code">envs/</p>
+                                    <p class="code">549d4a27-66f5-11e5-b425-0242ac1100de/</p>
+                                    <p class="code">services/</p>
+                                    <p class="code">4455979b-66e9-11e5-99e0-0242ac110120/</p>
+                                    <p class="code">config' -H </p>
+                                    <p class="code">'Content-type: application/json' -d </p>
+                                    <p class="code">'{"deploy_image":"bradgearon/ruby:2.2.4"}'</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "config_id":"549e57c0-66f5-11e5-b427-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "project_id":"34a35726-66e9-11e5-99df-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "service_id":"4455979b-66e9-11e5-99e0-0242ac110120",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "environment_id":"549d4a27-66f5-11e5-b425-0242ac1100de",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "service_type":"service",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_target_id":"31f03bc9-0314-11e5-b9c3-6c4008ad584a",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_image":"bradgearon/ruby:2.2.4",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_count":<span class="mi">1</span>,"env_variables":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"RAILSSSS_HOST",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "value":"newproj--new proj--railssss--967eda.shipped-cisco.com"</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "project_name":"new proj","service_name":"railssss",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "environment_name":"newproj",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "health_check_path":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "health_check_max_failures":<span class="mi">0</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "health_check_protocol":"HTTP","constraint_names":null,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deployed_url_template":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "custom_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "deploy_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"1 per host",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"unique_hosts","checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"Separate racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"different_racks",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"Production hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"production",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false},{"name":"Development hosts",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"development",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; ],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "hardware_constraints":</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; [</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"SSD",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"ssd",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"High Network I/O",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"high_io",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; },</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"GPU",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "tag":"gpu",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "checked":false</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; }</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; ]</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; }
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Delete a config</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyB-Column1-Body1">
+                                    <p>Deletes a config for a project environment.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">DELETE https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/config/&lt;CONFIG_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The config’s project</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The config’s environment</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">CONFIG_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The Id of the config to delete</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column2-Body1">
+                                    <p class="code">curl -X DELETE 'https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/</p>
+                                    <p class="code">34a35726-66e9-11e5-99df-0242ac110120/</p>
+                                    <p class="code">envs/</p>
+                                    <p class="code">549d4a27-66f5-11e5-b425-0242ac1100de/</p>
+                                    <p class="code">services/</p>
+                                    <p class="code">4455979b-66e9-11e5-99e0-0242ac110120/</p>
+                                    <p class="code">config/</p>
+                                    <p class="code">549e57c0-66f5-11e5-b427-0242ac1100de'</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

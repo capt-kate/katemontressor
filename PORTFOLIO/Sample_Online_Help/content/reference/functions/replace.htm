@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|String Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Replace</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/replace.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_string_functions.htm">String Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Replace</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="StringFunctions" data-mc-xref-target-name="Replace"><a name="Replace" data-mc-generated-bookmark="ListOf"></a><a name="kanchor827"></a>Replace</h2>
+            <p class="Body">Replaces the specified text with some other specified text.</p>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">Replace(text,textToMatch,replacementText) </p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">No</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <table cellspacing="0" class="TableStyle-OptionsTable" style="mc-table-style: url('../../resources/tablestyles/optionstable.css');width: 92%;">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>text</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>The text in which to make replacements.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>textToMatch</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>The specific text to match.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">
+                            <p>replacementText</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">
+                            <p>The text with which to replace it with.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">Text value.</p>
+            <h4 class="subheading">Example</h4>
+            <p class="Code">$Replace("This blue car is really blue", "blue", "yellow")</p>
+            <p class="Body_indent">This example returns "This yellow car is really yellow."</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

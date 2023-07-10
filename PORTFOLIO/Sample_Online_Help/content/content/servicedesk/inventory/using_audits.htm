@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Inventory">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Audits</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/using_audits.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inventory.htm">Inventory</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Audits</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor166"></a><a name="kanchor167"></a>Using Audits</h1>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />About Audits</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">An <span class="Emphasis">audit</span> collects software and hardware configuration information from the computers and network devices in your organization. The results from an audit can be viewed in the <span class="window_name">Inventory Manager</span> workspace.</p>
+                    <p class="Body"><a name="kanchor168"></a>An initial full audit is performed immediately after you deploy the agent. Subsequent recurring delta audits are performed as defined by the <span class="window_name">Audit Frequency</span> parameter in the <span class="window_name">Inventory Settings</span> workspace. You can change the frequency of audits. For example, you may like to audit daily or weekly. </p>
+                    <p class="Body">After the auditing is completed, the <span class="window_name">Audit Source</span> field is populated, as shown:</p>
+                    <p class="Body">
+                        <img src="../../resources/images/audit_src.jpg" class="icon" />
+                    </p>
+                    <p class="Body">The Audit Source shown above is the result of deploying an agent and then auditing. Audit sources can also be manual, import, WMI (or agentless), LanProbe, and SCCM.</p>
+                    <p class="Body">As you perform more audits, the results build up as an audit history, so that you have a picture of changes over a period of time. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Request an Additional Inventory Audit</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">An audit automatically runs when the agent is first deployed, and then by the schedule specified by the <span class="window_name">Audit Frequency</span> parameter in the <span class="window_name">Inventory Settings</span> workspace.</p>
+                    <p class="Body">Perform the following steps to request an additional audit:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the  workspace for a configuration item, and select the device that you want to audit.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">You cannot perform an Audit Inventory quick action on a Mac client. For the Mac operating system, the audit data is retrieved when the agent is first deployed and when the default audit schedule runs.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Audit Inventory</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Yes</span> to confirm that you want to proceed. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The system creates an audit task. It can take a while for the agent to receive the task and act on it (up to 30 minutes with the default settings), and then a while longer for the resulting data to be processed into the Configuration Management database.  When the audit has finished, any changes since the last audit are recorded. If there are no changes since the last inventory, no additional information is recorded.</p>
+                    <p class="Body_indent">You can continue to work while the audit is being processed. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">To check the progress of the audit, click the <span class="window_name">Agent Task</span> tab and view the <span class="window_name">Status</span> field for the relevant task.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />About Running Agentless Audits</a><a name="inventorymanagement_1146540237_1229666"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Agentless audits can be used where it is not feasible to install a client agent, for example on a mission critical server. Agentless auditing allows you to audit a computer and collect its inventory data without deploying an agent to that computer. Agentless audits use the Microsoft Windows Management Instrumentation (WMI) infrastructure to gather information.</p>
+                    <p class="Body">For auditing software licenses running remotely on thin clients, see <a href="#inventorymanagement_1146540237_1231485" class="MCXref xref">View Remote and Virtual Software Execution</a>.</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Request an Agentless Audit</a><a name="inventorymanagement_1146540237_1229676"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">Make sure that the gateway has administrator rights and permissions on the remote machines. You have to be granted the right to <span class="Bold">Act as part of the operating system</span> under the target machine's local security policy.  WMI must be allowed on the target computer. 
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="subheading">Run an Agentless Audit</h4>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">You can only run agentless audits on Windows computers. They are not supported on Mac OS computers.
+									</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Gateway</span> tab, click <span class="Bold">Scan Active Directory</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">This makes sure that all computers that are not audited (that is, without a client agent installed) are listed.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="window_name">Configuration Item</span> tab, and select one or more devices that you want to audit.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">The <span class="window_name">Agent Status</span> column should not read installed and the <span class="window_name">IP Address</span> field should be populated.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="Bold">Remote Scan</span> quick action from the toolbar or go to the action menu and select <span class="Bold">Audit &gt; Scan Remotely</span>. </td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">This creates a task for the gateway for a WMI-based audit, which must be picked up and processed (up to 30 minutes delay). When the audit has finished, any changes since the last audit are recorded. If there are no changes since the last audit, no additional information is recorded.</p>
+                            <p class="Body_indent">You can continue to work while the audit is being processed. </p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">To check the progress of the audit, select the <span class="window_name">Agent Task</span> tab.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Search for the machine name.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">You will see the text <span class="fixedwidth">Remote Scan of &lt;machine name&gt;.</span></p>
+                            <p class="Body_indent">The initial status is pending, which advances to in progress and then complete.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Go back to the computer record and view the updated information.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor169"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Schedule Agentless Audits</a><a name="inventorymanagement_1146540237_1229697"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <h4 class="subheading">Schedule an Agentless Audit</h4>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">Configuration Item</span> tab.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the computer for which you want to specify an audit schedule.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">The Agent Status column should <span class="Emphasis">not</span> read installed.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the action menu, choose <span class="Bold">Audit</span>, then <span class="Bold">Set Daily Agentless Scan</span> or <span class="Bold">Set Weekly Agentless Scan</span>.</td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">The scan interval you specify is shown in the <span class="window_name">Agentless Scan Interval</span> field on the <span class="window_name">Details</span> tab of the record.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">To set the time when the daily or weekly scan runs, click the and select <span class="Bold">More</span> &gt; <span class="Bold">Schedule Entry.</span></td>
+                                </tr>
+                            </table>
+                            <p class="Body_indent">Two default schedules called Daily Agentless Scan and Weekly Agentless Scan, are listed.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Depending on your selected scan interval, select either the daily record or the weekly record.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Specify the start time and end time, the recurrence, and the start time and end time or select <span class="Bold">No End Date</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Click <span class="Bold">Save</span> to set up your scan schedule.</td>
+                                </tr>
+                            </table>
+                            <h4 class="subheading">Activate the Agentless Scan Workflow</h4>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as the administrator, then select <span class="Bold">Settings</span> &gt; <span class="Bold">Configure Application</span> to go to the Configuration Console.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Business Objects</span> on the <span class="window_name">Service Desk Configuration</span> tab.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Under <span class="Bold">Manage Object Workflows</span>, click <span class="Bold">View Workflow</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Under <span class="Bold">ScheduleEntry</span>, select either the <span class="Bold">Agentless Scan Run Daily workflow</span> or the <span class="Bold">Agentless Scan Run Weekly</span> workflow (depending on the schedule selected earlier).</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click in the checkbox next to the workflow version you want to activate, and then click <span class="Bold">More Actions</span> &gt; <span class="Bold">Activate Version</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Yes</span> to dismiss the confirmation message. The active workflow version is highlighted in green.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Agent Tasks</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Choose the <span class="Bold">Agent Task</span> tab to view a list of agent tasks.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Tasks that in a status of <span class="Emphasis">pending </span>or <span class="Emphasis">in progress</span> will be set to <span class="Emphasis">expired </span>if  not processed within the default expiration time (7 days).
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor170"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Cancel an Agent Task</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Many of the tasks you perform within Inventory are scheduled as Agent tasks, for example updating gateway settings. You may choose to cancel an Agent task if it has not yet started or in Pending status.</p>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Agent Task</span> workspace.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select the task that you want to cancel. Check the task status. You cannot cancel a task that is currently in progress. </td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Cancel Task</span>.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 48px;" />
+                                <col style="width: 32px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                                    </td>
+                                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click <span class="Bold">Yes</span> to confirm cancellation of the task. (If you confirm after the task has been picked up by the agent, the task will still be performed.)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor171"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Discovered Assets and Change the Type</a><a name="inventorymanagement_1146540237_1234246"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Device details are obtained by a variety of means, including Agent Scan, WMI, SNMP, Net Scan, and <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a>.</p>
+                    <p class="Body">Depending on the amount of detail that is obtained, the device class can be identified. Data obtained from SNMP and <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a> will usually allow workstations and servers to be identified based on the operating system that is running, but to identify virtual machines (and therefore virtual workstations and virtual servers) an agent or WMI scan is needed.</p>
+                    <p class="Body"><a name="kanchor172"></a>If no relevant data has been obtained, then devices will be classed as CI.UnknowDevice.</p>
+                    <p class="Body">On the CI.UnknownDevice record, use the <a name="kanchor173"></a><span class="window_name">Change Device Type</span> quick action to convert the CI.UnknownDevice to the correct one, as described <a href="#inventorymanagement_1146540237_1234419" class="MCXref xref">View Unknown Devices and Change Their Type</a>. </p>
+                    <p class="Body">If a workstation or server record is not correctly identified, you can go to the workstation or server record and change the device type, as appropriate.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Changing the device type is restricted to Inventory Managers.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1234419"></a>View Unknown Devices and Change Their Type</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as the Inventory Manager.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the <span class="window_name">Configuration Item</span> tab to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Sort by Type:UnknownDevice to view all the unrecognized devices. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select one or more devices you want to change, then click <span class="Bold">Action Menu</span> &gt; <span class="Bold">Configuration Management </span>&gt; <span class="Bold">Change Device Type</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">From the <span class="window_name">Select Type</span> menu, select the device type.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">OK</span> to save your change.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">Discovered servers and workstations as well as unknown devices can be further classified into its associated business objects after a remote scan or audit on the device. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor174"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Applications Installed by DSM</a><a name="SIW"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">FrontRange Desktop and Server Management 7 (DSM 7) aids IT organizations automate, regulate, and simplify how desktops and servers are managed. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">DSM features are only available to those <span class="notranslate"><b>HEAT</b></span> customers who have purchased the FrontRange Desktop and Server Management product. The DSM client must be installed on the client machine.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">As an Inventory Manager, you can view the software deployed by NetInstall (DSM) so that you can quickly view the installed software that is managed by DSM, which might not be found in the Add/Remove Programs folder.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as Inventory Manager and open the <span class="window_name">Software Inventory</span> workspace. The software list appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Expand a manufacturer name, then double-click  a software record. The <span class="window_name">Software Identity</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select the <span class="window_name">Installed On</span> tab for a list of machines the software is installed on.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the software has been installed by DSM, the <span class="window_name">DSM Installed</span> column flag is set to yes. Otherwise, the column is blank.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Now, open the <span class="window_name">CI</span>workspace. The list of configuration items appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Double-click to open a server, virtual server, workstation, or virtual workstation record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">From the <span class="window_name">Software</span> tab, view a list of software that is installed on the CI.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the software has been installed by DSM, the column flag is set to yes.</p>
+                    <p class="Body_indent">&#160;</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor175"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Use Inventory Auditing with Virtual Machines</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can use Inventory Management to audit virtual machines as well as physical machines.</p>
+                    <p class="Body">A virtual machine contains virtual hardware and, typically, an operating system and software, in exactly the same way that a physical machine contains physical hardware, an operating system and software.</p>
+                    <p class="Body">Virtual machines, or guests, must be connected to the network in order to be discovered. The computer on which the virtual machines is installed is called the  host. See <a href="#inventorymanagement_1146540237_1312457" class="MCXref xref">View Guest-Host Relationships</a>.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Virtual machines with a network adapter configured as host only are not discovered.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor176"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Discovered Software and Identify Where it is Installed and the Number of Installations</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To view software that has been discovered by audit, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">Software Inventory</span> tab.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">This workspace displays a list of software applications discovered, including attributes such as manufacturer, name, version, language/locale, and so on.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">View the <span class="window_name">Installations</span> column for the number of installations of the software.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select and open the software application record to view further details, including the names of machines on which the software is installed. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Check <span class="Bold">License Required or Unauthorized</span> as appropriate.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click the <span class="window_name">Installed On</span> tab to see the computers on which the software is installed.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The number of computer records that appear in the Installed On tab match the number of installations shown in the Installations column in the list view.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor177"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Hardware and Software Changes</a><a name="VHSC"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">As the Inventory Manager, you can view a list of computers that have had hardware or software changes.</p>
+                    <p class="Body">You can view the hardware and software changes of a configuration item from the record itself, as described in the procedure <a href="#inventorymanagement_1146540237_1270192" class="MCXref xref">View Hardware and Software Changes from a Configuration Item Record</a>.</p>
+                    <ul>
+                        <li value="1">To view a complete list of hardware changes, open the <span class="window_name">Hardware Changes</span> workspace directly. Click the down arrow and select <span class="Bold">Hardware Changes</span>.</li>
+                        <li value="2">To view a complete list of software changes, open the <span class="window_name">Software Changes</span> workspace directly. Click the down arrow and select <span class="Bold">Software Changes</span>. </li>
+                    </ul>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Software usage changes and disk free space changes are not tracked. Only the addition, removal, or update of a software or hardware item is tracked.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">You can also view hardware and software changes related to a CI on the Inventory Manager dashboards.</p>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1270192"></a>View Hardware and Software Changes from a Configuration Item Record</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as Inventory Manager and open the <span class="window_name">Configuration Item</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Select any of the following CI types and open a record.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the <span class="window_name">Hardware Changes</span> tab, view any hardware changes.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">View the time and other details of the change. </li>
+                            <li value="2">View the <span class="window_name">Change Type</span> column, which shows the following values: added, removed, or changed, indicating that the hardware was added, removed, or modified.</li>
+                            <li value="3">To open the <span class="window_name">Hardware Changes</span> workspace, select a record and click <span class="Bold">Go to</span>.</li>
+                        </ul>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">The <span class="window_name">Hardware Changes</span> workspace appears, showing the details of the record. The <span class="window_name">CI Details</span> tab shows more information about the CI.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the <span class="window_name">Software Changes</span> tab to view any software changes.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">View the time and other details of the change. </li>
+                            <li value="2">View the <span class="window_name">Change Type</span> column, which shows the following values: added, removed, or changed, indicating that the software was added, removed, or modified.</li>
+                            <li value="3">To open the <span class="window_name">Software Changes</span> workspace, select a record and click <span class="Bold">Go to</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor178"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Audited Computer Hardware and Software Details</a><a name="inventorymanagement_1146540237_1270082"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Each audited computer has a number of properties that describe the hardware and software of the computer. These properties are collected when the computer is audited and are displayed.</p>
+                    <p class="Body">To view the details of hardware and software that has been audited, do the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">Configuration Item</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Sort and select any of the following CI types:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">To view detailed information, double click the name of the computer that you want to view, then click on the <span class="window_name">Hardware</span> or <span class="window_name">Software</span> tab to view the relevant details.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Update Inventory Settings from Software Inventory</a><a name="inventorymanagement_1146540237_1280114"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The primary source for <span class="notranslate"><b>HEAT</b></span> software inventory is the software items in the client computer's Add/Remove Programs window or Programs and Features window in the Control Panels window. However, the client agent also captures audit data of all running applications.</p>
+                    <p class="Body">If a running application is not found in the client computer's Add/Remove Programs window or Programs and Features window in the Control Panels window, then the client agent captures the associated executable file name(s), for example, *.<span class="Emphasis">exe</span>, from the file system. </p>
+                    <p class="Body">The Inventory Manager's <span class="window_name">Software Inventory</span> workspace entries will show the executable file name(s) in the <span class="window_name">Software Files</span> tab on the <span class="window_name">Configuration Items</span> workspace.</p>
+                    <p class="Body">As an Inventory Manager, you might want to capture these <span class="Emphasis">file system-based</span> software items from all other computers as well, regardless of whether they are running or not. You can accomplish this by including the executable file names in the Inventory Settings <span class="window_name">Software Files</span> tab via the <span class="Bold"><a name="kanchor179"></a>Include/exclude from Inventory</span> quick action in the Software Inventory's <span class="window_name">Software Files</span> tab.</p>
+                    <p class="Body">When the Inventory Settings is deployed to target computers, it instructs client agents to look for those executable file names from the file system and, if found, includes them in the software audit data.</p>
+                    <h4 class="subheading">Update Inventory Settings from Software Inventory</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log in as the Inventory Manager role.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Open the <span class="window_name">Configuration Item</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Sort and select any of the following CI types:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select any of the records from the specified CI types that have a status of installed, and open the record.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5."><a name="inventorymanagement_1146540237_1311721"></a>Click the <span class="window_name">Software</span> tab and view the <span class="window_name">Discovery Method</span> column. The <span class="Emphasis">file system-based</span> software appears as <span class="fixedwidth">File</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Open the <span class="window_name">Software Inventory</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Search for the software records  in which the Discovery method appeared as file (see <a href="#inventorymanagement_1146540237_1311721" class="MCXref xref">Click the Software tab and view the Discovery Method column. The file system-based software appears as File.</a>).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Open the software record that you would like to audit.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Click the <span class="window_name">Software Files</span> tab. The list of executable file name(s) appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">10.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="10.">Click <span class="Bold">Include/Exclude from Inventory</span>. Notice that the Included in Inventory column sets to yes.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="window_name">Include/Exclude from Inventory</span> quick action toggles to include and exclude the software files. If you click this quick action again, the software file is removed from auditing.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">11.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="11.">Open the <span class="window_name">Inventory Settings</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">12.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="12.">Open the default record, then click the <span class="window_name">Software Files</span> tab. Notice that the list of software files you associated in Software Inventory appear in this tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">13.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="13.">Click the <span class="window_name">Deploy Settings</span> quick action.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">All client machines running the software are audited.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor180"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Software Usage</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Software usage is shown on the <span class="window_name">Software Child</span> tab of the workstation, server, virtual workstation, and virtual server forms. </p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Remote applications are removed if they have not been used for more than 90 days. At which point, associated terminal clients will also be removed from the guest/host relationship. See <a href="#inventorymanagement_1146540237_1231485" class="MCXref xref">View Remote and Virtual Software Execution</a> for more information about terminal clients and guest/host relationships.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">The <span class="window_name">Usage Frequency</span> column shows the following:</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Usage frequency</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Calculated based on</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">never been used</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The client agent reports usage for software on audited machines only. The never frequency is implied by the fact that usage is not being reported.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">used occasionally (or used within the last 30, 60, or 90 days)</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The client agent only reports if the application has been used at least once (Occasionally within the last 30, 60, or 90 days) or used more frequently (Monthly, Weekly, or Daily). </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">daily</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">If the application has been used on any 3 of the last 7 days, it is categorized as daily.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">weekly</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">If the application has been used in any 2 or the last 4 weeks, it is categorized as weekly.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">monthly</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">If the application has been used in any 2 of the last 4 months, it is categorized as monthly.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">If the value is occasionally (or within the last 30, 60, or 90 days), The <span class="window_name">Last Used Date</span> column shows the date the software was last used.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="Bold">Collect Software Usage</span> option on the Inventory Settings form must be selected if you want software usage on the client machines  audited. See <a href="how_discovery_and_invent.htm#inventorymanagement_1146540237_1229393" class="MCXref xref">How Discovery and Inventory Auditing Work</a>.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">View Software Usage</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="Bold">Configuration Item</span> tab. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Sort and select any of the following CI types:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Double-click the name of the computer whose software usage you want to view.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the <span class="window_name">Software</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">View the <span class="window_name">Usage Frequency</span> column, and the corresponding column <span class="Bold">Last Used</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View Remote and Virtual Software Execution</a><a name="inventorymanagement_1146540237_1231485"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To view remote and virtual software execution and terminal server guest-host relationships, make sure that the <span class="Bold">Collect Software Usage</span> checkbox and the <span class="Bold">Collect Thin Client Sessions</span> checkbox are selected in Inventory Settings. See <a href="how_discovery_and_invent.htm#inventorymanagement_1146540237_1229393" class="MCXref xref">How Discovery and Inventory Auditing Work</a>.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Unless these settings are selected, guest-host relationships and the software execution environments are not shown in the guest or host machines.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">Terminal Servers and Remote Software Execution</h4>
+                    <p class="Body">A software application run remotely on a Terminal Server will be detected if the <span class="notranslate"><b>HEAT</b></span> Agent is installed on the terminal server. Software applications that are run remotely are associated with the client computer or terminal. </p>
+                    <p class="Body">If a CI record does not exist for the client computer or terminal then one is created with <span class="Emphasis">CI Type</span> = <span class="Emphasis">Workstation</span>. The client computer's or terminal's CI will show the terminal server's CI as a host. The terminal server's CI will show the client computer/terminal as a guest. </p>
+                    <p class="Body">Software applications run remotely are shown in the <span class="window_name">Software</span> tab of the client computer's CI record with <span class="Emphasis">Execution Environment</span> = <span class="Emphasis">Remote</span>.</p>
+                    <p class="Body">Software applications run remotely from a client computer are included in the installation counts shown in the <span class="window_name">Software Inventory</span> workspace. For example, if an application is installed on a terminal server and is run remotely from two clients, then the installation count will be three.</p>
+                    <p class="Body">Use of remote applications is detected and shown in the same way as local applications (for example, occasionally, monthly, weekly, and daily).</p>
+                    <h4 class="subheading">Virtual Applications</h4>
+                    <p class="Body">Virtual applications run in a self-contained virtual environment rather than being installed on the host computer. </p>
+                    <p class="Body">When a virtual app is detected by the <span class="notranslate"><b>HEAT</b></span> Agent, the software application will be included in the CI record's Software tab with <span class="Emphasis">Execution Environment</span> = <span class="Emphasis">Virtual</span>.</p>
+                    <p class="Body">Virtual applications count towards installation counts.  Virtual application usage is detected in the same way as local applications.</p>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1312457"></a>View Guest-Host Relationships</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">Configuration Item</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Sort and select any of the following CI types:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="window_name">Guest</span> tab to view all the clients of the current computer.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the machine you are on is a server, the <span class="window_name">Guest</span> tab might be populated. </p>
+                    <p class="Body_indent">View the <span class="window_name">Relationship Type</span> field.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Click the <span class="window_name">Host</span> tab to view all the host machines of the current computer.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If the machine you are on is used to connect to a host, the <span class="window_name">Host</span> tab is populated. View the <span class="window_name">Relationship Type</span> field.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Inserts and updates are managed by auditing the host computer. Remote applications and guest relationships do not disappear after a full audit is received by a computer. However, remote applications showing no usage for more than 90 days are removed. After all the remote applications are removed from the guest computer and if remote applications are not run in a host, their associated guest-host relationship is also removed. See <a href="#inventorymanagement_1146540237_1270082" class="MCXref xref">View Audited Computer Hardware and Software Details</a>.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">Examples of Guest-Host Relationships</h4>
+                    <p class="Body">The following is the <span class="window_name">Host</span> tab for the virtual server, which shows its hosts and indicates that they are virtual machines:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Guest-Host_Relationship"><a name="Guest-Host_Relationship" data-mc-generated-bookmark="ListOf"></a>Guest-Host Relationship</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/terminalserver_hosttab.png" />
+                    </p>
+                    <p class="Body">The following is one of the <span class="window_name">Guests</span> tab for the host server, which shows its clients (notice that the machine PL-WEB-SERVER is now shown as the guest:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Host&#160;Server_Guest_Tab"><a name="Host&#160;Server_Guest_Tab" data-mc-generated-bookmark="ListOf"></a>Host&#160;Server Guest Tab</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/terminatlserver_guest.png" />
+                    </p>
+                    <h4 class="subheading">View Software Execution Environments</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Click the <span class="window_name">Configuration Item</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Sort and select any of the following CI types:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Workstation</li>
+                            <li value="2">Server</li>
+                            <li value="3">Virtual Workstation</li>
+                            <li value="4">Virtual Server</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click the <span class="Bold">Software</span> tab to view all the execution environments.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The execution environments can be as follows:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Local software is installed locally</li>
+                        </ul>
+                    </div>
+                    <p class="Body">The following shows locally installed software on a terminal server:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Software_Execution_Environment_for_a_Host"><a name="Software_Execution_Environment_for_a_Host" data-mc-generated-bookmark="ListOf"></a>Software Execution Environment for a Host</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/hostserver_exeenviron.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="627" data-mc-height="268" src="../../resources/images/hostserver_exeenviron_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">Remote software is installed and run on a remote machine. Note that desktop software run remotely on a terminal server still requires a license.</li>
+                        <li value="2">Virtual The software is contained in its own virtual execution environment. This virtual environment can be stored locally or remotely.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Generate Reports and Export Data</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Defined configuration management reports are published to the Configuration Manager role and possibly to the License Manager role.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the <span class="window_name">Report</span> workspace, click the <span class="window_name">Category</span> column to sort by category. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click a report name. The report is generated in a <span class="window_name">Report Viewer</span> window.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Select a date/time parameter from the <span class="window_name">Start Date</span> and <span class="window_name">End Date</span> menus.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">View Report</span> window, click the navigation arrow to view the reports if you have selected multiple reports.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">From the <span class="window_name">View Report</span> window, do any of the following to export the report to another application:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">From the <span class="window_name">Select a format</span> menu select a format in which to view the report.</li>
+                            <li value="2">Use the arrow keys, if necessary, to page through the report data.</li>
+                            <li value="3">Click <span class="Bold">Export</span>. </li>
+                            <li value="4">You can view, save, or print the output file.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">From the <span class="window_name">View Report</span> window, do any of the following to print the report:</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">If you are using Internet Explorer, you can print the report directly by clicking <span class="Bold">Print</span>.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">When printing from Internet Explorer, make sure to add the website to your trusted sites otherwise the application might unexpectedly close. From the <span class="Bold">Tools menu</span> &gt; <span class="Bold">Internet Options</span>, click the <span class="Bold">Security</span> tab, click <span class="Bold">Trusted Sites</span>, click <span class="Bold">Sites</span>, click <span class="Bold">Add</span> to add the current website to your trusted site.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body_indent">If you are using Firefox, you can print the report by selecting another format and then print the report from the selected application by clicking <span class="Bold">Print</span>.</p>
+                    <p class="Body">You can export reports as Microsoft Excel spreadsheets.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Automatically Update Location for Networked Devices</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create user-defined locations and assign these locations to networked devices by specifying IP address ranges that are applicable to the location. After assigning an IP address range to a location, you can autofill this location to associated devices and computers. The <span class="notranslate"><b>HEAT</b></span> server uses these ranges to identify which configuration items should be automatically mapped to the given location. You can provide multiple ranges for a location. </p>
+                    <p class="Body">If you provide multiple ranges, the <a name="kanchor181"></a>asset processor tries to find the smallest IP range that matches. If there is more than one match, then it takes the one with the lowest start address. If there is still more than one match, for example, if two locations have the same range specified, then the location is picked randomly.</p>
+                    <p class="Body">You can also specify a range to exclude within a given IP range.</p>
+                    <p class="Body">You also have the ability to override default locations for specific devices and disable automatic location updates for them.</p>
+                    <p class="Body">The process for automatically updating the location of a configuration item is as follows:</p>
+                    <ul>
+                        <li value="1">Create locations and assign IP addresses to them. See  <a href="#inventorymanagement_1146540237_1272328" class="MCXref xref">Create Locations and Assign IP Address Ranges</a>.</li>
+                        <li value="2">During an audit, the network or IP addresses are populated, which allows the devices to be automatically linked to locations. Or you can run a quick action to apply new IP ranges to the configuration items in the location, as described in <a href="#inventorymanagement_1146540237_1272357" class="MCXref xref">Apply the IP Ranges to the CIs</a>.</li>
+                        <li value="3">If appropriate, override the defined subnet location for a configuration item and choose another location to assign to it, as described in <a href="#inventorymanagement_1146540237_1269144" class="MCXref xref">Override a Specified IP Range Location</a>.</li>
+                    </ul>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1272328"></a>Create Locations and Assign IP Address Ranges</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> as an administrator, Configuration Manager, or Inventory Manager.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the down arrow and select <span class="Bold">CI Location</span>. The existing location records appear in the list view.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">New CI Location</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Location</span> field, enter a location name. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">IP Range Mapping</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">New Device Subnet</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">In the window that appears, do the following:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Specify the IP address range in the <span class="window_name">Address Range Start</span> and <span class="window_name">Address Range End</span> fields.</li>
+                            <li value="2">Click <span class="Bold">Save</span>.</li>
+                            <li value="3">If you want to exclude a range within the range you specified, click <span class="Bold">New Device Subnet</span> again.</li>
+                            <li value="4">In the <span class="window_name">Address Range Start</span> and <span class="window_name">Address Range End</span> fields, specify the range that should be excluded from within the IP range you specified earlier.</li>
+                            <li value="5">Check <span class="Bold">Exclude</span> to exclude the range.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">For example, if you specify a range from <span class="fixedwidth">192.172.0</span> to <span class="fixedwidth">192.172.255</span>, but you want to exclude a range within the specified range, you can create another location mapping from <span class="fixedwidth">192.172.200</span> to <span class="fixedwidth">192.172.250</span> and check <span class="Bold">Exclude</span>. </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Save</span>.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Next, see <a href="#inventorymanagement_1146540237_1272357" class="MCXref xref">Apply the IP Ranges to the CIs</a>.</td>
+                        </tr>
+                    </table>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1272357"></a>Apply the IP Ranges to the CIs</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Create locations and map IP ranges to them, as described in <a href="#inventorymanagement_1146540237_1272328" class="MCXref xref">Create Locations and Assign IP Address Ranges</a>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the action menu, select <span class="Bold">Location Mapping</span> and then select <span class="Bold">Apply Now</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">If you open a CI record to which this subnet is associated, the <span class="window_name">CI Location</span> field is populated with the location you assigned. Check <span class="Bold">Override IP Range Location</span>  to override the assigned location, then select another CI location, as described in <a href="#inventorymanagement_1146540237_1269144" class="MCXref xref">Override a Specified IP Range Location</a>.</p>
+                    <h4 class="subheading"><a name="inventorymanagement_1146540237_1269144"></a>Override a Specified IP Range Location</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into <span class="notranslate"><b>HEAT</b></span> in the Inventory Manager role.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Configuration Item</span> to open the workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Search for the CI whose CI location you want to override.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select the record and double-click to open it.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Check <span class="Bold">Override IP Range Location</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />View and Associate Configuration Items with Organizational Units</a><a name="VAACWOU"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">From the <span class="window_name">Organizational Unit Management</span> workspace you can view organizational units and their hierarchies in a graphical tree view and see, at a glance, the configuration items that are associated with each organizational unit. The right-pane shows unassigned (not associated with any organizational unit) configuration items. </p>
+                    <p class="Body">You can open each configuration item record and associate an organizational unit with it, or you can view and drag and drop configuration items from one organizational unit to another using the organizational unit tree. When you are installing the gateway, all configuration items are automatically associated with the parent or root organizational unit unless specified otherwise, as when you are doing a custom installation of the gateway. However, the configuration items that were not audited or that were added to the network after the gateway installation might not be associated with organizational units. </p>
+                    <p class="Body">The <span class="window_name">Organizational Unit Management</span> workspace lets you do the following:</p>
+                    <ul>
+                        <li value="1">View the configuration items that are not associated with organizational units and quickly assign them to an organizational unit.</li>
+                        <li value="2">Drag and drop configuration items from one organizational unit to another.</li>
+                        <li value="3">View the operating system information, location, and owner of each configuration item.</li>
+                        <li value="4">Open the configuration item record from a configuration item that is listed.</li>
+                        <li value="5">Search from within the listed configuration items by the configuration item name, operating system, owner name, or location.</li>
+                    </ul>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="window_name">Organizational Unit Management</span> workspace is not configurable. It is available only to administrators and Inventory Managers.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator or Inventory Manager and open the <span class="window_name">Organizational Unit Management</span> workspace. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">You can do the following from this workspace:</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Expand the root organizational unit to show all the organizational units that are under it and view the hierarchy of organizational units in a graphical tree view.</li>
+                            <li value="2">Expand each child organizational unit to view the configuration items that are currently associated with the organizational unit. If appropriate, select a configuration item from the right pane, then drag and drop the configuration item to a different organizational unit. You can select multiple configuration items to drag and drop.</li>
+                        </ul>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Unassigned CIs</span> on the left pane to display all the configuration items that are not associated with organizational units.</li>
+                            <li value="2">If appropriate, select the unassigned configuration items, then drag and drop them to an organizational unit.</li>
+                            <li value="3">Search for a configuration item within the list of displayed configuration items by entering a few letters of the configuration item name in the <span class="window_name">Search</span> field.</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">You can search by entering the entire string or a few letters of the configuration item name, operating system, owner name, or location. Click <span class="Bold">Refresh</span><img src="../../resources/images/buttons/refresh.png" class="icon" /> to clear the search criteria.</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">To go to the configuration item record, select a configuration item from the list and double-click it.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="getting_started_with_inventory_discovery_and_auditing.htm">Using Inventory Discovery and Auditing</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

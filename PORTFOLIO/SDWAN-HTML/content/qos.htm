@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Quality of Service (QoS)</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-87024037-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/styles.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/tablet.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/mobile.css" rel="stylesheet" />
+        <link href="resources/stylesheets/sp-styles.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="Header"><span class="SP_Doc_VarsCompany">Silver Peak</span> <span class="SP_Doc_VarsDocTitle">SD-WAN</span> <span class="SP_Doc_VarsDocType">Deployment Guide</span></p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="5" data-mc-toc="True">
+            </div>
+        </div>
+        <h1>Quality of Service (QoS)</h1>
+        <p>Generally, BIOs determine to which traffic class a packet is placed. Quality of Service (<a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a>) settings are used for exceptions to the BIO&#160;configuration.</p>
+        <p>The Shaper provides a simplified way to globally configure <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> (Quality of Service) on the appliances.</p>
+        <ul>
+            <li value="1">It shapes traffic by allocating <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">bandwidth<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A rate of data transfer, throughput, or bit rate, measured in bits per second.</span></a> as a percentage of the system <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">bandwidth<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A rate of data transfer, throughput, or bit rate, measured in bits per second.</span></a>.</li>
+            <li value="2">The Shaper's parameters are organized into ten traffic classes. Four traffic classes are preconfigured and named --- realtime, interactive, default, and best effort.</li>
+            <li value="3">The system applies these <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> settings globally after compressing (deduplicating) all the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">tunnelized<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Encapsulating one type of network protocol (called the payload protocol) within a different delivery protocol. A logical connection between two devices, in our case, two Silver Peak appliances.</span></a> and pass-through-shaped traffic --- shaping it as it exits to the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">WAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Wide Area Network</span></a>.</li>
+            <li value="4">To manage Shaper settings for an appliance's system-level <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">WAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Wide Area Network</span></a> Shaper, use the Shaper Template.</li>
+        </ul>
+        <p>You can set <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> options from a template. The <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policy determines how flows are queued and marked. The <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policy's SET actions determine two things:</p>
+        <ul>
+            <li value="1">
+            
+            What traffic class a shaped <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">flow<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A stream of packets transmitted between two endpoints usually identified by a Protocol, Source Address, and Destination Address (and possibly source &amp; destination port numbers). Might not be tunnelized.</span></a> —whether optimized or pass-through—is assigned.</li>
+            <li value="2">
+            
+            Whether to trust incoming <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">DSCP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Differentiated Services Code Point. A 6-bit value that encoudes Per-Hop Behavior (PHB) into the 8-bit Differentiated Services (DS) field of the IP packet header. The DS field is the same as the TOS (Type of Service) field.</span></a> markings for <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a> <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> and <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">WAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Wide Area Network</span></a> <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a>, or to remark them as they leave for the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">WAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Wide Area Network</span></a></li>
+        </ul>
+        <p>Use the Shaper to define, prioritize, and name traffic classes. Then use the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policy to assign packets to traffic classes for processing.</p>
+        <h6>To create a QoS policy</h6>
+        <ol>
+            <li value="1">
+                <p>From the Templates page, select <b><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policies</b>. </p>
+                <p>The <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policy page appears.</p>
+            </li>
+            <li value="2">
+                <p>To create a new map, click <b>Add Map</b> and enter a name. </p>
+                <p>You can use the current or default map, instead.</p>
+            </li>
+            <li value="3">
+                <p>Click <b>Add Rule</b>.</p>
+                <p>A new row appears with pre-filled criteria. Modify as needed.</p>
+                <p><b>Priority</b>
+                </p>
+                <ul>
+                    <li value="1">
+                        <p>
+            
+            You can create rules with any priority between 1 and 65534.</p>
+                    </li>
+                    <li value="2">
+                        <p>
+            
+            Reserve priorities from 1000 to 9999 inclusive for <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">Orchestrator<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Formerly GMS. Silver Peak global management software. Manages, provisions, and monitors Silver Peak devices within a network.</span></a>. If using <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">Orchestrator<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Formerly GMS. Silver Peak global management software. Manages, provisions, and monitors Silver Peak devices within a network.</span></a> templates to add route map entries, <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">Orchestrator<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Formerly GMS. Silver Peak global management software. Manages, provisions, and monitors Silver Peak devices within a network.</span></a> will delete these entries before applying its policies.</p>
+                    </li>
+                    <li value="3">
+            
+            The lowest priority number (such as 1) has first priority. Best practice is to use priority 65534 as your default.</li>
+                    <li value="4">
+                        <p>
+            
+            Best practice is to add priority numbers in increments of 10, leaving room for you to easily insert new rules.</p>
+                    </li>
+                </ul>
+                <p><b>Source:Dest Port</b>
+                </p>
+                <ul>
+                    <li value="1">
+                        <p>
+            
+            
+            An <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">IP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Internet Protocol. Network layer protocol in the TCP/IP stack that enables a connectionless internetwork service.</span></a> address can specify a subnet—for example: 10.10.10.0/24. </p>
+                    </li>
+                    <li value="2">To allow any <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">IP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Internet Protocol. Network layer protocol in the TCP/IP stack that enables a connectionless internetwork service.</span></a> address, use 0.0.0.0/0.</li>
+                    <li value="3">
+            
+            
+            Ports are available only for the protocols <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">TCP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Transmission Control Protocol. The error-correcting Transport layer (Layer-4) in the TCP/IP protocol suite. It ensures that all data arrive at the other end accurately and completely intact.</span></a>, <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">UDP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>User Datagram Protocol. Part of the TCP/IP protocol suite, it was created to provide a way for applications to access the connectionless features of IP. UDP provides for exchange of datagrams without acknowledgements or guaranteed delivery.</span></a>, and <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">TCP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Transmission Control Protocol. The error-correcting Transport layer (Layer-4) in the TCP/IP protocol suite. It ensures that all data arrive at the other end accurately and completely intact.</span></a>/<a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">UDP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>User Datagram Protocol. Part of the TCP/IP protocol suite, it was created to provide a way for applications to access the connectionless features of IP. UDP provides for exchange of datagrams without acknowledgements or guaranteed delivery.</span></a>. </li>
+                    <li value="4">To allow any port, use 0.</li>
+                </ul>
+            </li>
+            <li value="4">Click to check the <b><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">QoS<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Quality of Service is the ability to provide different priority to different applications, users, or data flows, or to guarantee a certain level of performance to a data flow. QoS involves several functions: 1) classification of packets into traffic classes based on characteristics such as source, destination addresses, and/or applications and 2) queuing and service mechanisms that are used to apply service policies based on these classifications, including bandwidth allocation.</span></a> Policies</b> check box, then click <b>Save</b> at the bottom of the  list.</li>
+            <li value="5">To push your template values to your appliances, check <b>Shaper</b> from the template list, then click <b>Apply Templates</b> at the bottom of the  list.</li>
+        </ol>
+        <hr width="100%" size="0" align="center" />
+        <p class="Footer">Copyright © <span class="SP_Doc_VarsCurrentYear">2017</span> by Silver Peak Systems, Inc. All rights reserved.</p>
+        <img src="resources/globalimages/watermark.jpg" class="watermark" />
+    </body>
+</html>

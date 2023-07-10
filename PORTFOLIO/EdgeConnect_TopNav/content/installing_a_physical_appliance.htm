@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Deployment">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="sdwan sd-wan deployment guide silver peak network" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Installing a Physical EdgeConnect Appliance</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="resources/stylesheets/sp-styles.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+        <script src="../Skins/Default/Scripts/TopicToolBar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="http://www.silver-peak.com/Support/EdgeConnect/index.html" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/EC_Master_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="5" data-mc-toc="True">
+                                            </div>
+                                        </div>
+                                        <h1><a name="_Toc471208893"></a>Installing a Physical EdgeConnect Appliance</h1>
+                                        <p>Use the same procedure to install and configure a <b>Data Center</b> or <b>Branch</b> physical EdgeConnect appliance:</p>
+                                        <ol>
+                                            <li value="1">Download the <a href="https://www.silver-peak.com/download/latest/qStartEdgeConnect.html">Quick Start Guide (QSG) for the Unity EdgeConnect.</a></li>
+                                            <li value="2">Unbox the appliance and place it in the rack using the included rails or ears.</li>
+                                            <li value="3">Follow the steps provided in the Quick Start Guide.</li>
+                                            <li value="4">Connect the <b>mgmt0</b> port to a DHCP capable switch port and power the unit on. </li>
+                                            <li class="colorRed" value="5">DO NOT connect any LAN or WAN ports until approved, licensed, and configured.</li>
+                                            <li value="6">Log into Orchestrator. Orchestrator and the physical appliance will both contact the Silver Peak cloud portal and when successful, will illuminate the green <b>Appliances Discovered</b> button. </li>
+                                            <li value="7">Click <b>Appliances Discovered </b><img src="resources/images/word_import/silver_peak_edgeconnect_deployment_for_partners_8.1.x_1_191x38.png" style="width: 191;height: 38;" alt="" /> in the TOP right banner.</li>
+                                            <li value="8">Click <b>Approve</b> to select the appliance you want to manage and bring into your network.</li>
+                                            <li value="9">Follow the <b>Appliance Setup Wizard</b> to configure the appliance.<ul><li value="1">The IP address was identified in the <a href="appendix_a_site_deployment.htm">deployment worksheet</a>.</li></ul></li>
+                                            <li value="10">Once the appliance is licensed, approved and configured, you can schedule the downtime to wire up the Silver Peak to your customers' MPLS and FIREWALL.</li>
+                                            <li value="11"><span class="colorRed">The following steps affect service: </span>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Remove the LAN side network cable from the MPLS router (make a note of which Ethernet port) connect it to the <b>LAN0</b> port of the EC device.&#160; Take a new red cross-over cable (included in the packagingz0 and connect it from the <b>WAN0</b> port on the EC device to the original MPLS router Ethernet port.&#160; </li>
+                                                    <li value="2">Remove the LAN side network cable from the FIREWALL router (make a note of which Ethernet port) connect it to the <b>LAN1</b> port of the EC device.&#160; Take a new red cross-over cable (included in the packaging) and connect it from the <b>WAN1</b> port on the EC device to the original FIREWALL Ethernet port.&#160; </li>
+                                                    <li value="3">The Alarms regarding link and next-hop should clear.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <p>All IP addresses for LAN &amp; WAN interfaces need to be configured statically for in-line bridge mode.</p>
+                                        <h2>In-Line Bridge Mode is supported with or without a firewall </h2>
+                                        <p>For deployments in the branch, one of the simplest options for EdgeConnect appliances is inline bridge mode, when there are two devices involved (MPLS + Firewall). Other deployments are available. For example, a broadband connection can be terminated directly on the EC device. See the appendix for more details. </p>
+                                        <div class="figure">
+                                            <p>
+                                                <img src="resources/images/word_import/in_line_bridge_mode_is_supported_518x367.png" style="visibility: visible;width: 518;height: 367;" alt="" />
+                                            </p>
+                                            <p class="figcaption" data-mc-autonum="Figure 12. "><span class="autonumber"><span>Figure 12. </span></span> In-Line Bridge Mode Deployment</p>
+                                        </div>
+                                        <p>&#160;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

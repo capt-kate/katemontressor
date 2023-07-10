@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Service Levels|Creating a Service">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Service Level Targets</title>
+        <link href="../../resources/tablestyles/parametertable-notbold.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/services/creating_service_level_target.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="about_service_level_management.htm">Service Levels</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="creating_a_service.htm">Creating a Service</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Service Level Targets</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor279"></a>Service Level Targets</h1>
+            <p class="Body_indent">
+                <img src="../../resources/images/slt.png" />
+            </p>
+            <p class="Body">A <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">service level target<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A distinct measurement of service to be provided based on time and percentage of compliance: delivery target, response target, and resolution target.</span></a> (SLT) is a key element of a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">service level agreement<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>An agreement between the service provider and the customer documenting the agreed upon service levels for the service.</span></a> between a service provider and a customer. Service level targets are agreed as a means of measuring the performance of the service provider and are outlined as a way of avoiding disputes between the two parties based on misunderstanding.</p>
+            <p class="Body">In <span class="notranslate"><b>HEAT</b></span>, targets are linked to <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">service level package<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The level of service provided to a customer.
+
+A defined level of utility and warranty for a particular service package. Each service level package is designed to meet the needs of a particular pattern of business activity.</span></a>s, service level agreements, and <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">request offering<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A service item offered by a provider that an end user can request through the Service Catalog. For example, "Request for a new mailbox," and "Quarantine" are request offerings under the Email service.</span></a>s. For example, you can have general targets linked to a service level package (such as, promise to respond to an email within 24 hours), but have specific targets linked to a request offering (such as, promise to send a new phone within 5 days).</p>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> provides the following targets:</p>
+            <ul>
+                <li value="1"><span class="Bold">Delivery Target</span>: How soon can the request be delivered. Primarily for service requests. Results from the duration component are used to evaluate compliance of the service request delivery target and the overall service level agreement target.</li>
+                <li value="2"><span class="Bold">Response Target</span>: How soon can the provider respond to a customer request. Primarily for incidents. Information about whether the target duration was met or exceeded is used to evaluate the compliance of both the incident response target and the overall service level agreement target.</li>
+            </ul>
+            <p class="Body_indent"><span class="Bold">Resolution Target</span>: When can the issue expect to be resolved. Primarily for incidents. Results from the duration component are used to evaluate compliance of the incident resolution target and the overall service level agreement target.</p>
+            <ul>
+                <li value="1"><span class="Bold">Overall Compliance</span>: This target aggregates compliance information (that is, duration <span class="Emphasis">met/not-met</span> data) from service level targets for all incidents and service requests that fall under the service level agreement.</li>
+            </ul>
+            <div class="sub_list">
+                <ul>
+                    <li value="1"> If the aggregated <span class="Emphasis">met/not-met</span> data for all service level targets results in a percentage that meets the overall service level agreement compliance target, the service level agreement is<span class="Emphasis"> in compliance</span>. </li>
+                    <li value="2"> If the aggregated <span class="Emphasis">met/not-met</span> data for all service level targets results in a percentage that is below the overall service level agreement compliance target, the service level agreement is considered to be <span class="Emphasis">out of compliance</span>. </li>
+                    <li value="3"> You specify the overall compliance target when you create a service level package, and an service level agreement inherits the target when the package is subscribed to and the service level agreement is created. </li>
+                </ul>
+            </div>
+            <p class="Body">The <span class="window_name">Delivery</span>, <span class="window_name">Response</span>, and <span class="window_name">Resolution</span> targets have two components:</p>
+            <ul>
+                <li value="1"><b>Duration target</b>:&#160;Measured in days, hours, and minutes. The target time for an incident or request to be assigned to a Service Desk Analyst for resolution. </li>
+                <li value="2"><b>Compliance target</b>: A running percentage of the times that the target duration was not exceeded. Separate compliance targets exist for the response target and for the overall service level agreement target.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Service Level Target Example</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This example is based on two incidents and one service request, which were all submitted by a single organizational unit and are covered under the same service level agreement.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Service_Level_Target_Example_1"><a name="Service_Level_Target_Example_1" data-mc-generated-bookmark="ListOf"></a>Service Level Target Example 1</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sla_targets.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="940" data-mc-height="657" src="../../resources/images/sla_targets_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="fig_title" data-mc-xref-target-name="Service_Level_Target_Example_2"><a name="Service_Level_Target_Example_2" data-mc-generated-bookmark="ListOf"></a>Service Level Target Example 2</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/compliance_targets.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="433" data-mc-height="271" src="../../resources/images/compliance_targets_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body">The incidents have a response duration target of three days and a compliance target of 95%. This means that if the incidents are responded to in three days or less, the duration target is met. If the duration target is met at least 90% of the time, the compliance target is met and the incident response service level target is considered to be in compliance.</p>
+                    <p class="Body">The incidents have a resolution service level target duration of five days and a compliance target of 90%. This means that if the incidents are resolved in five days or less, the duration target is met. If the duration target is met at least 90% of the time, the compliance target is met and the incident resolution service level target is considered to be in compliance.</p>
+                    <p class="Body">The service request has a duration target of five days. This means that if the service request can be delivered in five days or less, the duration target is met. If the duration target is met at least 90% of the time, the compliance target is met and the service request delivering service level target is considered to be in compliance.</p>
+                    <p class="Body">The service level agreement has an overall compliance target inherited from the service level package. This target is evaluated using all met and not met data from the duration targets.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Percentages from individual compliance calculations in the service level targets are not used to evaluate the overall service level agreement compliance target. Only the met/no met data from duration targets is used.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Viewing Service Level Targets</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner and open the <span class="window_name">Services</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the service to which  to define a target, then choose the <span class="window_name">Service Level Package</span> tab.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Choose a service package from the list, then click <span class="Bold">Go To</span>. The <span class="window_name">Service Level Package</span> page appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Define the targets within the target tabs at the bottom of the page.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Defining Delivery Targets</a><a name="Define_Delivery_Targets"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Choose the <span class="window_name">Delivery Target</span> tab, then click <span class="Bold">Go to</span>. The target record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information as needed into the fields. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-fields-</a><a name="fields"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Automatically populated based on  the service and service level package. Cannot be modified. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Hours of Operation</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Automatically populated based on the hours of operation setting for the service level package. You can also choose an HOP&#160;from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. A brief description.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Compliance Target (%)</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">This field is automatically populated base on the business rules for the service package object. You can also enter the percentage of completion that is required to fulfill the target.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">If a request offering is already linked to the service or the service level package, the target values are overridden by the delivery targets specified for the request offering.
+							</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Defining Response Targets</a><a name="Define_Response_Targets"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In the absence of service level incident response targets, the default escalation schedule for incident response runs. If you define the incident response target for an incident service category here, then the values you enter here override the defined escalation schedule.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Choose the <span class="window_name">Response Target</span> tab, then click <span class="Bold">Go to</span>. The target record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information as needed into the fields. See <a href="#fields" class="MCXref xref">-fields-</a> above.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Defining Resolution Targets</a><a name="Define_Resolution_Targets"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In the absence of service level incident resolution targets, the default escalation schedule for incident resolution runs. If you define the incident resolution target for an incident service category here, then the values you enter here override the defined escalation schedule.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Choose the <span class="window_name">Resolution Target</span> tab, then click <span class="Bold">Go to</span>. The target record appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Enter information as needed into the fields. See <a href="#fields" class="MCXref xref">-fields-</a> above. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Defining Overall Compliance Targets</a><a name="Define_Overall_Compliance_Targets"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The overall compliance target is defined within a service level package. </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Service Level Package</span> workspace, open the service level package to which  to define the overall compliance target.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the <span class="window_name">Compliance Target</span> field, enter the number (from 1 to 100) of acceptable compliance.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">If the actual target compliances fall below the overall compliance target, the request is escalated. See <a href="../../configure/escalations/define_escalations__from.htm" class="MCXref xref">Escalations</a>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Defining Target Override Conditions</a><a name="Define_Target_Override_Conditions"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create a target override (also called a target variant or target condition) for an response target or resolution target. For example, you might want to set a different response target for a priority 1 incident. If the ticket submitted is priority 2, 3, 4, or 5, the default incident response target will be used. However, if the incident submitted is priority 1, the target variant priority 1 target is used instead (it overrides the default incident response target).</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as a service owner and open the <span class="window_name">Service Level Target</span> workspace. A list of service level targets defined for each service level package appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click a target to view its details.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Under the <span class="window_name">Target Override Conditions</span> tab, click <span class="Bold">New</span>. The <span class="window_name">New Target Condition</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter the values as needed:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Criteria Field</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Criteria. The default field is priority.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Criteria Value</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A number.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Delivery Target </p>
+                                    <p>Days</p>
+                                    <p>Hours</p>
+                                    <p>Minutes</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>The number of days, hours, and minutes for this condition.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Business Rule Triggers</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">When a new service level package is created, the business rule called <span class="window_name">NewServicePackageCreation</span> is triggered. This business rule runs the <span class="window_name">CreatePackageSLTs</span> quick action. This quick action automatically creates the following service level target records:</p>
+                    <ul>
+                        <li value="1">Service request delivery service level target</li>
+                        <li value="2">Incident response service level target</li>
+                        <li value="3">Incident resolution service level target</li>
+                    </ul>
+                    <p class="Body">Each service level package can have only one setting for each type of service level target.</p>
+                    <p class="Body">To change the default values used for the auto-creation of service level targets, you must change the global values shown in the following table. Global values are set through the Configuration Console. See <a href="../../configure/systemsettings/defining_global_constant.htm" class="MCXref xref">Defining Global Constants</a>.</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable-notbold.css');" class="TableStyle-ParameterTable-notBold" cellspacing="0">
+                        <col width="208px" class="TableStyle-ParameterTable-notBold-Column-Column2" />
+                        <col width="153px" class="TableStyle-ParameterTable-notBold-Column-Column2" />
+                        <col width="159px" class="TableStyle-ParameterTable-notBold-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-notBold-Head-Header1">
+                                <td colspan="3" class="TableStyle-ParameterTable-notBold-HeadD-Column2-Header1">
+                                    <p style="text-align: center;">Global Value Names For:</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Head-Header1">
+                                <td class="TableStyle-ParameterTable-notBold-HeadF-Column2-Header1">
+                                Service Request Delivery SLT
+                            </td>
+                                <td class="TableStyle-ParameterTable-notBold-HeadF-Column2-Header1">
+                                Incident Response SLT
+                            </td>
+                                <td class="TableStyle-ParameterTable-notBold-HeadD-Column2-Header1">
+                                Incident Resolution SLT
+                            </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">SLTDeliveryComplianceTarget</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body1">SLTResponseComplianceTarget</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body1">SLTResolutionComplianceTarget</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body2">
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">SLTDeliveryTargetDurationHrs</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyF-Column2-Body2">SLTResponseTargetDurationHrs</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyD-Column2-Body2">SLTResolutionTargetDurationHrs</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-notBold-Body-Body1">
+                                <td class="TableStyle-ParameterTable-notBold-BodyC-Column2-Body1">SLTDeliveryTargetDurationMin</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyC-Column2-Body1">SLTDeliveryTargetDurationMin</td>
+                                <td class="TableStyle-ParameterTable-notBold-BodyA-Column2-Body1">SLTResolutionTargetDurationMin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="about_service_level_management.htm">Service Levels</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="organizational_level_management.htm">Operational  Level Agreements</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="configuring_categories.htm">Configuring Categories</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_a_team.htm">Creating a Team</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="creating_a_vendor.htm">Creating a Vendor</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="outage_log.htm">Outage Log</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="subscribing_to_a_service.htm">Subscribing to a Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="service_level_agreements.htm">Service Level Agreements</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="service_level_package_co.htm">Service Level Packages</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="services_workspace_index.htm">Services Workspace Index</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="underpinning_contracts.htm">Underpinning Contracts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="slm_dashboard.htm">SLM Dashboard</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/service_level_management_lifecycle.htm">Service Level Management Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

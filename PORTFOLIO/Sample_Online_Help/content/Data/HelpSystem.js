@@ -1,0 +1,16 @@
+var xmlHelpSystemData = "";
+xmlHelpSystemData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlHelpSystemData += '<WebHelpSystem DefaultUrl=\"content/welcome.htm\" Toc=\"Data/Toc.js\" Index=\"Data/Index.js\" Concepts=\"Data/Concepts.xml\" BrowseSequence=\"Data/BrowseSequence.js\" Glossary=\"Data/Glossary.js\" SearchDatabase=\"Data/Search.xml\" Alias=\"Data/Alias.xml\" Synonyms=\"Data/Synonyms.xml\" SearchFilterSet=\"Data/Filters.xml\" SkinName=\"FRS_Skin\" Skins=\"FRS_Skin\" BuildTime=\"09 Jun 2014 8:54:09 AM\" BuildVersion=\"10.1.0.0\" TargetType=\"WebHelp2\" SkinTemplateFolder=\"Skin/\" InPreviewMode=\"false\" MoveOutputContentToRoot=\"false\" MakeFileLowerCase=\"true\" UseCustomTopicFileExtension=\"false\">';
+xmlHelpSystemData += '    <CatapultSkin Version=\"2\" SkinType=\"WebHelp2\" Comment=\"HTML5 skin\" Anchors=\"Width,Height\" Width=\"1250px\" Height=\"835px\" Top=\"175px\" Left=\"336px\" Bottom=\"40px\" Right=\"334px\" Tabs=\"TOC,Index,Glossary,BrowseSequences\" DefaultTab=\"TOC\" UseBrowserDefaultSize=\"false\" UseDefaultBrowserSetup=\"false\" NavigationLinkTop=\"true\" CommentsInTopic=\"false\" DisplayCommunitySearchResults=\"false\" DisplayNotificationOptions=\"false\" BrowserSetup=\"Toolbar,Menu,LocationBar,StatusBar,Resizable\" AutoSyncTOC=\"true\" RemoveImagesOnSave=\"true\" Title=\"HEAT Online Help\" EnableResponsiveOutput=\"true\" Name=\"FRS_Skin\">';
+xmlHelpSystemData += '        <Toolbar EnableCustomLayout=\"true\" Buttons=\"Print_New|PDF|Email|ExpandAll|RemoveHighlight|Separator|PreviousTopic|NextTopic|Separator|NewFeatures|Examples|BestPractice|Separator|Administrators|SDUsers|SSUsers|Separator|Filler|HelpTips\">';
+xmlHelpSystemData += '            <Script>function Feedback()';
+xmlHelpSystemData += '{';
+xmlHelpSystemData += 'window.open(\'mailto:Doc.Feedback@frontrange.com?subject=FeedbackTitle$Documentation Feedback (\'+document.title+\')&amp;body=Feedback$Enter%20comments%20on%20the%20next%20line.%0A%0A  \');';
+xmlHelpSystemData += '}';
+xmlHelpSystemData += '';
+xmlHelpSystemData += '</Script>';
+xmlHelpSystemData += '        </Toolbar>';
+xmlHelpSystemData += '        <WebHelpOptions NavigationPaneWidth=\"407\" TabletBreakpoint=\"1280\" MobileBreakpoint=\"500\" />';
+xmlHelpSystemData += '    </CatapultSkin>';
+xmlHelpSystemData += '</WebHelpSystem>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('HelpSystem', xmlHelpSystemData);

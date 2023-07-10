@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Web API">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Cloud Connect API</title>
+        <link href="../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#configure/ser_req_cloud_connect.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="heat_api.htm">Web API</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Cloud Connect API</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Cloud_Connect_API"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Cloud_Connect_API" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor565"></a>Cloud Connect API </h1>
+            <p class="Body">The following methods have been added to <span class="notranslate"><b>HEAT</b></span> web services API to enable manipulation of service requests.</p>
+            <table class="TableStyle-ParameterTable" style="width: 92%;mc-table-style: url('../resources/tablestyles/parametertable.css');" cellspacing="0">
+                <col style="width: 221pt;" class="TableStyle-ParameterTable-Column-Column1" />
+                <col style="width: 437pt;" class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Method</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetCategories</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Returns the list of available categories for the Service Catalog.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetCategoryTemplates</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Returns the list of request offerings in the Service Catalog, which belong to the indicated category.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetAllTemplates</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Returns the full list of request offerings in the Service Catalog.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetSubscriptionId</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Fetches the subscription ID that corresponds to the request offering for the current user.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetPackageData</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Retrieves the details of the indicated request offering.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>UserCanAccessRequestOffering</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Checks whether the current user is entitled to access the given request offering.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>SubmitRequest</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Creates and submits the service request, on behalf of a given user.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1" style="font-weight: bold;">
+                            <p>GetRequestData</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Retrieves the data for the given service request.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1" style="font-weight: bold;">
+                            <p>FetchServiceReqValidationListData</p>
+                        </td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                            <p>Fetches the allowable validation list data for the given service request parameter.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="heat_api.htm">Web API</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

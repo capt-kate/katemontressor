@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Modifying Journal.Email for Reply and Forward</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/modifying_journal.email_for_reply_and_forward.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Modifying Journal.Email for Reply and Forward</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Modifying Journal.Email for Reply and Forward</h1>
+            <p class="Body">As of release 2014.3, you can Reply, Reply all, and Forward emails from the activity history email forms. This feature is enabled by default for new users. However, users upgrading from earlier versions will not have this feature automatically enabled to protect their deployed customer interfaces. These existing users can enable this feature as needed.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Create a quick action for each function, Reply, Reply All, and Forward. Within the Configuration Console, open the <span class="window_name">Actions</span> workspace and next to <span class="window_name">Journal.Email</span>, click <b>Add/Edit</b>. The related actions appear.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Create the following actions using the <span class="window_name">Clone</span> action. (See <a href="../../servicedesk/quickactions/cloning_a_quick_action.htm" class="MCXref xref">Cloning a Quick Action</a>.)</td>
+                </tr>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Forward</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="fig_title" data-mc-xref-target-name="Forward_Email_Action"><a name="Forward_Email_Action" data-mc-generated-bookmark="ListOf"></a>Forward Email Action</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_forward_action.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="353" src="../../resources/images/email_forward_action_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field Name</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Field Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Outgoing Email</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">From Email Id</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(CurrentUserEmail())</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">To Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(null)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CC Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(null)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">BCC Address LIst</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(null)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$("FW: " + Subject)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Email Body</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBody)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">EmailBodyType</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBodyType)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sent</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">False</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Is New Record</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">True</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Relationship Name</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">JournalEmailContainsAttachment</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">&#160;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Reply</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="fig_title" data-mc-xref-target-name="Reply_Email_Action"><a name="Reply_Email_Action" data-mc-generated-bookmark="ListOf"></a>Reply Email Action</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_reply_action.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="351" src="../../resources/images/email_reply_action_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field Name</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Field Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Outgoing Email</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">From Email Id</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(CurrentUserEmail())</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">To Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(FromAddr)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CC Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(null)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">BCC Address LIst</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(null)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$("RE: " + Subject)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Email Body</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBody)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">EmailBodyType</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBodyType)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sent</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">False</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Is New Record</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">True</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Relationship Name</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">&#160;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Reply All</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="fig_title" data-mc-xref-target-name="Reply_All_Email_Action"><a name="Reply_All_Email_Action" data-mc-generated-bookmark="ListOf"></a>Reply All Email Action</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_reply_all_action.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="330" src="../../resources/images/email_reply_all_action_thumb_0_45.png" alt="" tabindex="" /></a>
+                    </p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field Name</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Field Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Category</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Outgoing Email</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">From Email Id</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(CurrentUserEmail())</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">To Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(FromAddr + ";" + ToAddrList)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">CC Address List</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(CCAddrList)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">BCC Address LIst</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(BCCAddrList)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$("RE: " + Subject)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Email Body</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBody)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">EmailBodyType</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">$(EmailBodyType)</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Sent</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">False</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Is New Record</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">True</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Relationship Name</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">&#160;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Modify the Journal.Email form and add three command buttons, referencing the actions you created. Ensure the visible expression is set so that a new journal email record does not show the options. Within the Configuration console, open the <span class="window_name">Journal.Email</span> business object. From the <span class="window_name">Forms</span> tab, open the <b>Journal.Email</b> form and add the buttons. (See <a href="../forms/forms.htm" class="MCXref xref">Using Forms</a>.)</td>
+                </tr>
+            </table>
+            <p class="fig_title" data-mc-xref-target-name="Journal.Email_Form_with_Reply,_Reply_All,_and_Forward_Buttons"><a name="Journal.Email_Form_with_Reply,_Reply_All,_and_Forward_Buttons" data-mc-generated-bookmark="ListOf"></a>Journal.Email Form with Reply, Reply All, and Forward Buttons</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/journal.email_form.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="330" src="../../resources/images/journal.email_form_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

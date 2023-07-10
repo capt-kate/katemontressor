@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email|Email Servers|Creating an Inbox">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Add an Inbox that Creates a Business Object</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/add_an_inbox_that_creates_a_business_object.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email_configuration.htm">Email Servers</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="inbox_configuration.htm">Creating an Inbox</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Add an Inbox that Creates a Business Object</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor668"></a>Adding an Inbox that Creates a Business Object</h1>
+            <p class="Body">You can create a generic inbox that enables you to create or update any business object. Basically, you create an inbox and define the business object type as <span class="window_name">Other</span>. You can define field and value pairs in the body of the email that tells the <span class="window_name">Email Listener</span> what to do.</p>
+            <p class="Body">Use a configurable <span class="window_name">Field Value</span> separator to separate <span class="window_name">key</span> and <span class="window_name">value</span>.</p>
+            <p class="Body">Use a configurable <span class="window_name">Record Marker</span> to allow multiple records within a single email.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Log into the Service Desk Console as an administrator and open the <span class="window_name">Email Config</span> workspace. The mailbox configuration appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click the mail host record. The <span class="window_name">Email Configuration</span> page appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the <span class="window_name">Inbox</span> tab, click <span class="Bold">New</span>. A blank <span class="window_name">Inbox Configuration</span> window appears.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter information into the fields. See <a href="#email_config_3911985154_1229107" class="MCXref xref">Adding an Inbox that Creates a Business Object</a>.</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1"> <b>Business object</b>: Choose <span class="Bold">Other</span>.</li>
+                    <li value="2"> <b>Name</b>: Choose a key value from the drop-down list, such as <span class="Bold">Incident</span>.</li>
+                    <li value="3"> <b>Unique Key</b>: Choose the field to identify the unique record, such as <span class="Bold">IncidentNumber</span>.</li>
+                    <li value="4"> <b>Record Marker</b>:&#160;Enter a valid marker value that separates multiple record information within an email. For example, if you enter # as a record marker, information in the email body preceding the # sign creates one record and information after the # sign creates another record. When inserted in a message body, this record marker (for example, a # symbol) allows multiple records to be created from the body of a single message. </li>
+                </ul>
+            </div>
+            <p class="fig_title" data-mc-xref-target-name="Inbox_that_Creates_an_Incident"><a name="Inbox_that_Creates_an_Incident" data-mc-generated-bookmark="ListOf"></a>Inbox that Creates an Incident</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/inbox_other.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="904" data-mc-height="389" src="../../resources/images/inbox_other_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save</span>.</td>
+                </tr>
+            </table>
+            <p class="Body">Given the incident mailbox above, "Summary$Test incident creation"' simply means storing "Test incident creation" in the <span class="window_name">Summary</span> field. ITo create a new incident, all mandatory fields need to be provided in the email body.</p>
+            <p class="Body">The following email results in the creation of an incident record.</p>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Email_Sent_when_an_Incident_is_Created"><a name="Sample_Email_Sent_when_an_Incident_is_Created" data-mc-generated-bookmark="ListOf"></a>Sample Email Sent when an Incident is Created</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_example.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="510" data-mc-height="281" src="../../resources/images/email_example_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <h4 class="subheading">Creating Multiple Incidents</h4>
+            <p class="Body">The following email results in the creation of two incidents. Note the use of the record marker "^" in the email body.</p>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Email_Sent_when_Multiple_Incidents_are_Created"><a name="Sample_Email_Sent_when_Multiple_Incidents_are_Created" data-mc-generated-bookmark="ListOf"></a>Sample Email Sent when Multiple Incidents are Created</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_example_multiple.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="595" data-mc-height="399" src="../../resources/images/email_example_multiple_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <h4 class="subheading">Updating Records</h4>
+            <p class="Body">An incident can be updated using the regular business object type "incident" and status mapping.</p>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Email_Updating_an_Incident"><a name="Sample_Email_Updating_an_Incident" data-mc-generated-bookmark="ListOf"></a>Sample Email Updating an Incident</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_update.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="231" data-mc-height="99" src="../../resources/images/email_update_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p class="Body">Or as an alternative, you can update incidents using the business object type "other" with detailed field values. The email configuration is the same as shown above. The following email updates two incident records. Note that the field called <span class="window_name">IncidentNumber</span> is configured in the mailbox configuration section.</p>
+            <p class="fig_title" data-mc-xref-target-name="Sample_Email_Updating_an_Other_Business_Object"><a name="Sample_Email_Updating_an_Other_Business_Object" data-mc-generated-bookmark="ListOf"></a>Sample Email Updating an Other Business Object</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_update_other.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="465" data-mc-height="215" src="../../resources/images/email_update_other_thumb_0_45.png" tabindex="" /></a>
+            </p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="email_configuration.htm">Email Servers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="inbox_configuration.htm">Creating an Inbox</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="outbox_configuration.htm">Creating an Outbox</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="email.htm">Setting Up Email</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="create_or_link_objects_by_email.htm">Create or Link Objects via Email</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="send_an_email_with_an_image.htm">Send an Email with an Image</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="email_examples.htm">Email Examples</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="process_an_email_based_on_incident_status.htm">Process an Email Based on Incident Status</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="update_a_service_via_email.htm">Update a Service Request via Email</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_email.htm">Using Email</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="the_address_book.htm">The Address Book</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="email_processing.htm">Email Processing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_notifications.htm">Default Notifications</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_email.htm">Troubleshooting Email</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="text_is_double_spaced.htm">Text is Double-Spaced Using Copy and Paste</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="solarwinds.htm">SolarWinds</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up the Application|Users">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>User Configuration Examples</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/users/user_configuration_examp.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/setting_up_the_applicati.htm">Setting Up the Application</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../setupwizard/users.htm">Users</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">User Configuration Examples</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor614"></a>User Configuration Examples</h1>
+            <p class="Body">This section contains examples on how to configure users and contacts.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Give Service Desk Analyst Access to Assigned Incidents</a><a name="Give_Service_Desk_Analyst_Access_to_Assigned_Incidents"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">At minimum, a Service Desk Analyst should be able to view and update his assigned incidents (as specified in the <span class="Bold">Owner</span> field on the Incident form.)</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the Configuration console Settings pane under Configure, go to <b>User and Permissions &gt; Roles and Permissions</b>, then click <span class="Bold">Service Desk Analyst</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Under the <span class="window_name">Object Permissions</span> tab, next to Incident, click <span class="Bold">Edit</span> in the <span class="window_name">Access</span> column.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="SDA_Object_Permissions"><a name="SDA_Object_Permissions" data-mc-generated-bookmark="ListOf"></a>SDA Object Permissions</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sda_object_permissions.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="786" data-mc-height="439" src="../../resources/images/sda_object_permissions_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The <span class="Bold">Service Desk accessing Incident Availability </span>page appears. </p>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Hover over the gray <b>Plus</b>, then click  to add  a case.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Add_a_case"><a name="Add_a_case" data-mc-generated-bookmark="ListOf"></a>Add a case</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/sda_add_a_case.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="668" data-mc-height="323" src="../../resources/images/sda_add_a_case_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Enter the following into the fields:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 94%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Update and view</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">where </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">Employee (via IncidentOwnerEmployee) </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">is</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1"> the logged in user </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Upon logging in as a Service Desk Analyst, the Incident grid only shows her assigned Incidents.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Give a Service Desk Manager Access to Incidents for Organizational Unit</a><a name="Give_a_Service_Desk_Manager_Access_to_Incidents_for_Organizational_Unit"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Another example of applying organizational unit restrictions on a hierarchical level is to allow a Service Desk Manager to update and view Incidents created within the organizational unit, either by himself or by subordinates:</p>
+                    <h4 class="subheading">For an Administrator to define this access</h4>
+                    <p class="Body">To allow a Service Desk Manager to update and view Incidents created by himself and any subordinates:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the User Management tab's <span class="Bold">Roles</span> page, click the <span class="Bold">Service Desk Manager</span> link.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">On the <span class="Bold">Object Permissions</span> page, click the <span class="Bold">Edit</span> link for Incident.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">The <span class="Bold">ServiceDeskManager accessing Incident </span>page opens. Click the button to add a table row for adding a case.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select <span class="Bold">Update and View </span>from the drop down list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select <span class="Bold">Employee (via IncidentOwnerEmployee) </span>as the first operator to constrain from the drop down list. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">From the next drop down list, select <span class="Bold">is</span> as the first negation.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">From the next drop down list, select<span class="Bold"> the logged-in user </span>as a matching value.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click the <span class="Bold">or the logged-in user's subordinates</span> checkbox.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Save your changes.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The case is saved, and is the display changes to read:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="Bold">Update and view records where</span>
+                            </li>
+                            <li value="2"><span class="Bold">Incident's [Profile#Employee.Owner] is the logged in user (or the logged in user's subordinate)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="Body">Upon logging in as a Service Desk Manager, the Incident grid should display Incidents created by the manager and any employees listed in the reporting hierarchy.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Give a Self Service Customer Access to Submitted Incidents</a><a name="Give_a_Self_Service_Customer_Access_to_Submitted_Incidents"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Self Service users will want access to any Incidents which they have submitted to the Service Desk for tracking purposes. You can restrict Incident access by the <span class="Bold">Customer Name</span> and/or <span class="Bold">Reported By</span> fields.</p>
+                    <h4 class="subheading">For an Administrator to define this access</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the <span class="Bold">User Interfaces</span> page listing available roles, click the <span class="Bold">Service Desk Analyst</span> link.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">On the <span class="Bold">Object Permissions</span> page, click the <span class="Bold">Edit</span> link for Incident.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">The <span class="Bold">Service Desk accessing Incident Availability</span> page opens. Click the button to add a table row for adding a case.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select <span class="Bold">Update and view </span>from the drop down list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select the <span class="Bold">Employee (via ProfileLink link) </span>relationshipas the first operator to constrain from the drop down list. The ProfileLink link is used to access profile data.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Skip to the third drop down list and select <span class="Bold">is</span> as the first negation.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">From the fourth drop down list, select<span class="Bold"> the logged in user </span>as a matching value.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">Click the <span class="Bold">or the logged in user's subordinates</span> checkbox </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Save your changes.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The case is saved, and is the display changes to read:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="Bold">Update and View Records where</span>
+                            </li>
+                            <li value="2"><span class="Bold">Incident's [link#ProfileLink] is the logged in user or the logged in user's subordinates</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="Body">Upon logging into the Self Service module, you will view the list of Incidents which you have submitted in the My Items grid.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Give a Service Desk Analyst Access to Incidents Assigned to Organizational Unit</a><a name="Give_a_Service_Desk_Analyst_Access_to_Incidents_Assigned_to_Organizational_Unit"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In this case, the Service Desk Analyst should be able to begin work on an Incident which is in the unassigned queue for his organizational unit (My Team). At the same time, the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SDA<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Desk Analyst</span></a> should be able to view Incidents which are assigned to other members of the team without being able to update them.</p>
+                    <h4 class="subheading">For an Administrator to define this access</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">On the <span class="Bold">User Interfaces</span> page listing available roles, click the <span class="Bold">Service Desk Analyst</span> link.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">On the <span class="Bold">Object Permissions</span> page, click the <span class="Bold">Edit</span> link for Incident.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">The <span class="Bold">Service Desk accessing Incident Availability </span>page opens. Click the button to add a table row for adding a case.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Select <span class="Bold">Update and view </span>from the drop down list.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Select <span class="Bold">Employee (via IncidentOwnerEmployee) </span>as the first operator to constrain from the drop down list. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">In the second drop down list, select <span class="Bold">OrganizationalUnit</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Skip to the third drop down list and select <span class="Bold">is</span> as the first negation.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">From the fourth drop down list, select<span class="Bold"> same as logged in user </span>as a matching value.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">Save your changes.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The case is saved, and is the display changes to read:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><span class="Bold">Update and view Records where</span>
+                            </li>
+                            <li value="2"><span class="Bold">Incident's [Profile#Employee.Owner]OrganizationalUnit is same as logged in user's OrganizationalUnit</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="Body">Upon logging in as a Service Desk Analyst who belongs to the Sales and Marketing organizational unit, the Incident grid displays all of the Incidents assigned to Sales and Marketing employees (Owners).</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />How to Submit a Request on Behalf of an External Customer</a><a name="How_to_Submit_a_Request_on_Behalf_of_an_External_Customer"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create a request on behalf of an external customer and create a relationship between the customer and the request.</p>
+                    <p class="Body">When a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SDA<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Desk Analyst</span></a> user creates a Service Request, they can designate the external customer in the Created By field.</p>
+                    <h4 class="subheading">To submit a request on behalf of an external customer (as a SDA user)</h4>
+                    <p class="Body">The customer must exist as an External Contact and appear in the Contact list. The external customer might communicate the issue to the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">SDA<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Service Desk Analyst</span></a> by email, phone, fax, walk-in, or other means.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">While logged in as Service Desk Analyst, open the <span class="window_name">Incident</span> workspace. A list of incidents appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the Grid Toolbar, click <span class="Bold">New Incident</span>. A blank incident form appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Within the <span class="Bold">Customer</span> field, start typing the name of the customer. A list of matching customer names appears. Select the customer you want from the list.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">In this example, we typed <span class="Emphasis">John</span>, then chose <span class="Emphasis">Katherine Joseph</span> from the list.</p>
+                    <p class="Body_indent">The Email and Phone field information is automatically generated.</p>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="Bold">Reported by</span> field, you can enter your name or the name of another customer.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">In this example, we entered <span class="Emphasis">John Davis </span>from the list of contacts.</p>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter other information as needed. 
+Required information is indicated by a red asterisk (<span style="color: #ff0000;" class="fixedwidth">*</span>).
+</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Note that the <span class="Bold">Owner</span> field automatically shows your logged in ID. You can change this entry if your role has permissions granted by the Administrator.</p>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">The object is now linked to the customer. When viewing the customer records, you can see the list of related objects.</p>
+                    <h4 class="subheading">To see the customer's related objects</h4>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">External Contact</span> workspace. A list of contacts appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Double-click the customer you want to view. The customer information appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_2" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">From the bottom of the window, select the Incident tab. A list of related Incidents appears.</td>
+                        </tr>
+                    </table>
+                    <p class="Body">In this example, we opened the record for Katherine Smith and found the incident we created for her.</p>
+                </div>
+            </div>
+            <p class="Body">
+            &#160;
+        </p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="configuring_users.htm">Using Employees</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuring_roles.htm">Creating Roles</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuring_groups__cont.htm">Using Contact Groups</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="department.htm">Using Departments</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="teams.htm">Using Teams</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="contact_store.htm">Using the Contact Store</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="external_contact.htm">Using External Contacts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="identity_store.htm">Using the Identity Store</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../employment_type.htm">Employment Type</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

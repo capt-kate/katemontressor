@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Release Management</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#overview/release_management.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Release Management</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="releasemanagement_2846608634_1130756"></a><a name="aanchor30"></a>
+                <MadCap:concept term="ITIL Release Management" /><a name="kanchor533"></a>Release Management</h1>
+            <p class="Body"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Release Management<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The process of designing, testing, and installing defined changes in the live environment.</span></a> is responsible for designing, testing, and installing defined changes in the live environment. While Change Management manages the process of change, Release Management manages the deployment of those configuration items that are implemented by Change Management. A release consists of rolling out new or updated software or hardware (configuration items) required to implement approved changes.The implementation of new hardware or software releases combine the controlled process of Configuration Management with the communication and preparation of Change Management. A release is thus initiated as part of the Change Management process and works with Configuration Management.</p>
+            <p class="Body">Release Management is used to distribute and manage the rollout of software and hardware across the entire IT infrastructure. In an IT environment, the goals of Release Management include the successful implementation of new software releases, hardware installations or upgrades, and other IT infrastructure changes that affect business operations. For example, upgrading the email server. Proper software and hardware control makes sure that licensed, tested, and version-certified software and hardware is available for use in the organization. </p>
+            <p class="Body">In <span class="notranslate"><b>HEAT</b></span>, Release Management provides you with all the capabilities for managing a release while still leaving the process flexible enough for you to incorporate business rules and validations to tailor the release process to fit your organizational needs.</p>
+            <p class="Body">Release Management is responsible for the following:</p>
+            <ul>
+                <li value="1">Planning the rollout of software. </li>
+                <li value="2">Designing and implementing procedures for the distribution and installation of changes to IT systems.</li>
+                <li value="3">Effectively communicating and managing expectations of the customer during the planning and rollout of new releases.</li>
+                <li value="4">Controlling the distribution and installation of changes to IT systems.</li>
+            </ul>
+            <p class="Body"><a name="kanchor534"></a>The following release types are supported in <span class="notranslate"><b>HEAT</b></span>:</p>
+            <ul>
+                <li value="1"><b>Major Release</b>: Software releases and major hardware upgrades, normally containing a lot of new functionality. A major upgrade or release usually supersedes all preceding minor upgrades, releases, and emergency fixes. A major release might affect most users in the organization.</li>
+                <li value="2"><b>Minor Release</b>: Software releases and hardware upgrades, normally containing small enhancements and fixes, some of which may have already been issued as emergency fixes. A minor upgrade or release usually supersedes all preceding emergency fixes. </li>
+                <li value="3"><b>Emergency Release</b>: Software and hardware fixes, normally containing the corrections to a small number of known problems. </li>
+            </ul>
+            <p class="Body">Release Management encompasses the planning, designing, building, configuration, performance testing, and acceptance testing of hardware and software in order to create release components ready for implementation in a production environment. Release describes an authorized change or collection of changes to an IT service. In <span class="notranslate"><b>HEAT</b></span> the scope of a release can be:</p>
+            <ul>
+                <li value="1"><span class="Bold">Standalone</span>: All components of the release are tested, distributed, and implemented together. A standalone release might be a minor release. It does not contain other related releases</li>
+                <li value="2"><span class="Bold">Master</span>: The rollout of configuration items brought about by a single major change might be broken into a master release (for the entire release project) and its subsets (or phase releases). A master release might be a major release type. The other releases under it are related releases.</li>
+            </ul>
+            <p class="Body_indent">For example, upgrading the entire organization to Windows 7 might be a master release project while one phase might be setting up users' computers and changing their BIOS settings (if necessary).</p>
+            <ul>
+                <li value="1"><span class="Bold">Phase</span>: A subset of a master release. For example, a software rollout can be done in phases for each location.</li>
+            </ul>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Milestones</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">In <span class="notranslate"><b>HEAT</b></span>, Release Management uses milestones to plan and increment the release process. By default, milestones are created for major releases; however, you have the option to manually create milestones for emergency and minor releases. </p>
+                    <ul>
+                        <li value="1">By default, approval workflows are defined for release milestones that are generated using the template for major releases. </li>
+                        <li value="2">Along with the <MadCap:glossaryTerm>Release Review Board</MadCap:glossaryTerm>, stakeholders are also identified for the release.</li>
+                        <li value="3">A Request for release might come from Change Management. When the change is linked to the release, the schedule dates for the change are driven by the release schedule and become read-only. The Release Manager also creates release packages to roll out configuration items included as part of a change.</li>
+                        <li value="4">Release Managers can also view the cost of the release while it is worked on, and get a final cost associated with the release upon the closure of the release or a milestone upon the closure of the milestone.</li>
+                        <li value="5">Release Managers can also monitor and track the metrics associated with releases by reviewing the release reports. </li>
+                    </ul>
+                    <p class="Body">See <a href="../servicedesk/releasemanagement/about_release_milestones.htm" class="MCXref xref">Working with Milestones</a> for  best practices when using milestones.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="how_heat_works.htm">How HEAT Works</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="system_overview.htm">Module Configuration</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="change_management.htm">Change Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="configuration_management.htm">Configuration Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="incident_management.htm">Incident Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="inventory_management.htm">Inventory Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="knowledge_management.htm">Knowledge Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="problem_management.htm">Problem Management</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="service_level_management.htm">Service Level Management</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

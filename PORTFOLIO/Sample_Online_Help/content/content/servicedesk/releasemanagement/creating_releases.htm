@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use|Release">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Working with Releases</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/releasemanagement/creating_releases.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../using_heat.htm">Use</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="viewing_releases.htm">Release</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Releases</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor218"></a>Working with Releases</h1>
+            <p class="Body">The Release Manager or the Change Manager can create releases. Change Managers often create a release while working on a change. </p>
+            <p class="Body">If Change Managers create a release, they can create the release record and set it to  <span class="Emphasis">draft</span> status while  gathering requirements or formalizing plans and details for the release. When they are ready to submit the release record, they update its status to <span class="Emphasis">requested</span>. </p>
+            <p class="Body">If Release Managers create a release, they can set it any state and work on the release. They also work on requested releases and update its status to active.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">Depending on the role you are in, you might have access to certain fields and values in the Release module. The Release Manager has full permissions to work with the Release module. The default application is configured to allow the Change Manager and Release Manager to create releases. The Change Manager has access to a subset of the Release Manager's permissions to work on the release object.
+					</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">Release Managers and Change Managers can create releases in the following ways:</p>
+            <ul>
+                <li value="1">By using the release form.</li>
+                <li value="2">By using a template on the release form.</li>
+                <li value="3">Within a change form - See <a href="../change/working_with_a_change.htm" class="MCXref xref">Creating a Change Request</a>.</li>
+            </ul>
+            <p>&#160;</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create a Release Request</a><a name="Create_a_release"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console, open the <span class="window_name">Release</span> workspace.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the toolbar, click <span class="Bold">New Release</span> to open a blank form, or choose a template from the drop-down list. See <a href="../../reference/default_templates.htm#Default_Release_Templates" class="MCXref xref">Default Release Templates</a>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="A_New_Release_Record"><a name="A_New_Release_Record" data-mc-generated-bookmark="ListOf"></a>A New Release Record</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/release_blank_form.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1128" data-mc-height="822" src="../../resources/images/release_blank_form_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">
+       The following default tabs appear (results may vary depending on your system setup):
+     </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Details </b> Continue to the next step.</li>
+                            <li value="2"><b>Milestones </b> See <a href="about_release_milestones.htm" class="MCXref xref">Working with Milestones</a>.</li>
+                            <li value="3"><b>CI </b>To create or link a CI, see <a href="../configurationmgmt/working_with_cis.htm" class="MCXref xref">Working with CIs</a>.</li>
+                            <li value="4"><b>Service </b> To create or link a service, see <a href="../services/creating_a_service.htm" class="MCXref xref">Creating a Service</a>.</li>
+                            <li value="5"><b>Related Releases </b>
+                            </li>
+                            <li value="6"><b>Release Package </b>
+                            </li>
+                            <li value="7"><b>Change</b> To create or link a change, see <a href="../change/working_with_a_change.htm" class="MCXref xref">Creating a Change Request</a></li>
+                            <li value="8"><b>Problem</b>  To create or link a problem, see <a href="../problem/creating_a_problem.htm" class="MCXref xref">Working with  Problems</a>.</li>
+                            <li value="9"><b>Stakeholders </b> See <a href="identifying_stakeholders.htm" class="MCXref xref">Release Stakeholders</a>.</li>
+                            <li value="10"><b>Activity History</b>  See <a href="../activityhistory/activity_history.htm" class="MCXref xref">Activity History</a>.</li>
+                            <li value="11"><b>Attachment</b> To attach a file or URL, see <a href="../attachments/attachments.htm" class="MCXref xref">Attachments and URLs</a>.</li>
+                            <li value="12"><b>Related Posts</b> See <a href="../socialboard/related_posts.htm" class="MCXref xref">Related Posts</a>.</li>
+                            <li value="13"><b>Schedule </b>
+                            </li>
+                            <li value="14"><b>Announcement </b> See <a href="../annoucements/announcements_and_faqs.htm" class="MCXref xref">Announcements and FAQs</a>.</li>
+                            <li value="15"><b>Workflow Instance</b>  See <a href="../../configure/workflows/workflow_instance.htm" class="MCXref xref">Workflow Instance</a>.</li>
+                            <li value="16"><b>Audit History</b>  See <a href="../../configure/manageorganization/audit_history.htm" class="MCXref xref">Audit History</a>.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />-fields-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Project Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the name of the project that this release is tied to. If this a subset of another release, enter the overall project name or effort.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter a full detailed description of the release along with any other notes.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Status</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The status is automatically set to <span class="Emphasis">draft</span>. Only a Change Manager can set the release status to <span class="Emphasis">requested </span>or <span class="Emphasis">cancelled</span>. The Release Manager is also not constrained by the state changes during the release lifecycle and can set other status values to the release record.
+</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Type</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose the kind of release from the drop-down list.</p>
+                                            <ul class="list_table">
+                                                <li value="1"><b>Emergency</b> - Response to a failure or error that is often urgent. This type of release must be made quickly and is usually recorded after the fact.</li>
+                                                <li value="2"><b>Major</b> - New projects, such as a new system or an upgrade of a major system affecting a large volume of users. This type of release has other dependencies and might require other minor releases. </li>
+                                                <li value="3"><b>Minor</b> - Small or routine release that has a minor effect.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Scope</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose the Scope of the release from the drop-down list.</p>
+                                            <ul class="list_table">
+                                                <li value="1"><b>Master</b> - A release object that has related releases associated with it. These releases are phase releases. A master release does not usually contain a release package; release packages are created for the phase release. Use the Related Releases tab to link to the phase release records. See <a href="working_with_related_rel.htm#releases_1392530198_1098166" class="MCXref xref">Working with Related Releases</a>.</li>
+                                                <li value="2"><b>Phase</b> - A child of a master release. Use the Related Releases tab to link to the Master release record. See <a href="working_with_related_rel.htm#releases_1392530198_1098166" class="MCXref xref">Working with Related Releases</a>.</li>
+                                                <li value="3"><b>Standalone</b> - A single release without child releases. </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Phase</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Choose a release phase from the drop-down list.</p>
+                                            <ul class="list_table">
+                                                <li value="1">Feature based - Release containing an added feature rolled out to the entire organization. </li>
+                                                <li value="2">Location based - Release by location.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Team</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Choose from the drop-down list. By default a release is assigned to the Release Management team.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Owner</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Choose from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Urgency</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The time appropriateness required. The default value is 3. Urgency and impact together define the priority value. <b>High</b>:&#160;Necessary immediately with a high degree of urgency. <b>Medium</b>: Required, but can be made after higher urgency changes have been implemented. <b>Low</b>:&#160;Required, but can wait for other changes of greater urgency to be implemented.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Impact</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Impact to the organization, group, or individual. The default value is 3. Impact and urgency together define the priority value.</p>
+                                            <ul>
+                                                <li value="1"><b>High</b>:&#160;Has a major impact on the organization. </li>
+                                                <li value="2"><b>Low</b>:&#160;Does not have much  effect on the organization. </li>
+                                                <li value="3"><b>Medium</b>:&#160;Has some  effect on the organization but  generally not considered  a large effect. </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Start Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the scheduled or estimated start date.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Target End Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the estimated or target end date.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Actual End Date</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the actual end date</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Effort</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the number of hours required for the release.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Estimated Cost</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the estimated cost of the release.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Total Cost</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Total cost is automatically generated by the system based on effort and cost.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Time</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The time spent  is based on the activity history, is automatically generated by the system, and is given in minutes.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Outage Plan Required</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Check if an outage plan is required. It can be attached to the record under the Attachment tab. When checked,  the outage start and end date fields become required. The outage start and end dates are reflected in linked change records.
+</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Start</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the dates that this outage plan is in effect.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">End</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter the dates that this outage plan is in effect.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Duration</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Duration is automatically generated by the system based on the difference between the outage plan end and start dates.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="Body_indent">Any date values here are reflected in linked change records.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4."> 
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">At this point, you can create milestones. See <a href="about_release_milestones.htm#releasemanagement_2846608634_1103032" class="MCXref xref">Create Milestones for a Release</a>.</p>
+                    <h4 class="subheading">Next:</h4>
+                    <p class="Body">Change the status of the release from <span class="Emphasis">draft</span> when you are ready to work on the release. The Release Manager can move through all states. The Change Manager can either <span class="Emphasis">request</span> the release or <span class="Emphasis">cancel</span> it. See <a href="#releases_1392530198_1097740" class="MCXref xref">Request a Release</a> and <a href="#releases_1392530198_1097764" class="MCXref xref">Working with Releases</a>.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Apply a Template to an Existing Release</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you have already filled in some of the fields, they will be over-written when you apply the template. If the release type is major, the different combinations of scope and phase, as defined in the templates, automatically create milestones. See <a href="about_release_milestones.htm#releasemanagement_2846608634_1305442" class="MCXref xref">Working with Milestones</a>.
+									</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within a release record, choose <span class="Bold">Action Menu &gt; Templates</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the list of available templates, select a template from the list to apply it to the current release. </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The following fields are auto-filled from the template:</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">If you filled in any of the following fields, they will be over-written by the default values from the template you selected. See <a href="about_release_milestones.htm#releasemanagement_2846608634_1305442" class="MCXref xref">Working with Milestones</a> for information on the milestones that are created when you select some of the available templates.
+									</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Status</li>
+                            <li value="2">Type</li>
+                            <li value="3">Team</li>
+                            <li value="4">Urgency</li>
+                            <li value="5">Impact</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Fill in the other fields needed.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <ul>
+                        <li value="1">If you selected a template for a major release type, depending on the type of template you selected, milestones are created for you. See <a href="about_release_milestones.htm" class="MCXref xref">Working with Milestones</a>.</li>
+                        <li value="2">For all other types of release, you have the option of creating milestones. See <a href="about_release_milestones.htm" class="MCXref xref">Working with Milestones</a>.</li>
+                        <li value="3">The release is in <span class="Emphasis">draft</span> state until you request it. See <a href="#releases_1392530198_1097740" class="MCXref xref">Request a Release</a>. </li>
+                        <li value="4">If you are the Release Manager, you can update the state to <span class="window_name">active</span> if you are ready to start working on it and create milestones for the release. See <a href="about_release_milestones.htm" class="MCXref xref">Working with Milestones</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor219"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Request a Release</a><a name="releases_1392530198_1097740"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">A new release request is set to <span class="Emphasis">draft</span>. You can leave it in this state while gathering information. When you are ready to submit the release request, set the status to <span class="Emphasis">requested</span>.</p>
+                    <p class="Body">As a Change Manager, you might have already linked to a release or created a release from change. </p>
+                    <p class="Body">If you created a new release, you must request it.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Follow this procedure to request a release that you created. After you have saved the release in requested status, you cannot make any other changes to it unless you have Release Manager permissions. The Release Manager can update the release from draft to active, or any other available state.
+					</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Service Desk Console as a Change Manager, open the <span class="window_name">Release</span> workspace, and open the release record that you want to update. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">From the <span class="window_name">Quick Action</span> menu, choose <span class="Bold">Request Release</span>. The status of the release is set to <span class="Emphasis">requested</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3."> 
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+    </td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">The Release Manager is automatically notified of the release request.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="about_release_approvals.htm">Approving Releases</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="about_release_milestones.htm">Creating a Milestone</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="about_the_release_review.htm">About the Release Review Board</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="managing_a_release_proje.htm">Managing a Release Project using the Gantt chart</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_releases.htm">Release</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="approving_a_release.htm">Approving Milestones</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="canceling_release.htm">Canceling a Release</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="identifying_stakeholders.htm">Release Stakeholders</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="linking_cis_and_services.htm">Linking CIs and Services to a Release</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="working_with_related_rel.htm">Working with Related Releases</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="working_with_release_pac.htm">Working with Release Packages</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/release_lifecycle.htm">Release Lifecycle</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

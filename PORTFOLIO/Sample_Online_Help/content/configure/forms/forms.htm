@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-browse-sequence-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Business Objects">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Forms</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/forms/forms.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../businessobjects/business_objects.htm">Business Objects</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Forms</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor364"></a>Using Forms</h1>
+            <p class="Body">A form is a graphical view of record and field information. On a form, each field is represented by a field control and often a label. Forms can also have other components, such as images, to enhance their usability. </p>
+            <p class="Body">Forms are used to collect object data for storage and retrieval for use in dashboards, layouts, and reports. </p>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> includes several default forms designed for common business needs. You can use these forms (including editing and deleting), or create your own using the form editor.</p>
+            <p class="Body">You can define a style for the overall form when creating or modifying a form. Styles applied to specific controls in the form supersede styles applied to the entire form.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Viewing the Forms</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Forms are found within each business object, under the <span class="window_name">Forms</span> tab. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Creating a Form</a><a name="Create_a_form"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"><a name="kanchor365"></a>Forms are created within the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Form Editor<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The editor in which you edit forms.</span></a>. You create a form associated with a business object, which in turn is used within a layout for users to view.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p><span class="Bold">Notes for Designing Forms</span>
+                                    </p>
+                                    <ul class="list_table">
+                                        <li value="1">While you can add more than one component to a form table cell, it can have an adverse effect on your form display. Adding elements causes the width and height of adjacent cell to increase.</li>
+                                        <li value="2">
+                                            <p>Columns expand to the width of their largest field name or control.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Within the Configuration Console from within a business object, select the <span class="window_name">Forms</span> tab. A list of forms for that business object appear. For example, the change business object has the following forms:</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Change_Object_Forms_List"><a name="Change_Object_Forms_List" data-mc-generated-bookmark="ListOf"></a>Change Object Forms List</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/change_forms.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1316" data-mc-height="570" src="../../resources/images/change_forms_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Click <span class="Bold">Add New Form</span>. The system shows a  blank form with a single cell.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="New_Empty_Form"><a name="New_Empty_Form" data-mc-generated-bookmark="ListOf"></a>New Empty Form</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/form_add_new.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1370" data-mc-height="386" src="../../resources/images/form_add_new_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter information into the fields. These options apply to the entire form, not individual components.</td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col width="179px" class="TableStyle-ParameterTable-Column-Column1" />
+                                <col width="419px" class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Display Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A unique name for this form</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Description</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">A brief description of what the form is used for.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Show control borders </p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Shows the boundaries of the controls you insert.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Show layout cells</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Shows the outline of each cell in a grid format.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Show tab indexes</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Shows the tab indexes.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Audit Views</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Logs each time the form is viewed.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Default Cell Margins</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Enter the number of pixels you want each cell to have. The order is top, right, bottom, left, or click the down arrow to enter the values in the diagram.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4."><b><a name="Form_Styling"></a></b>To apply a style to the form, click <b>Form styling...</b>, enter values from the pop-up window, then click <b>Save</b>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">Styles defined here are superseded by styles defined in individual controls.</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Form Style</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The style used for the overall form. Choose a style from the drop-down list. See <a href="../dynamicstyles/grid_highlighter.htm" class="MCXref xref">Using Highlighter Styles</a>.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Label Style</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The style used for the labels within the form. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Control Style</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The style used for the controls on the form</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Drag a field, relationship, or other control onto the form. You can drop the component when you see the green check mark.</td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1"><b>Fields</b>: Includes all fields defined for this business object. For example, the <span class="window_name">Urgency</span> field has been added to an incident form called <span class="window_name">Incident.DataEntry</span>. The system stores a value entered in the <span class="window_name">Urgency</span> field on the <span class="window_name">Incident.DataEntry</span> form in the incident business object.</li>
+                            <li value="2"><b>Relationships</b>: You can add a field from a business object relationship provided the relationship is 1-to-1 or many-to-1. This includes all business objects linked with this business object through defined relationships. For example, the <span class="window_name">IncidentDetails</span> form includes a <span class="window_name">Customer Name</span> field allowing you to search through the display names returned from the Profile.Employee object. When you select a name, the system automatically populates the rest of the customer information. </li>
+                            <li value="3"><b>Other</b>: Includes controls and graphical elements. For example, the <span class="window_name">Incident.Brief</span> form includes a pair of grids displaying recently updated tasks and recent activities. See <a href="other_form_controls.htm" class="MCXref xref">Other Form Controls</a>.</li>
+                        </ul>
+                        <p class="Body_indent">Available fields and components are derived from the business object associated with the form.</p>
+                    </div>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Drop in the blue area to place the component next to an existing component in the same cell.</li>
+                            <li value="2">Drop below the blue area to place the component in a new row below the existing cell.</li>
+                            <li value="3">Drop to the right of the blue area to place the component in a new column next to the existing cell.</li>
+                            <li value="4">To remove a control, select the component and press <span class="Bold">Delete</span> on your keyboard.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Adjust individual cell properties from the <span class="window_name">Cell Properties</span> tab. These properties pertain to the entire cell, no matter how many components are in the cell and no matter what properties each control has defined.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Cell_Properties_Tab"><a name="Cell_Properties_Tab" data-mc-generated-bookmark="ListOf"></a>Cell Properties Tab</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/cell_properties.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="650" data-mc-height="590" src="../../resources/images/cell_properties_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-cell properties-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Property</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Cell Layout</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>How the cell is laid out:</p>
+                                            <ul class="list_table">
+                                                <li value="1">Horizontal: Pads left and right cell borders.</li>
+                                                <li value="2">Vertical: Pads top and bottom of cell.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Cell Vertical Alignment</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">How the contents align in the cell.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Column Span</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">By default, each column is only one column wide. However, you can define a cell to span across multiple columns. This is useful when designing forms with merged cells. Enter the number value here. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Margins</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Overrides the default margins for the form. &#160;Enter the number of pixels that you want each cell to have. The order is top, right, bottom, left, or click the down arrow to enter the values in the diagram.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Row Span</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">By default, each row is only one row high. However, you can define a cell to span down multiple rows. Enter the number value here.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Section Break</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Makes this cell a section break.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Style</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Defines a style.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Style Rule</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Applies an expression to this style. You can define what existing style (bold, header, etc.) to apply to a control based on a condition. See <a href="show_cell_in_different_colors_based_on_value.htm" class="MCXref xref">Showing Fields in Different Colors Based on Value</a> for an example on how this could work.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Edit the properties of the component using the <span class="window_name">Control Properties</span> tab in the left panel. </td>
+                        </tr>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />-properties-</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Property</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Control Type</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The type of control:</p>
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Checkbox</li>
+                                                <li class="list_table" value="2">Color picker</li>
+                                                <li class="list_table" value="3">Date picker</li>
+                                                <li class="list_table" value="4">DateTime picker</li>
+                                                <li class="list_table" value="5">Email</li>
+                                                <li class="list_table" value="6">Password</li>
+                                                <li class="list_table" value="7">Text field</li>
+                                                <li class="list_table" value="8">Read-only text field</li>
+                                                <li class="list_table" value="9">HTML editor</li>
+                                                <li class="list_table" value="10">HTML viewer</li>
+                                                <li class="list_table" value="11">Radio button</li>
+                                                <li class="list_table" value="12">Object matching control</li>
+                                                <li class="list_table" value="13">Number</li>
+                                                <li class="list_table" value="14">Time picker</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Custom Mask</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Custom masks are useful for fields requiring a specific value format, such as a phone number, percentage value or serial number. </p>
+                                            <p>This control becomes available if you select <span class="Bold">Custom</span> from the <span class="window_name">Edit Mask</span> field. Enter a custom expression using the following characters:</p>
+                                            <ul>
+                                                <li value="1"><span class="Bold">U</span>: Upper-case characters only.</li>
+                                                <li value="2"><span class="Bold">A</span>: Alphanumeric characters only.</li>
+                                                <li value="3"><span class="Bold">l</span>: Lower-case characters only.</li>
+                                                <li value="4"><span class="Bold">9</span>: Numeric characters only.</li>
+                                            </ul>
+                                            <p>For example, an ISSN (International Standard Serial Number, a unique eight-digit number used to identify a print or electronic periodical publication) is formatted as an eight-digit number, separated by a hyphen into two four-digit numbers. By using a custom mask of <span class="window_name">9999-9999</span>, the required format is displayed, and invalid characters cannot be entered. This type of edit mask permits entering less than the required number of characters as placeholders. For example, you can enter five or less digits as characters for a custom mask of <span class="window_name">999.99</span>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Editable</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Specifies if you can edit the control.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Edit Mask</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Specifies an expression that forces the user to enter a specific character set:</p>
+                                            <ul class="list_table">
+                                                <li value="1"><span class="Bold">MAC Address</span>: AAAAAAAAAAAA</li>
+                                                <li value="2"><span class="Bold">IP Address</span>: 999.999.999.999</li>
+                                                <li value="3"><span class="Bold">US Phone</span>: (999)999-9999</li>
+                                                <li value="4"><span class="Bold">Zip Code</span>: AAAAA</li>
+                                                <li value="5"><span class="Bold">Custom</span>: A custom mask. </li>
+                                            </ul>
+                                            <p>When using an edit mask, a placeholder is displayed in the form for each character in the expression. Using an edit mask also prevents the entry of invalid characters.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Field Name</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Contains the name of the associated business object field.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Height</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The control height (lines).</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Label</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The text to appear on the field or control label.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Label Expression</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>An expression to  apply to this label, if needed. For example, on the KnowledgeSelfService form, the following expression has been added to the <span class="window_name">Details</span> cells: <span class="fixedwidth">$(("Article ID: " + KnowledgeNumber))</span>. This adds the label <span class="window_name">Article ID</span> to the label and the knowledge base number assigned to this record.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Label Pos</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The label position. Select from the drop-down list.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Max Rows</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Defines the maximum number of rows to be displayed in an embedded grid (embedded in the form). This limits the number of records displayed, superseding the values created in the grid editor. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Grid Name</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The name of the embedded grid to display in the form.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Grid Relation</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The name of the business object relationship associated with the embedded grid. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Disable Uploading</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The default upload state for the uploader control.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Read Only</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The read-only status of the component.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Read Only Expression</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>An expression associated with this read-only state. For example, you can set a field to be displayed as read-only when its status changes.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Required</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Marks this field as required.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Required Expression</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>An expression associated with this required state. For example, a common expression is to require a field to be completed if an incident is logged:</p>
+                                            <p><span class="fixedwidth">$(iif( (Status == "Logged"), , true))</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p><a name="Style"></a>Style</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>A display style for this control:</p>
+                                            <ul class="list_table">
+                                                <li value="1"><b>Default</b>: Default settings for the label and cell  in accordance with the theme. </li>
+                                                <li value="2"><b>Black Combo Box</b>: Adds a combo box with a black background. Makes the label bold.</li>
+                                                <li value="3"><b>Blue Text</b>: Makes field entries blue.</li>
+                                                <li value="4"><b>Bold Highlighted</b>: Makes field entries bold.</li>
+                                                <li value="5"><b>Bold Label</b>: Makes the label bold.</li>
+                                                <li value="6"><b>Bold w/Horizontal Rule</b>: Makes field entries bold and underlined.</li>
+                                                <li value="7"><b>Counter</b>: Sets cell as a counter. When a new record is added, the system increments the counter by 1.</li>
+                                                <li value="8"><b>Header</b>: Applies larger text style to label for use as a form heading.</li>
+                                                <li value="9"><b>Highlighted Row</b>: Enhances the cell with a highlight color.</li>
+                                                <li value="10"><b>Horizontal Rule</b>: Adds a horizontal rule to a cell. Uses rules to organize sets of fields and controls.</li>
+                                                <li value="11"><b>Horizontal Rule Header</b>: Sets the label against a shaded background.</li>
+                                                <li value="12"><b>Light Blue Text</b>: Makes field entries light blue.</li>
+                                                <li value="13"><b>Light Blue Text Right</b>: Makes field entries light blue and right-aligns them when displayed in the field.</li>
+                                                <li value="14"><b>Link (button)</b>: Provides custom styling for a link button.</li>
+                                                <li value="15"><b>Panel Body</b>: Creates a body section in a panel form component.</li>
+                                                <li value="16"><b>Panel Body (First Row)</b>: Creates a  body section as the top row in a panel form component.</li>
+                                                <li value="17"><b>Panel Body (No Border)</b>: Creates a body section with no border in a panel form component.</li>
+                                                <li value="18"><b>Panel Footer</b>: Creates a footer in a panel form component.</li>
+                                                <li value="19"><b>Panel Header</b>: Creates the heading in a panel, which can serve as a component in a complex form.</li>
+                                                <li value="20"><b>Red Label</b>: Makes field labels red.</li>
+                                                <li value="21"><b>Right Label</b>: Sets the label flush right against the field.</li>
+                                                <li value="22"><b>Therm labels bottom</b>: Provides custom styling for the bottom portion of an escalation thermometer.</li>
+                                                <li value="23"><b>Therm labels top</b>: Provides custom styling for the top portion of an escalation thermometer.</li>
+                                                <li value="24"><b>Vertical Rule</b>: Adds a vertical rule to a cell.</li>
+                                                <li value="25"><b>Vertical Rule (long)</b>: Adds a vertical rule to a cell, with the top of the rule running into the cell padding.</li>
+                                                <li value="26"><b>VIP</b>: Provides custom styling for a VIP cell.</li>
+                                            </ul>
+                                            <p>See <a href="../../reference/expressions/expressions_in_the_form_editor.htm" class="MCXref xref">Using Style Rule Expressions in the Form Editor</a> for information about these controls.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Style Rule</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>An expression to be applied to this style, if needed. You can define what existing style (bold, header, etc.) to apply to a control based on a condition.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Tab Index</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The tab order of the field. See <a href="set_tab_order.htm" class="MCXref xref">Setting the Tab Order</a></td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Visible Expression</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Accepts the expression <span class="fixedwidth">$(true)</span> to make the expression control visible, or <span class="fixedwidth">$(false)</span> to hide it from the user.</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                            <p>Width</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The control width (ems).</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">8.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="8.">To add a cell, select a cell on the form, then either </td>
+                        </tr>
+                    </table>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">From the toolbar go to <span class="Bold">Commands &gt; Insert </span>. then choose a command</li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">--or--
+                </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select a command from the top of the form:<ul><li value="1"><b>Add Top Row</b>: Inserts a blank row at the top of the form.</li><li value="2"><b>Add Bottom Row</b>: Inserts a blank row at the bottom of the form.</li><li value="3"><b>Insert Row Above</b>: Inserts a blank row above the selected row.</li><li value="4"><b>Insert Row Below</b>: Inserts a blank row below the selected row.</li><li value="5"><b>Insert Left Column</b>: Inserts a column to the left of the selected column.</li><li value="6"><b>Insert Right Column</b>: Inserts a column to the right of the selected column.</li><li value="7"><b>Delete Item</b>: Deletes the selected item.</li><li value="8"><b>Merge Cells</b>: Combines the selected cells into a single cell.</li></ul></li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">--or--
+                </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <img src="../../resources/images/buttons/new_window.png" alt="" class="icon" /> to open the <span class="window_name">Form Editor Commands</span> window, then click a command:<ul><li value="1"><b>Delete Control</b>: Deletes the selected control. </li><li value="2"><b>Merge Cells</b>: Combines the selected cells into a single cell.</li><li value="3"><b>Add Row At the End</b>: Inserts a blank row at the bottom of the form.</li><li value="4"><b>Insert Row Above Selection</b>:  Inserts a blank row above the selected row.</li><li value="5"><b>Insert Row Below Selection</b>: Inserts a blank row below the selected row.</li><li value="6"><b>Delete Row</b>: Deletes the selected row and its contents.</li><li value="7"><b>Insert Column to Right</b>:  Inserts a column to the right of the selected column.</li><li value="8"><b>Insert Column to Left</b>: Inserts a column to the left of the selected column.</li><li value="9"><b>Delete Column</b>: Deletes the selected column.</li><li value="10"><b>Show tab order:</b></li><li value="11"><b>Apply left-to-right tab order</b>: </li><li value="12"><b>Apply top-to-bottom tab order:</b></li><li value="13"><b>Clear - Let browser decide:</b></li><li value="14"><b>Complete index assignments</b>:</li></ul></li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">Another empty cell appears. Repeat for more cells, using the appropriate commands for your form.</p>
+                    <p class="Body_indent">For example, to modify the vertical alignment of a cell, next to <span class="Bold">Cell Vertical Alignment</span>, choose the alignment setting you want from the drop-down list.</p>
+                    <p class="Body_indent">You can manipulate these styles to add powerful structure and design elements to the form. Examples include:</p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Adding buttons to initiate an action.</li>
+                            <li value="2">Defining control actions when selected or manipulated (for example, run a report).</li>
+                            <li value="3">Defining control behaviors (for example, contents or lack of content, use of a pick list, accompanying tool tips). </li>
+                            <li value="4">Adding a free-floating label to identify a control or other item.</li>
+                            <li value="5">Formatting the appearance of a control by adding styles.</li>
+                            <li value="6">Adjusting control size and alignment.</li>
+                        </ul>
+                    </div>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">9.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="9.">
+    Click <span class="Bold">Save </span><img src="../../resources/images/buttons/save_down_arrow.png" class="icon" /> from the toolbar. 
+     Frequently saving your changes is recommended as you construct the form.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Duplicate a Form</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Forms</span> tab of a business object. The list of forms appears.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Move your mouse pointer over a form name and click <span class="Bold">Copy Form</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Copy_Form_Button"><a name="Copy_Form_Button" data-mc-generated-bookmark="ListOf"></a>Copy Form Button</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/form_copy.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="471" data-mc-height="213" src="../../resources/images/form_copy_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The <span class="window_name">Enter the Name</span> window appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Enter a unique name for the new form, then click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent"> The new form appears in the form list.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Delete a Form</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Open the <span class="window_name">Forms</span> tab of a business object. A list of forms appear.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Move your mouse pointer over a form name and click <span class="Bold">Delete Form</span>. </td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Delete_Form"><a name="Delete_Form" data-mc-generated-bookmark="ListOf"></a>Delete Form</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/form_delete.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="480" data-mc-height="200" src="../../resources/images/form_delete_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">The <span class="window_name">Delete confirmation</span> window appears.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Yes</span> to confirm the deletion. The page refreshes and the form is removed from the business object.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Customize a Form</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">A business object can use several forms for different purposes and audiences. For instance, by assigning forms to roles, one form can be used for managers and another for technicians. When designing forms, first customize the default panel, the brief panel, and then add new forms if necessary. </p>
+                    <p class="Body">Forms employ a tabular layout with rows of cells. Customizing forms involves these basic steps:</p>
+                    <ul>
+                        <li value="1">Add fields: Click and drag object fields from the navigator bar to a form cell.</li>
+                        <li value="2">Edit field position and appearance: Align fields and refine their aesthetic properties to enhance form usability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Default Forms</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The default forms are included under the <span class="window_name">Display</span> tab for each business object. You can edit the default forms. You can also use them as a template to create a form using the form wizard.</p>
+                    <p class="Body">A <span class="window_name">Summary</span> form (also called a <span class="window_name">Brief</span> form) is a special read-only form often used on a layout to display master-child objects, providing a preview of the record for the selected grid. Summary forms are labeled so users know they cannot edit information on them and is specified in the <span class="window_name">Preview Forms</span> section for a layout definition. Create, edit, and delete summary forms in the same way that you do any other form.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />About Default Form Content</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create form templates to speed data entry in commonly completed form fields. A template contains predefined content for one or more fields. When a user creates a record and applies a template to the record form, the predefined content is transferred into the form. The user does not have to fill in the predefined areas manually. </p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="form_controls.htm">Form Controls</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="other_form_controls.htm">Other Form Controls</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../toolbareditor/toolbar_editor.htm">Toolbar Editor</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../interface/workspaces/tabbing_between_fields.htm">Tabbing Between Fields</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="show_cell_in_different_colors_based_on_value.htm">Showing Fields in Different Colors Based on Value</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="how_to_limit_attachment_size.htm">Limiting Attachment Size</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../businessobjects/hide_items_in_closed_status.htm">Hiding Related Items in Closed Status</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="flex_lists.htm">Related Objects Lists</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="set_tab_order.htm">Setting the Tab Order</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/expressions/expressions_in_the_form_editor.htm">Using Style Rule Expressions in the Form Editor</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|Numeric and Currency Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Round</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/round.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_numeric_and_currency_functions.htm">Numeric and Currency Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Round</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="NumericAndCurrencyFunctions" data-mc-xref-target-name="Round"><a name="Round" data-mc-generated-bookmark="ListOf"></a><a name="kanchor763"></a>Round</h2>
+            <p class="Body">Rounds a value to the number of decimal places specified. Returns the integer nearest the <span class="window_name">value</span> parameter. If the fractional component of the <span class="window_name">value</span> parameter is halfway between two integers, one of which is even and the other odd, then this function returns the even number. This is called banker's rounding and it minimizes rounding errors that result from consistently rounding a midpoint value in a single direction.</p>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">Round(value, places)</p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">No</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <table style="width: 92%;caption-side: top;mc-table-style: url('../../resources/tablestyles/optionstable.css');" cellspacing="0" class="TableStyle-OptionsTable">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1"><span class="window_name">value</span>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Numeric or currency value to round.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1"><span class="window_name">places</span>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">Optional. The number of decimal places to round the value to. Must be a non-negative integer. The default is 0.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">The same type as the <span class="window_name">value</span> parameter type. If the <span class="window_name">value</span> parameter is a currency value, this function returns a currency value. If the <span class="window_name">value</span> parameter is a number value, this function returns a number value. If the <span class="window_name">value</span> parameter is not a number nor a currency, returns an error.</p>
+            <h4 class="subheading">Examples</h4>
+            <p class="Code">$(Round(2.12345,2))</p>
+            <p class="Body_indent">The above example returns a value of 2.12. Rounds down and to 2 places.</p>
+            <p class="Code">&#160;</p>
+            <p class="Code">$(Round(2.12789,2))</p>
+            <p class="Body_indent">The above example returns a value of 2.13. &#160;Rounds up and to 2 places.</p>
+            <p class="Code">&#160;</p>
+            <p class="Code">$(Round(2.125))</p>
+            <p class="Body_indent">The above example returns a value of 2.12. The number to round, 2.125, is halfway between two integers (2.12 and 2.13) so this function rounds to the even number (2.12).</p>
+            <p class="Code">&#160;</p>
+            <p class="Code">$(Round(2.135))</p>
+            <p class="Body_indent">The above example returns a value of 2.14. &#160;Rounds up.</p>
+            <p class="Code">&#160;</p>
+            <p class="Code">$(Round(2.125USD,2))</p>
+            <p class="Body_indent">The above example returns a value of 2.12USD. &#160;The number to round, 2.125, is halfway between two integers (2.12 and 2.13) so this function rounds to the even number (2.12). It also includes the currency value (USD).</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="_numeric_and_currency_functions.htm">Numeric and Currency Functions</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="currency.htm">Currency</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="currencycode.htm">CurrencyCode</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="currencyvalue.htm">CurrencyValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="defaultcurrencycode.htm">DefaultCurrencyCode</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="defaultcurrencysymbol.htm">DefaultCurrencySymbol</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="rounddown.htm">RoundDown</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="roundup.htm">RoundUp</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Constructing Expressions</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/constructing_expressions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Constructing Expressions</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor679"></a>Constructing Expressions</h1>
+            <p class="Body">A function, field reference, or calculated expression must be enclosed in an expression bracket. This syntax is a dollar sign with parenthesis: </p>
+            <p class="Code">$( )</p>
+            <p class="Body">The <span class="fixedwidth">$(</span> can only appear as the outer most portion of the expression, and should not appear anywhere within the expression itself. If you enter <span class="fixedwidth">$(</span> anywhere else within the expression, the current parser cannot interpret the expression properly, and incorrectly interprets the entire expression, as if it were a regular string literal.</p>
+            <p class="Body">In certain cases, the parser does allow for expressing simple values, without requiring the use of <span class="fixedwidth">$()</span>. An example is expressing simple string literal values such as "active".</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Literals</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Null Literal</h4>
+                    <p class="Body">Two representations are permissible when representing the null literal:</p>
+                    <ul>
+                        <li value="1"><span class="fixedwidth">$(null)</span>. null is in all lowercase and is enclosed within the <span class="fixedwidth">$()</span>.</li>
+                        <li value="2"><span class="fixedwidth">$(NULL)</span>. NULL is in all uppercase and is enclosed within the <span class="fixedwidth">$()</span>.</li>
+                    </ul>
+                    <h4 class="subheading"><a name="Boolean"></a>Boolean Literals</h4>
+                    <p class="Body">Boolean literals are used to represent true or false values. The following representations are permissible:</p>
+                    <ul>
+                        <li value="1">The true and false values are either in all lower or all upper case, and are enclosed within the <span class="fixedwidth">$()</span>:</li>
+                    </ul>
+                    <p class="Code">$(true), $(FALSE)</p>
+                    <ul>
+                        <li value="1">Regardless of case, the true and false values are enclosed in either single or double quotes, and then enclosed within the <span class="fixedwidth">$()</span>: </li>
+                    </ul>
+                    <p class="Code">$("True"), $(‘False')</p>
+                    <ul>
+                        <li value="1">Regardless of case, the true and false values are specified, without being enclosed within the <span class="fixedwidth">$()</span>:</li>
+                    </ul>
+                    <p class="Code">TRUE, False</p>
+                    <ul>
+                        <li value="1">The values of 0 or 1, which can be enclosed in either single or double quotes, are then enclosed within the <span class="fixedwidth">$()</span>:</li>
+                    </ul>
+                    <p class="Code">$(0), $(‘1')</p>
+                    <h4 class="subheading"><a name="Date/Time_Literals"></a>DateTime Literals</h4>
+                    <p class="Body">Within <span class="notranslate"><b>HEAT</b></span>, date formats depend on the user locale. The following example is for specifying a DateTime value for a user in Germany, relative to the CEST timezone:</p>
+                    <p class="Body_indent">16.10.2013 00:40:38</p>
+                    <p class="Body">In the English locale, the same date appears as:</p>
+                    <p class="Body_indent">10/16/2013 12:39:34 AM</p>
+                    <p class="Body">Locales that use a 24-hour time format (such as the German locale), use a leading zero (0) for morning hours.</p>
+                    <p class="Body">Alternatively, the same value can be expressed using a format similar to the ISO 8601 standard – the entered value is universally acceptable, regardless of the locale of the user:</p>
+                    <p class="Body_indent">2013-10-16 8:38 PM</p>
+                    <p class="Body_indent">2013-10-16 20:38</p>
+                    <p class="Body">Note that the time returned is UTC time and not the local time of the user.</p>
+                    <h4 class="subheading">Number Literals</h4>
+                    <p>The following representations are permissible for number literals:</p>
+                    <ul>
+                        <li value="1">The number value as is, with no surrounding characters:</li>
+                    </ul>
+                    <p class="Code">-123456.78, 123456</p>
+                    <ul>
+                        <li value="1">The number value surrounded by the standard expression syntax of <span class="fixedwidth">$()</span>:</li>
+                    </ul>
+                    <p class="Code">$(-123456.78), $(123456)</p>
+                    <ul>
+                        <li value="1">The number value, surrounded using either single or double quotes, and surrounded by the standard expression syntax of <span class="fixedwidth">$()</span>:</li>
+                    </ul>
+                    <p class="Code">$('-123456.78'), $('123456')</p>
+                    <h4 class="subheading">String Literals</h4>
+                    <p class="Body">String literals are represented by single or double quotes:</p>
+                    <p class="Code">"Humpty Dumpty sat on a wall"</p>
+                    <p class="Code">'Humpty Dumpty had a great fall.'</p>
+                    <p class="Body">Specify new lines in the string with the "\r\n" escape sequence:</p>
+                    <p class="Code"><span>$("Humpty Dumpty sat on a wall</span><span>," + "</span><span>\r\n</span><span>" + "</span><span>Humpty Dumpty had a great fall.")</span>
+                    </p>
+                    <table style="width: 80%;mc-caption-repeat: false;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>To see the new lines, ensure that the Text Field control on the form has a height of 2 or more. Vertical scrollbars automatically appear if the text value exceeds the current size of the control.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">To specify tab stops, use the "\t" escape sequence:</p>
+                    <p class="Code"><span>$("Elvis" + "\t" + "has left the building</span><span>!</span><span>")</span>
+                    </p>
+                    <p class="Body">After saving the expression with the "\t" escape sequence, editors (such as the field editor in the quick action editor) show the tab stops as space characters, but the metadata preserves the escape sequence properly and evaluates it accordingly at runtime.</p>
+                    <p class="Body">To escape quote characters, use the backslash escape sequence "\" within the string literal:</p>
+                    <p class="Code">$(‘The latest operating system is \'Windows 8\' from Microsoft')</p>
+                    <p class="Code">$("The latest Office suite is \"Office 2013\" from Microsoft")</p>
+                    <p class="Body">To specify Unicode characters, use the Unicode escape sequence "\u&lt;nnnn&gt;", where &lt;nnnn&gt; is the four-digit hexadecimal representation of the Unicode value:</p>
+                    <p class="Code"><span>$("The </span><span>first CJK </span><span>U</span><span>nicode character is</span><span>:</span><span>"</span><span> + "\u4E00"</span><span>)</span>
+                    </p>
+                    <p class="Body">After saving the expression with the Unicode characters, editors (such as the field editor in the quick action editor) show the Unicode character as is.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />References within Expressions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following sections describe how to use references within an expression:</p>
+                    <h4 class="subheading">Field References</h4>
+                    <p class="Body">The simplest field reference is a field name. A reference to a field in a related object is written as:</p>
+                    <p class="Code">[RelationshipSpecifier]FieldName</p>
+                    <p class="Body">You can use more than one RelationshipSpecifier. Each is enclosed in square brackets, specifying a multi-hop path to the field:</p>
+                    <p class="Code">[RelSpecifier1][RelSpecifier2][RelSpecifier3]FieldName </p>
+                    <p class="Body">You can obtain a field from a related object through a relationship or through a link field.</p>
+                    <h4 class="subheading">Reference Relationships</h4>
+                    <p class="Body">For accessing a related object through a relationship, the RelationshipSpecifier uses the form <span class="fixedwidth">[TableRef.RelationshipTag]</span>, where:</p>
+                    <ul>
+                        <li value="1"><b>TableRef</b> is the internal business object name (ending with or containing # sign) for the related business object.</li>
+                        <li value="2"><b>RelationshipTag</b> is usually empty, but can be used to distinguish one relationship from another in cases where more than one relationship exists between two business objects.</li>
+                    </ul>
+                    <p class="Body">When an empty tag is used, the relationship specifier still must end with a period. For example, in</p>
+                    <p class="Code">[Task#Assignment.]Owner</p>
+                    <p class="Body">the <span class="fixedwidth">Task#Assignment</span> tag is empty, and ends with a period.</p>
+                    <p class="Body">If a relationship definition has a non-empty tag, it must be explicitly used in any references that use that expression. &#160;An object reference without a tag cannot use a relationship with a named tag.</p>
+                    <p class="Body">To access a related object through a relationship, the relationship must be one-to-one or many-to-one to remove ambiguity. At most, one related object must be found for a given business object.</p>
+                    <h4 class="subheading">Reference Link Fields</h4>
+                    <p class="Body">To access related objects through a link field, RelationshipSpecifier uses the form <span class="fixedwidth">[link:LinkFieldName]</span>.</p>
+                    <p class="Body">When an expression is evaluated in a context of two business objects (for example, a table validation rule condition or relationship condition), a field can use the (other) prefix, specifying that the field lookup should begin in the second business object (validation object, related business object).</p>
+                    <h4 class="subheading">Reference Pick Lists</h4>
+                    <p class="Body">To return a pick list in an expression for an editing business rule, you can construct the rule with an OtherObject reference, as follows:</p>
+                    <p class="Code">$([OtherObject]PrimaryEmail)</p>
+                    <p class="Body">This returns a pick list called OtherObject in reference to the PrimaryEmail object. </p>
+                    <p class="Body">You can only use this in editing business rules.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="expression_examples.htm">Expression Examples</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

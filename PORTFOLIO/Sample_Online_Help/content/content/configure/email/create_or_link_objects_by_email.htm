@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Email|Email Examples">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Create or Link Objects via Email</title>
+        <link href="../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/email/create_or_link_objects_by_email.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email.htm">Setting Up Email</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="email_examples.htm">Email Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Create or Link Objects via Email</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Create_or_Link_Objects_via_Email"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Create_or_Link_Objects_via_Email" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor648"></a>Create or Link Objects via Email</h1>
+            <p class="Body">Configure this option after you have created and saved an inbox.</p>
+            <p class="Body">You can set up inbound emails to create an employee record or link to an employee record, or you can create an object record that is associated to the incident business object record without creating an employee record. </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create or Link to an Employee</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Within the <a href="inbox_configuration.htm" class="MCXref xref">Creating an Inbox</a> window, select <span class="Bold">Create or Link to an Employee</span> to enable the creation of a new employee profile using the incoming email address of a message received from a permitted domain. This option is available whether you select incident, problem, or other as the business object.
+</p>
+                    <p class="fig_title" data-mc-xref-target-name="Inbox_-_Create_or_Link_to_an_Employee"><a name="Inbox_-_Create_or_Link_to_an_Employee" data-mc-generated-bookmark="ListOf"></a>Inbox - Create or Link to an Employee</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_04.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="838" data-mc-height="846" src="../../resources/images/email_04_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">If you select this option and the user is in the system, a new incident or generic business object is created and linked to the existing Profile.Employee record.</li>
+                        <li value="2">If you select this option  and the user is not in the system, a new Profile.Employee record is created, which is then associated with the newly created incident or generic business object.</li>
+                    </ul>
+                    <p class="Body">If you do not select <span class="Bold">Create or Link to an Employee</span>, a generic business object is created or updated only if the employee is in the system. Otherwise, the email listener does not take any action. The incoming message is discarded and a log entry is created in the system log facility called syslog.</p>
+                    <p class="Body">By default, all new employees are added to the default organizational unit. However, they must be manually changed to active status, even if they are assigned to a team or organizational unit.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                        <col class="TableStyle-Note_Warning-Column-Column1" />
+                        <col class="TableStyle-Note_Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">Use caution when designating a default domain when using this feature. If the system cannot find the domain, the system attempts to create a new domain for this new user, possibly causing an infinite loop. The best way to prevent this is to  define a failure keyword. See <a href="inbox_configuration.htm#Delivery_failure_notification_tab" class="MCXref xref">Delivery Failure Notification Tab</a>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create a Link to a Custom Object</a><a name="Create_a_Link_to_a_Custom_Object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Inbox Configuration</span> window, enter an object name related to the incident object in the <span class="window_name">Create an Object Related to Incident</span> field.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">This feature appears when you do not select <span class="Bold">Create or Link to an Employee</span>.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Inbox_-_Create_an_Object_Related_to_Incident_fields"><a name="Inbox_-_Create_an_Object_Related_to_Incident_fields" data-mc-generated-bookmark="ListOf"></a>Inbox - Create an Object Related to Incident fields</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_05.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="938" data-mc-height="239" src="../../resources/images/email_05_thumb_0_45.png" style="width: 675px;height: 171px;" tabindex="" /></a>
+                    </p>
+                    <p class="Body_indent">Objects related to the incident object are listed in the <span class="window_name">Relationships</span> child tab of the incident business object.</p>
+                    <p class="Body_indent">For example, to create a knowledge record and associate it with the incident record, enter <span class="Bold">IncidentAssocFRS_Knowlege</span>.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">In the <span class="window_name">Match the email address from value to the related object field value</span> field, enter the display name of a valid object field from the related business object. This value is required. This field cannot be empty when you use the <span class="window_name">Create an Object Related to Incident</span> field.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">For example, if you are creating a knowledge record, enter keywords to map the <span class="window_name">From</span> value of the email to the keywords field of the knowledge record. The sender of the email (or the <span class="window_name">From</span> value) is mapped to the field that you specify.</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span> to update the record before continuing.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">The New Tenant Email Mailbox Mapping becomes visible (and you can add mappings) after you save the inbox record. 
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">In the <span class="window_name">Mapping</span> child tab, click <span class="Bold">New Tenant Email Mailbox Mapping</span>. The <span class="window_name">New Tenant Email Mailbox Mapping</span> window appears.</td>
+                        </tr>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="New_Tenant_Email_Mailbox_Mapping"><a name="New_Tenant_Email_Mailbox_Mapping" data-mc-generated-bookmark="ListOf"></a>New Tenant Email Mailbox Mapping</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_06.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="880" data-mc-height="395" src="../../resources/images/email_06_thumb_0_45.png" style="width: 728px;height: 326px;" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Enter the following information:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Map Field</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the field  you want to map. For example, PrimaryEmail.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Map Value</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The value  you want the field to contain. For example, @From:</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">7.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="7.">Repeat as needed to map additional values.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Ensure  all required fields in the target form have been mapped.
+							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Create Incidents if Employee is Not in the System</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can create an incident if the employee does not exist in the system. That is, you can allow incidents to be created without populating ProfileLink).</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">From the <span class="window_name">Inbox</span> workspace, ensure <span class="Bold">Create or Link to an Employee</span> is not checked.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Set the following:</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1"> Create an Object Related to Incident </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Enter <span class="Type">EmployeeAssociatesIncident</span>.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Match the email address "From" value to the related object field value</td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Enter <span class="Type">PrimaryEmail</span>.</td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">OR related object field value</td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Leave this field empty.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fig_title" data-mc-xref-target-name="Inbox_-_Creating_an_Incident"><a name="Inbox_-_Creating_an_Incident" data-mc-generated-bookmark="ListOf"></a>Inbox - Creating an Incident</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/email_create_incident_non-employee.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="865" data-mc-height="676" src="../../resources/images/email_create_incident_non-employee_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Click <span class="Bold">Save</span>.</td>
+                        </tr>
+                    </table>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                        <col class="TableStyle-Note_Warning-Column-Column1" />
+                        <col class="TableStyle-Note_Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/warning48_normal.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">Using this feature incorrectly can cause an infinite loop. The best way to prevent this is to  define a failure keyword. See <a href="inbox_configuration.htm#Delivery_failure_notification_tab" class="MCXref xref">Delivery Failure Notification Tab</a>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="email_configuration.htm">Email Servers</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="inbox_configuration.htm">Creating an Inbox</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="outbox_configuration.htm">Creating an Outbox</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="email.htm">Setting Up Email</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="using_email.htm">Using Email</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="the_address_book.htm">The Address Book</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="email_processing.htm">Email Processing</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/default_email_notificati.htm">Default Email Notifications</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

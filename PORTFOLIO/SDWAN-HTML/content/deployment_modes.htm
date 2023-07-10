@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Deployment Profiles">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Deployment Modes</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-87024037-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/styles.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/tablet.css" rel="stylesheet" />
+        <link href="../skins/default/stylesheets/components/mobile.css" rel="stylesheet" />
+        <link href="resources/stylesheets/sp-styles.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="Header"><span class="SP_Doc_VarsCompany">Silver Peak</span> <span class="SP_Doc_VarsDocTitle">SD-WAN</span> <span class="SP_Doc_VarsDocType">Deployment Guide</span></p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="5" data-mc-toc="True">
+            </div>
+        </div>
+        <h1>Deployment Modes</h1>
+        <p>
+            <img src="resources/importimages/sdwan_deployment_guide_review/deployment_profiles_1a.png" />
+        </p>
+        <p>The versatility of <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">Orchestrator<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Formerly GMS. Silver Peak global management software. Manages, provisions, and monitors Silver Peak devices within a network.</span></a> enables you to configure your deployment in various modes:</p>
+        <ul>
+            <li value="1"><b>Router</b> - Can be in-line or <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">out-of-path<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Same as Router mode. In an out-of-path deployment, policy-based routing (PBR), VRRP, or WCCP redirects the traffic to the Silver Peak appliance for processing.</span></a> and uses multiple ports. Best for complex networks.<ul><li value="1">
+            Do you want your traffic to be in-path or <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">out-of-path<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Same as Router mode. In an out-of-path deployment, policy-based routing (PBR), VRRP, or WCCP redirects the traffic to the Silver Peak appliance for processing.</span></a>? This mode supports both deployments. In-path deployment offers much simpler configuration.</li><li value="2">
+            Does your router support <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">VRRP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Virtual Router Redundancy Protocol is a standard redundancy protocol designed to increase the availability of servicing hosts on the same subnet.</span></a>, <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">WCCP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Web Cache Communications Protocol. A Cisco-developed content-routing protocol that provides a mechanism to redirect traffic flows in real-time. It has built-in load balancing, scaling, fault tolerance, and service-assurance (failsafe) mechanisms. Utilizes HIA (Here I Am) messages from SP devices and ISY (I See You) messages to the router.</span></a>, or <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">PBR<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Policy-based routing is a technique used to make routing decisions based on policies set by the network administrator.</span></a>? If so, you may want to consider <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">out-of-path<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Same as Router mode. In an out-of-path deployment, policy-based routing (PBR), VRRP, or WCCP redirects the traffic to the Silver Peak appliance for processing.</span></a> <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">Router mode<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Out-of-path deployment, where data traffic is redirected by using policy-based routing (PBR), Web Cache Coordination Protocol (WCCP), or Virtual Router Redundancy Protocol (VRRP).</span></a> deployment. You can set up more complex configurations, which offer <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">load balancing<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A technique to spread work between two or more computers, network links, CPUs, hard drives, or other resources, in order to get optimal resource utilization, maximize throughput, and minimize response time. Using multiple components with load balancing, instead of a single component, may increase reliability through redundancy. The balancing service is usually provided by a dedicated program or hardware device.</span></a> between appliances and high availability.</li><li value="3">
+            If your <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a> destination is behind a router or L3 <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">switch<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A network device that filters and forwards frames based on the destination address of each frame. The switch operates at Layer-2 (data link layer) of the Open System Interconnection (OSI) model.</span></a>, you need to add a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a>-side route (a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a> next-hop).</li></ul></li>
+            <li value="2"><b>Bridge</b> - Can only be in-line and uses 2 or 4 ports. Easiest setup for simple networks.<ul><li value="1">
+            Do you have a physical appliance or a virtual appliance?</li><li value="2">
+            A virtual appliance has no fail-to-wire, so you need a redundant network path to maintain connectivity if the appliance fails.</li><li value="3">
+            If your <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a> destination is behind a router or L3 <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">switch<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A network device that filters and forwards frames based on the destination address of each frame. The switch operates at Layer-2 (data link layer) of the Open System Interconnection (OSI) model.</span></a>, you need to add a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a>-side route (a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">LAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Local Area Network.</span></a> next-hop).</li><li value="4">
+            If the appliance is on a <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">VLAN<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Virtual Local Area Network. A means by which LAN users on different physical LAN segments are afforded priority access privileges across the LAN backbone so that they appear to be on the same physical segment of an enterprise-level logical LAN.</span></a> trunk, then you need to configure VLANs on the <span class="SP_Doc_VarsCompany">Silver Peak</span> so that the appliance can tag traffic with the appropriate <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">VLAN tag<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>See 802.1q encapsulation</span></a>.</li></ul></li>
+            <li value="3"><b>Server</b> - Can only be <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ MCTextPopupHotSpot_Hyperlink #text #textHyperlink">out-of-path<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Same as Router mode. In an out-of-path deployment, policy-based routing (PBR), VRRP, or WCCP redirects the traffic to the Silver Peak appliance for processing.</span></a> and uses 1 port (<b>mgmt0</b>). Best for backup configurations.</li>
+        </ul>
+        <div class="MCRelationshipsProxy_0">
+            <p class="conceptHeading_concept_0">Concepts</p>
+            <p class="conceptItem_concept_0"><a href="deployment_profiles.htm">Deployment Profiles</a>
+            </p>
+            <p class="conceptItem_concept_0"><a href="example_deployments.htm">Example Deployments</a>
+            </p>
+            <p class="taskHeading_task_0">Tasks</p>
+            <p class="taskItem_task_0"><a href="configuring_deployment_profiles.htm">Configuring Deployment Profiles</a>
+            </p>
+            <p class="taskItem_task_0"><a href="wan_hardening.htm">WAN Hardening</a>
+            </p>
+            <p class="referenceHeading_reference_0">Related Topics</p>
+            <p class="referenceItem_reference_0"><a href="in-line_deployments.htm">In-Line Deployments</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_bridge_vs_router.htm">In-Line Bridge vs In-Line Router</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_overview.htm">In-Line Overview</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="out-of-path_deployments.htm">Out-of-Path Deployments</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="server_mode_deployments.htm">Server Mode Deployments</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="deploying_in_nat_environments.htm">Deploying in NAT Environments</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="router_mode_considerations.htm">Router Mode Considerations</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_router_mode__router_+_firewall_.htm">In-Line Router Mode (Router + Firewall)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_router_mode__router_+_direct_internet_.htm">In-Line Router Mode (Router + Direct Internet)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_router_mode__single_direct_internet_.htm">In-Line Router Mode (Single Direct Internet)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_router_mode__dual_direct_internet_.htm">In-Line Router Mode (Dual Direct Internet)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="in-line_router_mode__dual_mpls_.htm">In-Line Router Mode (Dual MPLS)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="bridge_mode__router_+_direct_internet_.htm">Bridge Mode (Router + Direct Internet)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="bridge_mode__router_+_firewall_.htm">Bridge Mode (Router + Firewall)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="bridge_mode__dual_mpls_.htm">Bridge Mode (Dual MPLS)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="router_mode_mpls_+_internet.htm">Router Mode MPLS + Internet</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="router_mode_ha__mpls_+_mpls_.htm">Router Mode HA (MPLS + MPLS)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="dual_home_router_mode__mpls_+_internet_.htm">Dual Home Router Mode (MPLS + Internet)</a>
+            </p>
+            <p class="referenceItem_reference_0"><a href="dual_home_router_mode_ha__mpls_+_internet_.htm">Dual Home Router Mode HA (MPLS + Internet)</a>
+            </p>
+        </div>
+        <hr width="100%" size="0" align="center" />
+        <p class="Footer">Copyright © <span class="SP_Doc_VarsCurrentYear">2017</span> by Silver Peak Systems, Inc. All rights reserved.</p>
+        <img src="resources/globalimages/watermark.jpg" class="watermark" />
+    </body>
+</html>

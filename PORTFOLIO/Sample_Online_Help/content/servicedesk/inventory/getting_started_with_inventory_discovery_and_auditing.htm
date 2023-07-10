@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Inventory Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Inventory Discovery and Auditing</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#servicedesk/inventory/getting_started_with_inventory_discovery_and_auditing.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../../overview/inventory_management.htm">Inventory Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Inventory Discovery and Auditing</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Using Inventory Discovery and Auditing</h1>
+            <p class="Body">All main inventory audit tasks are restricted to <span class="notranslate"><b>HEAT Discovery</b></span> Managers.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Download and install a gateway. See <a href="#Install_a_Gateway" class="MCXref xref">Installing a Gateway</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Run an <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">Active Directory<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Microsoft's Active Directory is a service that stores and manages network-based entities such as applications, files, printers, and people.</span></a> scan, which shows all computers that are not being audited.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Deploy agents to the computers that are not being audited, which allows you to manage them.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">--or--
+        </p>
+            <p class="Body_indent">Install clients on the computers that are remote or not in the intranet.</p>
+            <p class="Body_indent">In some cases, you can choose to run an agentless audit on some computers. For example, where a client agent cannot be installed on a computer. </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Perform audits. See <a href="using_audits.htm" class="MCXref xref">Using Audits</a>.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">When you deploy an agent, it runs an audit. You can run additional audits, either by using the <span class="window_name">Audit Inventory</span> quick action or by scheduling an audit. </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Installing a Gateway</a><a name="Install_a_Gateway"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The <span class="notranslate"><b>HEAT</b></span> gateway can be installed with a minimum specification of Windows 7. See <a href="#Standard_Gateway_System_prerequisites" class="MCXref xref">Standard Gateway System Prerequisites</a> for the other requirements for the gateway computer. </p>
+                    <p class="Body">Before starting the installation, you can specify a default organizational unit to associate with your gateway. All clients deployed by a gateway, where you specified the default organizational unit in the installation, are by default associated with that organizational unit.</p>
+                    <p class="Body">When you specify a default organizational unit during installation, ensure that the computer you are using to install the gateway does not already have a configuration item record in <span class="notranslate"><b>HEAT</b></span>.</p>
+                    <p class="Body">After installation, the gateway runs the <span class="notranslate"><b>HEAT Discovery</b></span> client to generate a unique client ID. A registration message is then sent to the <span class="notranslate"><b>HEAT</b></span> server.</p>
+                    <p class="Body">When the registration message has been received and processed by the server, the gateway computer appears in the <span class="window_name">Gateway</span> workspace. </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Standard Gateway System Prerequisites</a><a name="Standard_Gateway_System_prerequisites"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">The following operating systems can be used to install <span class="notranslate"><b>HEAT</b></span> standard gateways:</p>
+                    <ul>
+                        <li value="1">Windows 7 and later operating systems.</li>
+                        <li value="2">Open ports to facilitate network access. Before performing the Inventory Management activities,  open the appropriate network ports for the gateway to communicate effectively with the domain controller. In your firewall settings for the service, enter the appropriate port and select the protocol option (see the following table).</li>
+                    </ul>
+                    <p class="Body">The following requirements are for  set up, discovery, and audit activities in Inventory Management:</p>
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col width="141px" class="TableStyle-ParameterTable-Column-Column1">
+                        </col>
+                        <col width="92px" class="TableStyle-ParameterTable-Column-Column2">
+                        </col>
+                        <col width="104px" class="TableStyle-ParameterTable-Column-Column2">
+                        </col>
+                        <col width="62px" class="TableStyle-ParameterTable-Column-Column2">
+                        </col>
+                        <col width="73px" class="TableStyle-ParameterTable-Column-Column2">
+                        </col>
+                        <col width="151px" class="TableStyle-ParameterTable-Column-Column2">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <td class="TableStyle-ParameterTable-HeadE-Column1-Header1">
+                                    <p>Application</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Process</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Activity</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Port</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadF-Column2-Header1">
+                                    <p>Protocol</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-HeadD-Column2-Header1">
+                                    <p>Endpoint</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>Gateway and client installation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>setup.exe</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Installation</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>80</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>http</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>SaaS web server</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>SaaS IM Gateway</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Active directory scan</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Discovery</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>389</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>LDAP</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Active directory server in the local domain</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>SaaS IM Client</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>LanProbe</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Discovery</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>161</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>SNMP</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Devices on the network</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>SaaS IM Client</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Audit message transport</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Audit</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>443</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>SOAP messages over https</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>SaaS IM service</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p>SaaS IM Gateway</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>WMI Scan</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>Audit</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>135</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">
+                                    <p>RPC</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Selected computer</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>SaaS IM Client</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Proxy</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>Audit</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>8097</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">
+                                    <p>http</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>Proxy</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">The <span class="window_name"> ADScan</span> function does the following:</p>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Calls the Windows <span class="window_name">ADsOpenObject</span> API with the credentials specified during installation to get an IDirectorySearch COM object for the active directory domain (for example, LDAP://DC=EMEA, DC=FRS).</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 48px;" />
+                        <col style="width: 32px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                            </td>
+                            <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Calls <span class="window_name">IDirectorySearch.ExecuteSearch</span> with the filter “(objectCategory = computer)”. This uses LDAP to return all computer objects in the domain.</td>
+                        </tr>
+                    </table>
+                    <p class="Body_indent">To perform the search, the user must be assigned “list contents” permission.</p>
+                    <p class="Body">To install the gateway on a server that does not belong to a domain, you must specify a valid local administrator user and “<span class="fixedwidth">.</span>” for the domain name. If you are using that gateway to deploy an agent to another computer in the same workgroup, the active directory scan does not work. It works only if the administrator user is common for the domain; however, in a workgroup, although the users might have the same login credentials, they are still considered two different users. To deploy an agent in this instance, use the client agent installer.</p>
+                    <p class="Body">See <a href="../../configure/asset_management.htm" class="MCXref xref">HEAT Discovery Asset Management</a> for installation options.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Installing the Gateway  From a Command Line</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Domain administrator credentials are needed for accessing active directory and performing
+remote computer administration.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="subheading">Installing the Standard Gateway</h4>
+                    <ul>
+                        <li value="1">Open the command prompt window and enter the following command:</li>
+                    </ul>
+                    <p><span class="fixedwidth">msiexec/i&lt;tenant url&gt;/IM/GatewayInstaller/SaaSgateway_1.9.msi FRS_ACCESSKEY=&lt;client authentication key&gt; FRS_SERVERBASE=&lt;Cloud IM web service base address&gt; FRS_OU&lt;Default organizational unit name&gt;</span>
+                    </p>
+                    <p class="Body_indent">--or--
+                </p>
+                    <ul>
+                        <li value="1">Download the MSI locally and install it:</li>
+                    </ul><span class="fixedwidth">msiexec /i &lt;\windows\temporary internet files&gt;SaaSGateway_1.9.msi FRS_ACCESSKEY=&lt;client authentication key&gt; FRS_SERVERBASE=&lt;Cloud IM web service base address&gt; FRS_OU&lt;Default organizational unit name&gt;</span>
+                    <p class="Body">The ClientInstallation.msi and ClientInstallation.cmd files are downloaded by default to the FrontRange Solutions &gt; SaaSIM &gt; ClientShare folder.</p>
+                    <h4 class="subheading">Installing the Data Center Gateway</h4>
+                    <p class="Body">&#160;</p><span class="fixedwidth">msiexec/i&lt;tenant url&gt;/IM/GatewayInstaller/SaaSgatewayDC_1.9.msi FRS_ACCESSKEY=&lt;client authentication key&gt; FRS_SERVERBASE=&lt;SaaS IM web service base address&gt; FRS_OU&lt;default organizational unit name&gt;</span>
+                    <p class="Body_indent">
+                        <p>
+                            <p>--or--
+                </p>
+                        </p>
+                    </p>
+                    <ul>
+                        <li value="1">Download the MSI locally and install it:</li>
+                    </ul><span class="fixedwidth">msiexec /i &lt;\windows\temporary internet files&gt;SaaSGatewayDC_1.9.msi FRS_ACCESSKEY=&lt;client authentication key&gt; FRS_SERVERBASE=&lt;Cloud IM web service base address&gt; FRS_OU&lt;Default organizational unit name&gt;</span>
+                    <p>&#160;</p>
+                    <p>where:</p>
+                    <ul>
+                        <li value="1"><b>&lt;tenant url&gt;</b> is the URL for the <span class="notranslate"><b>HEAT</b></span> instance.</li>
+                        <li value="2"><b>&lt;client authentication key&gt;</b> is the unique key for every tenant;  obtain this key from your <span class="notranslate"><b>HEAT</b></span> administrator.</li>
+                        <li value="3"><b>&lt;Cloud IM web service base address&gt;</b> is the base portion of the address for the web service endpoint.</li>
+                        <li value="4"><b>&lt;Default organizational unit name&gt;</b> is the organizational unit to which the gateway is associated.</li>
+                    </ul>
+                    <p class="Body">The ClientInstallation.msi and ClientInstallation.cmd files are downloaded by default to the FrontRange Solutions &gt; SaaSIM &gt; ClientShare folder.</p>
+                    <h4 class="subheading">Installing the Client from a Command Line</h4>
+                    <p class="Body">When you install the gateway, the ClientInstallation.msi and ClientInstallation.cmd files containing the command line parameters are downloaded by default to the FrontRange Solutions &gt; SaaSIM &gt; ClientShare folder.</p>
+                    <p class="Body">To deploy the client agent to communicate with the <span class="notranslate"><b>HEAT</b></span> data center, run the following command:</p>
+                    <p><span class="fixedwidth">MsiExec.exe /i "%temp%\ClientInstallation.msi" /qn /norestart CLNTCFGBASEURL="https://&lt;saas IM server&gt;" CLNTCFGCAK="&lt;client access key&gt;" CLNTCFGDEFOU=”&lt;default organizational unit name&gt;”.</span>
+                    </p>
+                    <p class="Body">To deploy the client agent to communicate with another proxy server, modify and run the following command:</p>
+                    <p><span class="fixedwidth">MsiExec.exe /i "%temp%\ClientInstallation.msi" /qn /norestart CLNTCFGBASEURL="http://&lt;Gateway_Proxy_Server:portnumber&gt;" CLNTCFGCAK="&lt;client access key&gt;" CLNTCFGDEFOU=”&lt;default organizational unit name&gt;”</span>
+                    </p>
+                    <p class="Body">To use a third-party proxy to install the client, you must point to this base address for connecting to the gateway data center edition and include the port number.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p class="Body">The protocol for the <span class="notranslate"><b>HEAT</b></span> IM server is HTTPS, but the protocol for the local gateway proxy is HTTP.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Uninstalling the Gateway</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To uninstall the gateway:</p>
+                    <ul>
+                        <li value="1">Rerun the gateway installer, following the wizard instructions to uninstall.</li>
+                    </ul>
+                    <p class="Body_indent">--or--
+                </p>
+                    <ul>
+                        <li value="1">From the Windows control panel, select <span class="Bold">Uninstall</span>.</li>
+                    </ul>
+                    <p class="Body">When you uninstall, both the Cloud gateway and the <span class="notranslate"><b>HEAT</b></span> agent are removed from the local computer. The Cloud gateway is unable to inform the <span class="notranslate"><b>HEAT</b></span> server that it has been uninstalled.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../../configure/asset_management.htm">HEAT Discovery Asset Management</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="manage_inventory_settings.htm">Manage Inventory Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="managing_gateway_setting.htm">Manage Gateway Settings</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_deploy.htm">Deploying the MDI Service</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="mdi_configure.htm">Configuring Mobile Device Inventory</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="inventory.htm">Inventory</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="how_discovery_and_invent.htm">How Discovery and Inventory Auditing work</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_about.htm">About Mobile Device Inventory (MDI)</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="mdi_service.htm">About MDI Client and the MDI&#160;Service</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="viewing_and_managing_ass.htm">Viewing and Managing Asset Data</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="using_audits.htm">Using Audits</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="audit_virtual_machines.htm">Auditing Virtual Machines</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="mdm_apns_tool.htm">APNS Certificate Tool</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="running_an_active_direct.htm">Running an Active Directory Scan</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="deploying_agents_to_othe.htm">Deploying Agents to Other Computers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../overview/invenotry_lifecycle.htm">Inventory Lifecycle</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_discovery.htm">Troubleshooting</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Security|Authentication">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>When Seamless Sign-on Fails</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/securitysettings/when_seamless_signon_fails.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/application_security.htm">Security</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../security/authentication.htm">Authentication</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">When Seamless Sign-on Fails</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_3">When Seamless Sign-on Fails</h1>
+            <p class="Body">A user writes:</p>
+            <p class="Body_indent">I added open ID as an authorization provider to set up seamless sign on. Today, when I try to log in, I it flashes the login screen and then I get a Google open ID authentication request error, unregistered domain. Is there a way to fix this? I can’t log in to turn it off.</p>
+            <h4 class="subheading">Issue</h4>
+            <p class="Body">When you login the first time, Google asks if you want to trust the FrontRange Application. If you say Yes, it proceeds. If you say no, you are denied each time.</p>
+            <h4 class="subheading">Solution</h4>
+            <p class="Body">Go to the internal user login page when the system is configured to use SSO as a default provider. The URL should be similar to the following:</p>
+            <p class="XML">https://frs-dev-tenant2.saasitdev.com/Login.aspx?NoDefaultProvider=True</p>
+            <ul>
+                <li value="1">Clear the cache.</li>
+                <li value="2">Use an internal user account and do <span class="Bold">unselect</span> on the default authentication provider page.</li>
+            </ul>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="../systemsettings/session_inactivity_timeo.htm">Session Inactivity Timeout</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../login/log_in.htm">Setting Up User Login</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../login/logging_out.htm">Logging Out</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="authentication_configura.htm">Authentication Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../security/direct_ad_authentication.htm">Integrated Windows Authentication</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../how_to_log_in.htm">How to Log In</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../login/anonymous_log_in.htm">Anonymous Login</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../login/external_login.htm">Viewing a List of Users with External Login</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="authentication_providers.htm">Authentication Providers</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../login/log_in_using_urls.htm">Logging In or Accessing Records Using URLs</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="login_priority.htm">Login Priority</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="setting_password_policy.htm">Password Policy</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../login/logon_history.htm">Logon History</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

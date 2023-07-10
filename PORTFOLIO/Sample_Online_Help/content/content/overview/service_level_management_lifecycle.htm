@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Module Configuration|Service Level Management">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Service Level Management Lifecycle</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../index.html#overview/service_level_management_lifecycle.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../configure/administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="system_overview.htm">Module Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="service_level_management.htm">Service Level Management</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Service Level Management Lifecycle</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Service Level Management Lifecycle</h1>
+            <p class="Body">The following process is recommended in configuring Self Service and the Service Catalog. Use the Service Owner or administrator role.</p>
+            <p class="fig_title" data-mc-xref-target-name="Service_Level_Management_Lifecycle"><a name="Service_Level_Management_Lifecycle" data-mc-generated-bookmark="ListOf"></a>Service Level Management Lifecycle</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../resources/images/service_level_mgmt_lifecycle.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbig_image" data-mc-width="562" data-mc-height="366" src="../resources/images/service_level_mgmt_lifecycle_thumb_0_45.png" alt="" tabindex="" /></a>
+            </p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">1.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="1.">Create a service. Specify characteristics that define a service. These characteristics are inherited by all service level packages and offerings that are linked to the service. See <a href="../servicedesk/services/creating_a_service.htm" class="MCXref xref">Creating a Service</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">2.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="2.">Create request offerings and form offerings and assign each to a category. After a service is defined, end users do not see or request the service itself. Instead, they select from lists of offerings made available to them through the Service Catalog. See <a href="../servicedesk/services/creating_request_offering.htm" class="MCXref xref">Working with Request Offerings</a>.</td>
+                </tr>
+            </table>
+            <div class="sub_list">
+                <ul>
+                    <li value="1">A request offering configures a service request, including cost, delivery schedule, fulfillment method, and so on. Service Catalog end users request predefined services through the request offering forms that you design. When the end user submits the request, a service request record is created.</li>
+                    <li value="2">A form offering configures a more general form used by Service Catalog end users to submit requests that do not have a predefined cost or delivery schedule (for example, to submit an incident). When you create a form offering, you specify which business object is used when a form offering record is created (unlike with request offerings, in which the service request object is automatically used). Form appearance is based on the business object layout that you select.</li>
+                </ul>
+            </div>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">3.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="3.">Define service level packages. Specify additional characteristics that define how a service is offered to subscribers. A service level package is based on one service, from which it inherits general characteristics such as owner, provider, and so on. See <a href="../servicedesk/services/service_level_package_co.htm" class="MCXref xref">Service Level Packages</a>.</td>
+                </tr>
+            </table>
+            <p class="Body_indent">A service can have multiple service level packages. For example, you could define service level packages named "Gold," "Silver," and "Bronze" for a service, each with a different price, response time, hours of operation, and so on.</p>
+            <p class="Body_indent">The promises offered by a service level package are dependent on a number of factors: promises made by other groups within the organization (captured in a service level agreement) and promises made by outside vendors (captured in an underpinning contract). See <a href="../servicedesk/services/service_level_agreements.htm" class="MCXref xref">Service Level Agreements</a> and <a href="../servicedesk/services/underpinning_contracts.htm" class="MCXref xref">Underpinning Contracts</a>. </p>
+            <p class="Body_indent">The degree of compliance an organization can provide (and therefore can be offered to a customer), is defined as a service level target, and can also affect the service level package. OLAs, UC, and SLAs all have defined targets. See <a href="../servicedesk/services/creating_service_level_target.htm" class="MCXref xref">Service Level Targets</a>.</p>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">4.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="4.">Link request offerings to a service level package. After you define a service level package, you must link it to one or more request offerings. When a link is established, the request offering is included in the service level package. See <a href="../servicedesk/services/service_level_package_co.htm#Linking_to_a_Request_Offering" class="MCXref xref">Request Offering Link Tab</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">5.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="5.">Publish service level packages. A service level package must be published to make it available for subscription. See <a href="../servicedesk/services/creating_request_offering.htm" class="MCXref xref">Working with Request Offerings</a>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_lst_num_1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 48px;" />
+                <col style="width: 32px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_lst_num_1" valign="top"><span class="ProcedureNumber">6.</span>
+                    </td>
+                    <td class="AutoNumber_p_lst_num_1" valign="top" data-mc-autonum="6.">Subscribe to service level packages and create service level agreements. Request offerings are available to end users after you create a service level agreement by subscribing to a service level package. See <a href="../servicedesk/services/creating_request_offering.htm" class="MCXref xref">Working with Request Offerings</a>.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="../servicedesk/services/about_service_level_management.htm">Service Levels</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../servicedesk/services/organizational_level_management.htm">Operational  Level Agreements</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../servicedesk/services/configuring_categories.htm">Configuring Categories</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../servicedesk/services/creating_a_team.htm">Creating a Team</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../servicedesk/services/creating_a_vendor.htm">Creating a Vendor</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../servicedesk/services/creating_service_level_target.htm">Service Level Targets</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../servicedesk/services/outage_log.htm">Outage Log</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../servicedesk/services/service_level_agreements.htm">Service Level Agreements</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../servicedesk/services/service_level_package_co.htm">Service Level Packages</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../servicedesk/services/services_workspace_index.htm">Services Workspace Index</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../servicedesk/services/underpinning_contracts.htm">Underpinning Contracts</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../servicedesk/services/slm_dashboard.htm">SLM Dashboard</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|Control Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>ChildFold</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/childfold.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_control_functions.htm">Control Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ChildFold</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="ControlFunctions" data-mc-xref-target-name="ChildFold"><a name="ChildFold" data-mc-generated-bookmark="ListOf"></a><a name="kanchor719"></a>ChildFold</h2>
+            <p class="Body">Iterates through the given child business objects, evaluating the given expression in the context of each of the child business objects. The results of the expression evaluations are aggregated using the <span class="window_name">aggregatorFunc</span> parameter. </p>
+            <p class="Body">Evaluates an expression for each selected object instance related to (a child of) a parent object and applies an aggregator function to the results. The <span class="window_name">childPredicateExpression</span> parameter, if specified, selects which related objects to include. If not specified, they are all included.</p>
+            <p class="Body">&#160;</p>
+            <table style="width: 100%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">In this release, <span class="notranslate"><b>HEAT</b></span> only supports the plus (+)&#160;aggregator operator. In the future, we may support additional aggregator operators such as multiplication (*), minimum (min), maximum (max), etc.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">ChildFold(parentObjectRef, parentRecId, childRelationshipRef, childExpression, aggregatorFunc, childPredicateExpression)</p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">No</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <table style="mc-table-style: url('../../resources/tablestyles/optionstable.css');width: 92%;" cellspacing="0" class="TableStyle-OptionsTable">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">                        parentObjectRef
+                    </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                        The name of the parent business object.
+                 </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">                        parentRecId                       
+                    </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                        The RecID of the instance of the parent business object.
+                    </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+              childRelationshipRef                    </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>A relationship specifier for the relationship relating the parent to its related object (child object).                                          </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">childExpression                    </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">The expression to evaluate for each child business object.          </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">aggregatorFunc<![CDATA[                   ]]></td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>An aggregation function specified as a string. In this release, <span class="notranslate"><b>HEAT</b></span> only supports the plus (+)&#160;aggregator.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">childPredicateExpression</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">(Optional) A Boolean expression that is evaluated for each child. The child is only included if the result of this evaluation is <em>true</em>.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">Unicode text value.</p>
+            <h4 class="subheading">Example</h4>
+            <p class="Body_indent">To determine the number of instances of the child business objects associated with a parent incident business object, enter the following:</p>
+            <p class="Code">$(ChildFold("Change#", "213KJASD92132SD", "Task#Assignment.", "Cost + 100", "+")) </p>
+            <p class="Body_indent"> This looks up the change business object where the RecId is <span class="fixedwidth">"213KJASD92132SD"</span> and finds all of the task objects related to this change object through the relation <span class="fixedwidth">"Task#Assignment"</span>. In the context of each of these child business objects, the function evaluates the expression <span class="fixedwidth">Cost + 100</span> and combines all of these computed values using addition.</p>
+            <p class="Body_indent">&#160;</p>
+            <p class="Body_indent">Another example counts all the <span class="fixedwidth">"Task#Assignment"</span> children that are not canceled. </p>
+            <p class="Code">$(ChildFold("Incident#", RecId, "Task#Assignment.Rev4", "$(iif(Status == 'Canceled',0,1))", "+"))</p>
+            <p class="Body_indent">&#160;</p>
+            <p class="Body_indent">In another example, you can update a field in the change business object to get a count of the incidents: </p>
+            <p class="Code">$(ChildFold("Change#", RecId, "Incident#.IncidentAssociatesChange", "$(iif(Status == 'Active',1,0))", "+"))</p>
+            <p class="Body_indent"><span class="fixedwidth">Incident#.</span> is the relationship reference to the child incident business object, where the internal reference name for the IncidentAssociatesChange relationship is empty. If the internal reference name of the relationship is populated,  use  instead: <span class="fixedwidth">Incident#.&lt;Internal Reference Name&gt;</span>, where the internal reference name is after the period.</p>
+            <p class="Body_indent">If the relationship is to a group member object such as <span class="fixedwidth">FRS_Knowledge.IssueResolution</span>, you would use:
+
+<span class="fixedwidth">FRS_Knowledge#IssueResolution.&lt;Internal Reference Name&gt;</span>. 
+
+Notice the member object is between the "<span class="fixedwidth">#</span> and the <span class="fixedwidth">.</span> in all examples.
+</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="_control_functions.htm">Control Functions</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="findancestor.htm">FindAncestor</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="foreachchild.htm">ForEachChild</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="getbovalue.htm">GetBOValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="getsrpvalue.htm">GetSRPValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ifallsiblings.htm">IfAllSiblings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="isbounderchangecontrol.htm">IsBOUnderChangeControl</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="istrueforallchildren.htm">IsTrueForAllChildren</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="searchhierarchy.htm">SearchHierarchy</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="searchlist.htm">SearchList</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

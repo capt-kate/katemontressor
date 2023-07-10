@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Expression Validator</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/expression_validator.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Expression Validator</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor705"></a>Expression Validator</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span>&#160;Release 2014.3 adds an expression validator. The expression validator provides informational messages about expression syntax.</p>
+            <p class="Body">At this time, the expression validator is only used for business rule and form expressions and not for relationship expressions or other types of expressions.</p>
+            <p class="Body">When you create or edit a business rule, you use the <span class="notranslate"><b>HEAT</b></span> Expression Editor. If you enter something incorrectly, for example if you misspell an expression name, the expression validator returns a warning or error message and provides a hint about the problem. </p>
+            <p class="Body">In the following example, the name of the built-in function FindAncestor is misspelled. The expression validator provides an informational error message and does not allow you to save the expression.</p>
+            <p class="fig_title" data-mc-xref-target-name="Expression_Editor_Validation_Message_Example_1"><a name="Expression_Editor_Validation_Message_Example_1" data-mc-generated-bookmark="ListOf"></a>Expression Editor Validation Message Example 1</p>
+            <p class="Body">
+                <img src="../../resources/images/validator1.jpg" style="width: 537px;height: 395px;" />
+            </p>
+            <p class="Body">In this example, the syntax is wrong and the validator displays an error message:</p>
+            <p class="fig_title" data-mc-xref-target-name="Expression_Editor_Validation_Message_Example_2"><a name="Expression_Editor_Validation_Message_Example_2" data-mc-generated-bookmark="ListOf"></a>Expression Editor Validation Message Example 2</p>
+            <p class="Body">
+                <img src="../../resources/images/validator2.jpg" style="width: 545px;height: 402px;" />
+            </p>
+            <p>&#160;</p>
+            <p>The expression validator checks all parts of the syntax, including the names of constants to ensure that they are valid. If it finds an invalid constant, the expression validator returns a warning message and allows you to save the expression.</p>
+            <p>&#160;</p>
+            <table style="width: 100%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">In future releases of <span class="notranslate"><b>HEAT</b></span>, the expression validator will return error messages and will not allow you to save the expression. In <span class="notranslate"><b>HEAT</b></span>&#160;Release 2014.3, the expression validator only returns warning messages and allows you to continue, even if there is an error.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

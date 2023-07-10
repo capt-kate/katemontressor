@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Default Quick Actions|Quick Action Templates">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Send Email</title>
+        <link href="../../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../index.html#reference/quickactions/templates/send_email.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> </span><a class="MCBreadcrumbsLink" href="../../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../default_quick_actions.htm">Default Quick Actions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../quick_action_parameters.htm">Quick Action Templates</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Send Email</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor912"></a>Send Email Quick Action</h1>
+            <p class="Body">Use this quick action to compose an email to send to a designated person or group. For example, you can send a confirmation email when a change has been approved. The email can be populated with data, such as field values, functions, counters, or global values.</p>
+            <p class="Body">You also can send updates to the calendar application of the target group, such as task updates when an change occurs in an incident or change record. </p>
+            <p class="Body">Group emails are facilitated using address book-style functionality. The default is to send one email. To send an email for each record in a relationship, click the appropriate radio button, then select the related object from the drop-down list. This also allows you to select email targets for the parent record and related record when completing the email template.</p>
+            <p class="Body">You can also send emails to child object records associated with the parent business object. An email is sent for each instance of the child object. </p>
+            <table style="width: 92%;mc-table-style: url('../../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">From</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>The address from which the email is sent.</p>
+                            <p>Can only contain one entry. Click <b>Add</b><img src="../../../resources/images/buttons/add_green.png" class="icon" /> or click <b>Address Book</b> to enter the address.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">To</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>The address or addresses to which the email is sent.</p>
+                            <p>This field can contain multiple entries. Click <b>Add</b><img src="../../../resources/images/buttons/add_green.png" class="icon" /> or click <b>Address Book</b> to enter the addresses.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Add CC</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Adds a CC (carbon copy) field to the form. Enter the addresses you want.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Add BCC</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Adds a BCC (blind carbon copy) field to the form. &#160;Enter the addresses you want.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Subject</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>The subject of the email. </p>
+                            <p>You can either enter a subject or  create an expression-based subject.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Email body text area</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>The body of the email.</p>
+                            <p>Construct the body of your email using the controls in the email body area.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Attach a file</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Allows you to include attachments.</p>
+                            <p>Click to attach a file to  the email.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Attach from related</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Allows you to attach a related business object.</p>
+                            <p>Click to link to a related business object and include its attachments.</p>
+                            <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../../resources/images/attach_related_objects.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="408" data-mc-height="227" src="../../../resources/images/attach_related_objects_thumb_0_45.png" tabindex="" /></a>
+                            </p>
+                            <p>See <a href="../../../configure/email/create_or_link_objects_by_email.htm#Create_a_Link_to_a_Custom_Object" class="MCXref xref">Creating a Link to a Custom Object</a>.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Prompt for attachments</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">Asks if you want to attach a file.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">Journal.Email records are linked to the parent business object when running the <span class="window_name">Send Email</span> quick action and business rule, regardless of whether the relationship “internal reference name” is defined or not.</p>
+            <p class="Body">2014.3 behavior for escalation and workflow services:</p>
+            <ol>
+                <li value="1">Only one relationship is expected to exist between two business objects.</li>
+                <li value="2">If more than one relationship is found, then the relationship references cannot be resolved unless one of the relationships has an empty "internal reference name".</li>
+                <li value="3">If more than one relationship exists and neither one can be removed, then the customer needs to contact support to remove the internal reference name. This allows escalation and workflow services to uniquely identify it.</li>
+            </ol>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../../../servicedesk/quickactions/using_send_email_qa.htm">Using the Send Email QA</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="search_and_link.htm">Search and Link</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="search_and_unlink.htm">Search and Unlink</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="send_mobile_notification.htm">Send Mobile Notification</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="start_ipcm_voice_activity.htm">Start IPCM Voice Activity</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="start_remote_control.htm">Start Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="stop_remote_control.htm">Stop Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="sync_remote_control_session.htm">Sync Remote Control Session</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="template.htm">Template</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ui_action.htm">UI Action</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="update_object.htm">Update Object</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="workflow_script.htm">Workflow Script</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

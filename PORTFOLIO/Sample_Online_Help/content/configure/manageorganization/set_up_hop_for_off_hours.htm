@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure|Setting Up Hours of Operation">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Set Up HOP For Off Hours</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/manageorganization/set_up_hop_for_off_hours.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../configure.htm">Configure</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="hours_of_operation.htm">Setting Up Hours of Operation</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Set Up HOP For Off Hours</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>Setting Up HOP For Off Hours</h1>
+            <p class="Body">You might want to determine the amount of time spent resolving an incident when an incident gets entered into the system after the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">HOP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Hours of Operation. The time designated as operation hours of the organization.</span></a> ends for the days and is resolved before the next <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">HOP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Hours of Operation. The time designated as operation hours of the organization.</span></a> interval begins. The gap between the <a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" alt="Closed" data-mc-alt2="Open">HOP<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Hours of Operation. The time designated as operation hours of the organization.</span></a> intervals could be anywhere from minutes to months, and cannot be calculated.</p>
+            <p class="Body">In this case, use an if-then expression to calculate the duration. For example:</p>
+            <p class="Code">‘$(iif((HOPCalcDuration("Midnight", CreatedDateTime, ResolvedDateTime) / 60) &gt; 0), (HOPCalcDuration("Midnight", CreatedDateTime, ResolvedDateTime) / 60), &lt;Whatever appropriate&gt;)’.</p>
+            <p class="Body">Where</p>
+            <ul>
+                <li value="1"><b>Midnight </b>is the name of the HOP schedule.</li>
+                <li value="2"><b>Whatever appropriate</b> is what you want to use as an alternative expression.</li>
+            </ul>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="hours_of_operation.htm">Setting Up Hours of Operation</a>
+                    </p>
+                    <p class="conceptItem_concept_0"><a href="../../servicedesk/scheduling/scheduling.htm">Scheduling</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/scheduling/schedule_entry.htm">Schedule Entry</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/functions/hopcalcduration.htm">HOPCalcDuration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/functions/hopcalctargetdate.htm">HOPCalcTargetDate</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

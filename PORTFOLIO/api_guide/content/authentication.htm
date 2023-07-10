@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Authentication</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Authentication</h1>
+                    <p>There are two ways to authenticate with Shipped.</p>
+                    <h2 id="api-tokens">Api Tokens</h2>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body1">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body1">
+                                    <p>Each user has a secret <span class="code">api_token</span> attribute. Find this token on the settings page. Passing this value as a querying parameter will authenticate that user.</p>
+                                    <p>
+Replace <span class="code">token</span> with your own API token, which is found in <b>Settings</b>. </p>
+                                    <p>This endpoint authenticates the user associated with the token and returns that user.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/users/current?api_token=&lt;TOKEN&gt;</code>
+                                    </p>
+                                    <h3>URL Parameters</h3>
+                                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">api_token</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The api token found in settings.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column1-Body1">
+                                    <p class="code">curl https://api.ciscoshipped.io/users/current </p>
+                                    <blockquote>
+                                        <p>Example Response</p>
+                                    </blockquote>
+                                    <p class="code">{ <br /> "auth_token": "", <br /> "id":123456, <br /> "login":"adama", <br /> "avatar_url":"https://avatars.githubusercontent.com/u/123456?v=3", <br /> "html_url":"https://github.com/ikinsey", <br /> "name":"Bill Adama", <br /> "email":"wadama@galactica.net", <br /> "api_token": "XVlBwuiEEIkakjwoifslkw" <br /> } </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>Cookie Login</h2>
+                    <p>Once you’ve logged in with oauth on <a href="https://ciscoshipped.io/">https://ciscoshipped.io</a>, you receive an encrypted, signed cookie that can be used for API authentication.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

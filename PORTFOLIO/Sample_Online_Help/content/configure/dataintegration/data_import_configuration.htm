@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Needs Work" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Administer|Importing &amp; Exporting Data|Configuring Data Integration|Data Import">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Data Import Configuration</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/data_import_configuration.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../administer.htm">Administer</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration.htm">Importing &amp; Exporting Data</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_integration_configu.htm">Configuring Data Integration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="data_import.htm">Data Import</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Data Import Configuration</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor437"></a>Data Import Configuration</h1>
+            <p class="Body">You can import files up to 500 MB using an FTP or file connection.</p>
+            <p class="Body">Enter information into the fields. </p>
+            <p class="fig_title" data-mc-xref-target-name="Data_Import_Connection_Settings"><a name="Data_Import_Connection_Settings" data-mc-generated-bookmark="ListOf"></a>Data Import Connection Settings</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/data_import_window.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1471" data-mc-height="872" src="../../resources/images/data_import_window_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuration Details</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col width="191px" class="TableStyle-ParameterTable-Column-Column1" />
+                        <col width="686px" class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p>Connection Name</p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>A unique name for the connection.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">To import a file  from the network (with VPN access) or from an FTP site, ensure that you have the necessary permissions to access the file. Select one of the following options:</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />FTP</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Select this option to connect to a file server (not a web server) to transfer data. The FTP protocol is used to upload files from a workstation to a specified FTP&#160;server.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Server Path 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The server path as <span class="Type">FTPServername/Filepath</span>. Be sure to use a backslash (/). Do not include the name of the file.
+                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        SSL Encryption
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                        Engages SSL encryption.
+                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Data File Name 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                       The name of the data file.
+ </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Template File Name
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                        Optional. Enter the name of the file that is a subset of the mapping file. If your mapping file is large, you might want to create a smaller file containing only the columns or fields for mapping - to create a map before data import.
+</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Login 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                        The user name used to access the server.
+                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                        Password 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                       The password used to access the server.
+                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />File</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Select this option to import data from a shared network file.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Server Path
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                        The server path, such as <span class="Type">Servername\Filepath</span>. VPN access is required when <span class="notranslate"><b>HEAT</b></span> accesses the hosting server. When using <span class="Type">Servername</span> instead of an IP address, ensure that the IP address is known to <span class="notranslate"><b>HEAT</b></span>. Be sure to use a forward slash (\). Do not include the name of the file.
+                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Data File Name
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the data file.
+ To import multiple files, see <a href="#Import_multiple_files" class="MCXref xref">Import Multiple Files</a>.             </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Template File Name
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                        Optional. Enter the name of the file that is a subset of the mapping file. If your mapping file is large, you might want to create a smaller file containing only the columns or fields for mapping - to create a map before data import.
+</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Login 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The user name used to access the server.
+                    </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                        Password 
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                        The password used to access the server.
+                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Manual</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Select this option to create a non-scheduled one-time data import.</p>
+                            <p class="Body">You can import data from a local file source into your database. This import configuration can be saved to your list of integration connections, but can not be scheduled, due to the nature of a manual import. You must manually import the data file each time you run the connection.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                        Data File Name
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The name of the data file.
+                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />File Information</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Select the file type to import.</p>
+                    <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">Line breaks are supported in XML and Microsoft Excel files, but not in CSV files.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Comma Delimited (CSV)</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">This format can be read by most applications, such as Microsoft Word or Microsoft Excel.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Delimiter</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>This field appears when you select <span class="window_name">Comma Delimited Type</span>. 
+                        Enter the field delimiter (for example, #), or choose an option from the drop-down list:
+                        </p>
+                                            <ul class="list_table">
+                                                <li class="list_table" value="1">Comma (,)</li>
+                                                <li class="list_table" value="2">Colon (:)</li>
+                                                <li class="list_table" value="3">Semicolon (;)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Decimal separator</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The decimal separator symbol. Enter a value or choose one from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Encoding
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The character standard of your file. Select from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                       Date Format<br />Time Format<br />Timezone
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The date, time, and time zone format of your file. Select values from the drop-down lists. This ensures that your data is imported correctly into the database. If your data does not contain date or time fields, use the default settings.
+                    </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Excel Spreadsheet (XLS, XLSX)</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">This format can be read by  Microsoft Excel or other compatible applications. You can only import a single-page Microsoft Excel worksheet.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Decimal separator</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The decimal separator symbol. Enter a value or choose one from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Encoding
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The character standard of your file. Select from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                       Date Format<br />Time Format<br />Timezone
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The date, time, and time zone format of your file. Select values from the drop-down lists. This ensures that your data is imported correctly into the database. If your data does not contain date or time fields, use the default settings.
+                    </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Multiple Role support for CSV and XLS files</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Add a <span class="window_name">Role</span> column to the input file that contains the role display names. If you are updating an existing employee record during the upload, any new roles are added to the roles already assigned to the employee in the employee record. &#160;The system separates roles by commas.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">The <span class="window_name">Role</span> column should be named *Role* (with the asterisks included) and should include the role display name and not the actual role name. For example, include Self Service and not SelfService. All role names should be in the column and separated by commas.
+					</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul>
+                                <li value="1">No AddRoleBehavior setting in the configuration file.</li>
+                                <li value="2">
+                                    <p>By default, it is always “merge” behavior.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />XML</a><a name="Important_Note_About_XML_files"></a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Select to import generic XML data.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Table Element</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> The name of the table object.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Row Element</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The name of the row object.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Include Header Row</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>Inputs an XML file in legacy GBU format. In this format, the <span class="window_name">Table Element</span> is "Rows", and <span class="window_name">Row Element</span> is "Row".</p>
+                                            <p class="XML">  <![CDATA[ ]]></p>
+                                            <p class="XML">&lt;Rows&gt; <br /> &#160;&#160;&#160;&#160;&lt;Row&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field&gt;PrimaryEmail&lt;/Field&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field&gt;FirstName&lt;/Field&gt; <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ...<br /> &#160;&#160;&#160;&#160;&lt;Row&gt; <br />&lt;Rows&gt; </p>
+                                            <p class="XML">  <![CDATA[ ]]></p>
+                                            <p>Do not check this option to use the flexible two-level format. </p>
+                                            <p>In this example,the <span class="window_name">Table Element</span> is "Employee_Info", and <span class="window_name">Row Element</span> is "Employee". The field names for this "Employee" object can be an element (such as Name) or a row-level attribute (such as Employee_Number).</p>
+                                            <p class="XML">  <![CDATA[ ]]></p>
+                                            <p class="XML">&lt;Employee_Info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employee.xs"&gt; </p>
+                                            <p class="XML"> &#160;&#160;&#160;&#160;&lt;Employee Employee_Number="105"&gt; </p>
+                                            <p class="XML">  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Name&gt;Masashi Okamura&lt;/Name&gt; </p>
+                                            <p class="XML">  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Department&gt;Design Department&lt;/Department&gt; </p>
+                                            <p class="XML"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ...</p>
+                                            <p class="XML">  &#160;&#160;&#160;&#160;&lt;/Employee&gt; <br />&lt;/Employee_Info&gt; </p>
+                                            <p class="XML">  <![CDATA[ ]]></p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Decimal separator</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The decimal separator symbol. Enter a value or choose one from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Encoding
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The character standard of your file. Select from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                       Date Format<br />Time Format<br />Timezone
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The date, time, and time zone format of your file. Select values from the drop-down lists. This ensures that your data is imported correctly into the database. If your data does not contain date or time fields, use the default settings.
+                    </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body">Data with null values do not appear in the XML file, which can cause problems when exporting data. </p>
+                            <p class="Body">For example, consider the following XML. Note the data for the second employee  contains an email cell with no attributes. This cause the data to import incorrectly.</p>
+                            <p class="XML">&lt;Employee_Info&gt; <br /> &#160;&#160;&#160;&#160;&lt;Employee Employee_Number="105"&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Name&gt;Masashi Okamura&lt;/Name&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Department&gt;Design Department&lt;/Department&gt; <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Email&gt;masashi@design.com&lt;/Email&gt;<br />	&#160;&#160;&#160;&#160;&#160;&#160;&#160;	&lt;Phone&gt;408.555.1234&lt;/Phone&gt;	
+		<br />		
+				
+				 &#160;&#160;&#160;&#160;&lt;/Employee&gt; 
+        <br />        &#160;&#160;&#160;&#160;&lt;Employee Employee_Number="106"&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Name&gt;Frank Smith&lt;/Name&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Department&gt;Design Department&lt;/Department&gt;  <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Email&gt;&lt;/Email&gt;<br />	&#160;&#160;&#160;&#160;&#160;&#160;&#160;	&lt;Phone&gt;408.555.1235&lt;/Phone&gt;	<br /> &#160;&#160;&#160;&#160;&lt;/Employee&gt;  <br />&lt;/Employee_Info&gt; 
+        </p>
+                            <p class="Body">To alleviate this issue, create an empty string:</p>
+                            <p class="XML">&lt;Employee_Info&gt; <br /> &#160;&#160;&#160;&#160;&lt;Employee Employee_Number="105"&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Name&gt;Masashi Okamura&lt;/Name&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Department&gt;Design Department&lt;/Department&gt; <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Email&gt;masashi@design.com&lt;/Email&gt;<br />	&#160;&#160;&#160;&#160;&#160;&#160;&#160;	&lt;Phone&gt;408.555.1234&lt;/Phone&gt;	
+		<br />		
+				
+				 &#160;&#160;&#160;&#160;&lt;/Employee&gt; 
+        <br />        &#160;&#160;&#160;&#160;&lt;Employee Employee_Number="106"&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Name&gt;Frank Smith&lt;/Name&gt; <br /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Department&gt;Design Department&lt;/Department&gt; <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Email&gt;""&lt;/Email&gt;<br />	&#160;&#160;&#160;&#160;&#160;&#160;&#160;	&lt;Phone&gt;408.555.1235&lt;/Phone&gt;	<br /> &#160;&#160;&#160;&#160;&lt;/Employee&gt;  <br />&lt;/Employee_Info&gt; </p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Hierarchical XML</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="Body">Select to import a structured XML file.</p>
+                            <table style="mc-table-style: url('../../resources/tablestyles/parametertable.css');width: 92%;" cellspacing="0" class="TableStyle-ParameterTable">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field</th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                            <p>Table Element</p>
+                                            <p>Row Element</p>
+                                            <p>Include Header Row</p>
+                                        </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> These options are disabled because the values are automatically picked up by the XML file.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">XSLT</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. Defines a template to apply to your XML file. Click <span class="Bold">Upload</span> and navigate to your template file.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Decimal separator</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The decimal separator symbol. Enter a value or choose one from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                        Encoding
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The character standard of your file. Select from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                       Date Format<br />Time Format<br />Timezone
+                    </td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The date, time, and time zone format of your file. Select values from the drop-down lists. This ensures that your data is imported correctly into the database. If your data does not contain date or time fields, use the default settings.
+                    </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="Body_indent">See also <a href="about_hierarchical_xml_format.htm" class="MCXref xref">About Hierarchical XML Format</a>.</p>
+                            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                                <col class="TableStyle-Note-Column-Column1" />
+                                <col class="TableStyle-Note-Column-Column2" />
+                                <tbody>
+                                    <tr class="TableStyle-Note-Body-Body2">
+                                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                            <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                                        </td>
+                                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                            <p>Large files (over 50 MB) take longer to preview, because the entire file is downloaded before the first batch can be shown.</p>
+                                            <p>In other types, the copy/download occurs when moving from the Connection to the Object Mapping page. In Hierarchical XML, we bypass ALL mapping  pages. Hence,  the copy/download only occurs when a user wants to preview the file.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Import Multiple Files</a><a name="Import_multiple_files"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">To import multiple files, you can use the asterisk wild card in the <span class="window_name">Data File Prefix</span> field. For example, if you enter <span class="Type">Test*.csv</span>, all csv files beginning with <span class="Type">Test</span> are imported.</p>
+                    <p class="Body">If you have the following files, for example:</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/data_import_example.png" />
+                    </p>
+                    <ul>
+                        <li value="1">Files are processed based on the their <span class="window_name">Creation DateTime</span>, so <span class="window_name">TesterData_o1.csv</span> is processed first, although alphabetically it is fifth, and <span class="window_name">TesterData_1.csv</span> is processed fifth, although it is first alphabetically.</li>
+                        <li value="2">A <span class="window_name">Processed</span> folder is created in the path if it does not exist. For this  example, it is <span class="fixedwidth">\\CA-L02540\test\Processed\</span>. As each file is imported, it is moved to the <span class="window_name">Processed</span> folder. S When the import is complete, all six files above will be moved from the <span class="window_name">\test</span> folder into the <span class="window_name">\test\Processed</span> folder.</li>
+                        <li value="3">As each file is processed, the Integration History – Source Name column is updated by appending each processed file name, so it will be</li>
+                    </ul>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">TesterData_1.csv</li>
+                        </ul>
+                        <p>Then</p>
+                        <ul>
+                            <li value="1">TesterData_2.csv,</li>
+                            <li value="2">TesterData_3.csv</li>
+                        </ul>
+                        <p>And so on …</p>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Test Connection</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Click <span class="Bold">Test Connection</span>.</p>
+                    <p class="Body_indent">If your connection is set up correctly, a <span class="Bold">Success</span> confirmation message appears. Notice that the connection date and time are updated.</p>
+                    <p class="Body_indent">If the connection fails, do not click <span class="Bold">Next</span> until <span class="window_name">Test Connection</span> shows the <span class="window_name">Success</span> message. The connection could fail because of various reasons such as incorrect authentication, restricted or no FTP access, or restricted file permissions.</p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Next</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Object Mapping</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Enter information into the fields.</p>
+                    <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadfieldHeading"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />--fields--</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                                <col class="TableStyle-ParameterTable-Column-Column1" />
+                                <col class="TableStyle-ParameterTable-Column-Column2" />
+                                <thead>
+                                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Field </th>
+                                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Mapping</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The mapping. Select the default mapping or select <span class="Bold">Add New</span> from the drop-down list.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                            <p>The mapping name. Use the default name, modify the name, or choose <span class="Bold">Add New</span> from the drop-down list to create a new mapping. </p>
+                                            <p>To modify the existing name, click <span class="Bold">Save as New</span>. A clone of the mapping is created, which you can then modify. This button is only enabled when an existing mapping is selected. </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Max file size</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Read only. Shows the maximum file size that you can import. The default maximum file size is 250 MB.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Source File Name</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Read only. Taken from the value in the <span class="Bold">File Name</span> field.</td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Source Unique Key</td>
+                                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Lists the fields containing the keys that uniquely identify your record.  The fields that appear in the list are taken from the first record in your source file. Choose the field that is primary in identifying your records. </td>
+                                    </tr>
+                                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Target Business Object</td>
+                                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                            <p>The primary business object in <span class="notranslate"><b>HEAT</b></span> into which the data is imported. This list shows all the business objects in <span class="notranslate"><b>HEAT</b></span>. You can enter a few letters of the target business object and then click <span class="Bold">Filter by Name</span> or <span class="Bold">Filter by Object </span>to narrow your search. For example, if you are importing a list of employee records into <span class="notranslate"><b>HEAT</b></span>, the primary business object you need to map to is Profile#Employee.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Filter Manager</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">After mapping the object tables to query, specify filter conditions for the root business object. </p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Create Filter</span>. The filter fields appear.</li>
+                    </ul>
+                    <table style="mc-table-style: url('../../resources/tablestyles/note.css');width: 80%;" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>If the <span class="window_name">Create Filter</span> button is not visible, delete the default mappings on the previous page. </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li value="1">Select the condition that you want and enter the fields and operators into the form.</li>
+                    </ul>
+                    <p class="fig_title" data-mc-xref-target-name="Filter_Manager_Conditions_and_Fields"><a name="Filter_Manager_Conditions_and_Fields" data-mc-generated-bookmark="ListOf"></a>Filter Manager Conditions and Fields</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dataimport_filtermanager.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="588" data-mc-height="179" src="../../resources/images/dataimport_filtermanager_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">Click <span class="Bold">Add</span> to add another row.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Field Mapping</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Define the field level mapping and transformation.</p>
+                    <p class="fig_title" data-mc-xref-target-name="Map_Fields_for_Import"><a name="Map_Fields_for_Import" data-mc-generated-bookmark="ListOf"></a>Map Fields for Import</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/dataimport_fieldmapping.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="448" data-mc-height="132" src="../../resources/images/dataimport_fieldmapping_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                    <ul>
+                        <li value="1">The left column shows the source file name and the right column shows the target business object field name.</li>
+                        <li value="2">If appropriate, select a transformation function from the middle column.</li>
+                    </ul>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Select the field names to map between the source file and the target object in <span class="notranslate"><b>HEAT</b></span>. </li>
+                        </ul>
+                    </div>
+                    <p class="Body_indent">--or--
+                </p>
+                    <div class="sub_list">
+                        <ul>
+                            <li value="1">Click <span class="Bold">Auto Map</span> to map the source file column header to the target field name. </li>
+                        </ul>
+                    </div>
+                    <table style="mc-table-style: url('../../resources/tablestyles/note.css');width: 80%;" class="TableStyle-Note" cellspacing="0">
+                        <col class="TableStyle-Note-Column-Column1" />
+                        <col class="TableStyle-Note-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note-Body-Body2">
+                                <td class="TableStyle-Note-BodyB-Column1-Body2">
+                                    <img src="../../resources/global_images/note.png" />
+                                </td>
+                                <td class="TableStyle-Note-BodyA-Column2-Body2">
+                                    <p>Remapping the source column header does not change your existing mapping.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">
+                   See  <a href="about_field_mapping.htm" class="MCXref xref">Field Mapping</a> for more information.</p>
+                    <h4 class="subheading">Mapping Files with Currency Data</h4>
+                    <p class="Body">To prevent errors while importing files containing currency data, map the currency value and the currency type separately.</p>
+                    <p class="Body">For example, if your file contains a value such as NNN.NN GBP (eg. 8999.00 GBP), create a column for the numeric value (NNN.NN) and another column for the currency type (GBP).</p>
+                    <p class="Body">If that is not practical, then you can use the Split function on the <span class="window_name">Field Mapping</span> page:</p>
+                    <p class="XML">"Currency",  , 0  - Split - "Currency"</p>
+                    <p class="XML">"Currency",  , 1 - Split - "Currency_Currency"</p>
+                </div>
+            </div>
+            <p class="Body"> 
+            See <a href="schedule_manager.htm" class="MCXref xref">Schedule Manager</a> on how to create a scheduled import.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="winrm_setup.htm">WinRM Setup</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="about_hierarchical_xml_format.htm">About Hierarchical XML Format</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

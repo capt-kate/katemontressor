@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Releases</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Releases</h1>
+                    <p>A release is a build deployed to a specific environment for a service.</p>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Get all releases</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Gets all the releases for an environment.</p>
+                                    <p>Retrieves the most recent releases for all services in an environment.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/releases</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the project for which to get releases</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The id of the environment for which to get releases</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">
+                                    <p class="code">curl https://api.ciscoshipped.io/</p>
+                                    <p class="code">projects/</p>
+                                    <p class="code">d6638244-71eb-11e5-863c-0242ac110237/</p>
+                                    <p class="code">envs/</p>
+                                    <p class="code">3eecaaae-71ee-11e5-b054-0242ac110238/</p>
+                                    <p class="code">releases</p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">[</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_id":"d6638244-71eb-11e5-863c-0242ac110237",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_id":"dc7c6530-71eb-11e5-a1d8-0242ac110264",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "environment_id":"3eecaaae-71ee-11e5-b054-0242ac110238",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "config_id":"3eed5b61-71ee-11e5-b056-0242ac110238",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "release_id":"f3c48e2f-72ce-11e5-9209-0242ac11026c",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_type":"ServiceRepo",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deploy_image":"npateriyainsecure/php-hello-world",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "env_name":"ihbe1",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_port":<span class="mi">80</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_count":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "env_variables":[{"name":"PHPTEST1_HOST",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "value":"http://ihbe1--phptest1--phptest1--bcf5b5.shipped-cisco.com"}],</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "project_name":"phptest1",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "service_name":"phptest1",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "commit_id":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "error_msg":"",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "status":"CleaningUp",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "user_id":"촶",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "user_login":"mikejihbe",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployment_id":"d7e5947e-ae88-4263-b44a-5f0556f1e8d8",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "snapshot_id":"f3c467d3-72ce-11e5-9208-0242ac11026c",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "marathon_app_id":"ihbe1--phptest1--phptest1--721cf2",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_path":"/",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_max_failures":<span class="mi">0</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "health_check_protocol":"HTTP",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployed_url_template":"http://%s.shipped-cisco.com",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "deployed_at":"2015-10-14T23:54:48.324Z"},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;   {...},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {...}</p>
+                                    <p class="code">]
+                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Deploy a new release</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>Deploys a commit ref for a service to an environment on a project.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">POST https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/envs/&lt;ENV_ID&gt;/services/&lt;SERVICE_ID&gt;/deploy</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the project for which to deploy a release</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body2">ENV_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body2">The environment for which to deploy the release</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">SERVICE_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The service for which to deploy the release</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="query-parameters">Query Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Default</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">commit_id</td>
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">-</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">This is the git ref to be deployed. This ref must exist on the service that is being deployed.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Update a release</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1" data-mc-pattern="1">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1">
+                                    <p>A release is a point in time snapshot so update is not valid operation.</p>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2" data-mc-pattern="5">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2" colspan="2">
+                                    <h2>Get the status of a release</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body2">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyB-Column1-Body2">
+                                    <p>Gets the current status of releases for a service. This will return a list objects with information on the <a href="https://github.com/mesosphere/marathon">Marathon</a> instances.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/projects/&lt;PROJECT_ID&gt;/releases/&lt;RELEASE_ID&gt;/status</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">PROJECT_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyD-Column1-Body1">The id of the project for which to deploy a release</td>
+                                            </tr>
+                                            <tr class="TableStyle-ParameterTable-Body-Body2">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body2">RELEASE_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body2">The id of the release for which to get the status</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column2-Body2">&#160;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

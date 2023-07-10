@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions|Built-in Functions|Control Functions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>ForEachChild</title>
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/functions/foreachchild.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../expressions/expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_built_in_functions.htm">Built-in Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="_control_functions.htm">Control Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ForEachChild</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h2 class="ControlFunctions" data-mc-xref-target-name="ForEachChild"><a name="ForEachChild" data-mc-generated-bookmark="ListOf"></a><a name="kanchor721"></a>ForEachChild</h2>
+            <p class="Body">Iterates child object instances and computes a text value for each of them. These values are then optionally sorted, and then concatenated and separated by a specified delimiter.</p>
+            <p class="Body">Evaluates a text-valued expression for each related (child)&#160;object and concatenates the results into a single text value. The related objects are related to a single parent object via the <span class="window_name">childRelationshipRef</span> parameter. The children can be ordered by specifying one or more sort fields of the child object as ordering keys.</p>
+            <h4 class="subheading">Syntax</h4>
+            <p class="Code">ForEachChild(parentObjectRef, recId, childRelationshipRef, childExpression, fieldAndOrder)</p>
+            <h4 class="subheading">Enabled for</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 150px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Search/Dashboard</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">No</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Business Rules</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Quick Actions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Workflow Objects</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Yes</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">Reports</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Parameters</h4>
+            <table cellspacing="0" class="TableStyle-OptionsTable" style="mc-table-style: url('../../resources/tablestyles/optionstable.css');width: 92%;">
+                <col class="TableStyle-OptionsTable-Column-Column1" style="width: 285px;" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>parentObjectRef</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>The parent business object as an object reference.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>recId</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>RecID of the parent business object instance.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>childRelationshipRef</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>The relationship that relates the parent to its children.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">
+                            <p>childExpression</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>An expression to evaluate for each child.</p>
+                            <p>&#160;</p>
+                            <p><b>NOTE:</b>&#160;If the final element of the concatenation is the same for each instance and is a literal value, the system interprets that literal value to be a delimiter. The system adds the delimiter to the end of every entry except for the last entry.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">
+                            <p>fieldAndOrder</p>
+                        </td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">
+                            <p>(Optional) The order by which to sort the results. Each argument is a list of field names optionally followed by a space and ASC&#160;(ascending) or DESC (descending). &#160;Ascending is the default. If you specify more than one sort order, they are applied in the order given.</p>
+                            <p>&#160;</p>
+                            <p>This function can take an unlimited number of these parameters, including none. &#160;Use additional instances of this parameter to sort the results even more.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Return Value</h4>
+            <p class="Body_indent">Text value.</p>
+            <h4 class="subheading">Example</h4>
+            <p class="Body_indent">For example, to iterate all instances of the child business object called ResNoteHistory for a fixed issue with a certain RecID, use the following within the business rule of the parent business object:</p>
+            <p class="Code">ForEachChild("Issue_Fix", RecId, "ResNoteHistory#.", "LastModBy + '\t' <br />+ LastModDateTime<br />+ '\r\n' + ResolutionNote<br />+ '\r\n______________\r\n"', "CreatedDateTime ASC")</p>
+            <p class="Body_indent">For each instance, the system concatenates the following information: the name of the person who last modified the instance (LastModBy), followed by a tab, followed by the date and time it was last modified (LastModDateTime), followed by a new line, and then the text of the resolution note (ResolutionNote), followed by a new line that contains an underline and followed by another new line. These concatenations are sorted by the date and time the instance was created (CreatedDateTime) in ascending (ASC)&#160;order.</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="_control_functions.htm">Control Functions</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="childfold.htm">ChildFold</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="findancestor.htm">FindAncestor</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="getbovalue.htm">GetBOValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="getsrpvalue.htm">GetSRPValue</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ifallsiblings.htm">IfAllSiblings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="isbounderchangecontrol.htm">IsBOUnderChangeControl</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="istrueforallchildren.htm">IsTrueForAllChildren</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="searchhierarchy.htm">SearchHierarchy</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="searchlist.htm">SearchList</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

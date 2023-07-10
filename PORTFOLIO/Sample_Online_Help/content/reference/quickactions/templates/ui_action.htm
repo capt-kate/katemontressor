@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Default.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Default Quick Actions|Quick Action Templates">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>UI Action</title>
+        <link href="../../../resources/tablestyles/note_warning.css" rel="stylesheet" />
+        <link href="../../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../index.html#reference/quickactions/templates/ui_action.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../default_quick_actions.htm">Default Quick Actions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../quick_action_parameters.htm">Quick Action Templates</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">UI Action</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor915"></a>UI Action Quick Action</h1>
+            <p class="Body">Executes a quick action within a form. </p>
+            <p class="Body">You can  switch to a designated child tab and open a blank form for a user to fill out. There is no way to pass parameters with this quick action; instead, use the <span class="window_name">NewObject</span> quick action.</p>
+            <p class="Body">Several incident quick actions are UI quick actions. To see these within an incident record; go to <span class="Bold">Action Menu &gt; System</span>. </p>
+            <p class="Body">Remember:</p>
+            <ul>
+                <li value="1">All commands are case sensitive; mixed case does not work. Use the values defined below.</li>
+                <li value="2"><span class="fixedwidth">null</span> must be entered in the parameter if a command is not used. Leaving it empty is not the equivalent  and produces different results.</li>
+                <li value="3">Not all parameters are mandatory for each action.</li>
+            </ul>
+            <p class="fig_title" data-mc-xref-target-name="UI_Action_Quick_Action"><a name="UI_Action_Quick_Action" data-mc-generated-bookmark="ListOf"></a>UI Action Quick Action</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../../resources/images/quick_action_ui_action.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="890" data-mc-height="487" src="../../../resources/images/quick_action_ui_action_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <table style="mc-table-style: url('../../../resources/tablestyles/parametertable.css');width: 92%;" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Scope</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>The access point of the quick action. For example: <span class="fixedwidth">CurrentTab:ObjectWorkspace:ObjectView</span>.</p>
+                            <ul class="list_table">
+                                <li value="1"><b>Application</b>. Performs an action on the application.</li>
+                                <li value="2"><b>WorkspaceSelector</b>. Performs an action within the current workspace.</li>
+                                <li value="3"><b>ObjectWorkspace</b>. Performs an action within the designated object workspace.</li>
+                                <li value="4"><b>CurrentTab</b>. Performs an action within the active tab.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Command ID</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">The command ID that you want to run. For example: <span class="fixedwidth">NewChildObject</span></td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Confirmation</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Optional. The confirmation that you want to show.  The confirmation message appears to the user, at which time the user can continue the action or cancel. See <a href="#The_Confirmation_Dialog_Box" class="MCXref xref">The Confirmation Dialog Box</a> below for more details.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Command Data</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">The data that the command is run against. For example: <span class="fixedwidth">{ ObjectType:"Incident#" , ChildObjectType:"Change#" , NewObjectType:"Change#" }</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">See <a href="../../../servicedesk/quickactions/using_the_ui_action_qa_to_open_another_workspace.htm" class="MCXref xref">Using the UI Action Quick Action to Open Another Workspace</a> and <a href="../../../servicedesk/quickactions/using_the_ui_action_qa_to_open_a_workflow.htm" class="MCXref xref">Using the UI Action Quick Action to Open a Workflow</a> for examples on how to use this quick action.</p>
+            <h4 class="subheading"><a name="The_Confirmation_Dialog_Box"></a>The Confirmation Dialog Box</h4>
+            <p class="Body">When a Confirmation is processed,  remove it from the command definition by the confirmation dialog handler.</p>
+            <p class="Code">{</p>
+            <p class="Code">&#160;&#160;&#160;&#160;‘Title’: ’&lt;text&gt;’,</p>
+            <p class="Code">&#160;&#160;&#160;&#160;‘Message’: ’&lt;message&gt;’,</p>
+            <p class="Code">&#160;&#160;&#160;&#160;’Timeout’ : &lt;timeout&gt;,</p>
+            <p class="Code">&#160;&#160;&#160;&#160;TimeoutAction: ’&lt;action&gt;’,</p>
+            <p class="Code">&#160;&#160;&#160;&#160;’Ok’ :’&lt;action&gt;’,</p>
+            <p class="Code">&#160;&#160;&#160;&#160;’Cancel’ :’&lt;action&gt;’</p>
+            <p class="Code">}</p>
+            <table style="width: 92%;mc-table-style: url('../../../resources/tablestyles/parametertable.css');" class="TableStyle-ParameterTable" cellspacing="0">
+                <col class="TableStyle-ParameterTable-Column-Column1" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <col class="TableStyle-ParameterTable-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-ParameterTable-Head-Header1">
+                        <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1">Type </th>
+                        <th class="TableStyle-ParameterTable-HeadF-Column2-Header1">Required</th>
+                        <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Title </td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Required</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1"> Dialog box title string.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Message </td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Required</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Message displayed in the dialog box.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Timeout </td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Int</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Optional</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">Dialog countdown in seconds. Countdown does not occur if not provided.</td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">TimeoutAction</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Optional</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Action to be executed when timeout has expired. </p>
+                            <ul class="list_table">
+                                <li value="1"><b>'continue'</b>. Equivalent to user clicking OK. Use all lower case.</li>
+                                <li value="2"><b>'cancel'</b>. Cancels the operation; equivalent to user clicking Cancel.  Use all lower case.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">Ok </td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">String</td>
+                        <td class="TableStyle-ParameterTable-BodyF-Column2-Body1">Optional</td>
+                        <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                            <p>Action for the OK button. </p>
+                            <ul class="list_table">
+                                <li value="1">Can be <b>'continue'</b> or <b>'cancel'</b>. </li>
+                                <li value="2">The OK button is not shown if the parameter is empty. </li>
+                                <li value="3">The default value is assumed if no value is given.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-ParameterTable-Body-Body1">
+                        <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">Cancel </td>
+                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">String</td>
+                        <td class="TableStyle-ParameterTable-BodyC-Column2-Body1">Optional</td>
+                        <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                            <p>Action for Cancel button.</p>
+                            <ul class="list_table">
+                                <li value="1">  Can be <b>'continue'</b> or <b>'cancel'</b>. </li>
+                                <li value="2">The Cancel button is not shown if the parameter is empty.</li>
+                                <li value="3">  The default value is assumed if no value is given.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">For example:</p>
+            <p class="Code">{'Title':'Request to Logout', 'Message': 'Do you want to log out now?', <br />'Timeout': 30, 'TimeoutAction': 'continue', 'OK': 'continue', 'Cancel':'cancel'}</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />UI Actions and Composite Actions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 80%;mc-table-style: url('../../../resources/tablestyles/note_warning.css');" class="TableStyle-Note_Warning" cellspacing="0">
+                        <col class="TableStyle-Note_Warning-Column-Column1" />
+                        <col class="TableStyle-Note_Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Note_Warning-Body-Body2">
+                                <td class="TableStyle-Note_Warning-BodyB-Column1-Body2">
+                                    <img src="../../../resources/global_images/warning48_normal.png" alt="" class="icon" />
+                                </td>
+                                <td class="TableStyle-Note_Warning-BodyA-Column2-Body2">
+                                We strongly discourage users from using UI Action quick actions with Composite Action quick actions. This configuration is not supported as it produces inconsistent results.                      </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="Body">When using the <span class="window_name">UI Action</span> quick action within the Composite Action quick action, please note:</p>
+                    <ul>
+                        <li value="1">The <span class="window_name">UI Action</span> quick action relies on the UI commands in the browser, not the server side.</li>
+                        <li value="2">        Non-UI quick actions rely on server side quick actions.</li>
+                        <li value="3">The        <span class="window_name">UI Action</span> quick action is built as asynchronous. Send the request and return immediately (without waiting) to the composite framework to continue other actions.</li>
+                        <li value="4">Use the <span class="window_name">UI Action</span> quick action within a  <span class="window_name">Composite Action</span> quick action at your own risk. This procedure is not recommended as it could cause unexpected results.</li>
+                    </ul>
+                    <p class="Body">Limitations</p>
+                    <ul>
+                        <li value="1">Canceling the <span class="window_name">UI Action</span> quick action does not cancel the remaining actions defined in the Composite Action quick action.</li>
+                        <li value="2">Create the <span class="window_name">UI Action</span> quick action as the last action (<span class="Emphasis">Highly recommended</span>).</li>
+                        <li value="3">Use only one <span class="window_name">UI Action</span> quick action in a <span class="window_name">Composite Action</span> quick action. Multiple actions will probably produce unintended results.</li>
+                    </ul>
+                </div>
+            </div>
+            <h4 class="subheading">Types of Actions</h4>
+            <table style="width: 80%;mc-table-style: url('../../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../../resources/global_images/note.png" alt="" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">All values are case sensitive. Be sure to use the values as documented.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Log out of the application</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action brings up a confirmation box asking the user if they want to log out. If the user does not respond, they are automatically logged out. </p>
+                    <p class="Body_indent">
+                        <img src="../../../resources/images/logout_box.png" alt="" />
+                    </p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. Application	</li>
+                        <li value="2"><b>CommandID</b>. Logout</li>
+                        <li value="3"><b>CommandData</b>. <span class="fixedwidth">null </span><span class="Emphasis">(lowercase)</span></li>
+                        <li value="4"><b>Confirmation</b>.<br /> <span class="fixedwidth">{Title:'Logout in', <br />Message:'Do you want to logout?', <br />Timeout:10, <br />TimeoutAction:'continue'<br />Ok:'continue',<br />Cancel:'cancel'}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Refresh the application</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action refreshes the window and updates the application data. Equivalent to <b>F5</b> or <b>Refresh</b> in the browser.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. Application	</li>
+                        <li value="2"><b>CommandID</b>. Reload	</li>
+                        <li value="3"><b>CommandData</b>. <span class="fixedwidth">null</span>. No confirmation box appears.</li>
+                        <li value="4"><b>Confirmation</b>. Optional. if empty, the default brackets are used and the default confirmation box is generated.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open an URL in a pop-up browser</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action automatically opens a new window to the specified URL. Invalid URLs result in a 404 error (Page Not Found).</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. Application	</li>
+                        <li value="2"><b>CommandID</b>. OpenWindow	</li>
+                        <li value="3"><b>CommandData</b>.<br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;Url:"http://www.frontrange.com"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;, Target:"_blank"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;, Options:"width=400,height=500"</span>&#160;&#160;&#160;&#160;<br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;, Replace:"false"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open a link stored in a business object</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action opens a pop-up window to the URL specified in the <span class="window_name">Subject</span> field of an object.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. Application	</li>
+                        <li value="2"><b>CommandID</b>. OpenWindow	</li>
+                        <li value="3"><b>CommandData</b>. Optional	</li>
+                        <li value="4"><b>Confirmation</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;Url:"$(Subject)", </span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;Target:"_blank", </span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;Options:"width=400,height=500"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}</span><br /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open a new layout tab by object type	</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action opens a new tab.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. WorkspaceSelector	</li>
+                        <li value="2"><b>CommandID</b>. OpenObjectTab	</li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{ 'ObjectType':'Change#', }	</span><br />--or--<br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;ObjectType: 'Incident#',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;ForceReload: false,</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;NewNaviState:true</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open a web page in a sub-tab of the application<![CDATA[	]]></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action opens a web page  defined in the URL page in the new tab within the application.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. WorkSpaceSelector	</li>
+                        <li value="2"><b>CommandID</b>. OpenLinkTab	</li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'Name':'frontrange.com',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'Id': 'frontrangecom',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'Closable': 'true',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'Url': 'http://www.frontrange.com'</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search results by condition from the current context.</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action passes the priority from the current business object.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. ObjectWorkspace	</li>
+                        <li value="2"><b>CommandID</b>. Search	</li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'ObjectType':'Incident#',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'SearchCriteria':[</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'ObjectId':'Incident#','FieldName':'Priority',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'Condition':'=', 'FieldValue':'$(Priority)'}</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;],</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;'FillSearchPanel':'false'</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open the object referenced in a different field	 	 		</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body"> This  action opens an incident  referenced in the <span class="window_name">Subject</span> field of the current object.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. <span class="Emphasis">(uses previous value)</span></li>
+                        <li value="2"><b>CommandID</b>. <span class="Emphasis">(uses previous value)</span></li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'ObjectType':'Incident#',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'SearchCriteria':[</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'ObjectId':'Incident#','FieldName':'IncidentNumber',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'Condition':'=', 'FieldValue':'$(Subject)'}</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;],</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'FillSearchPanel':'false'</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Prompt for the incident number, then open it	 	 	</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action asks the user for an incident number, then opens the incident record.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. <span class="Emphasis">(uses previous value)</span></li>
+                        <li value="2"><b>CommandID</b>. <span class="Emphasis">(uses previous value)</span></li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'ObjectType':'Incident#',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'SearchCriteria':[</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'ObjectId':'Incident#','FieldName':'IncidentNumber',<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'Condition':'=', <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'FieldValue':'$(Prompt("Please enter Incident Number",""))'}</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;],</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'FillSearchPanel':'false'</span>&#160;&#160;&#160;<br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a new task object in a workspace	</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action creates a new  Task in a layout and links the current object. The value from the current object can be passed in this way including linking the parent incident to the task. This is equivalent to the InsertChild quick action. This option allows the system to move the data from the current context to the child record. Relationship details need to be filled in as part of creating the new object if they need to be linked</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. ObjectWorkspace	</li>
+                        <li value="2"><b>CommandID</b>. NewObject	</li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'ObjectType': 'Task#Assignment',</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;'Fields': [</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'Name': 'ParentLink_Category', 'Value': 'Incident'},</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'Name': 'ParentLink_RecID', 'Value': '$(RecId)'},</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'Name': 'OwnerTeam', 'Value': '$(OwnerTeam)'},</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'Name': 'Owner', 'Value': '$(Owner)'},</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{'Name': 'Subject', 'Value': '$(Subject)'},</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;]</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a new incident in a tab		</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action opens a new layout with a new object as referenced in the command data ObjectType.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. ObjectWorkspace	</li>
+                        <li value="2"><b>CommandID</b>. NewObject	</li>
+                        <li value="3"><b>CommandData</b>. <span class="fixedwidth">{ 'ObjectType': 'Incident#' }</span></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Close the current tab	</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action closes the current tab.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. CurrentTab	</li>
+                        <li value="2"><b>CommandID</b>. CloseTab	</li>
+                        <li value="3"><b>CommandData</b>. Null	</li>
+                        <li value="4"><b>Confirmation</b>. Optional</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a new child object </a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">This action creates a new child record with the default assigned to the new object. Typically, relationship push constraint is used to move the data from the main object to child object.</p>
+                    <ul>
+                        <li value="1"><b>Scope</b>. 	CurrentTab:ObjectWorkspace:ObjectView</li>
+                        <li value="2"><b>CommandID</b>. 	NewChildObject	</li>
+                        <li value="3"><b>CommandData</b>. <br /><span class="fixedwidth">{</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;ObjectType:"Incident#"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;, ChildObjectType:"Change#"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">&#160;&#160;&#160;&#160;, NewObjectType:"Change#"</span><br style="mc-tag-and-class: span;" /><span class="fixedwidth">}	</span><br /></li>
+                        <li value="4"><b>Confirmation</b>. Optional	</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="Body">&#160;</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="../../../servicedesk/quickactions/using_the_ui_action_qa_to_open_a_workflow.htm">Using the UI Action QA to Open a Workflow</a>
+                    </p>
+                    <p class="examplesItem_examples_0"><a href="../../../servicedesk/quickactions/using_the_ui_action_qa_to_open_another_workspace.htm">Using the UI Action QA to Open Another Workspace</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="search_and_link.htm">Search and Link</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="search_and_unlink.htm">Search and Unlink</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="send_email.htm">Send Email</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="send_mobile_notification.htm">Send Mobile Notification</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="start_ipcm_voice_activity.htm">Start IPCM Voice Activity</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="start_remote_control.htm">Start Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="stop_remote_control.htm">Stop Remote Control</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="sync_remote_control_session.htm">Sync Remote Control Session</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="template.htm">Template</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="update_object.htm">Update Object</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="workflow_script.htm">Workflow Script</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

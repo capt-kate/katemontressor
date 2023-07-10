@@ -1,0 +1,31 @@
+P       Operation (remaining): OOBE boot apply
+2019-06-29 01:49:34, Info                  SP       AddSpace: add:       157286400, current:       157286400, peak:       157286400
+2019-06-29 01:49:34, Info                  SP       Operation (remaining): Refresh localized strings
+2019-06-29 01:49:34, Info                  SP       Operation (remaining): Execute provisioning migration
+2019-06-29 01:49:34, Info                  SP       Operation (remaining): Gather end install, scope: EVERYTHING
+2019-06-29 01:49:34, Info                  SP       AddSpace: add:       314572800, current:       471859200, peak:       471859200
+2019-06-29 01:49:34, Info                  SP       Operation (remaining): Start suspended services
+2019-06-29 01:49:34, Info                  SP     DISKSPACEQUERY: Final disk space needed estimate: 471859200
+2019-06-29 01:49:34, Info                  SP     Executing operation: OOBE boot apply
+2019-06-29 01:49:34, Info                  SP     MEMORYTRACK: Total             : 5770870784
+2019-06-29 01:49:34, Info                  SP     MEMORYTRACK: Load              : 10
+2019-06-29 01:49:34, Info                  SP     MEMORYTRACK: Available for op  : 5430636544
+2019-06-29 01:49:34, Info                  SP     DISKSPACETRACK: Available      : 46339137536
+2019-06-29 01:49:34, Info                  SP     DISKSPACETRACK: Needed total   : 471859200
+2019-06-29 01:49:34, Info                  SP     DISKSPACETRACK: Needed for op  : 157286400
+2019-06-29 01:49:34, Info                  SP     DISKSPACETRACK: 46339137536
+2019-06-29 01:49:34, Info                  SP     SetupPlatfrom: Executing Execute.PreApply commands
+2019-06-29 01:49:34, Info                  SP     Diagnostic file: C:\Windows\Panther\MigLog.xml
+2019-06-29 01:49:34, Info                  SP     Upgrade is using replacement manifests in C:\$WINDOWS.~BT\Sources\ReplacementManifests
+2019-06-29 01:49:34, Info                  SP     Adding mapping from C: to C:\Windows.old
+2019-06-29 01:49:34, Info                  SP     MIGPERFTRACK: OOBE boot apply (online) =======================================
+2019-06-29 01:49:34, Info                  SP     SPExecuteOOBEBootApply: Begin run. WinOld: C:\Windows.old
+2019-06-29 01:49:34, Info                  SP     Entering pSPStartAutoStartingServices
+2019-06-29 01:49:34, Info                  SP     Leaving pSPStartAutoStartingServices
+2019-06-29 01:49:34, Info                  SP     pSPWaitAutoStartingSystemServices: Started at 01:49:34
+2019-06-29 01:49:34, Info                  SP     pSPWaitAutoStartingSystemServices: all services running
+2019-06-29 01:49:34, Info                  SP     pSPWaitAutoStartingSystemServices: Finished at 01:49:34
+2019-06-29 01:49:34, Info                  SP     pSPExecuteApply: Starting the engine online
+2019-06-29 01:49:37, Info                         Entering MigStartupOnline method
+2019-06-29 01:49:37, Info                         Entering MigPlatformStartupOnline method
+2019-06-29 01:49:38, Info             

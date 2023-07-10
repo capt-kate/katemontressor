@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Workflow Object Blocks">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Wait for Child</title>
+        <link href="../../resources/tablestyles/textlist.css" rel="stylesheet" />
+        <link href="../../resources/tablestyles/optionstable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/workflowobjects/wait_for_child.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="workflow_object_blocks.htm">Workflow Object Blocks</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Wait for Child</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1 class="v2014_1" data-mc-autonum="* * * New or Improved for 2014.1 * * * &#160;" data-mc-xref-target-name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Wait_for_Child_Workflow_Block"><a name="*_*_*_New_or_Improved_for_2014.1_*_*_*_&#160;Wait_for_Child_Workflow_Block" data-mc-generated-bookmark="ListOf"></a><span class="autonumber"><span class="newfeature">* * * New or Improved for 2014.1 * * * &#160;</span></span><a name="kanchor836"></a>Wait for Child Workflow Block</h1>
+            <p class="Body">Waits for a condition specified in the block to become true for a child object, or for a timer to expire. By default, exit ports for this block allow for separate workflow paths based on these events. </p>
+            <p class="fig_title" data-mc-xref-target-name="Wait_for_Child_Workflow_Block"><a name="Wait_for_Child_Workflow_Block" data-mc-generated-bookmark="ListOf"></a>Wait for Child Workflow Block</p>
+            <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/wait_for_child_block.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="681" data-mc-height="420" src="../../resources/images/wait_for_child_block_thumb_0_45.png" tabindex="" /></a>
+            </p>
+            <p>The timeout behavior is as follows:</p>
+            <p class="Body">If value based timer (i.e. duration) is specified by values</p>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/textlist.css');" class="TableStyle-TextList" cellspacing="0">
+                <col style="width: 117px;" class="TableStyle-TextList-Column-Column1" />
+                <col style="width: 53px;" class="TableStyle-TextList-Column-Column1" />
+                <col style="width: 394px;" class="TableStyle-TextList-Column-Column1" />
+                <col class="TableStyle-TextList-Column-Column1" />
+                <tbody>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">days </td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">== </td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">null &amp;&amp; hours == null &amp;&amp; minutes == null,</td>
+                        <td class="TableStyle-TextList-BodyG-Column1-Body2">then infinite timeout or never times out</td>
+                    </tr>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">days</td>
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">== </td>
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">-1 &amp;&amp; hours == -1 &amp;&amp; minutes == -1,</td>
+                        <td class="TableStyle-TextList-BodyD-Column1-Body2">then infinite timeout or never times out</td>
+                    </tr>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">days</td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">&lt;=</td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">0 &amp;&amp; hours &lt;= 0 &amp;&amp; minutes &lt;= 0,</td>
+                        <td class="TableStyle-TextList-BodyG-Column1-Body2">then Immediately times out and timeout exit is used
+                    </td>
+                    </tr>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">days</td>
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">&gt;</td>
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">0 &amp;&amp; hours &gt; 0 &amp;&amp; minutes &gt; 0,</td>
+                        <td class="TableStyle-TextList-BodyA-Column1-Body2">then combined value is set as the timeout and exit timeout is used when the time passes.
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">If field based timer</p>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/textlist.css');" class="TableStyle-TextList" cellspacing="0">
+                <col class="TableStyle-TextList-Column-Column1" style="width: 116px;" />
+                <col class="TableStyle-TextList-Column-Column1" style="width: 54px;" />
+                <col class="TableStyle-TextList-Column-Column1" style="width: 239px;" />
+                <col class="TableStyle-TextList-Column-Column1" />
+                <tbody>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">fieldvalue</td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">==</td>
+                        <td class="TableStyle-TextList-BodyH-Column1-Body2">null,</td>
+                        <td class="TableStyle-TextList-BodyG-Column1-Body2">then infinite timeout or never times out</td>
+                    </tr>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">fieldvalue </td>
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">&lt;=</td>
+                        <td class="TableStyle-TextList-BodyE-Column1-Body2">UtcNow,</td>
+                        <td class="TableStyle-TextList-BodyD-Column1-Body2">then immediately times out and timeout exit used
+                    </td>
+                    </tr>
+                    <tr class="TableStyle-TextList-Body-Body2">
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">fieldvalue</td>
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">&gt;</td>
+                        <td class="TableStyle-TextList-BodyB-Column1-Body2">UtcNow,</td>
+                        <td class="TableStyle-TextList-BodyA-Column1-Body2">then combined value is set as the timeout and exit timeout is used when the time passes
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Exit Ports</h4>
+            <ul>
+                <li value="1">Define additional exit ports under the <span class="window_name">Exits Configuration</span> tab.</li>
+            </ul>
+            <table style="width: 92%;mc-caption-repeat: false;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">ok</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <p>Continue to the next block.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyB-Column1-Body1">timed out</td>
+                        <td class="TableStyle-OptionsTable-BodyA-Column2-Body1">The workflow is terminated as incomplete because an event exceeded the defined length of time.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="subheading">Properties</h4>
+            <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/optionstable.css');" class="TableStyle-OptionsTable" cellspacing="0">
+                <col class="TableStyle-OptionsTable-Column-Column1" />
+                <col class="TableStyle-OptionsTable-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Title</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1"> Enter a unique name for the object.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">Relationship Name</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">Select an available relationship for the child object from the drop-down list.</td>
+                    </tr>
+                    <tr class="TableStyle-OptionsTable-Body-Body1">
+                        <td class="TableStyle-OptionsTable-BodyE-Column1-Body1">How many children should satisfy conditions</td>
+                        <td class="TableStyle-OptionsTable-BodyD-Column2-Body1">
+                            <ul class="list_table">
+                                <li value="1"><span class="Bold">All</span> - all children must satisfy the conditions.</li>
+         ER, ignore_on_failure INTEGER, PRIMARY KEY (identifier))       ﬁÊTSmõ±Äõπ>'Ñ¿5   Ô Ô                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     fschanges µ   p    ﬁÊTSmõ±ÄxãŒ»Ï•»ö
+
+¯KÕ ÿ— √ºµÆß†ôíãÑ}voha
+Ò
+ÍZ
+„
+‹SLE>70)"
+’
+Œ
+«
+¿
+π
+≤
+´
+§
+ù
+ñ
+è
+à
+Å
+z
+s
+l
+e
+^
+W
+P
+I
+B
+;
+4
+-
+&
+
+
+
+
+
+	¸	ı	Ó	Á	‡	Ÿ	“	À	ƒ	Ω	∂	Ø	®	°	ö	ì	å	Ö	~	w	p	i	b	[	T	M	F	?	8	1	*	#					 ˘ÚÎ‰˘ÚÎ‰›÷œ6/(!˛˜È‚€‘Õ∆ø∏±™£úïéáÄyrkd]V»¡∫≥¨•ûóêâÇ{tmf_XJC<.' ˝ˆÔË·⁄”Ã≈æ∑∞©¢õîçÜxqjc\UNG@92+$˙ÛÏÂﬁ◊–…¬ª¥›÷œ»¡∫≥¨•ûóêâÇ{tmf_XQJC<5.' ˝ˆÔË·⁄”Ã≈æ∑∞©¢õîçÜxqjc\UNG@92+$˙ÛÏÂﬁ◊–…¬ª¥≠¶üòëäÉ|ung`YRKD=6/(!˛˜È‚€‘ÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑZSL  1 ô∑  * ô∂  # ôµ   ô¥   ô≤<  ô±<  ô∞'  ô„'  ô‚'  ô·'  ô‡L  öL  öL  öL  ö ”  ö”  öæ  ö(æ  ö'æ  ö&æ 8 ö7æ 1 ö6æ * ö5æ # ö4æ # ö3∑  öò∑  öóí 1 ®
+í * ®	í # ®í  ®í  ®í  ®í  ®   ®(  ®F  ®Eí # ®jí  ®ií  ®hí  ®gí  ®fß  ®ñß  ®ïí # ®±í  ®∞í  ®Øí  ®Æí  ®≠	ö  ®ºç  ®÷ç  ®’˜ h:  ≤,  ≤8j« ≤;j¿ ≤:jπ ≤9j≤ ≤.©Ò ≤,∞Í ≤ ) ≤XS ≤XZ ≤êÑ ≤ê} ≤ êv ±ˇêÑ ±˛ê} ±˝êv ±¸êo ±˚êh ±˙êh ±˘êa ±¯A  ≥ªO  ≥Œ=  ≥›=  ≥‹=  ≥ÎÌ  ¥Ì  ¥
+	 ˇ˛˝¸˚˙˘¯˜ˆıÙÛÚÒÔÓÌÏÎÍÈËÁÊÂ‰„‚·‡ﬂﬁ›‹€⁄Ÿÿ◊÷’‘”“—–œŒÕÃÀ …»«∆≈ƒ√¬¡¿øæΩºª∫π∏∑∂µ¥≥≤±∞ØÆ≠¨´™©®ß¶•/.-,+*)('&%$#"! 
+	 ˇ˛˝¸˚˙˘¯˜ˆıÙÛÚÒÔÓÌÏÎÍÈË µ µ µ µﬂ # ¥Ì= [ ¥Ï= T ¥Î= M ¥Í= F ¥È µ µ µ µ µ µ µ µ µ µ µ µ µ µ µ µ µ µ
+ µ	 µ µ µ µ µ µ µ µ µ = w ¥ˇ= p ¥˛= i ¥˝= b ¥¸= [ ¥˚= T ¥˙= M ¥˘= F ¥¯= ? ¥˜= 8 ¥ˆ= 1 ¥ı= * ¥Ù= # ¥Û=  ¥Ú=  ¥Ò=  ¥=  ¥ÓWVUTSRQPONMLKJIHGFEDCBA@?>=<;:987 w ¥   ? ¥
+   8

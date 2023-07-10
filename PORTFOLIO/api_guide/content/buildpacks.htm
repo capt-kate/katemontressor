@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-conditions="Status.Complete" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" />
+        <meta name="author" /><title>Buildpacks</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="resources/tablestyles/codetable.css" rel="stylesheet" />
+        <link href="resources/stylesheets/shipped.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="contentBody">
+                <div>
+                    <h1>Buildpacks</h1>
+                    <p> Buildpacks can be the functional starting points for applications in various web frameworks. For example, if you’re
+building a Ruby on Rails app, we provide a build pack that sets you up with a working, deployable HelloWorld
+application with reasonable defaults. We suggest you use these build packs as starting points for new applications. </p>
+                    <table style="width: 100%;mc-table-style: url('resources/tablestyles/codetable.css');" class="TableStyle-CodeTable" cellspacing="0">
+                        <col class="TableStyle-CodeTable-Column-Column1" />
+                        <col class="TableStyle-CodeTable-Column-Column1" data-mc-pattern="0" />
+                        <col class="TableStyle-CodeTable-Column-Column2" style="width: 50%;" data-mc-pattern="4" />
+                        <tbody>
+                            <tr class="TableStyle-CodeTable-Body-Body1">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1" colspan="2">
+                                    <h2>List all buildpacks</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2">
+                                <td class="TableStyle-CodeTable-BodyF-Column1-Body2">&#160;</td>
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body2">
+                                    <p>Retrieves a list of all available buildpacks.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/buildpacks</code>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body2">
+                                    <p class="code"><code>curl https://api.ciscoshipped.io/buildpacks?api_token<span>=</span>&lt;TOKEN&gt;
+</code>
+                                    </p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">[</p>
+                                    <p class="code">&#160;&#160;&#160;&#160;{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "id":"8dc13969-dd18-11e4-aa3b-0090f5d8986c",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "name":"PHP","image_source":"https://api.ciscoshipped.io/cli/static/images/php.svg",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_build_command":"mkdir -p output; cp *.png *.php output/",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_run_command":"/app/bin/run",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_test_command":"echo noop",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "build_image":"bradrydzewski/php:5.5",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "default_deploy_image":"tutum/apache-php:latest""default_container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; &#160;&#160;&#160; "container_shared_directory":"/app","bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-buildpack-template-rails.git"},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {...},</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; {...}</p>
+                                    <p class="code">]</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body1">
+                                <td class="TableStyle-CodeTable-BodyE-Column1-Body1" colspan="2">
+                                    <h2>Get a buildpack</h2>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyD-Column2-Body1">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-CodeTable-Body-Body2">
+                                <td class="TableStyle-CodeTable-BodyC-Column1-Body2">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyB-Column1-Body2">
+                                    <p>Retrieves a buildpack.</p>
+                                    <h3>HTTP Request</h3>
+                                    <p><code class="httpRequest">GET https://api.ciscoshipped.io/buildpacks/&lt;BUILDPACK_ID&gt;</code>
+                                    </p>
+                                    <h3 id="url-parameters">URL Parameters</h3>
+                                    <table class="TableStyle-ParameterTable" cellspacing="0" style="mc-table-style: url('resources/tablestyles/parametertable.css');">
+                                        <thead>
+                                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Parameter</th>
+                                                <th class="TableStyle-ParameterTable-HeadD-Column1-Header1">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">BUILDPACK_ID</td>
+                                                <td class="TableStyle-ParameterTable-BodyA-Column1-Body1">The ID of the buildpack to retrieve</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-CodeTable-BodyA-Column2-Body2">
+                                    <p class="code"><code>curl https://api.ciscoshipped.io/buildpacks/8dc13969-dd18-11e4-aa3b-0090f5d8986c
+</code>
+                                    </p>
+                                    <h3 class="light">Example Response</h3>
+                                    <p class="code">{</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "id":"8dc13969-dd18-11e4-aa3b-0090f5d8986c",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "name":"PHP",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "image_source":"https://api.ciscoshipped.io/cli/static/images/php.svg",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_build_command":"mkdir -p output; cp *.png *.php output/",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_run_command":"/app/bin/run",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_test_command":"echo noop",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_cpu":<span class="mi">1</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_ram":<span class="mi">512</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "build_image":"bradrydzewski/php:5.5",</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "default_deploy_image":"tutum/apache-php:latest""default_container_port":<span class="mi">3000</span>,</p>
+                                    <p class="code">&#160;&#160;&#160;&#160; "container_shared_directory":"/app","bootstrap_template_repo":"http://github.com/CiscoCloud/shipped-buildpack-template-rails.git"
+						<p class="code">}</p></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

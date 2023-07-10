@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference|Expressions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Expression Examples</title>
+        <link href="../../resources/tablestyles/parametertable.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#reference/expressions/expression_examples.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix"> <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Expression Examples</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1><a name="kanchor683"></a>Expression Examples</h1>
+            <p class="Body">This section describes various scenarios for using expressions.</p>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Sample Expressions </a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 92%;mc-table-style: url('../../resources/tablestyles/parametertable.css');mc-caption-repeat: false;" class="TableStyle-ParameterTable" cellspacing="0">
+                        <col class="TableStyle-ParameterTable-Column-Column1" />
+                        <col class="TableStyle-ParameterTable-Column-Column2" />
+                        <thead>
+                            <tr class="TableStyle-ParameterTable-Head-Header1">
+                                <th class="TableStyle-ParameterTable-HeadE-Column1-Header1">Expression</th>
+                                <th class="TableStyle-ParameterTable-HeadD-Column2-Header1">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(FieldName)</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Refers to the field of the current business object. See <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(CurrentLoginID())</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Invokes a built-in function. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$("9"+[link:ProfileLink]Phone1)</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns a phone number from a related object prefixed by a number 9. See <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> for more information.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(Prompt("Enter Customer Notes", ""))</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Invokes a built-in function, <span class="fixedwidth" style="font-family: 'Courier New';">$prompt ("prompt message", validation_list_name) (message)</span>, with literal constants as arguments. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(GetNextCounter("IncidentNumberCounter"))</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>In an initialization business rule, this expression adds a counter, incrementing the incident number.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(HopTargetDate("9 to 5", CreatedDateTime, "7")) </span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Invokes a built-in function with a mix of literal constants ("9 to 5" and 7) and field references (CreatedDateTime) as arguments. See <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> and <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> for more information.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$([Profile#Employee.]FirstName + [Profile#Employee.]LastName)</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns the  first and last name from the employee profile. See <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> for more information.</p>
+                                    <p>&#160;</p>
+                                    <p>If there is no additional field name after the period in <span class="fixedwidth">[Profile#Employee.]</span>, there is a one to one relationship. If there is a  field name, there is a one to many relationship. See <a href="constructing_expressions.htm" class="MCXref xref">Constructing Expressions</a> for more information.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$(SearchHierarchy("OrganizationalUnit", "ServiceAgreement", OrgUnitLink_RecID, "$((ServiceLink == [OtherObject]Service_Valid)&amp;&amp; (Status == \"Published\"))", Service_Valid))</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Used in a calculated field, this expression returns published Service Level Agreements to which this user is subscribed, based on the organizational unit.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyE-Column1-Body1">
+                                    <p><span class="fixedwidth">$([OtherObject]PrimaryEmail)</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyD-Column2-Body1">
+                                    <p>Returns a pick list, <span class="fixedwidth">OtherObject</span>, in reference to the <span class="fixedwidth">PrimaryEmail</span> object. </p>
+                                    <p>&#160;</p>
+                                    <p>The editing business rule:</p>
+                                    <p><span class="fixedwidth">AlternateContactEmail = $([OtherObject]PrimaryEmail)</span>
+                                    </p>
+                                    <p>makes use of this expression. In both examples, <span class="fixedwidth">OtherObject</span> is the object in the named pick list used in the editing rule (in this case, <span class="fixedwidth">Profile.Employee</span>). </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-ParameterTable-Body-Body1">
+                                <td class="TableStyle-ParameterTable-BodyB-Column1-Body1">
+                                    <p><span class="fixedwidth">$(iif((Status == "Closed"),<br />CurrentUserDisplay Name(), <br />null<br />))</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-ParameterTable-BodyA-Column2-Body1">
+                                    <p>This conditional expression states that if a status is closed, the <span class="fixedwidth">CurrentLoginID</span> value is returned. For example, this editing business rule can be applied to record the user who set an incident status to <span class="Emphasis">Closed</span>.</p>
+                                    <p><span class="fixedwidth">null</span> is a reserved keyword that can be used in expressions along with literal constants, fields, and functions.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Reference Fields within a Business Object</a><a name="Referencing_fields_within_a_business_object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$(&lt;<span class="Emphasis">FieldName</span>&gt;)</p>
+                    <p class="Body">Enclose the name of the field using the <span class="notranslate"><b>HEAT</b></span> expression syntax. For example, to reference the service field in incident, use the syntax: </p>
+                    <p class="Code">$(Service)</p>
+                    <p class="Body">This can be used in the following rule that sets the <span class="window_name">ActualService</span> field to the value of the <span class="window_name">Service</span> field in incident, when the latter field is changed, as shown in the following example:</p>
+                    <p class="fig_title" data-mc-xref-target-name="ActualService_Field"><a name="ActualService_Field" data-mc-generated-bookmark="ListOf"></a>ActualService Field</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/expression_ref_field.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="55" src="../../resources/images/expression_ref_field_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Access Fields Referenced by a Link Field in the Business Object</a><a name="Access_fields_referenced_by_a_link_field_in_the_business_object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$([link:&lt;LinkField&gt;]&lt;FieldName&gt;)</p>
+                    <p class="Body">For example, the OrgUnitLink field in incident points to a corresponding OrganizationalUnit record. To reference the value of the Name field of the OrganizationalUnit record by means of the OrgUnitLink field, use the following expression:</p>
+                    <p class="Code">$([link:OrgUnitLink]Name)</p>
+                    <p class="Body">This syntax can then be used in the following editing rule, to set the organization unit ID of the incident:</p>
+                    <p class="fig_title" data-mc-xref-target-name="OrganizationalUnitID&#160;Field"><a name="OrganizationalUnitID&#160;Field" data-mc-generated-bookmark="ListOf"></a>OrganizationalUnitID&#160;Field</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/expression_ref_link_field.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="62" src="../../resources/images/expression_ref_link_field_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Access Fields from a Validated Business Object</a><a name="Access_fields_from_a_validated_business_object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$([OtherObject]&lt;FieldName&gt;)</p>
+                    <p class="Body">This syntax is typically used when creating editing rules to return the value of a field in the corresponding validation business object, when the current validated field is being updated.</p>
+                    <p class="Body">For example, assume the user is currently in the incident business object and wants to access the TeamEmail value for the OwnerTeam currently set for the incident record. To do this, ensure that the field in the business object is configured to be validated. In this example, the OwnerTeam field in incident is validated using the named validation list <b>Team of StandardUserTeam used in Incident</b>.</p>
+                    <p class="fig_title" data-mc-xref-target-name="OwnerTeam_Field"><a name="OwnerTeam_Field" data-mc-generated-bookmark="ListOf"></a>OwnerTeam Field</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/validation_list.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="749" data-mc-height="467" src="../../resources/images/validation_list_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <p class="Body">With the field validation in place, the user can then define an editing rule against the OwnerTeam field in incident, so that when this field is changed, the rule returns the field value of the validated business object (that is, the OtherObject):</p>
+                    <p class="fig_title" data-mc-xref-target-name="OwnerTeam_Field_in_Incident"><a name="OwnerTeam_Field_in_Incident" data-mc-generated-bookmark="ListOf"></a>OwnerTeam Field in Incident</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/expression_validated_list.png"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="624" data-mc-height="109" src="../../resources/images/expression_validated_list_thumb_0_45.png" tabindex="" /></a>
+                    </p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Access Values from a Related Business Object</a><a name="Access_values_from_a_related_business_object"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$([TableRef#.]&lt;FieldName&gt;)</p>
+                    <p class="Code">$([TableRef#InternalReferenceName.]&lt;FieldName&gt;)</p>
+                    <p class="Body">This type of expression can only be used for one to one or many to one relationships. That is, the expression expects to find at the most one matching child record for the corresponding relationship.</p>
+                    <p class="Body">Instead of referencing the relationship by name, the TableRef for the child business object is used instead. </p>
+                    <ul>
+                        <li value="1">For regular business objects, the TableRef is of the form [BusinessObject#.], for example, [Problem#.].</li>
+                        <li value="2">For group member business objects, the TableRef is of the form [GroupObject#MemberObject.], for example, [Profile#Employee.].</li>
+                    </ul>
+                    <p class="Body">Notice in the examples, the presence of the "#" and "." characters. The "#" character is used to separate the name of the group object from the member object.</p>
+                    <p class="Body">This type of syntax is typically used in the form editor to bring in values from the related business object (for example, the <span class="fixedwidth">EmployeeLocation</span> field, from the <span class="fixedwidth">Profile.Employee</span> business object):</p>
+                    <p class="fig_title" data-mc-xref-target-name="Field_Name_Form"><a name="Field_Name_Form" data-mc-generated-bookmark="ListOf"></a>Field Name Form</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/expression_employee.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="485" data-mc-height="42" src="../../resources/images/expression_employee_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <p class="Body">In this example, the field name is represented as</p>
+                    <p class="Code">$([Profile#Employee.]EmployeeLocation)</p>
+                    <p class="Body">There are times however, when there is more than one relationship between the same parent and child business objects (for example, incident to employee). In such cases, the <span class="window_name">Internal Reference Name</span> property of the relationship is used to distinguish between the relationships. This parameter is then specified after the "." character, as shown in the example expression.</p>
+                    <p class="Body">For example, the <span class="window_name">Reported By</span> information on the incident object comes from the <span class="window_name">IncidentAssociatedByAlternateContact</span> relationship, which has an <span class="window_name">Internal Reference Name</span> parameter of <b>Reverse</b>:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Incident_Relationship"><a name="Incident_Relationship" data-mc-generated-bookmark="ListOf"></a>Incident Relationship</p>
+                    <p class="Body_indent">
+                        <img src="../../resources/images/5_9.jpg" />
+                    </p>
+                    <p class="Body">To reference a field in Profile.Employee using this alternate relationship, the following syntax is used instead:</p>
+                    <p class="Code">$([Profile#Employee.Reverse]PrimaryEmail)</p>
+                    <p class="Body">Notice that <b>Reverse</b> (the <b>Internal Reference Name</b> for the relationship) is specified after the "." character, immediately after the TableRef (<b>Profile#Employee</b>).</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Define a Constrained Validation List</a><a name="Define_a_constrained_validation_list"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$([ValidationList]&lt;FieldName&gt;)</p>
+                    <p class="Body">The above syntax is only used within the context of the named validation list definition. </p>
+                    <p class="Body">Typically the values from one validated field are constrained based on the value of another field in the same object. For example, the JobTitle field in the Profile.Employee business object is constrained based on the value of the department selected for the employee. </p>
+                    <p class="Body">To define such a validation list, in the Constraints area, enter the following syntax:</p>
+                    <p class="Code">ValidationObject.FieldName Equal to $([ValidationList]&lt;FieldName&gt;)</p>
+                    <p class="fig_title" data-mc-xref-target-name="Constraints_Area"><a name="Constraints_Area" data-mc-generated-bookmark="ListOf"></a>Constraints Area</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/5_10.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="712" data-mc-height="464" src="../../resources/images/5_10_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <p class="Body">In this example, the fields on the left hand side come from the validation business object. The object is JobTitle (as indicated in the <b>Get list data from</b> drop-down menu).</p>
+                    <p class="Body">The <span class="fixedwidth">$([ValidationList]Department)</span> expression references the field from the business object, which is utilizing this named validation list. In this case, the employee business object.</p>
+                    <p class="Body">With this configuration, the job titles that can be selected for the employee are based on the department value that was previous selected. The department value from the employee is then used to determine the job title records with the same department name and return the constrained results accordingly.</p>
+                    <p class="Body">Use  the <span class="fixedwidth">$([ValidationList]FieldName)</span> syntax (instead of $(FieldName)) so that the named validation list can be shared across other business objects. </p>
+                    <p class="Body">For example, if there is a new customer business object that needs to implement the same constrained validation list, the same named validation list can be reused for that object.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" name="kanchor684"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Prompt for Values Within a Quick Action</a><a name="Prompt_for_values_within_a_quick_action"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">You can use prompt expressions in the context of the update quick action to ask the user to fill out a value for a field in the business object.</p>
+                    <p class="Code">$(Prompt(&lt;Title in prompt&gt;, ""))</p>
+                    <p class="Code">$(Prompt(&lt;Title in prompt&gt;, &lt;Named validation list&gt;))</p>
+                    <p class="Body">There are two variations of the prompt expression: </p>
+                    <ul>
+                        <li value="1">If the second parameter to the expression is an empty string, then the user can enter any value for the field.</li>
+                        <li value="2">If the second parameter to the expression is a string value, the system assumes that this value is the named validation list and uses it to constrain the allowable values which the user can enter for the field.</li>
+                    </ul>
+                    <p class="Body">This is typically used when the underlying field is also validated.</p>
+                    <h4 class="subheading">Prompt to Update the Owner Team of an Incident Record</h4>
+                    <p class="Body">This prompt updates the owner team of the incident record:</p>
+                    <p class="Code">$(Prompt("Incident Owner Team", "Team of StandardUserTeam used in Incident"))</p>
+                    <p class="Body">This syntax is seen in the existing reassign owner team quick action in incident:</p>
+                    <p class="fig_title" data-mc-xref-target-name="Reassign&#160;Owner_Team_Quick_Action"><a name="Reassign&#160;Owner_Team_Quick_Action" data-mc-generated-bookmark="ListOf"></a>Reassign&#160;Owner Team Quick Action</p>
+                    <p class="Body_indent"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../resources/images/expression_owner_team_qa.jpg"><img class="MCPopupThumbnail img imgbig_image" data-mc-width="1163" data-mc-height="360" src="../../resources/images/expression_owner_team_qa_thumb_0_45.jpg" tabindex="" /></a>
+                    </p>
+                    <h4 class="subheading">Prompt to Create a Business Object</h4>
+                    <p class="Body">This prompt is used in the <span class="window_name">Social Board</span> workspace to create a business object from the Social Board.</p>
+                    <p class="Code">$(Prompt("Summary", "", 350, 25, "", "", "_ConversationTitle_"))</p>
+                    <p class="Code">$(Prompt("Description", "", 400, 200, "", "", "_ConversationContent_"))</p>
+                    <ul>
+                        <li value="1">The first parameter, <span class="fixedwidth">"_ConversationTitle_"</span>, includes the original post in the Summary field. </li>
+                        <li value="2">The second parameter, <span class="fixedwidth">"_ConversationContent_"</span>,  includes the original post along with all the comments in the Description field.</li>
+                        <li value="3">A prompt for a summary and description are displayed, with an empty text area 340 pixels in width and 25 pixels in height, for the Summary field and an empty text area 400 pixels in width and 200 pixels in height for the Description field.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Define IF-THEN-ELSE Expressions</a><a name="Define_IF-THEN-ELSE_expressions"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <h4 class="subheading">Syntax</h4>
+                    <p class="Code">$(iif(&lt;condition&gt;, &lt;value when condition is true&gt;, &lt;value when condition is false&gt;))</p>
+                    <p class="Body">Like most programming languages, the <span class="notranslate"><b>HEAT</b></span> system supports conditional expressions using the <b>iif</b> expression. (Note that there are two "i" characters in iif). This expression has three parameters: the first is the condition, the second parameter is the value to return if the condition is true,and the third parameter is value to return if the condition is false.</p>
+                    <p class="Body">This conditional expression is used in various locations in <span class="notranslate"><b>HEAT</b></span>. For example, the following expression return false if the incident status has a value of <b>Logged</b>. Otherwise, it returns a value of true:</p>
+                    <p class="Code">$(iif((Status == "Logged"), false, true))</p>
+                    <p class="Body">The return value of this conditional expression can then be used, for example, to determine when the owner field in incident is mandatory (that is, when the status has a value other than logged):</p>
+                    <p class="Code">Owner is required when $(iif((Status == "Logged"), false, true ))</p>
+                    <p class="Body">You can nest <span class="fixedwidth">iif</span> expressions within one another, so that the return value of one <span class="fixedwidth">iif</span> expression feeds into another expression.</p>
+                    <p class="Body">In such cases, note that the <span class="notranslate"><b>HEAT</b></span> expression syntax <span class="fixedwidth">$()</span> applies to the <span class="Emphasis">outermost</span> expression. &#160;You do not need to use the <span class="fixedwidth">$()</span> syntax anywhere within the nested expression.</p>
+                </div>
+            </div>
+            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="Closed" data-mc-alt2="Open" />Define Conditional Expressions</a><a name="Define_conditional_expressions"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="Body">Applying a read-only control is a common use of conditional expressions. Another example is in the default change approval form, with this expression applied to the read-only expression control:</p>
+                    <p class="Code">iif( ((Status == "Closed") || (Status == "Denied")), true, )</p>
+                    <p class="Body">If the status is closed, the item becomes read-only.</p>
+                    <p class="Body">A more complex example of a conditional expression can be found in a default incident editing rule, specifying the Priority changes to be made when the Urgency and Impact fields are changed:</p>
+                    <p class="Code">$(iif(((Urgency == "High") &amp;&amp; (Impact == "High")), </p>
+                    <p class="Code"> "1", </p>
+                    <p class="Code"> iif((((Urgency == "High") &amp;&amp; (Impact == "Medium")) || ((Urgency == "Medium") &amp;&amp; (Impact == "High"))), </p>
+                    <p class="Code"> "2", </p>
+                    <p class="Code"> iif(((((Urgency == "High") &amp;&amp; (Impact == "Low")) || ((Urgency == "Medium") &amp;&amp; (Impact == "Medium"))) || ((Urgency == "Low") &amp;&amp; (Impact == "High"))), </p>
+                    <p class="Code"> "3", </p>
+                    <p class="Code"> iif((((Urgency == "Medium") &amp;&amp; (Impact == "Low")) || ((Urgency == "Low") &amp;&amp; (Impact == "Medium"))), </p>
+                    <p class="Code"> "4", </p>
+                    <p class="Code"> "5"</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;      )</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;    )</p>
+                    <p class="Code">&#160;&#160;&#160;&#160;  )</p>
+                    <p class="Code">))</p>
+                    <p class="Body">In this case, each combination of urgency and impact field values specifies the priority level from 1 to 5.</p>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="expressions.htm">Expressions</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="../../configure/toolbareditor/adding_toolbar_component.htm">Adding Toolbar Components</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="constructing_expressions.htm">Constructing Expressions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_searches_.htm">Using Expressions in Searches and Dashboards</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../servicedesk/quickactions/using_expressions_in_qui.htm">Using Expressions in Quick Actions</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="../../configure/businessrules/using_expressions_in_business_rules.htm">Using Expressions in Business Rules</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="expressions_in_the_form_editor.htm">Style Rule Expressions in the Form Editor</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="../functions/_built_in_functions.htm">Built-in Functions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="type_conversions.htm">Type Conversions</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="operators.htm">Operators</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="null_value.htm">Null Values</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>

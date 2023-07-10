@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>About Hierarchical XML Format</title>
+        <link href="../../resources/tablestyles/note.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/frs_styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../index.html#configure/dataintegration/about_hierarchical_xml_format.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_FRS_breadcrumbs_0"><span class="MCBreadcrumbsPrefix">  <![CDATA[ ]]></span><a class="MCBreadcrumbsLink" href="../../reference/reference.htm">Reference</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">About Hierarchical XML Format</span>
+        </div>
+        <!-- ******  start GOOGLE TRANSLATE WIDGET ****** -->
+        <div id="google_translate_element" style="float: right">
+        </div>
+        <script>/* <![CDATA[ */
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,ja,nl,pt,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+		/* ]]> */</script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <!-- ******  end GOOGLE TRANSLATE WIDGET ****** -->
+        <div class="content">
+            <h1>About Hierarchical XML Format</h1>
+            <p class="Body"><span class="notranslate"><b>HEAT</b></span> can import XML files containing more than one business object. To do so, the file must follow a strict format (outlined below). The Hierarchical import process supports preprocessing via XSLT to transcribe your current data format to meet this requirement.</p>
+            <table style="width: 80%;mc-table-style: url('../../resources/tablestyles/note.css');" class="TableStyle-Note" cellspacing="0">
+                <col class="TableStyle-Note-Column-Column1" />
+                <col class="TableStyle-Note-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Note-Body-Body2">
+                        <td class="TableStyle-Note-BodyB-Column1-Body2">
+                            <img src="../../resources/global_images/note.png" alt="" class="icon" />
+                        </td>
+                        <td class="TableStyle-Note-BodyA-Column2-Body2">
+                            <p>Large files (over 50 MB) take longer to preview, because the entire file is downloaded before the first batch can be shown. In other types, the copy/download occurs when moving from the connection to the <span class="window_name">Object Mapping</span> page. In hierarchical XML, we bypass ALL mapping  pages; hence,  the copy/download only occurs when a user wants to preview the file.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Body">The 1.0 schema the XML must follow is:</p>
+            <p class="XML">&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"&gt;</p>
+            <p class="XML">&#160;</p>
+            <p class="XML_green">&lt;!-- decimal or empty string--&gt;</p>
+            <p class="XML">&lt;xs:simpleType name="decimal-or-empty"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;xs:union memberTypes="xs:decimal empty-string" /&gt;</p>
+            <p class="XML">&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&lt;xs:simpleType name="empty-string"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;xs:restriction base="xs:string"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="" /&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;/xs:restriction&gt;</p>
+            <p class="XML">&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&#160;</p>
+            <p class="XML_green">&lt;!-- Parent/Primary BusinessObject (BO) --&gt;</p>
+            <p class="XML">&lt;xs:element name="BusinessObject"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;xs:complexType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:all&gt;</p>
+            <p class="XML_green">&lt;!-- Parent/Primary BO transaction action --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element name="Transaction" minOccurs="1" maxOccurs="1"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:restriction base="xs:string"&gt;</p>
+            <p class="XML_green">&lt;!-- Insert only if it does not exist - will not update and error if it exists --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="Insert"/&gt;</p>
+            <p class="XML_green">&lt;!-- Update only if it exists - will not insert and error if it does not exist --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="Update"/&gt;</p>
+            <p class="XML_green">&lt;!-- Insert if it does not exist or Update if it exists --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="UpdateAdd"/&gt;</p>
+            <p class="XML_green">&lt;!-- Delete if it exists or Ignore if it does not exist --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="Delete"/&gt;</p>
+            <p class="XML_green">&lt;!-- Do nothing --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="None"/&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:restriction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:element&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element name="LinkTransaction" minOccurs="0" maxOccurs="1"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:restriction base="xs:string"&gt;</p>
+            <p class="XML_green">&lt;!-- Link to parent/primary BO --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="Link"/&gt;</p>
+            <p class="XML_green">&lt;!-- Unlink from parent/primary BO --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="Unlink"/&gt;</p>
+            <p class="XML_green">&lt;!-- Do nothing --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &#160;&#160;&#160; &lt;xs:enumeration value="None"/&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:restriction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:element&gt;</p>
+            <p class="XML_green">&lt;!-- List of composite keys that uniquely locate the onject in the target system --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element name="UniqueKeyList" minOccurs="1" maxOccurs="1"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:complexType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:sequence&gt;</p>
+            <p class="XML_green">&lt;!-- In schema version 1.0 only one unique key is supported --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element name="UniqueKey" minOccurs="1" maxOccurs="1"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:complexType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:sequence&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element name="Field" minOccurs="1" maxOccurs="unbounded"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:complexType&gt;</p>
+            <p class="XML">&lt;xs:attribute name="Name" type="xs:string" use="required"/&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;/xs:sequence&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;/xs:sequence&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;xs:element name="FieldList" minOccurs="1" maxOccurs="1"&gt;</p>
+            <p class="XML">&lt;xs:complexType&gt;</p>
+            <p class="XML">&lt;xs:sequence&gt;</p>
+            <p class="XML">&lt;xs:element name="Field" minOccurs="0" maxOccurs="unbounded"&gt;</p>
+            <p class="XML">&lt;xs:complexType mixed="true"&gt;</p>
+            <p class="XML">&lt;xs:all&gt;</p>
+            <p class="XML">&lt;xs:element name="LanguageValues" minOccurs="0" maxOccurs="1"&gt;</p>
+            <p class="XML">&lt;xs:complexType mixed="true"&gt;</p>
+            <p class="XML">&lt;xs:all&gt;</p>
+            <p class="XML">&lt;xs:element name="de" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="fr" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="es" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="pt_BR" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="nl" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="jp" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="ru" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="default" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;/xs:all&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;xs:element name="CurrencyValue" type="decimal-or-empty" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;xs:element name="CurrencyCode" type="xs:string" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;/xs:all&gt;</p>
+            <p class="XML">&lt;xs:attribute name="Name" type="xs:string" use="required"/&gt;</p>
+            <p class="XML">&lt;xs:attribute name="Type" use="optional"&gt;</p>
+            <p class="XML">&lt;xs:simpleType&gt;</p>
+            <p class="XML">&lt;xs:restriction base="xs:string"&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.String" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Int32" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Int64" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Single" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Double" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Decimal" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.DateTime" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="System.Boolean" /&gt;</p>
+            <p class="XML">&lt;xs:enumeration value="Currency" /&gt;</p>
+            <p class="XML">&lt;/xs:restriction&gt;</p>
+            <p class="XML">&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&lt;/xs:attribute&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;/xs:sequence&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML_green">&lt;!-- List of related BOs --&gt;</p>
+            <p class="XML">&lt;xs:element name="RelatedBusinessObjectList" minOccurs="0" maxOccurs="1"&gt;</p>
+            <p class="XML">&lt;xs:complexType&gt;</p>
+            <p class="XML">&lt;xs:sequence&gt;</p>
+            <p class="XML_green">&lt;!-- support a maximum of 100 related objects for each parent/primary BO--&gt;</p>
+            <p class="XML">&lt;xs:element name="RelatedBusinessObject" maxOccurs="100"&gt;</p>
+            <p class="XML">&lt;xs:complexType&gt;</p>
+            <p class="XML">&lt;xs:sequence&gt;</p>
+            <p class="XML">&lt;xs:element ref="BusinessObject" minOccurs="0" maxOccurs="1"/&gt;</p>
+            <p class="XML">&lt;/xs:sequence&gt;</p>
+            <p class="XML">&lt;xs:attribute name="Relationship" type="xs:string" use="required"/&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;/xs:sequence&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&lt;/xs:all&gt;</p>
+            <p class="XML">&lt;xs:attribute name="Name" type="xs:string" use="required"/&gt;</p>
+            <p class="XML">&lt;/xs:complexType&gt;</p>
+            <p class="XML">&lt;/xs:element&gt;</p>
+            <p class="XML">&#160;</p>
+            <p class="XML_green">&lt;!-- Hierarchical Business Objects --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;xs:element name="BusinessObjectList"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:complexType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:sequence&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:element ref="BusinessObject" maxOccurs="unbounded"/&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:sequence&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:attribute name="SchemaVersion" use="required"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:restriction base="xs:string"&gt;</p>
+            <p class="XML_green">&lt;!-- schema versions --&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;xs:enumeration value="1.0"/&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:restriction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:simpleType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:attribute&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/xs:complexType&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;/xs:element&gt;</p>
+            <p class="XML">&#160;</p>
+            <p class="XML">&lt;/xs:schema&gt;</p>
+            <h4 class="subheading">Notes</h4>
+            <ul>
+                <li value="1">The <span class="window_name">SchemaVersion</span> attribute must be 1.0.</li>
+                <li value="2">The maximum  levels of child business object is two. &#160;For example, Incident-Task.Assignment-Journal.Notes.</li>
+                <li value="3">The transaction must be one of the following: insert, update, updateAdd, delete, or none. <ul><li value="1">UpdateAdd insert a new record if not found, or update if it is found. </li><li value="2">None is used when only child business object is linked or unlinked. Otherwise no action.</li></ul></li>
+                <li value="4">LinkTransaction must be one of the following: link, unlink, none. LinkTransaction is only used in the child business object context. If  specified in the root level parent info, it is ignored.</li>
+                <li value="5">The maximum number of RelationBusinessObjects supported is 100.</li>
+                <li value="6">The <span class="window_name">Type</span> attribute can be one of the following:<ul><li value="1">System.Int32</li><li value="2">System.Int64</li><li value="3">System.Single</li><li value="4">System.Double</li><li value="5">System.Decimal </li><li value="6">System.DateTime </li><li value="7">System.Boolean</li><li value="8">Currency</li></ul></li>
+            </ul>
+            <h4 class="subheading">Example import file -  Incident containing Task.Assignment containing Journal.Notes:</h4>
+            <p class="XML">&lt;?xml version="1.0" encoding="utf-8"?&gt;</p>
+            <p class="XML">&lt;BusinessObjectList SchemaVersion="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="HierarchicalObjects-1.0.xsd"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;BusinessObject Name="Incident"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Transaction&gt;UpdateAdd&lt;/Transaction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="IncidentNumber" /&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="IncidentNumber"&gt;50011&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Subject"&gt;Daily Backup Failure&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Symptom"&gt;Backup failed on server&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Service"&gt;Data Service&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Category"&gt;Backup&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Owner"&gt;JClerk&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="OwnerTeam"&gt;Service Desk&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Impact"&gt;Low&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Urgency"&gt;High&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Source"&gt;Phone&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="ProfileLink"&gt;John M Doe&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RelatedBusinessObjectList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RelatedBusinessObject Relationship="IncidentAssocTaskAssignment"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;BusinessObject Name="Task.Assignment"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Transaction&gt;UpdateAdd&lt;/Transaction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;LinkTransaction&gt;Link&lt;/LinkTransaction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="AssignmentID" /&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="AssignmentID"&gt;400011&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Subject"&gt;Please restore the backup on the Server&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="OwnerTeam"&gt;Service Desk&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RelatedBusinessObjectList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;RelatedBusinessObject Relationship="IncidentContainsJournal"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;BusinessObject Name="Journal.Notes"&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Transaction&gt;UpdateAdd&lt;/Transaction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;LinkTransaction&gt;Link&lt;/LinkTransaction&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="RecId" /&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKey&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/UniqueKeyList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="RecId"&gt;2B4FDD4BF1FD49FFAD4BF0249A4038EE&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Category"&gt;Memo&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Source"&gt;Voice Mail&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="Subject"&gt;Additional Info Request&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="TimeSpent"&gt;10&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Field Name="NotesBody"&gt;How soon do you need the backup.&lt;/Field&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/FieldList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/BusinessObject&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RelatedBusinessObject&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RelatedBusinessObjectList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/BusinessObject&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RelatedBusinessObject&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;/RelatedBusinessObjectList&gt;</p>
+            <p class="XML">&#160;&#160;&#160;&#160;&lt;/BusinessObject&gt;</p>
+            <p class="XML">&lt;/BusinessObjectList&gt;</p>
+        </div>
+        <div class="related">
+            <fieldset class="related_topics">
+                <div class="MCRelationshipsProxy_0">
+                    <p class="z_configureHeading_z_configure_0">Related Information</p>
+                    <p class="z_configureItem_z_configure_0"><a href="data_integration_configu.htm">Configuring Data Integration</a>
+                    </p>
+                    <p class="z_configureItem_z_configure_0"><a href="winrm_setup.htm">WinRM Setup</a>
+                    </p>
+                    <p class="conceptHeading_concept_0">Topics</p>
+                    <p class="conceptItem_concept_0"><a href="data_integration.htm">Importing &amp; Exporting Data</a>
+                    </p>
+                    <p class="examplesHeading_examples_0">Examples</p>
+                    <p class="examplesItem_examples_0"><a href="run_program_examples.htm">Reset a Password using Run Program</a>
+                    </p>
+                    <p class="taskHeading_task_0">Tasks</p>
+                    <p class="taskItem_task_0"><a href="data_export.htm">Data Export</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="run_program.htm">Run Program - Remote Host</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import.htm">Data Import</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="data_import_configuration.htm">Data Import Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="sccm_configuration.htm">SCCM Configuration</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="schedule_manager.htm">Schedule Manager</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="review_publish.htm">Review &amp; Publish</a>
+                    </p>
+                    <p class="taskItem_task_0"><a href="web_service.htm">Web Service</a>
+                    </p>
+                    <p class="referenceHeading_reference_0">Reference</p>
+                    <p class="referenceItem_reference_0"><a href="about_field_mapping.htm">Field Mapping</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="manually_running_an_acti.htm">Manually Running an Activated Connection</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="ldap_settings.htm">LDAP Settings</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="integration_status_and_history.htm">Integration Status and History</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="troubleshooting_data_int.htm">Troubleshooting Data Integration</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/cmdb_baseline_log.htm">CMDB Baseline Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/integration_log.htm">Integration Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../logging/ldap_import_log.htm">LDAP Import Log</a>
+                    </p>
+                    <p class="referenceItem_reference_0"><a href="../../reference/quickactions/templates/export_data.htm">Export Data</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="footer">
+            <p class="footer_web">Copyright © 2011-2014 <b>FrontRange Solutions USA Inc</b>. | All Rights Reserved</p>
+        </div>
+    </body>
+</html>
